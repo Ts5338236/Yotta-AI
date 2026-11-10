@@ -123,6 +123,9 @@ def generate_budgets(
 ) -> List[Dict[str, Any]]:
     """Generate initial fiscal year budget records for all departments.
 
+    Budget allocations scale with the dataset volume to comfortably fund
+    all clean-path procurement operations without budget overruns.
+
     Args:
         config: Central configuration dictionary.
         rng: Deterministic NumPy RNG instance.
@@ -134,12 +137,16 @@ def generate_budgets(
     """
     fiscal_year = int(config["project"]["fiscal_year"])
     currency = str(config["project"]["base_currency"])
+    scale_name = _get_scale_name(config)
+
+    # Scale budget limits with requisition volume
+    scale_factor = 4 if scale_name == "full" else 1
 
     budgets: List[Dict[str, Any]] = []
     for dept in departments:
         budget_id = id_factory.next_budget_id()
-        # Realistic budget variance between $750,000 and $3,500,000 in $50,000 steps
-        budget_steps = rng.integers(15, 71)  # 15 * 50,000 = 750,000 to 70 * 50,000 = 3,500,000
+        # Variance between $750k - $3.5M (starter) or $3M - $14M (full) in $50,000 steps
+        budget_steps = rng.integers(15 * scale_factor, 71 * scale_factor)
         allocated_usd = float(budget_steps * 50000)
         allocated_minor = int(allocated_usd * 100)
 
@@ -353,6 +360,96 @@ def generate_suppliers(
     return suppliers
 
 
+def generate_approvers(
+    config: Mapping[str, Any],
+    rng: np.random.Generator,
+    id_factory: IDFactory,
+    departments: List[Dict[str, Any]],
+) -> List[Dict[str, Any]]:
+    """Generate authorized approvers for each department and corporate finance.
+
+    Tiers:
+    - Line Managers: limit <= $2,000
+    - Department Heads: limit <= $25,000
+    - Corporate Finance: limit > $25,000
+
+    Args:
+        config: Central configuration dictionary.
+        rng: Deterministic NumPy RNG.
+        id_factory: Centralized IDFactory instance.
+        departments: Generated department master records.
+
+    Returns:
+        List[Dict[str, Any]]: Generated approver records.
+    """
+    thresholds = config.get("approval_thresholds", {})
+    mgr_limit = int(thresholds.get("manager_limit", 2000))
+    dept_head_limit = int(thresholds.get("department_head_limit", 25000))
+
+    approvers: List[Dict[str, Any]] = []
+    approver_seq = 1
+
+    # 1. Line Manager and Department Head per department
+    for dept in departments:
+        dept_id = dept["department_id"]
+        dept_name = dept["name"]
+
+        # Line Manager
+        app_id = id_factory.next_approver_id()
+        first = rng.choice(SYNTHETIC_FIRST_NAMES)
+        last = rng.choice(SYNTHETIC_LAST_NAMES)
+        approvers.append({
+            "approver_id": app_id,
+            "name": f"{first} {last}",
+            "email": f"{first.lower()}.{last.lower()}.app{approver_seq:02d}@example.com",
+            "department_id": dept_id,
+            "role": "LINE_MANAGER",
+            "approval_limit": mgr_limit * 100,  # cents
+            "approval_limit_usd": mgr_limit,
+            "is_active": 1,
+            "created_at": "2026-01-01T00:00:00Z",
+        })
+        approver_seq += 1
+
+        # Department Head
+        app_id_head = id_factory.next_approver_id()
+        first_h = rng.choice(SYNTHETIC_FIRST_NAMES)
+        last_h = rng.choice(SYNTHETIC_LAST_NAMES)
+        approvers.append({
+            "approver_id": app_id_head,
+            "name": f"{first_h} {last_h}",
+            "email": f"{first_h.lower()}.{last_h.lower()}.app{approver_seq:02d}@example.com",
+            "department_id": dept_id,
+            "role": "DEPARTMENT_HEAD",
+            "approval_limit": dept_head_limit * 100,  # cents
+            "approval_limit_usd": dept_head_limit,
+            "is_active": 1,
+            "created_at": "2026-01-01T00:00:00Z",
+        })
+        approver_seq += 1
+
+    # 2. Corporate Finance Approvers (2 officers)
+    finance_dept = next((d for d in departments if d["name"] == "Finance"), departments[0])
+    for _ in range(2):
+        app_id_fin = id_factory.next_approver_id()
+        first_f = rng.choice(SYNTHETIC_FIRST_NAMES)
+        last_f = rng.choice(SYNTHETIC_LAST_NAMES)
+        approvers.append({
+            "approver_id": app_id_fin,
+            "name": f"{first_f} {last_f}",
+            "email": f"{first_f.lower()}.{last_f.lower()}.app{approver_seq:02d}@example.com",
+            "department_id": finance_dept["department_id"],
+            "role": "FINANCE",
+            "approval_limit": 1000000 * 100,  # $1,000,000 limit
+            "approval_limit_usd": 1000000,
+            "is_active": 1,
+            "created_at": "2026-01-01T00:00:00Z",
+        })
+        approver_seq += 1
+
+    return approvers
+
+
 def generate_all_masters(
     config: Mapping[str, Any],
     rng: np.random.Generator,
@@ -367,16 +464,18 @@ def generate_all_masters(
 
     Returns:
         Dict[str, List[Dict[str, Any]]]: Dictionary containing master entity lists:
-            'departments', 'budgets', 'requesters', 'suppliers'.
+            'departments', 'budgets', 'requesters', 'suppliers', 'approvers'.
     """
     departments = generate_departments(config, rng, id_factory)
     budgets = generate_budgets(config, rng, id_factory, departments)
     requesters = generate_requesters(config, rng, id_factory, departments)
     suppliers = generate_suppliers(config, rng, id_factory)
+    approvers = generate_approvers(config, rng, id_factory, departments)
 
     return {
         "departments": departments,
         "budgets": budgets,
         "requesters": requesters,
         "suppliers": suppliers,
+        "approvers": approvers,
     }

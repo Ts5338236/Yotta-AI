@@ -1,6 +1,6 @@
 # Project Assumptions & Design Decisions
 
-This document provides a transparent and auditable record of all foundational assumptions, technical design choices, and business model constraints adopted in Phase 1 and Phase 2 of the Procure-to-Pay Synthetic Data Generator.
+This document provides a transparent and auditable record of all foundational assumptions, technical design choices, and business workflow constraints across Phases 1, 2, and 3 of the Procure-to-Pay Synthetic Data Generator.
 
 Assumptions are classified into three distinct categories:
 - **Category A**: Explicit Requirements from the Master Prompt / PRD.
@@ -17,93 +17,69 @@ Assumptions are classified into three distinct categories:
    - All generated transaction dates strictly fall within 2026 (non-leap year, 365 days).
 2. **Base Currency**:
    - `USD` is the central base currency of the procurement system.
-3. **Approval Thresholds**:
-   - Line Manager approval threshold: Up to \$2,000.
-   - Department Head approval threshold: Up to \$25,000.
-   - Purchases exceeding \$25,000 require Finance / Executive review.
+3. **Approval Thresholds & Governance**:
+   - Line Manager approval threshold: Up to \$2,000 (direct purchase order, catalogue sourcing).
+   - Department Head approval threshold: Up to \$25,000 (competitive RFQ with >= 3 supplier quotes).
+   - Purchases exceeding \$25,000 require Department Head approval + Corporate Finance approval.
 4. **Supplier Scoring Weights**:
    - Landed Cost Weight: `0.60` (60%)
    - Lead Time Weight: `0.25` (25%)
    - Risk Rating Weight: `0.15` (15%)
-   - Weights must strictly sum to `1.0`.
+   - Normalized score formula: $\text{score} = 0.60 \times C_{\text{norm}} + 0.25 \times L_{\text{norm}} + 0.15 \times R_{\text{norm}}$ (lower score is better).
 5. **Fixed FX Rates**:
-   - `USD`: 1.0
-   - `INR`: 0.012 (1 INR = 0.012 USD)
-   - `EUR`: 1.08 (1 EUR = 1.08 USD)
-   - `GBP`: 1.27 (1 GBP = 1.27 USD)
-   - `JPY`: 0.0067 (1 JPY = 0.0067 USD)
+   - `USD`: 1.0, `INR`: 0.012, `EUR`: 1.08, `GBP`: 1.27, `JPY`: 0.0067.
 6. **Dataset Scale Tiers**:
-   - **Starter Scale**: 10 Departments, 30 Requesters, 12 Suppliers, 115 Purchase Requests, 50 RFQs, 150 Quotes, 90 Purchase Orders.
-   - **Full Scale**: 12 Departments, 300 Requesters, 120 Suppliers, 1,150 Purchase Requests, 500 RFQs, 1,500 Quotes, 900 Purchase Orders.
+   - **Starter Scale**: 10 Departments, 30 Requesters, 12 Suppliers, 115 Purchase Requests, 50 RFQs, ~150 Quotes, ~90 Purchase Orders.
+   - **Full Scale**: 12 Departments, 300 Requesters, 120 Suppliers, 1,150 Purchase Requests, 500 RFQs, ~1,500 Quotes, ~900 Purchase Orders.
 7. **Sourcing Constraints**:
-   - Each Purchase Request can originate at most one RFQ (1:1 or 1:0 relationship).
-   - An invited vendor cannot be invited multiple times to the same RFQ.
-   - Minimum quotes per RFQ: 3; Maximum quotes: 6; Default invites: 3.
+   - Exactly one RFQ per eligible purchase request (1:1 relationship).
+   - An invited vendor cannot be invited multiple times to the same RFQ (`UNIQUE(rfq_id, supplier_id)`).
+   - Sourcing paths supported: `competitive`, `catalogue`, `single_source`, `contract`.
+   - Single-source reason codes: `sole_supplier`, `urgent`, `contract`.
+   - Every competitive RFQ must have at least 3 supplier invitations and 3 quotations.
 8. **Anomalies Envelope**:
-   - Minimum target anomaly rate: 3% (`0.03`).
-   - Maximum target anomaly rate: 5% (`0.05`).
-9. **Pre-Approval Workflow Scope for Phase 2**:
-   - Purchase requests generated in Phase 2 are restricted to pre-approval workflow states (`DRAFT` and `SUBMITTED`).
-   - No approval decisions, rejections, RFQs, quotations, POs, or deliveries are generated in Phase 2.
-10. **Log-Normal Price Distributions**:
-    - Item unit prices are sampled from category-specific log-normal distributions bounded by explicit minimum and maximum limits.
+   - Target anomaly rate: 3% to 5% (strictly deferred to Phase 6; clean workflow in Phase 3).
+9. **Landed Cost Formula**:
+   $$\text{Landed Cost} = (\text{Quoted Price} \times \text{Quantity}) + \text{Freight} + \text{Duty} + \text{Non-recoverable Tax}$$
 
 ---
 
 ## Category B: Technical Design Decisions
 
 1. **Monetary Representation (INTEGER Minor Units & Exact Reconciliation)**:
-   - *Decision*: In SQLite and ledger operations, all monetary amounts are stored as `INTEGER` minor units (cents).
-   - *Line Total Reconciliation*: `line_total = round(qty * unit_estimate, 2)`.
-   - *Request Total Reconciliation*: `total_estimate_usd = sum(request_line.line_total)` and `total_estimated_amount = sum(request_line.estimated_line_total)`.
-   - *Rationale*: Guarantees zero floating-point accumulation discrepancies across tables.
+   - In SQLite and ledger operations, all monetary amounts are stored as `INTEGER` minor units (cents).
+   - Line Total Reconciliation: `line_total = round(qty * unit_estimate, 2)`.
+   - PO Value Reconciliation: `po.total_amount = sum(line.line_total)` and `po.value = sum(line.line_total_usd)`.
 2. **Single Deterministic RNG Pass-Through**:
-   - *Decision*: Exactly one `numpy.random.Generator` is instantiated at the entry point (`np.random.default_rng(seed)`).
-   - *Rule*: Submodules never instantiate new random instances or rely on Python global `random`.
-3. **Acyclic Requester Manager Hierarchy (DAG Tree)**:
-   - *Decision*: Within each department, the first requester created is assigned the top executive grade (`DIRECTOR`) with `manager_id = None`. Subsequent requesters are assigned an eligible senior manager from the same department who was created earlier in the sequence.
-   - *Rationale*: Mathematically guarantees a directed acyclic tree with zero circular reporting loops.
-4. **Category Log-Normal Distribution Parameters**:
-
-| Category | Log Mean ($\mu$) | Log Sigma ($\sigma$) | Min Price ($) | Max Price ($) | Rationale |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **IT Hardware** | 6.5 | 0.6 | 100.00 | 15,000.00 | Higher unit costs (laptops, servers, displays) |
-| **Software** | 5.5 | 0.8 | 50.00 | 20,000.00 | SaaS & enterprise licenses with high variance |
-| **Office Supplies** | 3.5 | 0.5 | 1.00 | 500.00 | Low unit consumables (pens, paper, folders) |
-| **Furniture** | 5.0 | 0.6 | 20.00 | 10,000.00 | Medium unit costs (ergonomic chairs, desks) |
-| **Industrial Equipment** | 7.0 | 0.7 | 500.00 | 50,000.00 | Heavy capital equipment (pallet jacks, compressors) |
-| **Maintenance** | 4.5 | 0.6 | 10.00 | 10,000.00 | Replacement parts, lubricants, filters |
-| **Professional Services** | 6.0 | 0.8 | 100.00 | 30,000.00 | Hourly consulting & security audit retainers |
-| **Logistics** | 4.5 | 0.6 | 10.00 | 10,000.00 | Packaging materials, pallet sets, scanners |
-| **Facilities** | 5.0 | 0.6 | 20.00 | 15,000.00 | Air purifiers, sanitization stands, fire gear |
-| **Marketing** | 5.0 | 0.8 | 20.00 | 15,000.00 | Exhibition displays, print runs, agency assets |
-
-5. **2026 Calendar Demand Seasonality**:
-
-| Month | Name | Days | Demand Weight | Synthetic Behavior |
-| :---: | :--- | :---: | :---: | :--- |
-| 1 | January | 31 | 0.07 | Post-holiday ramp-up, annual budget opening |
-| 2 | February | 28 | 0.07 | Steady operational procurement |
-| 3 | March | 31 | 0.08 | Q1 close purchasing push |
-| 4 | April | 30 | 0.07 | Q2 initial planning |
-| 5 | May | 31 | 0.07 | Mid-year project replenishment |
-| 6 | June | 30 | 0.08 | Q2 half-year procurement close |
-| 7 | July | 31 | 0.08 | Summer operational maintenance |
-| 8 | August | 31 | 0.08 | Q3 preparations |
-| 9 | September | 30 | 0.09 | Q3 close and Q4 budget acceleration |
-| 10 | October | 31 | 0.10 | Fiscal year-end procurement increase |
-| 11 | November | 30 | 0.10 | Pre-holiday capital equipment commitments |
-| 12 | December | 31 | 0.11 | "Use-it-or-lose-it" year-end budget exhaustion |
+   - Exactly one `numpy.random.Generator` is instantiated at the entry point (`np.random.default_rng(seed)`).
+   - Submodules never instantiate independent random instances.
+3. **Multicriteria Supplier Scoring Normalization**:
+   - Normalization within each RFQ across competing bids:
+     $$\text{metric}_{\text{norm}} = \frac{v - \min(v)}{\max(v) - \min(v)}$$
+     (If $\max == \min$, normalized value is `0.0`).
+   - Clean-path award rule: The eligible quotation with the lowest score wins.
+4. **Delivery Shipment Distribution**:
+   - ~80% single on-time shipments (delivered on or 1–2 days before expected date).
+   - ~10% single late shipments (delivered 1–5 days after expected date).
+   - ~10% multi-shipment partial fulfillments (split into 2 deliveries: 50%–70% initial partial receipt, remainder final receipt).
+5. **Double-Entry Style Budget Event Ledger**:
+   - `ALLOCATE`: Initial department funding.
+   - `RESERVE`: Pre-encumbrance when a Purchase Request is approved.
+   - `COMMIT`: Binding contract commitment upon Purchase Order issuance (relieving PR reservation).
+   - `RELEASE`: De-encumbrance if a request is cancelled or rejected.
+   - `SPEND`: Synthetic accounting expenditure recognized upon physical goods delivery.
+   - Clean-path guarantee: `allocated_amount >= reserved_amount + committed_amount + spent_amount` across all departments.
 
 ---
 
 ## Category C: Domain & Operational Assumptions
 
-1. **Initial Budget Encumbrance State**:
-   - Initial department budgets generated in Phase 2 have `allocated > 0`, and `reserved = 0`, `committed = 0`, `spent = 0`.
-   - Real-time balance deductions and ledger events (`RESERVE`, `COMMIT`, `SPEND`) are executed in Phase 3.
-2. **Departmental Requisition Weighting**:
-   - Operational and tech departments (Engineering, IT, Operations, R&D) generate higher volumes of purchase requisitions than administrative departments (Legal, HR, Facilities).
-3. **Supplier Lead Time & Risk Score Model**:
-   - Supplier mean lead time ranges from 3 to 30 days.
-   - Risk score is calibrated by category: LOW (0.05 - 0.30), MEDIUM (0.31 - 0.65), HIGH (0.66 - 0.95).
+1. **Pre-PO Rejection Behavior**:
+   - Natural business variation: ~5% of submitted requests are rejected during Level 1 or Level 2 approval.
+   - Rejected requests are halted immediately: they never receive RFQs, quotations, purchase orders, or commitments.
+2. **Synthetic Expenditure (No Accounts Payable / Invoicing Engine)**:
+   - The `SPEND` budget event and `spent_amount` field model synthetic accounting disbursement triggered upon goods receipt.
+   - Actual invoice OCR, 3-way invoice matching, and bank payment processing are explicitly out of scope.
+3. **Approver Organization Hierarchy**:
+   - Each department has 1 designated `LINE_MANAGER` and 1 `DEPARTMENT_HEAD`.
+   - Corporate Finance maintains centralized oversight for requests > \$25,000.

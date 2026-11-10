@@ -11,7 +11,7 @@ import sqlite3
 import sys
 from pathlib import Path
 
-from datagen import __version__, generate_phase2_dataset
+from datagen import __version__, generate_procurement_workflow
 from datagen.config import ConfigValidationError, load_config
 
 
@@ -114,23 +114,33 @@ def main(argv: list[str] | None = None) -> None:
 
     if args.generate:
         try:
-            dataset = generate_phase2_dataset(
+            dataset = generate_procurement_workflow(
                 config_path=args.config,
                 scale=args.scale,
                 seed=args.seed,
             )
             meta = dataset["metadata"]
-            total_spend = sum(pr["total_estimate_usd"] for pr in dataset["purchase_requests"])
-            print("=== Phase 2 Data Generation Successful ===")
+            total_spend = sum(po["value"] for po in dataset["purchase_orders"])
+            print("=== Phase 3 Procurement Workflow Generation Successful ===")
             print(f"Scale Tier        : {meta['scale']}")
             print(f"Random Seed       : {meta['seed']}")
             print(f"Departments       : {len(dataset['departments'])}")
             print(f"Budgets           : {len(dataset['budgets'])}")
             print(f"Requesters        : {len(dataset['requesters'])}")
             print(f"Suppliers         : {len(dataset['suppliers'])}")
+            print(f"Approvers         : {len(dataset['approvers'])}")
             print(f"Purchase Requests : {len(dataset['purchase_requests'])}")
-            print(f"Request Lines     : {len(dataset['request_lines'])}")
-            print(f"Total Est. Spend  : ${total_spend:,.2f} {meta['base_currency']}")
+            print(f"Approvals         : {len(dataset['approvals'])}")
+            print(f"RFQs              : {len(dataset['rfqs'])}")
+            print(f"Supplier Invites  : {len(dataset['rfq_supplier_invites'])}")
+            print(f"Supplier Quotes   : {len(dataset['supplier_quotes'])}")
+            print(f"Quote Lines       : {len(dataset['quote_lines'])}")
+            print(f"Purchase Orders   : {len(dataset['purchase_orders'])} (Competitive: {meta['competitive_pos_count']}, Non-Competitive: {meta['non_competitive_pos_count']})")
+            print(f"PO Lines          : {len(dataset['purchase_order_lines'])}")
+            print(f"Deliveries        : {len(dataset['deliveries'])}")
+            print(f"Budget Events     : {len(dataset['budget_events'])}")
+            print(f"Status Events     : {len(dataset['status_events'])}")
+            print(f"Total PO Spend    : ${total_spend:,.2f} {meta['base_currency']}")
             sys.exit(0)
         except Exception as err:
             print(f"Generation error: {err}", file=sys.stderr)
