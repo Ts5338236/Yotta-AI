@@ -1,0 +1,6 @@
+# Pinned core dependencies for Procure-to-Pay Synthetic Data Generator
+# Tested with Python 3.12.3 (compatible with Python >=3.11)
+numpy==2.2.3
+pandas==2.2.3
+PyYAML==6.0.3
+pytest==9.2.0

@@ -1,0 +1,4 @@
+-- Procure-to-Pay Synthetic Data Generator
+-- Seed SQL Script Placeholder
+-- Phase 1: Database schema definition is in schema.sql.
+-- Synthetic seed records will be generated and populated in Phase 2 and subsequent phases.
