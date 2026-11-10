@@ -2,7 +2,7 @@
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Status: Phase 1 Foundation](https://img.shields.io/badge/Status-Phase%201%20Foundation-orange.svg)]()
+[![Status: Phase 2 Complete](https://img.shields.io/badge/Status-Phase%202%20Complete-green.svg)]()
 
 Production-quality Procure-to-Pay (P2P) Synthetic Data Generator built for the **YottaFlex AI** technical coding round.
 
@@ -12,13 +12,14 @@ Production-quality Procure-to-Pay (P2P) Synthetic Data Generator built for the *
 
 The **Procure-to-Pay Synthetic Data Generator** is an enterprise data engineering framework designed to simulate an authentic corporate procurement lifecycle. The platform generates realistic, normalized, relational procurement datasets with controlled anomalies for testing downstream data warehouses, fraud detection systems, and machine learning models.
 
-### Primary Objectives:
+### Key Capabilities (Phase 1 & Phase 2 Complete):
+- **Master Data Generation**: Organizational hierarchy (Departments, Budgets, Requesters with DAG reporting trees, and Suppliers).
+- **Purchase Requisitions**: Itemized Purchase Requests and Request Lines with category-based log-normal pricing and 2026 calendar seasonality.
 - **Relational Integrity**: 100% normalized 3NF relational schema in SQLite enforcing strict foreign keys, unique constraints, and check constraints.
-- **Deterministic & Reproducible**: Fully reproducible sequence identifiers and zero uncontrolled randomness.
+- **Deterministic & Reproducible**: Fully reproducible sequence identifiers and zero uncontrolled randomness (single shared RNG pass-through).
 - **Financial Precision**: Absolute precision in monetary amounts and currency conversions using Python `decimal.Decimal` and SQLite integer minor units.
-- **Traceable Ledger**: Complete auditability of budget movements (`ALLOCATE`, `RESERVE`, `COMMIT`, `RELEASE`, `SPEND`) and entity status transitions.
 
-> **Status Notice**: This repository currently implements **Phase 1: Project Foundation & Architecture**. Data generation modules (master data, PRs, RFQs, POs, deliveries) will be implemented in Phases 2 through 7.
+> **Status Notice**: Phase 1 (Foundation & Schema) and **Phase 2 (Master Data & Purchase Requests)** are **COMPLETE**. Downstream sourcing (RFQs, Quotes), approvals, purchase orders, deliveries, and anomaly injection will be implemented in Phases 3 through 7.
 
 ---
 
@@ -41,15 +42,17 @@ procure-to-pay-datagen/
 ├── requirements.txt            # Pinned production dependencies
 ├── README.md                   # Project documentation & user guide
 ├── config/
-│   └── default.yaml            # Centralized system & scale configuration
+│   └── default.yaml            # Centralized system, scale, distribution & seasonality config
 ├── src/
 │   ├── datagen/                # Core generator package
-│   │   ├── __init__.py         # Package marker & version
+│   │   ├── __init__.py         # Package marker & generate_phase2_dataset entry point
 │   │   ├── __main__.py         # datagen execution entry point
 │   │   ├── cli.py              # CLI argument parser (argparse)
 │   │   ├── config.py           # Strict YAML config parser & validator
 │   │   ├── ids.py              # Centralized deterministic IDFactory
-│   │   └── fx.py               # Deterministic Decimal FX engine
+│   │   ├── fx.py               # Deterministic Decimal FX engine
+│   │   ├── masters.py          # Master data generator (Depts, Budgets, Reqs, Sups)
+│   │   └── requests.py         # Purchase requests & lines with log-normal pricing
 │   └── validate/               # Quality assurance package
 │       ├── __init__.py
 │       ├── __main__.py         # validate execution entry point
@@ -61,22 +64,27 @@ procure-to-pay-datagen/
 │       ├── schema.sql          # Canonical DDL defining 18 normalized tables
 │       └── seed.sql            # Seed SQL script placeholder
 ├── docs/                       # Architectural & design specifications
-│   ├── architecture.md         # System architecture & Mermaid ER diagram
+│   ├── architecture.md         # System architecture & Mermaid data flow
 │   ├── data_dictionary.md      # Comprehensive field-level data dictionary
 │   ├── assumptions.md          # Classified assumptions & technical decisions
 │   ├── validation_summary.md   # Test results & validation roadmap
 │   ├── reproducibility.md      # Determinism & environment guide
 │   ├── source_manifest.md      # Source inventory of all components
 │   └── AI_USAGE.md             # Transparent AI governance log
-├── tests/                      # Automated pytest suite (31 unit tests)
+├── tests/                      # Automated pytest suite (46 unit tests)
 │   ├── __init__.py
 │   ├── test_config.py
+│   ├── test_determinism.py     # Determinism & seed verification
+│   ├── test_distributions.py   # Price & seasonality distribution verification
 │   ├── test_fx.py
 │   ├── test_ids.py
+│   ├── test_masters.py         # Master data generator unit tests
+│   ├── test_requests.py        # Purchase requests & lines unit tests
 │   └── test_schema.py
 └── ai/
     └── prompts/
-        └── 01_phase1_foundation.md
+        ├── 01_phase1_foundation.md
+        └── 02_phase2_generation.md
 ```
 
 ---
@@ -101,7 +109,7 @@ procure-to-pay-datagen/
    python -m pip install -r requirements.txt
    ```
 
-4. Install the package in editable mode or configure the Python path:
+4. Set the Python path:
    ```powershell
    $env:PYTHONPATH = "src"
    ```
@@ -118,39 +126,51 @@ export PYTHONPATH=src
 
 ---
 
-## 5. Configuration Management
+## 5. Generating Synthetic Data (Phase 2)
 
-Configuration is centralized in `config/default.yaml` and strictly validated by `src/datagen/config.py`.
-
-To validate the configuration via CLI:
+Execute data generation directly through the CLI:
 
 ```powershell
-python -m datagen --validate-config
+# Generate starter scale dataset (default)
+python -m datagen --generate
+
+# Generate full scale dataset with specific seed
+python -m datagen --generate --scale full --seed 20261022
 ```
 
-### Configuration Sections:
-- **`project`**: Metadata, fiscal year (`2026`), base currency (`USD`), base date (`2026-01-01`).
-- **`scale`**: Dataset volume definitions for `starter` and `full` tiers.
-- **`approval_thresholds`**: Financial signing limits (`manager_limit: 2000`, `department_head_limit: 25000`).
-- **`supplier_scoring`**: Multicriteria evaluation weights summing to 1.0 (cost: 0.60, lead time: 0.25, risk: 0.15).
-- **`anomalies`**: Target anomaly rate envelope (`0.03` to `0.05`).
-- **`procurement`**: Quotation constraints (`minimum_quotes: 3`, `maximum_quotes: 6`).
-- **`fx_rates`**: Fixed conversion factors for USD, EUR, GBP, INR, and JPY.
+Sample CLI Output:
+```text
+=== Phase 2 Data Generation Successful ===
+Scale Tier        : starter
+Random Seed       : 20261022
+Departments       : 10
+Budgets           : 10
+Requesters        : 30
+Suppliers         : 12
+Purchase Requests : 115
+Request Lines     : 217
+Total Est. Spend  : $602,837.12 USD
+```
+
+### Programmatic Python Usage:
+```python
+from datagen import generate_phase2_dataset
+
+dataset = generate_phase2_dataset(scale="starter", seed=20261022)
+print(f"Generated {len(dataset['purchase_requests'])} requests.")
+```
 
 ---
 
-## 6. Database Schema Initialization
-
-The database schema is defined in `data/sql/schema.sql` and includes 18 normalized tables with foreign keys, check constraints, and performance indexes.
+## 6. Database Schema Initialization & Validation
 
 To initialize an empty SQLite database schema:
 
 ```powershell
-# Create an initialized SQLite database
 python -m datagen --init-db data/p2p_procurement.db
 ```
 
-To run foundational schema integrity and foreign-key checks on the database:
+To run foundational schema integrity and foreign-key checks:
 
 ```powershell
 python -m validate data/p2p_procurement.db
@@ -176,21 +196,24 @@ Execute the full automated test suite using `pytest`:
 python -m pytest -v
 ```
 
-All 31 unit tests cover:
-- Centralized `IDFactory` formatting, sequence independence, multi-delivery numbering, and regex patterns.
-- YAML configuration loading, required key enforcement, threshold validations, and type checking.
-- Deterministic FX currency conversions, decimal rounding, and negative value rejection.
-- SQLite foreign key enforcement, uniqueness constraints, check constraints, and RFQ invite requirements.
+All 46 unit tests cover:
+- Master data counts, unique keys, manager DAG hierarchy, and currency compliance.
+- Requisition departmental consistency, budget references, and derived spend reconciliation.
+- Category log-normal price bounds and 2026 monthly seasonality trends.
+- Deterministic byte-for-byte reproducibility across runs with identical seeds.
+- Centralized `IDFactory` formatting, sequence independence, and regex validations.
+- High-precision Decimal foreign exchange conversions.
+- SQLite foreign key enforcement, unique constraints, and check constraints.
 
 ---
 
-## 8. Current Implementation Status & Roadmap
+## 8. Development Roadmap
 
 | Phase | Milestone | Scope | Status |
 | :---: | :--- | :--- | :---: |
 | **Phase 1** | **Project Foundation & Architecture** | Package structure, SQLite schema, IDFactory, FX engine, config management, docs, foundational tests | **COMPLETED** |
-| Phase 2 | Master Data Generation | Departments, Budgets, Requesters, Approvers, Suppliers | Upcoming |
-| Phase 3 | Requisition & Sourcing | Purchase Requests, Request Lines, RFQs, Supplier Quotes, Quote Lines | Upcoming |
+| **Phase 2** | **Master Data & Purchase Requests** | Departments, Budgets, Requesters (DAG), Suppliers, PRs, Request Lines, Log-normal Pricing, Seasonality | **COMPLETED** |
+| Phase 3 | Requisition & Sourcing | Sourcing procedure, RFQs, Supplier Invitations, Multi-Currency Quotations | Upcoming |
 | Phase 4 | Approval & Purchasing | Multi-level approvals, supplier scoring, PO creation, Budget commitments | Upcoming |
 | Phase 5 | Delivery & Lifecycle | Deliveries, partial receipts, budget spend events, status transitions | Upcoming |
 | Phase 6 | Anomaly Injection | Split POs, budget overruns, phantom vendors, late shipments | Upcoming |

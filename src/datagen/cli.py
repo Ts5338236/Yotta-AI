@@ -1,7 +1,7 @@
 """Command-line interface for Procure-to-Pay Synthetic Data Generator.
 
-Provides commands to inspect configuration and initialize database schemas.
-Data generation commands are scheduled for Phase 2 through Phase 7.
+Provides commands to inspect configuration, initialize database schemas,
+and run Phase 2 master and requisition data generation.
 """
 
 from __future__ import annotations
@@ -11,7 +11,7 @@ import sqlite3
 import sys
 from pathlib import Path
 
-from datagen import __version__
+from datagen import __version__, generate_phase2_dataset
 from datagen.config import ConfigValidationError, load_config
 
 
@@ -49,7 +49,7 @@ def main(argv: list[str] | None = None) -> None:
     """Main CLI entry point."""
     parser = argparse.ArgumentParser(
         prog="p2p-datagen",
-        description="Procure-to-Pay Synthetic Data Generator (Phase 1 Foundation)",
+        description="Procure-to-Pay Synthetic Data Generator (Phase 2 Master & Requisition)",
     )
     parser.add_argument(
         "--version",
@@ -73,6 +73,24 @@ def main(argv: list[str] | None = None) -> None:
         metavar="DB_PATH",
         help="Initialize SQLite database schema at the specified path and exit",
     )
+    parser.add_argument(
+        "--generate",
+        action="store_true",
+        help="Execute Phase 2 in-memory synthetic data generation",
+    )
+    parser.add_argument(
+        "--scale",
+        type=str,
+        choices=["starter", "full"],
+        default=None,
+        help="Scale tier to generate (starter or full)",
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=None,
+        help="Random seed for deterministic generation",
+    )
 
     args = parser.parse_args(argv)
 
@@ -94,10 +112,35 @@ def main(argv: list[str] | None = None) -> None:
             print(f"Failed to initialize database: {err}", file=sys.stderr)
             sys.exit(1)
 
-    # Default message when invoked without specific action flags in Phase 1
-    print("Procure-to-Pay Synthetic Data Generator - Phase 1 Foundation")
-    print("Use --init-db <path> to create database schema, or --validate-config to test YAML config.")
-    print("Synthetic data generation modules will be activated in Phase 2.")
+    if args.generate:
+        try:
+            dataset = generate_phase2_dataset(
+                config_path=args.config,
+                scale=args.scale,
+                seed=args.seed,
+            )
+            meta = dataset["metadata"]
+            total_spend = sum(pr["total_estimate_usd"] for pr in dataset["purchase_requests"])
+            print("=== Phase 2 Data Generation Successful ===")
+            print(f"Scale Tier        : {meta['scale']}")
+            print(f"Random Seed       : {meta['seed']}")
+            print(f"Departments       : {len(dataset['departments'])}")
+            print(f"Budgets           : {len(dataset['budgets'])}")
+            print(f"Requesters        : {len(dataset['requesters'])}")
+            print(f"Suppliers         : {len(dataset['suppliers'])}")
+            print(f"Purchase Requests : {len(dataset['purchase_requests'])}")
+            print(f"Request Lines     : {len(dataset['request_lines'])}")
+            print(f"Total Est. Spend  : ${total_spend:,.2f} {meta['base_currency']}")
+            sys.exit(0)
+        except Exception as err:
+            print(f"Generation error: {err}", file=sys.stderr)
+            sys.exit(1)
+
+    # Default help summary
+    print("Procure-to-Pay Synthetic Data Generator - Phase 2")
+    print("Use --generate [--scale starter|full] to run in-memory data generation.")
+    print("Use --init-db <path> to initialize SQLite database schema.")
+    print("Use --validate-config to verify YAML configuration.")
 
 
 if __name__ == "__main__":

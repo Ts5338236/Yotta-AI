@@ -51,3 +51,70 @@ fx_rates:
   EUR: 1.08
   GBP: 1.27
   JPY: 0.0067
+
+category_distributions:
+  IT Hardware:
+    log_mean: 6.5
+    log_sigma: 0.6
+    min_price: 100
+    max_price: 15000
+  Office Supplies:
+    log_mean: 3.5
+    log_sigma: 0.5
+    min_price: 1
+    max_price: 500
+  Software:
+    log_mean: 5.5
+    log_sigma: 0.8
+    min_price: 50
+    max_price: 20000
+  Furniture:
+    log_mean: 5.0
+    log_sigma: 0.6
+    min_price: 20
+    max_price: 10000
+  Industrial Equipment:
+    log_mean: 7.0
+    log_sigma: 0.7
+    min_price: 500
+    max_price: 50000
+  Maintenance:
+    log_mean: 4.5
+    log_sigma: 0.6
+    min_price: 10
+    max_price: 10000
+  Professional Services:
+    log_mean: 6.0
+    log_sigma: 0.8
+    min_price: 100
+    max_price: 30000
+  Logistics:
+    log_mean: 4.5
+    log_sigma: 0.6
+    min_price: 10
+    max_price: 10000
+  Facilities:
+    log_mean: 5.0
+    log_sigma: 0.6
+    min_price: 20
+    max_price: 15000
+  Marketing:
+    log_mean: 5.0
+    log_sigma: 0.8
+    min_price: 20
+    max_price: 15000
+
+seasonality:
+  monthly_weights:
+    1: 0.07
+    2: 0.07
+    3: 0.08
+    4: 0.07
+    5: 0.07
+    6: 0.08
+    7: 0.08
+    8: 0.08
+    9: 0.09
+    10: 0.10
+    11: 0.10
+    12: 0.11

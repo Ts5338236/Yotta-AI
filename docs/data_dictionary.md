@@ -5,19 +5,22 @@ This document details the relational schema, field definitions, integrity constr
 ---
 
 ## 1. Department (`departments`)
-Master entity defining organizational business units.
+Master entity defining organizational business units. Generated in Phase 2 by `src/datagen/masters.py`.
 
 | Field Name | Data Type | Constraint | Required | Description | Allowed Values / Format | Units |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `department_id` | TEXT | PRIMARY KEY | Yes | Unique department code | `^DEPT-\d{2}$` (e.g. `DEPT-01`) | Dimension |
 | `name` | TEXT | UNIQUE, NOT NULL | Yes | Department operational name | Non-empty string | - |
-| `cost_center_code`| TEXT | UNIQUE, NOT NULL | Yes | ERP cost center identifier | Unique alphanumeric | - |
+| `cost_center_code`| TEXT | UNIQUE, NOT NULL | Yes | ERP cost center identifier | Unique alphanumeric (e.g. `CC-ENG-100`) | - |
+| `cost_centre` | TEXT | Alias | Yes | Alias for `cost_center_code` | Alphanumeric | - |
+| `effective_from` | TEXT | Attribute | Yes | Department active start date | `YYYY-MM-DD` (`2026-01-01`) | Date |
+| `effective_to` | TEXT | Attribute | Yes | Department active end date | `YYYY-MM-DD` (`2026-12-31`) | Date |
 | `created_at` | TEXT | NOT NULL | Yes | Audit creation timestamp | ISO 8601 UTC timestamp | Time |
 
 ---
 
 ## 2. Budget (`budgets`)
-Financial allocations per department and fiscal year.
+Financial allocations per department and fiscal year. Generated in Phase 2 by `src/datagen/masters.py`.
 
 | Field Name | Data Type | Constraint | Required | Description | Allowed Values / Format | Units |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -25,10 +28,14 @@ Financial allocations per department and fiscal year.
 | `department_id` | TEXT | FK (`departments`), NOT NULL | Yes | Owning department | Valid `department_id` | Dimension |
 | `fiscal_year` | INTEGER | CHECK (>= 2000), NOT NULL | Yes | Operating fiscal year | e.g. 2026 | Year |
 | `currency` | TEXT | NOT NULL | Yes | Base operating currency | `USD` | ISO 4217 |
-| `allocated_amount`| INTEGER | CHECK (>= 0), NOT NULL | Yes | Total budget allocated | Non-negative integer | Cents |
-| `reserved_amount` | INTEGER | CHECK (>= 0), NOT NULL | Yes | Pre-encumbered (PR submitted) | Non-negative integer | Cents |
-| `committed_amount`| INTEGER | CHECK (>= 0), NOT NULL | Yes | Encumbered (PO issued) | Non-negative integer | Cents |
-| `spent_amount` | INTEGER | CHECK (>= 0), NOT NULL | Yes | Disbursed (Goods received) | Non-negative integer | Cents |
+| `allocated` | REAL | Attribute | Yes | Total budget allocated in USD | Non-negative float | USD |
+| `allocated_amount`| INTEGER | CHECK (>= 0), NOT NULL | Yes | Total budget allocated in cents | Non-negative integer | Cents |
+| `reserved` | REAL | Attribute | Yes | Pre-encumbered in USD (PR submitted) | `0.0` initially | USD |
+| `reserved_amount` | INTEGER | CHECK (>= 0), NOT NULL | Yes | Pre-encumbered (PR submitted) | Non-negative integer (0 initially) | Cents |
+| `committed` | REAL | Attribute | Yes | Encumbered in USD (PO issued) | `0.0` initially | USD |
+| `committed_amount`| INTEGER | CHECK (>= 0), NOT NULL | Yes | Encumbered (PO issued) | Non-negative integer (0 initially) | Cents |
+| `spent` | REAL | Attribute | Yes | Disbursed in USD (Goods received) | `0.0` initially | USD |
+| `spent_amount` | INTEGER | CHECK (>= 0), NOT NULL | Yes | Disbursed (Goods received) | Non-negative integer (0 initially) | Cents |
 | `created_at` | TEXT | NOT NULL | Yes | Audit creation timestamp | ISO 8601 UTC timestamp | Time |
 
 *Table Constraints:* `UNIQUE (department_id, fiscal_year)`.
@@ -36,15 +43,17 @@ Financial allocations per department and fiscal year.
 ---
 
 ## 3. Requester (`requesters`)
-Corporate employees authorized to raise purchase requests.
+Corporate employees authorized to raise purchase requests. Generated in Phase 2 by `src/datagen/masters.py`.
 
 | Field Name | Data Type | Constraint | Required | Description | Allowed Values / Format | Units |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `requester_id` | TEXT | PRIMARY KEY | Yes | Unique requester code | `^REQ-\d{4}$` (e.g. `REQ-0001`) | Dimension |
+| `department_id` | TEXT | FK (`departments`), NOT NULL | Yes | Assigned department | Valid `department_id` | Dimension |
 | `name` | TEXT | NOT NULL | Yes | Full employee name | Non-empty string | - |
 | `email` | TEXT | UNIQUE, NOT NULL | Yes | Corporate email address | Valid corporate email | - |
-| `department_id` | TEXT | FK (`departments`), NOT NULL | Yes | Assigned department | Valid `department_id` | Dimension |
+| `grade` | TEXT | Attribute | Yes | Seniority grade tier | `'DIRECTOR'`, `'SENIOR_MANAGER'`, `'MANAGER'`, `'SENIOR_INDIVIDUAL'`, `'INDIVIDUAL'` | Enum |
 | `job_title` | TEXT | NOT NULL | Yes | Job designation | Non-empty string | - |
+| `manager_id` | TEXT | FK (`requesters`), Nullable | Yes | Reporting manager ID | Valid `requester_id` in same dept, or `NULL` for Director | Dimension |
 | `created_at` | TEXT | NOT NULL | Yes | Audit creation timestamp | ISO 8601 UTC timestamp | Time |
 
 ---
@@ -66,53 +75,67 @@ Corporate actors authorized to approve purchase requests based on financial dele
 ---
 
 ## 5. Supplier (`suppliers`)
-External commercial vendors providing goods and services.
+External commercial vendors providing goods and services. Generated in Phase 2 by `src/datagen/masters.py`.
 
 | Field Name | Data Type | Constraint | Required | Description | Allowed Values / Format | Units |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `supplier_id` | TEXT | PRIMARY KEY | Yes | Unique vendor identifier | `^SUP-\d{4}$` (e.g. `SUP-0001`) | Dimension |
+| `supplier_code` | TEXT | Attribute | Yes | Vendor operational code | `^SUP-C-\d{4}$` (e.g. `SUP-C-0001`) | Dimension |
 | `name` | TEXT | UNIQUE, NOT NULL | Yes | Legal company name | Non-empty string | - |
 | `contact_email` | TEXT | NOT NULL | Yes | Sales contact email | Valid email | - |
 | `country` | TEXT | NOT NULL | Yes | Operating country | e.g. `'USA'`, `'DEU'`, `'IND'`, `'GBR'`, `'JPN'` | ISO 3166 |
 | `currency` | TEXT | NOT NULL | Yes | Native invoicing currency | `'USD'`, `'EUR'`, `'GBP'`, `'INR'`, `'JPY'` | ISO 4217 |
 | `status` | TEXT | CHECK enum, NOT NULL | Yes | Vendor onboarding status | `'ACTIVE'`, `'PREFERRED'`, `'PROBATION'`, `'INACTIVE'` | Enum |
-| `risk_classification` | TEXT | CHECK enum, NOT NULL | Yes | Assessed vendor risk | `'LOW'`, `'MEDIUM'`, `'HIGH'` | Enum |
+| `status_effective_dates`| TEXT | Attribute | Yes | Effective period | `'2026-01-01 to 2026-12-31'` | String |
+| `effective_from` | TEXT | Attribute | Yes | Effective start date | `YYYY-MM-DD` | Date |
+| `effective_to` | TEXT | Attribute | Yes | Effective end date | `YYYY-MM-DD` | Date |
+| `risk_flag` | TEXT | CHECK enum, NOT NULL | Yes | Assessed vendor risk | `'LOW'`, `'MEDIUM'`, `'HIGH'` | Enum |
+| `risk_classification` | TEXT | CHECK enum, NOT NULL | Yes | Alias for `risk_flag` | `'LOW'`, `'MEDIUM'`, `'HIGH'` | Enum |
+| `risk_score` | REAL | Attribute | Yes | Quantitative vendor risk score | Low: 0.05-0.30, Med: 0.31-0.65, High: 0.66-0.95 | Score |
+| `lead_time_mean` | INTEGER | Attribute | Yes | Expected delivery lead time | 3 to 30 days | Days |
 | `created_at` | TEXT | NOT NULL | Yes | Audit creation timestamp | ISO 8601 UTC timestamp | Time |
 
 ---
 
 ## 6. PurchaseRequest (`purchase_requests`)
-Requisition raised by a requester for goods or services.
+Requisition raised by a requester for goods or services. Generated in Phase 2 by `src/datagen/requests.py`.
 
 | Field Name | Data Type | Constraint | Required | Description | Allowed Values / Format | Units |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `request_id` | TEXT | PRIMARY KEY | Yes | Requisition ID | `^PR-\d{4}-\d{6}$` (e.g. `PR-2026-000001`) | Dimension |
 | `requester_id` | TEXT | FK (`requesters`), NOT NULL | Yes | Requisition author | Valid `requester_id` | Dimension |
-| `department_id` | TEXT | FK (`departments`), NOT NULL | Yes | Charged department | Valid `department_id` | Dimension |
-| `budget_id` | TEXT | FK (`budgets`), NOT NULL | Yes | Funded budget account | Valid `budget_id` | Dimension |
+| `department_id` | TEXT | FK (`departments`), NOT NULL | Yes | Charged department | Valid `department_id` (matches requester's dept) | Dimension |
+| `budget_id` | TEXT | FK (`budgets`), NOT NULL | Yes | Funded budget account | Valid `budget_id` (matches dept's budget) | Dimension |
 | `currency` | TEXT | NOT NULL | Yes | Request currency | `'USD'` | ISO 4217 |
-| `total_estimated_amount` | INTEGER | CHECK (>= 0), NOT NULL | Yes | Estimated requisition sum | Minor units | Cents |
-| `status` | TEXT | CHECK enum, NOT NULL | Yes | Requisition lifecycle stage | `'DRAFT'`, `'SUBMITTED'`, `'PENDING_APPROVAL'`, `'APPROVED'`, `'REJECTED'`, `'CANCELLED'`, `'IN_SOURCING'`, `'ORDERED'` | Enum |
-| `request_date` | TEXT | NOT NULL | Yes | Business requisition date | `YYYY-MM-DD` | Date |
+| `request_date` | TEXT | NOT NULL | Yes | Business requisition date | `YYYY-MM-DD` (strictly within 2026) | Date |
+| `created_date` | TEXT | Alias | Yes | Alias for `request_date` | `YYYY-MM-DD` | Date |
+| `status` | TEXT | CHECK enum, NOT NULL | Yes | Requisition lifecycle stage | `'DRAFT'`, `'SUBMITTED'` (pre-approval workflow in Phase 2) | Enum |
+| `priority` | TEXT | Attribute | Yes | Requisition priority | `'LOW'`, `'MEDIUM'`, `'HIGH'`, `'CRITICAL'` | Enum |
 | `justification` | TEXT | NOT NULL | Yes | Business purpose summary | Non-empty string | - |
+| `total_estimate_usd` | REAL | Attribute | Yes | Exact derived sum from request lines | `SUM(request_line.line_total)` | USD |
+| `total_estimated_amount` | INTEGER | CHECK (>= 0), NOT NULL | Yes | Estimated requisition sum in cents | `SUM(request_line.estimated_line_total)` | Cents |
 | `created_at` | TEXT | NOT NULL | Yes | Audit creation timestamp | ISO 8601 UTC timestamp | Time |
 | `updated_at` | TEXT | NOT NULL | Yes | Last status update timestamp | ISO 8601 UTC timestamp | Time |
 
 ---
 
 ## 7. RequestLine (`request_lines`)
-Individual line item breakdown for a purchase request.
+Individual line item breakdown for a purchase request. Generated in Phase 2 by `src/datagen/requests.py`.
 
 | Field Name | Data Type | Constraint | Required | Description | Allowed Values / Format | Units |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `request_line_id` | TEXT | PRIMARY KEY | Yes | Line item identifier | `^RL-\d{6}$` (e.g. `RL-000001`) | Dimension |
 | `request_id` | TEXT | FK (`purchase_requests`), NOT NULL | Yes | Parent purchase request | Valid `request_id` | Dimension |
 | `line_number` | INTEGER | CHECK (> 0), NOT NULL | Yes | Sequential line index | Pos integer (1, 2, ...) | Index |
-| `item_description` | TEXT | NOT NULL | Yes | Goods or service description | Non-empty string | - |
-| `category` | TEXT | NOT NULL | Yes | Procurement category | e.g. `'HARDWARE'`, `'SOFTWARE'`, `'SERVICES'` | - |
-| `quantity` | INTEGER | CHECK (> 0), NOT NULL | Yes | Required units | Positive integer | Count |
+| `item` | TEXT | Attribute | Yes | Catalog item description | Non-empty string per category | - |
+| `item_description` | TEXT | NOT NULL | Yes | Alias for `item` | Non-empty string | - |
+| `category` | TEXT | NOT NULL | Yes | Procurement category | 10 approved categories | - |
+| `qty` | INTEGER | CHECK (> 0), NOT NULL | Yes | Required units | Positive integer | Count |
+| `quantity` | INTEGER | CHECK (> 0), NOT NULL | Yes | Alias for `qty` | Positive integer | Count |
+| `unit_estimate` | REAL | Attribute | Yes | Unit estimate in USD | Log-normal sample bounded by `[min, max]` | USD |
 | `estimated_unit_price` | INTEGER | CHECK (>= 0), NOT NULL | Yes | Unit estimate in cents | Non-negative integer | Cents |
-| `estimated_line_total` | INTEGER | CHECK (>= 0), NOT NULL | Yes | `quantity * unit_price` | Non-negative integer | Cents |
+| `line_total` | REAL | Attribute | Yes | `round(qty * unit_estimate, 2)` | Exactly `qty * unit_estimate` | USD |
+| `estimated_line_total` | INTEGER | CHECK (>= 0), NOT NULL | Yes | Line total in cents | `int(round(line_total * 100))` | Cents |
 
 *Table Constraints:* `UNIQUE (request_id, line_number)`.
 

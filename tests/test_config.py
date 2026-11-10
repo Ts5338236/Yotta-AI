@@ -105,3 +105,28 @@ def test_missing_config_file_raises_not_found():
     """Verify that a non-existent config path raises FileNotFoundError."""
     with pytest.raises(FileNotFoundError):
         load_config("non_existent_config.yaml")
+
+
+def test_invalid_category_distributions_fail(base_valid_config):
+    """Verify that malformed category distribution parameters raise ConfigValidationError."""
+    invalid = copy.deepcopy(base_valid_config)
+    invalid["category_distributions"]["IT Hardware"]["max_price"] = 50  # less than min_price (100)
+
+    with pytest.raises(ConfigValidationError, match="cannot be less than min_price"):
+        validate_config(invalid)
+
+    invalid2 = copy.deepcopy(base_valid_config)
+    invalid2["category_distributions"]["Software"]["log_sigma"] = -0.5
+    with pytest.raises(ConfigValidationError, match="log_sigma .* must be positive"):
+        validate_config(invalid2)
+
+
+def test_invalid_seasonality_weights_fail(base_valid_config):
+    """Verify that non-positive or missing seasonality monthly weights fail validation."""
+    invalid = copy.deepcopy(base_valid_config)
+    invalid["seasonality"]["monthly_weights"][12] = -0.1
+
+    with pytest.raises(ConfigValidationError, match="must be a positive number"):
+        validate_config(invalid)
+
+

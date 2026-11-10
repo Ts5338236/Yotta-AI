@@ -201,6 +201,49 @@ def _validate_fx_rates(fx_rates: Any, base_currency: str) -> None:
         )
 
 
+def _validate_category_distributions(category_distributions: Any) -> None:
+    if category_distributions is None:
+        return
+    if not isinstance(category_distributions, dict) or not category_distributions:
+        raise ConfigValidationError("'category_distributions' must be a non-empty dictionary.")
+
+    for category, dist in category_distributions.items():
+        if not isinstance(dist, dict):
+            raise ConfigValidationError(f"Distribution parameters for '{category}' must be a dictionary.")
+        for field in ("log_mean", "log_sigma", "min_price", "max_price"):
+            if field not in dist:
+                raise ConfigValidationError(f"Missing '{field}' in category_distributions['{category}'].")
+            val = dist[field]
+            if not isinstance(val, (int, float)):
+                raise ConfigValidationError(f"'{field}' in category '{category}' must be numeric, got: {val}")
+        if dist["log_sigma"] <= 0:
+            raise ConfigValidationError(f"log_sigma for category '{category}' must be positive, got {dist['log_sigma']}")
+        if dist["min_price"] <= 0:
+            raise ConfigValidationError(f"min_price for category '{category}' must be positive, got {dist['min_price']}")
+        if dist["max_price"] < dist["min_price"]:
+            raise ConfigValidationError(
+                f"max_price ({dist['max_price']}) cannot be less than min_price ({dist['min_price']}) for category '{category}'."
+            )
+
+
+def _validate_seasonality(seasonality: Any) -> None:
+    if seasonality is None:
+        return
+    if not isinstance(seasonality, dict):
+        raise ConfigValidationError("'seasonality' section must be a dictionary.")
+    if "monthly_weights" not in seasonality:
+        raise ConfigValidationError("Missing 'monthly_weights' in 'seasonality' section.")
+    weights = seasonality["monthly_weights"]
+    if not isinstance(weights, dict):
+        raise ConfigValidationError("'monthly_weights' must be a dictionary.")
+    for month in range(1, 13):
+        val = weights.get(month) if month in weights else weights.get(str(month))
+        if val is None:
+            raise ConfigValidationError(f"Missing monthly weight for month {month}.")
+        if not isinstance(val, (int, float)) or val <= 0:
+            raise ConfigValidationError(f"Weight for month {month} must be a positive number, got: {val}")
+
+
 def validate_config(config: Mapping[str, Any]) -> Dict[str, Any]:
     """Validate a loaded configuration dictionary against project specifications.
 
@@ -228,6 +271,8 @@ def validate_config(config: Mapping[str, Any]) -> Dict[str, Any]:
     _validate_anomalies(config["anomalies"])
     _validate_procurement(config["procurement"])
     _validate_fx_rates(config["fx_rates"], config["project"]["base_currency"])
+    _validate_category_distributions(config.get("category_distributions"))
+    _validate_seasonality(config.get("seasonality"))
 
     return dict(config)
 
@@ -262,3 +307,4 @@ def load_config(config_path: str | Path | None = None) -> Dict[str, Any]:
             raise ConfigValidationError(f"Failed to parse YAML file: {err}") from err
 
     return validate_config(raw_config)
+
