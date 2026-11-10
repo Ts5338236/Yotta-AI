@@ -83,3 +83,20 @@ Assumptions are classified into three distinct categories:
 3. **Approver Organization Hierarchy**:
    - Each department has 1 designated `LINE_MANAGER` and 1 `DEPARTMENT_HEAD`.
    - Corporate Finance maintains centralized oversight for requests > \$25,000.
+
+---
+
+## Phase 4 Specific Assumptions: Derivation & Validation Architecture
+
+1. **Non-Circular Independent Validation (Category A)**:
+   - The `validate/` package operates autonomously from `datagen.derive.py`.
+   - The validation engine independently recalculates expected values directly from source records rather than calling `derive.py` and comparing outputs to themselves.
+2. **Financial Integer Quantization Tolerance (Category B)**:
+   - Unit prices are stored in database minor units (integer cents). When a line total is derived from FX conversion or landed costs, division by quantity may yield fractional cents.
+   - The financial validator accommodates this integer truncation by allowing a variance of at most $\le \max(1, \text{quantity})$ minor units between `line_total` and `quantity * unit_price`.
+3. **Validation Severity Hierarchy (Category B)**:
+   - `CRITICAL`: Primary key duplicates/nulls, broken foreign key references, budget overruns, and unapproved PO creation. Triggers non-zero exit code.
+   - `ERROR`: Mathematical rounding discrepancies, state machine skips, and approval threshold violations. Triggers non-zero exit code.
+   - `WARNING`: Informational operational alerts that do not breach schema constraints.
+4. **Sequential Lifecycle Event Sequencing (Category B)**:
+   - Chronological validation of lifecycle transitions for a specific entity orders status events by `status_event_id` to preserve exact monotonic state machine progression across concurrent transactions.

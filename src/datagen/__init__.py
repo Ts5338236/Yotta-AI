@@ -19,6 +19,19 @@ from datagen.masters import (
     generate_requesters,
     generate_suppliers,
 )
+from datagen.derive import (
+    derive_all,
+    derive_budget_balances,
+    derive_current_statuses,
+    derive_delivery_metrics,
+    derive_delivery_summaries,
+    derive_purchase_order_line_totals,
+    derive_purchase_order_totals,
+    derive_purchase_request_totals,
+    derive_quote_landed_costs,
+    derive_request_line_totals,
+    derive_supplier_scores,
+)
 from datagen.orders import generate_orders
 from datagen.requests import (
     generate_all_requests,
@@ -28,7 +41,7 @@ from datagen.requests import (
 from datagen.sourcing import classify_sourcing_paths, generate_sourcing
 from datagen.workflow import generate_procurement_workflow, run_clean_path_validation
 
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 
 
 def generate_phase2_dataset(

@@ -4,7 +4,7 @@
 
 The **Procure-to-Pay Synthetic Data Generator** (`procure-to-pay-datagen`) is an enterprise-grade synthetic data engineering platform designed to simulate a realistic, end-to-end corporate procurement lifecycle. The platform generates structurally sound, relational, anomaly-injected datasets for testing, machine learning evaluation, and data warehouse benchmarking.
 
-### In Scope (Phases 1, 2, and 3 Complete)
+### In Scope (Phases 1, 2, 3, and 4 Complete)
 - **Master Data**: Departments, Budgets, Requesters (DAG tree), Suppliers, and Approvers (`src/datagen/masters.py`).
 - **Requisitions**: Purchase Requests and Request Lines with log-normal pricing and 2026 calendar seasonality (`src/datagen/requests.py`).
 - **Approval Engine**: Multi-level financial thresholds, line manager, department head, and corporate finance approvals (`src/datagen/approvals.py`).
@@ -13,13 +13,14 @@ The **Procure-to-Pay Synthetic Data Generator** (`procure-to-pay-datagen`) is an
 - **Fulfillment & Deliveries**: Physical goods receipts supporting partial and multi-shipment scenarios (`src/datagen/delivery.py`).
 - **Budget Ledger**: Double-entry style event ledger (`ALLOCATE`, `RESERVE`, `COMMIT`, `RELEASE`, `SPEND`) with balance reconciliation (`src/datagen/budget.py`).
 - **Lifecycle History**: Complete state machine transition tracking across PR, RFQ, PO, and Delivery (`src/datagen/events.py`).
+- **Centralized Derived Fields Engine**: Recalculates line totals, request totals, quote landed costs, composite scores, PO totals, delivery fulfillments, and budget balances (`src/datagen/derive.py`).
+- **Comprehensive Independent Validation Suite**: 7-domain auditing covering primary keys, foreign keys, arithmetic reconciliation, lifecycle state continuity, date chronology, approvals & awards, and budget ledgers (`src/validate/checks.py`, `src/validate/models.py`).
 - **End-to-End Orchestration**: Seamless pipeline coordination with clean-path validation (`src/datagen/workflow.py`).
 
 ### System Boundaries (Scheduled for Subsequent Phases)
-- Phase 4: Foundational automated verification & multi-tier validation package expansion.
-- Phase 5: Deep relational anomaly detectors.
-- Phase 6: Controlled anomaly injection (split POs, phantom vendors, budget overruns, late shipments).
-- Phase 7: Export to CSV, JSON, and bulk SQLite database.
+- Phase 5: Data export and storage engine (CSV, JSON, and bulk relational SQLite database).
+- Phase 6: Controlled anomaly injection (split POs, phantom vendors, budget overruns, late shipments) and ground truth labeling.
+- Phase 7: End-to-end validation, audit reporting, and test bench verification.
 
 ---
 
@@ -49,11 +50,13 @@ procure-to-pay-datagen/
 │   │   ├── delivery.py         # Deliveries & partial shipments
 │   │   ├── budget.py           # Budget event ledger & balance reconciliation
 │   │   ├── events.py           # Status event lifecycle history
+│   │   ├── derive.py           # Centralized derived fields recalculation engine
 │   │   └── workflow.py         # Workflow orchestration & clean-path validation
 │   └── validate/               # Quality assurance & verification package
-│       ├── __init__.py
-│       ├── __main__.py
-│       └── checks.py           # Foundational schema & relational validators
+│       ├── __init__.py         # Package exports
+│       ├── __main__.py         # CLI execution entry point
+│       ├── models.py           # ValidationCheckResult & ValidationReport models
+│       └── checks.py           # 7-domain independent auditing engine & SQLite checks
 ├── data/
 │   ├── csv/                    # Target directory for CSV exports (.gitkeep)
 │   ├── json/                   # Target directory for JSON exports (.gitkeep)
@@ -65,15 +68,17 @@ procure-to-pay-datagen/
 │   ├── data_dictionary.md
 │   ├── assumptions.md
 │   ├── validation_summary.md
+│   ├── validation_summary.json
 │   ├── reproducibility.md
 │   ├── source_manifest.md
 │   └── AI_USAGE.md
-├── tests/                      # Automated pytest suite (66 passing tests)
+├── tests/                      # Automated pytest suite (112 passing tests)
 │   ├── __init__.py
 │   ├── test_approvals.py       # Approval thresholds & roles
 │   ├── test_budget.py          # Budget event ledger & reconciliation
 │   ├── test_config.py          # Configuration loading & validation
 │   ├── test_delivery.py        # Delivery fulfillment & partial shipments
+│   ├── test_derive.py          # Centralized derived fields unit tests (11 functions)
 │   ├── test_determinism.py     # Determinism & seed reproducibility
 │   ├── test_distributions.py   # Price & seasonality distribution verification
 │   ├── test_fx.py              # Decimal FX conversion
@@ -85,12 +90,21 @@ procure-to-pay-datagen/
 │   ├── test_schema.py          # SQLite schema & constraints
 │   ├── test_sourcing.py        # Sourcing classification & RFQ invites
 │   ├── test_status_events.py   # State machine transitions
-│   └── test_workflow_integration.py # End-to-end integration & determinism
+│   ├── test_validation_approvals.py   # Approval & business rule validator tests
+│   ├── test_validation_budget.py      # Budget ledger validator tests
+│   ├── test_validation_dates.py       # Date chronology validator tests
+│   ├── test_validation_financial.py   # Financial reconciliation validator tests
+│   ├── test_validation_foreign_keys.py# Foreign key & relationship validator tests
+│   ├── test_validation_integration.py # End-to-end validator & reporting tests
+│   ├── test_validation_lifecycle.py   # Lifecycle state machine validator tests
+│   ├── test_validation_primary_keys.py# Primary key & ID format validator tests
+│   └── test_workflow_integration.py   # Full workflow integration & balance tests
 └── ai/
     └── prompts/
         ├── 01_phase1_foundation.md
         ├── 02_phase2_generation.md
-        └── 03_phase3_procurement_workflow.md
+        ├── 03_phase3_procurement_workflow.md
+        └── 04_phase4_derived_validation.md
 ```
 
 ---
@@ -156,3 +170,32 @@ flowchart TD
 2. **State-Isolated Sequence Counters**: Identifiers for all 18 entities are produced deterministically through `IDFactory`.
 3. **Double-Entry Budget Integrity**: `budget_events` tracks every financial movement, ensuring `allocated >= reserved + committed + spent`.
 4. **State Machine Consistency**: Status changes are tracked in `status_events`, guaranteeing chronological validity.
+
+---
+
+## 5. Derived Fields Engine & Comprehensive Validation Architecture (Phase 4)
+
+Phase 4 introduces a strict separation of concerns between **derivation** (`src/datagen/derive.py`) and **independent validation** (`src/validate/checks.py`, `src/validate/models.py`).
+
+### A. Centralized Derived Fields Engine (`derive.py`)
+Provides pure, non-circular mathematical and relational recalculation directly from raw source records:
+1. `derive_request_line_totals`: Computes exact line totals in integer cents from quantity and estimated unit price.
+2. `derive_purchase_request_totals`: Aggregates itemized request lines to derive total estimated amounts and USD values.
+3. `derive_quote_landed_costs`: Calculates native currency totals, base USD conversions, freight, duty, tax, and landed costs.
+4. `derive_supplier_scores`: Executes min-max normalization across competing quotes and computes weighted composite scores.
+5. `derive_purchase_order_totals`: Derives binding purchase order totals directly from PO line items.
+6. `derive_delivery_summaries`: Aggregates cumulative receipts per PO, evaluating full delivery and late arrival flags.
+7. `derive_current_statuses`: Resolves current entity status from the latest valid `StatusEvent`.
+8. `derive_budget_balances`: Reconstructs active `reserved`, `committed`, `spent`, and `available` balances from the double-entry event ledger.
+9. `derive_delivery_metrics`: Computes operational performance metrics (on-time rate, average lead times, average delay days).
+
+### B. Independent Validation Architecture (`src/validate/`)
+The validation framework operates independently of `derive.py` to prevent circular verification. Expected values are recalculated autonomously from primary source transactions:
+- **Primary Key & ID Auditing**: Verifies non-nullness, uniqueness, and adherence to `ID_REGEX_MAP` patterns across all 18 entities.
+- **Foreign Key & Cross-Entity Integrity**: Validates every relational reference, including compound rules (e.g. quoting suppliers must be invited, PR departments must match requester departments).
+- **Financial Arithmetic Reconciliation**: Verifies exact multiplication, summation, landed cost formulas, and scoring bounds.
+- **Lifecycle State Machine Verification**: Audits status sequence continuity, disallowing illegal jumps and prohibiting orders on rejected requisitions.
+- **Date Ordering & Chronology**: Validates the end-to-end timeline: $\text{Requisition} \le \text{Approval} \le \text{RFQ} \le \text{Quote} \le \text{Award} \le \text{PO} \le \text{Delivery}$.
+- **Approval & Procurement Business Rules**: Audits monetary delegation thresholds, required approver roles, and objective lowest-score award criteria.
+- **Double-Entry Budget Reconciliation**: Audits event types, positive amounts, initial allocations, and proves 0 budget overruns on clean paths.
+- **Machine-Readable Reports**: Automatically emits comprehensive markdown (`docs/validation_summary.md`) and JSON (`docs/validation_summary.json`) reports.

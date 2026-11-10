@@ -342,3 +342,30 @@ Detailed operational and anomaly event log for data auditing. Population schedul
 | `reason` | TEXT | NOT NULL | Yes | Root cause or violation text | Non-empty string | - |
 | `logged_at` | TEXT | NOT NULL | Yes | Exception detection timestamp | ISO 8601 UTC timestamp | Time |
 | `resolved` | INTEGER | CHECK (0, 1), NOT NULL | Yes | Resolution flag | `0` (Unresolved), `1` (Resolved) | Boolean |
+
+---
+
+## 19. Derived & Computed Fields Summary (Phase 4 Centralization)
+
+All derived attributes are calculated deterministically by `src/datagen/derive.py` from raw source records:
+
+| Derived Field | Target Entity | Source Table(s) | Mathematical Derivation / Formula |
+| :--- | :--- | :--- | :--- |
+| `estimated_line_total` | `request_lines` | `request_lines` | $\text{quantity} \times \text{estimated\_unit\_price}$ (cents) |
+| `line_total` | `request_lines` | `request_lines` | $\text{round}(\text{estimated\_line\_total} / 100.0, 2)$ (USD) |
+| `total_estimated_amount` | `purchase_requests` | `request_lines` | $\sum \text{request\_lines.estimated\_line\_total}$ (cents) |
+| `total_estimate_usd` | `purchase_requests` | `request_lines` | $\sum \text{request\_lines.line\_total}$ (USD) |
+| `line_total` | `quote_lines` | `quote_lines` | $\text{quantity} \times \text{unit\_price}$ (native cents) |
+| `line_total_base` | `quote_lines` | `quote_lines`, FX | $\text{round}(\text{line\_total} \times \text{fx\_rate\_to\_base})$ (USD cents) |
+| `total_quoted_amount` | `supplier_quotes` | `quote_lines` | $\sum \text{quote\_lines.line\_total}$ (native cents) |
+| `total_quoted_amount_base` | `supplier_quotes` | `quote_lines` | $\sum \text{quote\_lines.line\_total\_base}$ (USD cents) |
+| `landed_cost_base` | `supplier_quotes` | `quote_lines` | $\text{merchandise\_usd} + \text{freight} + \text{duty} + \text{tax\_nonrecoverable}$ |
+| `score` | `supplier_quotes` | `supplier_quotes` | $0.60 \times C_{\text{norm}} + 0.25 \times L_{\text{norm}} + 0.15 \times R_{\text{norm}}$ |
+| `line_total` | `purchase_order_lines`| `purchase_order_lines`| $\text{quantity} \times \text{unit\_price}$ (cents) |
+| `total_amount` | `purchase_orders` | `purchase_order_lines`| $\sum \text{purchase\_order\_lines.line\_total}$ (cents) |
+| `value` | `purchase_orders` | `purchase_order_lines`| $\text{round}(\text{total\_amount} / 100.0, 2)$ (USD) |
+| `reserved_amount` | `budgets` | `budget_events` | $\sum \text{RESERVE} - \sum \text{RELEASE}$ (cents) |
+| `committed_amount` | `budgets` | `budget_events` | $\sum \text{COMMIT} - \sum \text{SPEND}$ (cents) |
+| `spent_amount` | `budgets` | `budget_events` | $\sum \text{SPEND}$ (cents) |
+| `available_amount` | `budgets` | `budgets`, `budget_events` | $\text{allocated} - (\text{reserved} + \text{committed} + \text{spent})$ (cents) |
+| `current_status` | All Lifecycle Entities| `status_events` | Latest $\text{StatusEvent.to\_status}$ ordered by timestamp and ID |

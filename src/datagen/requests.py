@@ -9,6 +9,7 @@ from __future__ import annotations
 from typing import Any, Dict, List, Mapping
 import numpy as np
 
+from datagen.derive import derive_purchase_request_totals
 from datagen.ids import IDFactory
 
 
@@ -372,17 +373,7 @@ def generate_all_requests(
     )
 
     # Calculate exact derived totals from lines for each purchase request
-    pr_totals_usd: Dict[str, float] = {}
-    pr_totals_cents: Dict[str, int] = {}
-    for line in request_lines:
-        req_id = line["request_id"]
-        pr_totals_usd[req_id] = round(pr_totals_usd.get(req_id, 0.0) + line["line_total"], 2)
-        pr_totals_cents[req_id] = pr_totals_cents.get(req_id, 0) + line["estimated_line_total"]
-
-    for pr in purchase_requests:
-        req_id = pr["request_id"]
-        pr["total_estimate_usd"] = pr_totals_usd.get(req_id, 0.0)
-        pr["total_estimated_amount"] = pr_totals_cents.get(req_id, 0)
+    derive_purchase_request_totals(request_lines, purchase_requests)
 
     return {
         "purchase_requests": purchase_requests,

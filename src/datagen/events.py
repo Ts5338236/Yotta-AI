@@ -105,10 +105,11 @@ def generate_status_events(
 
         # Approvals
         req_approvals = approvals_by_request.get(req_id, [])
-        for app in req_approvals:
+        for idx, app in enumerate(req_approvals):
             dec = app["decision"]
             dec_ts = app["decision_date"]
             app_id = app["approver_id"]
+            from_st = "PENDING_APPROVAL" if idx == 0 else req_approvals[idx - 1]["decision"]
 
             se_app = id_factory.next_status_event_id()
             status_events.append({
@@ -117,8 +118,8 @@ def generate_status_events(
                 "entity": "PURCHASE_REQUEST",
                 "entity_type": "PURCHASE_REQUEST",
                 "entity_id": req_id,
-                "from_status": "PENDING_APPROVAL",
-                "previous_status": "PENDING_APPROVAL",
+                "from_status": from_st,
+                "previous_status": from_st,
                 "to_status": dec,
                 "new_status": dec,
                 "actor": app_id,
