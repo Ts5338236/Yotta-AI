@@ -80,3 +80,4 @@ def test_detects_duplicate_rfq_supplier_invitation(starter_dataset):
     failures = [r for r in results if r.check_name == "rfq_invite_uniqueness" and not r.passed]
     assert len(failures) >= 1
     assert failures[0].entity == "rfq_supplier_invites"
+

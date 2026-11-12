@@ -128,3 +128,4 @@ def test_exact_financial_reconciliation(master_data):
         assert pr["total_estimate_usd"] == lines_sum_usd[pid]
         assert pr["total_estimated_amount"] == lines_sum_cents[pid]
         assert pr["total_estimate_usd"] > 0.0
+

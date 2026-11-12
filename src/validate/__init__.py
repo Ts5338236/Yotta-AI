@@ -1,5 +1,17 @@
 """Validation package for Procure-to-Pay Synthetic Data Generator (Phase 4)."""
 
+from validate.anomaly_checks import (
+    AnomalyFinding,
+    detect_all_anomalies,
+    detect_budget_overrun,
+    detect_duplicate_purchase_request,
+    detect_expired_quote_before_award,
+    detect_inactive_supplier_used,
+    detect_non_cheapest_quote_without_rationale,
+    detect_po_without_approval,
+    detect_quote_currency_mismatch,
+    evaluate_detections,
+)
 from validate.checks import (
     EXPECTED_TABLES,
     ValidationCheckError,
@@ -24,9 +36,19 @@ from validate.models import ValidationCheckResult, ValidationReport
 __version__ = "2.0.0"
 __all__ = [
     "EXPECTED_TABLES",
+    "AnomalyFinding",
     "ValidationCheckError",
     "ValidationCheckResult",
     "ValidationReport",
+    "detect_all_anomalies",
+    "detect_budget_overrun",
+    "detect_duplicate_purchase_request",
+    "detect_expired_quote_before_award",
+    "detect_inactive_supplier_used",
+    "detect_non_cheapest_quote_without_rationale",
+    "detect_po_without_approval",
+    "detect_quote_currency_mismatch",
+    "evaluate_detections",
     "check_foreign_key_violations",
     "check_foreign_keys_enabled",
     "check_required_tables_exist",

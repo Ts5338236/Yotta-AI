@@ -279,3 +279,4 @@ def generate_procurement_workflow(
         raise ValueError(f"Clean-path validation failed ({len(validation_errors)} errors):\n{error_msg}")
 
     return dataset
+

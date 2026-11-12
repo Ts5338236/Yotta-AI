@@ -80,3 +80,4 @@ def test_numerical_sanity_checks(full_dataset):
         assert line["line_total"] > 0
         assert not np.isnan(line["unit_estimate"])
         assert not np.isnan(line["line_total"])
+

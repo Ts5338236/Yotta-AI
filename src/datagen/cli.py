@@ -76,7 +76,12 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument(
         "--generate",
         action="store_true",
-        help="Execute Phase 2 in-memory synthetic data generation",
+        help="Execute in-memory synthetic data generation",
+    )
+    parser.add_argument(
+        "--inject-anomalies",
+        action="store_true",
+        help="Inject controlled procurement anomalies into generated dataset",
     )
     parser.add_argument(
         "--scale",
@@ -121,7 +126,16 @@ def main(argv: list[str] | None = None) -> None:
             )
             meta = dataset["metadata"]
             total_spend = sum(po["value"] for po in dataset["purchase_orders"])
-            print("=== Phase 3 Procurement Workflow Generation Successful ===")
+
+            gt_records = []
+            if args.inject_anomalies:
+                from datagen.anomalies import inject_anomalies
+                import numpy as np
+                cfg = load_config(args.config)
+                rng = np.random.default_rng(meta["seed"])
+                dataset, gt_records = inject_anomalies(dataset, cfg, rng)
+
+            print("=== Procurement Workflow Generation Successful ===")
             print(f"Scale Tier        : {meta['scale']}")
             print(f"Random Seed       : {meta['seed']}")
             print(f"Departments       : {len(dataset['departments'])}")
@@ -141,6 +155,13 @@ def main(argv: list[str] | None = None) -> None:
             print(f"Budget Events     : {len(dataset['budget_events'])}")
             print(f"Status Events     : {len(dataset['status_events'])}")
             print(f"Total PO Spend    : ${total_spend:,.2f} {meta['base_currency']}")
+
+            if args.inject_anomalies:
+                print(f"\nInjected Anomalies: {len(gt_records)}")
+                from collections import Counter
+                counts = Counter(r["issue_type"] if isinstance(r, dict) else r.issue_type for r in gt_records)
+                for itype, cnt in sorted(counts.items()):
+                    print(f"  - {itype}: {cnt}")
             sys.exit(0)
         except Exception as err:
             print(f"Generation error: {err}", file=sys.stderr)

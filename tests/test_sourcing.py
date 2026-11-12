@@ -95,3 +95,4 @@ def test_rfq_and_supplier_invitations_integrity(sourcing_setup):
         rfq_invites = invites_by_rfq.get(rfq["rfq_id"], [])
         assert len(rfq_invites) >= 3, f"RFQ {rfq['rfq_id']} has fewer than 3 supplier invitations"
         assert rfq["due_date"] > rfq["issue_date"]
+

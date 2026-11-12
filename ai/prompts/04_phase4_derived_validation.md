@@ -824,3 +824,4 @@ Create a Git commit only after reviewing the working tree and confirming tests p
 STOP AFTER PHASE 4.
 
 Wait for my explicit approval before beginning Phase 5.
+

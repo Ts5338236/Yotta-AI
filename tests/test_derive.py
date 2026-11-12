@@ -191,3 +191,4 @@ def test_derive_all_integration(starter_dataset):
     assert "current_statuses" in derived
     assert "budget_balances" in derived
     assert derived["delivery_metrics"]["on_time_rate"] > 0.70
+

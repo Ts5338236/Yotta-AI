@@ -67,3 +67,4 @@ def test_detects_reconciled_balance_mismatch(starter_dataset):
     ]
     assert len(failures) >= 1
     assert failures[0].entity == "budgets"
+

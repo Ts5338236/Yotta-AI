@@ -80,3 +80,4 @@ def test_corrupted_dataset_triggers_overall_fail():
     assert report.status == "FAIL"
     assert report.summary["failed"] >= 2
     assert len(report.failures) >= 2
+

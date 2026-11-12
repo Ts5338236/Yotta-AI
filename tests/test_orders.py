@@ -96,3 +96,4 @@ def test_purchase_order_lines_reconciliation(orders_setup):
         assert po["total_amount"] == total_cents
         assert po["value"] == round(total_cents / 100.0, 2)
         assert all(l["quantity"] > 0 for l in lines)
+

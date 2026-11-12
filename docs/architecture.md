@@ -4,7 +4,7 @@
 
 The **Procure-to-Pay Synthetic Data Generator** (`procure-to-pay-datagen`) is an enterprise-grade synthetic data engineering platform designed to simulate a realistic, end-to-end corporate procurement lifecycle. The platform generates structurally sound, relational, anomaly-injected datasets for testing, machine learning evaluation, and data warehouse benchmarking.
 
-### In Scope (Phases 1, 2, 3, and 4 Complete)
+### In Scope (Phases 1, 2, 3, 4, and 5 Complete)
 - **Master Data**: Departments, Budgets, Requesters (DAG tree), Suppliers, and Approvers (`src/datagen/masters.py`).
 - **Requisitions**: Purchase Requests and Request Lines with log-normal pricing and 2026 calendar seasonality (`src/datagen/requests.py`).
 - **Approval Engine**: Multi-level financial thresholds, line manager, department head, and corporate finance approvals (`src/datagen/approvals.py`).
@@ -16,11 +16,13 @@ The **Procure-to-Pay Synthetic Data Generator** (`procure-to-pay-datagen`) is an
 - **Centralized Derived Fields Engine**: Recalculates line totals, request totals, quote landed costs, composite scores, PO totals, delivery fulfillments, and budget balances (`src/datagen/derive.py`).
 - **Comprehensive Independent Validation Suite**: 7-domain auditing covering primary keys, foreign keys, arithmetic reconciliation, lifecycle state continuity, date chronology, approvals & awards, and budget ledgers (`src/validate/checks.py`, `src/validate/models.py`).
 - **End-to-End Orchestration**: Seamless pipeline coordination with clean-path validation (`src/datagen/workflow.py`).
+- **Modular Anomaly Injection Engine**: Post-generation mutations injecting 7 procurement anomaly types with sequence synchronization (`src/datagen/anomalies.py`).
+- **Ground Truth Generation**: Dedicated immutable ground truth records with `ANOM-######` IDs strictly segregated from operational tables (`src/datagen/anomalies.py`).
+- **Independent Anomaly Detection & Evaluation**: 7 independent rule-based detectors and metric evaluator achieving 100% precision and recall (`src/validate/anomaly_checks.py`).
 
 ### System Boundaries (Scheduled for Subsequent Phases)
-- Phase 5: Data export and storage engine (CSV, JSON, and bulk relational SQLite database).
-- Phase 6: Controlled anomaly injection (split POs, phantom vendors, budget overruns, late shipments) and ground truth labeling.
-- Phase 7: End-to-end validation, audit reporting, and test bench verification.
+- Phase 6: Final data export and storage engine (CSV, JSON, and bulk relational SQLite database).
+- Phase 7: Test bench verification and final round packaging.
 
 ---
 
@@ -51,12 +53,14 @@ procure-to-pay-datagen/
 │   │   ├── budget.py           # Budget event ledger & balance reconciliation
 │   │   ├── events.py           # Status event lifecycle history
 │   │   ├── derive.py           # Centralized derived fields recalculation engine
+│   │   ├── anomalies.py        # Anomaly injection engine & ground truth generator
 │   │   └── workflow.py         # Workflow orchestration & clean-path validation
 │   └── validate/               # Quality assurance & verification package
 │       ├── __init__.py         # Package exports
 │       ├── __main__.py         # CLI execution entry point
 │       ├── models.py           # ValidationCheckResult & ValidationReport models
-│       └── checks.py           # 7-domain independent auditing engine & SQLite checks
+│       ├── checks.py           # 7-domain independent auditing engine & SQLite checks
+│       └── anomaly_checks.py   # Independent anomaly detectors & evaluation engine
 ├── data/
 │   ├── csv/                    # Target directory for CSV exports (.gitkeep)
 │   ├── json/                   # Target directory for JSON exports (.gitkeep)
@@ -65,14 +69,16 @@ procure-to-pay-datagen/
 │       └── seed.sql            # Seed SQL script placeholder
 ├── docs/                       # Architecture, data dictionary, & technical specifications
 │   ├── architecture.md
+│   ├── anomaly_catalog.md
 │   ├── data_dictionary.md
 │   ├── assumptions.md
+│   ├── prompt_history.md
 │   ├── validation_summary.md
 │   ├── validation_summary.json
 │   ├── reproducibility.md
 │   ├── source_manifest.md
 │   └── AI_USAGE.md
-├── tests/                      # Automated pytest suite (112 passing tests)
+├── tests/                      # Automated pytest suite (142 passing tests)
 │   ├── __init__.py
 │   ├── test_approvals.py       # Approval thresholds & roles
 │   ├── test_budget.py          # Budget event ledger & reconciliation

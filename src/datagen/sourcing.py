@@ -305,3 +305,4 @@ def generate_sourcing(
         "quote_lines": quote_lines,
         "awarded_quotes": awarded_quotes,
     }
+

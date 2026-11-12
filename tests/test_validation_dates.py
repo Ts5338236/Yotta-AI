@@ -74,3 +74,4 @@ def test_detects_delivery_preceding_purchase_order(starter_dataset):
     failures = [r for r in results if r.check_name == "date_delivery_after_po" and not r.passed]
     assert len(failures) >= 1
     assert failures[0].entity == "deliveries"
+

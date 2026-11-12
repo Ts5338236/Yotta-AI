@@ -96,3 +96,4 @@ def test_detects_budget_overrun(starter_dataset):
     assert len(failures) >= 1
     assert failures[0].entity == "budgets"
     assert failures[0].severity == "CRITICAL"
+

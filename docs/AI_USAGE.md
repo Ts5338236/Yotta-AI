@@ -13,6 +13,7 @@ This document transparently records how Artificial Intelligence (AI) tools were 
   - Phase 2: `ai/prompts/02_phase2_generation.md`
   - Phase 3: `ai/prompts/03_phase3_procurement_workflow.md`
   - Phase 4: `ai/prompts/04_phase4_derived_validation.md`
+  - Phase 5: `ai/prompts/05_phase5_anomalies.md`
 
 ---
 
@@ -39,20 +40,38 @@ This document transparently records how Artificial Intelligence (AI) tools were 
   - Implemented structured validation results with severity ratings (`CRITICAL`, `ERROR`, `WARNING`, `INFO`).
   - Added automated report generation for GitHub-flavored Markdown (`docs/validation_summary.md`) and deterministic JSON (`docs/validation_summary.json`).
 - **Testing & Corrupted Fixture Design (`tests/`)**:
-  - Authored 46 new unit and integration tests across 9 focused validation test suites.
+  - Authored 46 unit and integration tests across 9 focused validation test suites.
   - Created intentionally corrupted test fixtures to prove the validator detects duplicate PKs, broken FKs, arithmetic discrepancies, illegal state jumps, date inversions, and budget overruns.
+
+### Phase 5 Anomaly Injection, Ground Truth Generation & Detection Engine
+- **Modular Anomaly Injection Engine (`src/datagen/anomalies.py`)**:
+  - Implemented 7 distinct procurement anomaly mutations post-generation without polluting core master data generation.
+  - Built dynamic IDFactory sequence counter synchronization (`sync_factory_counters`) preventing primary key collisions when synthesizing new records.
+  - Maintained disjoint mutation candidate tracking to guarantee that multiple injectors do not corrupt the same target records.
+- **Ground Truth Isolation & Modeling**:
+  - Formatted dedicated `GroundTruthRecord` objects with standardized `ANOM-######` primary keys.
+  - Kept ground truth strictly isolated from operational tables (zero boolean injection flags or contamination).
+- **Independent Anomaly Detection & Evaluation (`src/validate/anomaly_checks.py`)**:
+  - Created 7 independent rule-based detectors inspecting operational tables without reading ground truth or injection metadata.
+  - Implemented edge-case discrimination (e.g. non-cheapest award with valid justification is not flagged; quotes awarded before expiry pass).
+  - Built comprehensive evaluation engine calculating TP, FP, FN, Precision, Recall, and F1 overall and per-category.
+- **Dual Validation Modes**:
+  - `clean` mode: validates baseline data health and expects 0 anomalies (clean datasets pass, anomaly-injected datasets fail).
+  - `anomaly_aware` mode: validates baseline data health, runs detectors, and evaluates detections against ground truth.
 
 ---
 
 ## 3. Verification & Testing of Generated Code
 
-- **Automated Test Execution**: All 112 automated tests passed with a 100% pass rate:
+- **Automated Test Execution**: All 142 automated pytest tests passed with a 100% pass rate:
   - Foundational and generation suites: 66 tests.
   - Derived fields and validation suites: 46 tests.
+  - Anomaly injection, detection, ground truth, and metrics suites: 30 tests.
 - **Comprehensive Validation Audit Execution**:
-  - **Starter Scale Dataset**: 10,830 checks executed, 10,830 passed, 0 failed, 0 warnings (**PASS**).
-  - **Full Scale Dataset**: 108,960 checks executed, 108,960 passed, 0 failed, 0 warnings (**PASS**).
-- **Corrupted Fixture Detection**: Automated tests confirmed 100% detection rate for duplicate IDs, missing foreign keys, line-total arithmetic mismatches, illegal state jumps, date inversions, and budget overruns.
+  - **Starter Scale Dataset (Clean Mode)**: 10,830 checks executed, 10,830 passed, 0 failed, 0 warnings (**PASS**).
+  - **Starter Scale Dataset (Anomaly-Aware Mode)**: 7/7 anomalies detected, 0 FP, 0 FN, 100% precision, 100% recall (**PASS**).
+  - **Full Scale Dataset (Anomaly-Aware Mode)**: 35/35 anomalies detected, 0 FP, 0 FN, 100% precision, 100% recall (**PASS**).
+- **Clean Mode Rejection**: Anomaly-injected datasets reliably fail validation in `clean` mode, proving zero silent acceptance of non-compliant records.
 
 ---
 
@@ -60,15 +79,15 @@ This document transparently records how Artificial Intelligence (AI) tools were 
 
 The following items are designated for human developer evaluation and sign-off:
 
-- [ ] **TODO: Review Integer Cent Quantization Tolerance**: Confirm that allowing a tolerance of $\le \max(1, \text{quantity})$ cents between `line_total` and `quantity * unit_price` is acceptable for integer cent storage.
-- [ ] **TODO: Review State Machine Target Set**: Verify whether `COMPLETED` and `ORDERED` terminal states match company ERP lifecycle conventions.
-- [ ] **TODO: Human Approval for Phase 5 Transition**: Explicit developer approval required prior to beginning Phase 5 (Data Export & Storage Engine).
+- [ ] **TODO: Review Anomaly Distribution Weights**: Confirm that 1 anomaly per category in starter scale and 5 per category in full scale matches expected machine learning training/eval ratios.
+- [ ] **TODO: Review Operational Action Taxonomy**: Confirm that `expected_decision` values (`REJECT`, `DISQUALIFY`, `JUSTIFY_OR_REVERT`, `BLOCK`, `FLAG`, `REVISE`) conform to client ERP policy.
+- [ ] **TODO: Human Approval for Phase 6 Transition**: Explicit developer approval required prior to beginning Phase 6 (Data Export Engine & Relational Storage).
 
 ---
 
 ## 5. Scope Boundaries Maintained
 
-In strict accordance with Phase 4 instructions:
-1. **No Anomaly Injection**: Anomaly injection (split POs, phantom suppliers, budget overruns, off-contract spend) is deferred strictly to Phase 6.
-2. **No Final Export Engine**: CSV, JSON, and bulk SQL relational export engines are deferred to Phase 5.
-3. **Non-Circular Guarantee**: Validation routines do not call `derive.py` to verify output; all expectations are independently recalculated.
+In strict accordance with Phase 5 instructions:
+1. **No Final Export Engine**: CSV, JSON export formats and SQLite persistent disk storage engine are deferred strictly to Phase 6.
+2. **Zero Contamination**: Detectors never read ground truth records or injection metadata; ground truth is never saved as operational table columns.
+3. **Execution Boundary**: Stopped immediately upon completion of Phase 5. Awaiting explicit user instruction before Phase 6.

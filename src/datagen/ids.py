@@ -31,6 +31,7 @@ ID_REGEX_MAP: Dict[str, str] = {
     "status_event": r"^SE-\d{6}$",
     "rfq_supplier_invite": r"^INV-\d{6}$",
     "exception_log": r"^EXC-\d{6}$",
+    "anomaly": r"^ANOM-\d{6}$",
 }
 
 # Pre-compiled patterns for high-performance validation
@@ -195,6 +196,12 @@ class IDFactory:
         self._counters["exception_log"] += 1
         seq = self._counters["exception_log"]
         return self._generate("exception_log", f"EXC-{seq:06d}")
+
+    def next_anomaly_id(self) -> str:
+        """Generate next Anomaly Ground Truth ID (e.g. ANOM-000001)."""
+        self._counters["anomaly"] += 1
+        seq = self._counters["anomaly"]
+        return self._generate("anomaly", f"ANOM-{seq:06d}")
 
     def validate_id(self, entity_type: str, entity_id: str) -> bool:
         """Validate if an entity ID matches the canonical pattern for that entity type.

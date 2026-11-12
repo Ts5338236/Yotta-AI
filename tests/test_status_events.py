@@ -37,3 +37,4 @@ def test_status_events_chronological_sequence(workflow_dataset):
             prev_ts = ev_list[i - 1]["event_ts"]
             curr_ts = ev_list[i]["event_ts"]
             assert curr_ts >= prev_ts, f"Out of order transition on {ent_type} {ent_id}: {curr_ts} < {prev_ts}"
+

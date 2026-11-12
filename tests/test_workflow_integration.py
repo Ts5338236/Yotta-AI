@@ -50,3 +50,4 @@ def test_workflow_seed_divergence():
     spend1 = sum(p["value"] for p in ds1["purchase_orders"])
     spend2 = sum(p["value"] for p in ds2["purchase_orders"])
     assert spend1 != spend2
+

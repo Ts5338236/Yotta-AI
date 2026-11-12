@@ -1617,10 +1617,15 @@ def validate_budget_ledger(dataset: Dict[str, Any]) -> List[ValidationCheckResul
 # MASTER VALIDATION COORDINATOR
 # ==============================================================================
 
+from validate.anomaly_checks import detect_all_anomalies, evaluate_detections
+
+
 def validate_dataset(
     dataset: Dict[str, Any],
     config: Optional[Mapping[str, Any]] = None,
     db_path: Optional[str | Path] = None,
+    mode: str = "clean",
+    ground_truth: Optional[List[Any]] = None,
 ) -> ValidationReport:
     """Execute all independent validation checks and produce a unified ValidationReport.
 
@@ -1628,11 +1633,13 @@ def validate_dataset(
         dataset: Dictionary containing all procurement entity record lists.
         config: Central configuration dictionary.
         db_path: Optional path to SQLite database for physical schema checks.
+        mode: Validation mode ('clean' or 'anomaly_aware').
+        ground_truth: Optional list of ground truth records or dicts.
 
     Returns:
         ValidationReport: Complete validation report with status, metrics, and failures.
     """
-    report = ValidationReport()
+    report = ValidationReport(mode=mode)
 
     # Record entity inventory counts
     for key, val in dataset.items():
@@ -1692,17 +1699,65 @@ def validate_dataset(
             description="SQLite PRAGMA foreign_key_check detects 0 orphaned rows",
         ))
 
+    # Anomaly detection and mode-specific verification
+    findings = detect_all_anomalies(dataset, config)
+    report.anomaly_findings = [f.to_dict() for f in findings]
+
+    gt = ground_truth if ground_truth is not None else dataset.get("ground_truth")
+
+    if mode == "clean":
+        # In clean mode, zero anomalies are expected. Any detected anomaly is a CRITICAL failure.
+        if findings:
+            for f in findings:
+                report.add_result(ValidationCheckResult(
+                    check_name=f"clean_mode_anomaly_{f.issue_type}",
+                    category="ANOMALY_FREE",
+                    passed=False,
+                    severity="CRITICAL",
+                    entity=f.entity,
+                    record_id=f.record_id,
+                    actual_value=f"Anomaly: {f.issue_type}",
+                    expected_value="Zero anomalies in clean dataset",
+                    description=f.description,
+                ))
+    elif mode == "anomaly_aware":
+        # In anomaly-aware mode, evaluate detected anomalies against ground truth
+        if gt is not None:
+            eval_metrics = evaluate_detections(findings, gt)
+            report.evaluation = eval_metrics
+            # If 100% precision and recall achieved on injected anomalies, mark PASS
+            if eval_metrics["precision"] == 1.0 and eval_metrics["recall"] == 1.0:
+                report.status = "PASS"
+            else:
+                report.status = "FAIL"
+
     return report
 
 
 def main() -> None:
     """CLI runner supporting both database file paths and in-memory generation validation."""
-    parser = argparse.ArgumentParser(description="Comprehensive Procure-to-Pay Validator (Phase 4)")
+    parser = argparse.ArgumentParser(description="Comprehensive Procure-to-Pay Validator & Anomaly Detector")
     parser.add_argument(
         "target",
         nargs="?",
         default="data/",
         help="Target database file path or data directory",
+    )
+    parser.add_argument(
+        "--mode",
+        choices=["clean", "anomaly_aware"],
+        default="clean",
+        help="Validation mode: 'clean' (expects 0 anomalies) or 'anomaly_aware' (evaluates detections against ground truth)",
+    )
+    parser.add_argument(
+        "--inject-anomalies",
+        action="store_true",
+        help="Inject controlled anomalies into in-memory generated dataset",
+    )
+    parser.add_argument(
+        "--evaluate",
+        action="store_true",
+        help="Print detailed anomaly detection metrics",
     )
     parser.add_argument(
         "--scale",
@@ -1746,12 +1801,22 @@ def main() -> None:
         sys.exit(0)
 
     # In-memory workflow generation and comprehensive validation
-    print(f"=== Generating Clean Dataset ({args.scale} scale, seed {args.seed}) ===")
+    print(f"=== Generating Dataset ({args.scale} scale, seed {args.seed}) ===")
     from datagen.workflow import generate_procurement_workflow
     dataset = generate_procurement_workflow(scale=args.scale, seed=args.seed)
 
-    print(f"=== Executing Comprehensive Phase 4 Independent Validation ===")
-    report = validate_dataset(dataset, config=config)
+    gt_records = None
+    if args.inject_anomalies:
+        print("=== Injecting Controlled Procurement Anomalies ===")
+        from datagen.anomalies import inject_anomalies
+        import numpy as np
+        rng = np.random.default_rng(args.seed)
+        dataset, gt_records = inject_anomalies(dataset, config, rng)
+        dataset["ground_truth"] = gt_records
+        print(f"Injected Anomalies   : {len(gt_records)}")
+
+    print(f"=== Executing Validation (Mode: {args.mode}) ===")
+    report = validate_dataset(dataset, config=config, mode=args.mode, ground_truth=gt_records)
 
     # Write reports to docs/
     report.save_reports(md_path=args.output_md, json_path=args.output_json)
@@ -1761,7 +1826,21 @@ def main() -> None:
     print(f"Failed Checks         : {report.summary['failed']:,}")
     print(f"Warnings              : {report.summary['warnings']:,}")
     print(f"Overall Status        : {report.status}")
-    print(f"Markdown Report Saved : {args.output_md}")
+    print(f"Detected Anomalies    : {len(report.anomaly_findings)}")
+
+    if report.evaluation:
+        ev = report.evaluation
+        print("\n=== Detection Performance Evaluation ===")
+        print(f"Ground Truth Count    : {ev['total_ground_truth']}")
+        print(f"Detected Count        : {ev['total_detected']}")
+        print(f"True Positives (TP)   : {ev['true_positives']}")
+        print(f"False Positives (FP)  : {ev['false_positives']}")
+        print(f"False Negatives (FN)  : {ev['false_negatives']}")
+        print(f"Precision             : {ev['precision'] * 100:.2f}%")
+        print(f"Recall                : {ev['recall'] * 100:.2f}%")
+        print(f"F1-Score              : {ev['f1_score']:.4f}")
+
+    print(f"\nMarkdown Report Saved : {args.output_md}")
     print(f"JSON Report Saved     : {args.output_json}")
 
     if report.status != "PASS":

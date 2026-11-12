@@ -48,6 +48,7 @@ class ValidationReport:
     """Comprehensive aggregation of all executed validation checks."""
 
     status: str = "PASS"  # PASS or FAIL
+    mode: str = "clean"   # clean or anomaly_aware
     summary: Dict[str, int] = field(default_factory=lambda: {
         "total_checks": 0,
         "passed": 0,
@@ -59,6 +60,8 @@ class ValidationReport:
     checks: List[ValidationCheckResult] = field(default_factory=list)
     failures: List[Dict[str, Any]] = field(default_factory=list)
     warnings: List[Dict[str, Any]] = field(default_factory=list)
+    anomaly_findings: List[Dict[str, Any]] = field(default_factory=list)
+    evaluation: Optional[Dict[str, Any]] = None
 
     def add_result(self, result: ValidationCheckResult) -> None:
         """Register a validation check result and update summary tallies."""
@@ -87,8 +90,9 @@ class ValidationReport:
 
     def to_dict(self) -> Dict[str, Any]:
         """Convert report to serializable dictionary matching PRD specification."""
-        return {
+        out = {
             "status": self.status,
+            "mode": self.mode,
             "summary": self.summary,
             "categories": self.categories,
             "entities": self.entities,
@@ -96,12 +100,18 @@ class ValidationReport:
             "failures": self.failures,
             "warnings": self.warnings,
         }
+        if self.anomaly_findings:
+            out["anomaly_findings"] = self.anomaly_findings
+        if self.evaluation:
+            out["evaluation"] = self.evaluation
+        return out
 
     def to_markdown(self) -> str:
         """Generate GitHub-flavored Markdown validation summary document."""
         lines = [
             "# Data Validation & Integrity Report",
             "",
+            f"**Validation Mode**: `{self.mode}`  ",
             f"**Overall Status**: `{self.status}`  ",
             f"**Total Checks Executed**: {self.summary['total_checks']:,}  ",
             f"**Passed Checks**: {self.summary['passed']:,}  ",
@@ -177,6 +187,37 @@ class ValidationReport:
                         f"| `{w['check_name']}` | `{w['entity']}` | `{w['record_id']}` | {w['description']} |"
                     )
 
+        if self.evaluation:
+            ev = self.evaluation
+            lines.extend([
+                "",
+                "---",
+                "",
+                "## 4. Anomaly Detection & Ground Truth Evaluation",
+                "",
+                f"**Total Ground Truth Anomalies**: {ev.get('total_ground_truth', 0)}  ",
+                f"**Total Inferred Detections**: {ev.get('total_detected', 0)}  ",
+                f"**True Positives**: {ev.get('true_positives', 0)}  ",
+                f"**False Positives**: {ev.get('false_positives', 0)}  ",
+                f"**False Negatives**: {ev.get('false_negatives', 0)}  ",
+                f"**Overall Precision**: {ev.get('precision', 0.0) * 100:.2f}%  ",
+                f"**Overall Recall**: {ev.get('recall', 0.0) * 100:.2f}%  ",
+                f"**Overall F1-Score**: {ev.get('f1_score', 0.0):.4f}  ",
+                "",
+                "### Performance by Anomaly Category",
+                "",
+                "| Category | Ground Truth | Detected | TP | FP | FN | Precision | Recall | F1 |",
+                "| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |",
+            ])
+            for cat, cstats in sorted(ev.get("by_category", {}).items()):
+                gt_cnt = cstats.get("ground_truth", cstats.get("ground_truth_count", 0))
+                det_cnt = cstats.get("detected", cstats.get("detected_count", 0))
+                lines.append(
+                    f"| `{cat}` | {gt_cnt} | {det_cnt} | {cstats['true_positives']} | "
+                    f"{cstats['false_positives']} | {cstats['false_negatives']} | {cstats['precision']*100:.1f}% | "
+                    f"{cstats['recall']*100:.1f}% | {cstats['f1_score']:.4f} |"
+                )
+
         lines.append("")
         return "\n".join(lines)
 
@@ -197,3 +238,4 @@ class ValidationReport:
 
         with open(json_p, "w", encoding="utf-8") as f:
             json.dump(self.to_dict(), f, indent=2)
+

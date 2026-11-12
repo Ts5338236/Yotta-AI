@@ -70,3 +70,4 @@ def test_detects_po_issued_for_rejected_requisition(starter_dataset):
     failures = [r for r in results if r.check_name == "lifecycle_rejected_pr_no_po" and not r.passed]
     assert len(failures) >= 1
     assert failures[0].severity == "CRITICAL"
+

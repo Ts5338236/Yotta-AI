@@ -102,3 +102,4 @@ def test_multicriteria_scoring_and_lowest_score_award(sourcing_artifacts):
             assert 0.0 <= q["score"] <= 1.0
             if q["quote_id"] != winner["quote_id"]:
                 assert q["status"] == "REJECTED"
+

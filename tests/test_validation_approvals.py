@@ -100,3 +100,4 @@ def test_detects_non_lowest_score_awarded(starter_dataset):
     ]
     assert len(failures) >= 1
     assert failures[0].severity == "CRITICAL"
+

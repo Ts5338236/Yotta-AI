@@ -1,5 +1,6 @@
 # Data Validation & Integrity Report
 
+**Validation Mode**: `clean`  
 **Overall Status**: `PASS`  
 **Total Checks Executed**: 10,830  
 **Passed Checks**: 10,830  

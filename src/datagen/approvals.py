@@ -184,3 +184,4 @@ def generate_approvals(
         "rejected_requests": rejected_requests,
         "draft_requests": draft_requests,
     }
+

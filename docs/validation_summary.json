@@ -1,5 +1,6 @@
 {
   "status": "PASS",
+  "mode": "clean",
   "summary": {
     "total_checks": 10830,
     "passed": 10830,

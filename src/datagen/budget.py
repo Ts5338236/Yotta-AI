@@ -220,3 +220,4 @@ def generate_budget_events(
         "budget_events": budget_events,
         "reconciled_budgets": reconciled_budgets,
     }
+

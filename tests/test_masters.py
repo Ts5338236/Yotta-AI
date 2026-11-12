@@ -159,3 +159,4 @@ def test_generate_all_masters_integration(base_config):
     assert len(masters["budgets"]) == 10
     assert len(masters["requesters"]) == 30
     assert len(masters["suppliers"]) == 12
+

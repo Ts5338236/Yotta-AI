@@ -76,3 +76,4 @@ def test_detects_competitive_po_missing_awarded_quote(starter_dataset):
     failures = [r for r in results if r.check_name == "fk_competitive_po_awarded_quote" and not r.passed]
     assert len(failures) >= 1
     assert failures[0].actual_value == "QUO-2026-999999"
+

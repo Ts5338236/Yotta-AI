@@ -45,3 +45,4 @@ def test_budget_balances_reconciled_without_overrun(workflow_dataset):
         assert alloc >= (res + com + spent), (
             f"Budget overrun detected on {b['budget_id']}: {alloc} < ({res} + {com} + {spent})"
         )
+

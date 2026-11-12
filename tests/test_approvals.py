@@ -106,3 +106,4 @@ def test_approval_chronological_ordering(workflow_setup):
     for app in approval_data["approvals"]:
         pr = pr_map[app["request_id"]]
         assert app["decision_date"][:10] >= pr["request_date"]
+

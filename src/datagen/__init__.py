@@ -5,6 +5,11 @@ from __future__ import annotations
 from typing import Any, Dict, Optional
 import numpy as np
 
+from datagen.anomalies import (
+    ANOMALY_CATEGORIES,
+    GroundTruthRecord,
+    inject_anomalies,
+)
 from datagen.approvals import generate_approvals
 from datagen.budget import generate_budget_events
 from datagen.config import load_config
@@ -96,6 +101,9 @@ __all__ = [
     "generate_procurement_workflow",
     "generate_phase2_dataset",
     "run_clean_path_validation",
+    "inject_anomalies",
+    "GroundTruthRecord",
+    "ANOMALY_CATEGORIES",
     "generate_all_masters",
     "generate_departments",
     "generate_budgets",
