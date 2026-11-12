@@ -31,9 +31,9 @@ def starter_dataset():
 def test_full_export_integrity_passes(starter_dataset, tmp_path):
     """Verify that export_all generates artifacts that achieve 100% PASS across all integrity audits."""
     data_dir = tmp_path / "data"
-    export_all(starter_dataset, base_dir=data_dir, schema_path="data/sql/schema.sql")
+    export_all(starter_dataset, base_dir=data_dir, schema_path="output/sql/schema.sql")
 
-    audit = validate_all_exports(starter_dataset, base_dir=data_dir, schema_path="data/sql/schema.sql")
+    audit = validate_all_exports(starter_dataset, base_dir=data_dir, schema_path="output/sql/schema.sql")
 
     assert audit["status"] == "PASS"
     assert audit["csv_validation"]["passed"] is True
@@ -45,7 +45,7 @@ def test_full_export_integrity_passes(starter_dataset, tmp_path):
 def test_integrity_audit_detects_corrupted_csv(starter_dataset, tmp_path):
     """Verify that a corrupted CSV file triggers audit failure."""
     data_dir = tmp_path / "data"
-    export_all(starter_dataset, base_dir=data_dir, schema_path="data/sql/schema.sql")
+    export_all(starter_dataset, base_dir=data_dir, schema_path="output/sql/schema.sql")
 
     # Corrupt a CSV by removing records
     dept_csv = data_dir / "csv" / "departments.csv"

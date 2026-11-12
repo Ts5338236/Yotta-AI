@@ -54,7 +54,7 @@ def main():
             ("4. Pytest Test Suite", [sys.executable, "-m", "pytest", "tests/", "-v"]),
             ("5. Starter Generation & Export", [sys.executable, "-m", "datagen", "--generate", "--scale", "starter", "--export", "--output-dir", "output_starter"]),
             ("6. Full Scale Generation, Anomaly Injection & Export", [sys.executable, "-m", "datagen", "--generate", "--scale", "full", "--inject-anomalies", "--export", "--output-dir", "output_full"]),
-            ("7. Two-Run Determinism Check", [sys.executable, "scratch/verify_determinism_2runs.py"]),
+            ("7. Two-Run Determinism Check", [sys.executable, "scripts/verify_determinism_2runs.py"]),
         ]
 
         all_ok = True

@@ -20,14 +20,16 @@ def init_database(db_path: str | Path, schema_path: str | Path | None = None) ->
 
     Args:
         db_path: Path where the SQLite database file should be created/updated.
-        schema_path: Optional custom path to schema.sql. Defaults to data/sql/schema.sql.
+        schema_path: Optional custom path to schema.sql. Defaults to output/sql/schema.sql.
     """
     target_db = Path(db_path).resolve()
     target_db.parent.mkdir(parents=True, exist_ok=True)
 
     if schema_path is None:
         project_root = Path(__file__).resolve().parent.parent.parent
-        resolved_schema = project_root / "data" / "sql" / "schema.sql"
+        resolved_schema = project_root / "output" / "sql" / "schema.sql"
+        if not resolved_schema.exists():
+            resolved_schema = project_root / "data" / "sql" / "schema.sql"
     else:
         resolved_schema = Path(schema_path).resolve()
 

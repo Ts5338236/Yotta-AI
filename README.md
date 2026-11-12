@@ -285,8 +285,8 @@ procure-to-pay-datagen/
 │       ├── checks.py           # 8-domain independent auditing engine & SQLite checks
 │       ├── anomaly_checks.py   # Independent anomaly detectors & evaluation engine
 │       └── export_checks.py    # Multi-format export integrity & cross-format validation
-├── data/                       # Starter dataset exports (CSV, JSON, SQLite, SQL, GT)
-├── output/                     # Full-scale dataset exports (CSV, JSON, SQLite, SQL, GT)
+├── output/                     # Operational dataset exports (CSV, JSON, SQLite, SQL, GT)
+├── scripts/                    # Verification harnesses (determinism verification, fresh clone audit)
 ├── docs/                       # Architectural & design specifications
 │   ├── data_dictionary.md      # Field-level dictionary for all 19 tables
 │   ├── AI_USAGE.md             # AI governance and disclosure log
@@ -477,7 +477,7 @@ Execute the independent validation engine to audit relational constraints, lifec
 
 ```powershell
 # 1. Clean Validation Mode (expects 0 anomalies; clean dataset PASSES)
-python -m validate data/ --scale starter --mode clean
+python -m validate output/ --scale starter --mode clean
 
 # 2. Anomaly-Aware Mode with Evaluation Benchmark (evaluates against Ground Truth; PASSES on F1=1.0)
 python -m validate output/ --scale full --mode anomaly_aware --inject-anomalies --evaluate
@@ -517,13 +517,13 @@ Overall Validation Status       : PASS
 The export engine supports five industrial persistence targets:
 
 1. **RFC 4180 CSV Export**:
-   All 18 relational tables are written with stable column ordering, standard UTF-8 encoding, and CRLF line terminators to `data/csv/` and `output/csv/`.
+   All 18 relational tables are written with stable column ordering, standard UTF-8 encoding, and CRLF line terminators to `output/csv/`.
 2. **UTF-8 JSON Export**:
-   All 18 tables + `metadata.json` are formatted with 2-space indentation and sorted keys to `data/json/` and `output/json/`.
+   All 18 tables + `metadata.json` are formatted with 2-space indentation and sorted keys to `output/json/`.
 3. **SQLite Relational Database**:
    Generates a fully indexed SQLite database with strict foreign key constraints enforced:
    - `output/database/procurement.db`
-   - `output/sql/yotta_ai.db` and `data/sql/yotta_ai.db`
+   - `output/sql/yotta_ai.db`
 4. **Canonical SQL DDL (`schema.sql`)**:
    Self-contained DDL creating all 19 relational tables with primary keys, composite foreign keys, check constraints, and performance indexes.
 5. **Topologically Ordered SQL Seed (`seed.sql`)**:
@@ -703,7 +703,7 @@ The system guarantees **100% bitwise determinism** across independent executions
 Verify bitwise parity across two independent full-scale runs:
 
 ```powershell
-python scratch/verify_determinism_2runs.py
+python scripts/verify_determinism_2runs.py
 ```
 
 All 42 exported files across both runs match bit-for-bit with identical SHA-256 cryptographic hashes:

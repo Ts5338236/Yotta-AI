@@ -19,7 +19,7 @@ from datagen.export import export_to_sql_schema
 def test_sql_schema_syntax_and_tables(tmp_path):
     """Verify that schema.sql executes cleanly and creates expected tables."""
     schema_dest = tmp_path / "schema.sql"
-    export_to_sql_schema(schema_src="data/sql/schema.sql", output_path=schema_dest)
+    export_to_sql_schema(schema_src="output/sql/schema.sql", output_path=schema_dest)
 
     assert schema_dest.exists()
 
@@ -51,7 +51,7 @@ def test_sql_schema_syntax_and_tables(tmp_path):
 
 def test_sql_schema_indexes_created(tmp_path):
     """Verify that indexes are defined on foreign key columns."""
-    with open("data/sql/schema.sql", "r", encoding="utf-8") as f:
+    with open("output/sql/schema.sql", "r", encoding="utf-8") as f:
         sql = f.read()
 
     conn = sqlite3.connect(":memory:")

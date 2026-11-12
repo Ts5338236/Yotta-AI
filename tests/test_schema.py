@@ -18,7 +18,7 @@ def db_conn():
     conn = sqlite3.connect(":memory:")
     conn.execute("PRAGMA foreign_keys = ON;")
 
-    schema_path = Path(__file__).resolve().parent.parent / "data" / "sql" / "schema.sql"
+    schema_path = Path(__file__).resolve().parent.parent / "output" / "sql" / "schema.sql"
     with open(schema_path, "r", encoding="utf-8") as f:
         schema_sql = f.read()
 

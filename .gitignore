@@ -62,12 +62,6 @@ venv.bak/
 *.sqlite
 *.sqlite3
 *.db
-data/sqlite/*.db
-data/sqlite/*.sqlite
-
-# Generated data artifacts (preserve directory structure via .gitkeep)
-data/csv/*.csv
-data/json/*.json
 
 # IDE and OS files
 .vscode/

@@ -1826,7 +1826,7 @@ def main() -> None:
     parser.add_argument(
         "target",
         nargs="?",
-        default="data/",
+        default="output/",
         help="Target database file path or data directory",
     )
     parser.add_argument(

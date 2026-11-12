@@ -95,7 +95,7 @@ def _sanitize_record(row: Dict[str, Any]) -> Dict[str, Any]:
 
 def export_to_csv(
     dataset: Dict[str, Any],
-    output_dir: str | Path = "data/csv",
+    output_dir: str | Path = "output/csv",
     tables_to_export: Optional[Sequence[str]] = None,
 ) -> Dict[str, Path]:
     """Export operational procurement entities to CSV files in output_dir.
@@ -144,7 +144,7 @@ def export_to_csv(
 
 def export_to_json(
     dataset: Dict[str, Any],
-    output_dir: str | Path = "data/json",
+    output_dir: str | Path = "output/json",
     tables_to_export: Optional[Sequence[str]] = None,
 ) -> Dict[str, Path]:
     """Export operational procurement entities to JSON files in output_dir.
@@ -192,7 +192,7 @@ def export_to_json(
 
 def export_ground_truth(
     ground_truth: Sequence[Dict[str, Any]],
-    output_dir: str | Path = "data/ground_truth",
+    output_dir: str | Path = "output/ground_truth",
 ) -> Dict[str, Path]:
     """Export ground truth anomaly manifests to dedicated ground_truth directory.
 
@@ -234,8 +234,8 @@ def export_ground_truth(
 
 def export_to_sqlite(
     dataset: Dict[str, Any],
-    db_path: str | Path = "data/database/procurement.db",
-    schema_path: str | Path = "data/sql/schema.sql",
+    db_path: str | Path = "output/database/procurement.db",
+    schema_path: str | Path = "output/sql/schema.sql",
     enable_fk: bool = True,
 ) -> Path:
     """Populate relational SQLite database using dedicated database engine."""
@@ -248,7 +248,7 @@ def export_to_sqlite(
 
 
 def export_to_sql_schema(
-    schema_src: str | Path = "data/sql/schema.sql",
+    schema_src: str | Path = "output/sql/schema.sql",
     output_path: str | Path = "output/sql/schema.sql",
 ) -> Path:
     """Export canonical schema DDL to target destination.
@@ -262,15 +262,20 @@ def export_to_sql_schema(
     """
     src = Path(schema_src).resolve()
     dst = Path(output_path).resolve()
-    dst.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(src, dst)
+    if not src.exists():
+        alt = Path("data/sql/schema.sql").resolve()
+        if alt.exists():
+            src = alt
+    if src != dst:
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(src, dst)
     return dst
 
 
 def export_to_sql_seed(
     dataset: Dict[str, Any],
-    output_path: str | Path = "data/sql/seed.sql",
-    schema_path: str | Path = "data/sql/schema.sql",
+    output_path: str | Path = "output/sql/seed.sql",
+    schema_path: str | Path = "output/sql/schema.sql",
 ) -> Path:
     """Generate self-contained SQL seed script with INSERT statements in FK order.
 
@@ -286,6 +291,10 @@ def export_to_sql_seed(
     out_p.parent.mkdir(parents=True, exist_ok=True)
 
     resolved_schema = Path(schema_path).resolve()
+    if not resolved_schema.exists():
+        alt = Path("data/sql/schema.sql").resolve()
+        if alt.exists():
+            resolved_schema = alt
     with open(resolved_schema, "r", encoding="utf-8") as f:
         schema_sql = f.read()
 
@@ -429,9 +438,9 @@ def generate_source_manifest(
 
 def export_all(
     dataset: Dict[str, Any],
-    base_dir: str | Path = "data",
+    base_dir: str | Path = "output",
     output_dir: Optional[str | Path] = None,
-    schema_path: str | Path = "data/sql/schema.sql",
+    schema_path: str | Path = "output/sql/schema.sql",
     ground_truth: Optional[Sequence[Dict[str, Any]]] = None,
     **kwargs: Any,
 ) -> Dict[str, Any]:

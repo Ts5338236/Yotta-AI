@@ -34,7 +34,7 @@ def starter_dataset():
 def test_database_initialization_and_schema(tmp_path):
     """Verify that initialize_schema creates a clean SQLite DB with 19 tables."""
     db_file = tmp_path / "init_test.db"
-    initialize_schema(db_file, schema_path="data/sql/schema.sql")
+    initialize_schema(db_file, schema_path="output/sql/schema.sql")
 
     assert db_file.exists()
     conn = get_connection(db_file)
@@ -49,7 +49,7 @@ def test_database_initialization_and_schema(tmp_path):
 def test_database_population_and_foreign_keys(starter_dataset, tmp_path):
     """Verify that populate_database inserts all records with zero foreign key errors."""
     db_file = tmp_path / "procurement.db"
-    populate_database(starter_dataset, db_path=db_file, schema_path="data/sql/schema.sql")
+    populate_database(starter_dataset, db_path=db_file, schema_path="output/sql/schema.sql")
 
     assert db_file.exists()
     integrity = check_database_integrity(db_file)
@@ -74,7 +74,7 @@ def test_database_rollback_on_failure(starter_dataset, tmp_path):
     ]
 
     with pytest.raises(DatabaseError):
-        populate_database(corrupted, db_path=db_file, schema_path="data/sql/schema.sql")
+        populate_database(corrupted, db_path=db_file, schema_path="output/sql/schema.sql")
 
     # DB should either not exist or be cleaned up
     assert not db_file.exists() or db_file.stat().st_size == 0

@@ -1,7 +1,7 @@
 """Unit tests for Phase 6 Ground Truth Export.
 
 Verifies:
-- Ground truth is exported to data/ground_truth/ground_truth.csv and ground_truth.json.
+- Ground truth is exported to output/ground_truth/ground_truth.csv and ground_truth.json.
 - Ground truth remains isolated and is NOT written into operational CSV or JSON tables.
 - Contains required fields: anomaly_id, issue_type, entity, record_id, expected_decision, reason.
 """

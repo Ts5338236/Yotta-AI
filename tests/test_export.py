@@ -85,7 +85,7 @@ def test_export_to_sql_seed_and_execution(starter_data, tmp_path):
     assert exported_seed.stat().st_size > 0
 
     # Execute schema.sql then seed.sql in a fresh in-memory database
-    with open("data/sql/schema.sql", "r", encoding="utf-8") as f:
+    with open("output/sql/schema.sql", "r", encoding="utf-8") as f:
         schema_sql = f.read()
     with open(exported_seed, "r", encoding="utf-8") as f:
         seed_sql = f.read()

@@ -27,7 +27,7 @@ def starter_dataset():
 def test_sql_seed_not_placeholder(starter_dataset, tmp_path):
     """Verify that generated seed.sql contains real INSERT statements."""
     seed_file = tmp_path / "seed.sql"
-    export_to_sql_seed(starter_dataset, output_path=seed_file, schema_path="data/sql/schema.sql")
+    export_to_sql_seed(starter_dataset, output_path=seed_file, schema_path="output/sql/schema.sql")
 
     assert seed_file.exists()
     assert seed_file.stat().st_size > 1000
@@ -43,9 +43,9 @@ def test_sql_seed_not_placeholder(starter_dataset, tmp_path):
 def test_sql_seed_execution_and_counts(starter_dataset, tmp_path):
     """Verify that seed.sql executes cleanly and recreates the source dataset."""
     seed_file = tmp_path / "seed.sql"
-    export_to_sql_seed(starter_dataset, output_path=seed_file, schema_path="data/sql/schema.sql")
+    export_to_sql_seed(starter_dataset, output_path=seed_file, schema_path="output/sql/schema.sql")
 
-    with open("data/sql/schema.sql", "r", encoding="utf-8") as f:
+    with open("output/sql/schema.sql", "r", encoding="utf-8") as f:
         schema_sql = f.read()
     with open(seed_file, "r", encoding="utf-8") as f:
         seed_sql = f.read()

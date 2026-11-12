@@ -66,7 +66,7 @@ def get_connection(
 
 def initialize_schema(
     db_path: str | Path,
-    schema_path: str | Path = "data/sql/schema.sql",
+    schema_path: str | Path = "output/sql/schema.sql",
     enable_foreign_keys: bool = True,
 ) -> Path:
     """Initialize a blank SQLite database executing DDL schema statements.
@@ -87,7 +87,11 @@ def initialize_schema(
 
     schema_file = Path(schema_path).resolve()
     if not schema_file.exists():
-        raise FileNotFoundError(f"Schema DDL script not found at: {schema_file}")
+        alt_schema = Path("output/sql/schema.sql").resolve()
+        if alt_schema.exists():
+            schema_file = alt_schema
+        else:
+            raise FileNotFoundError(f"Schema DDL script not found at: {schema_file}")
 
     with open(schema_file, "r", encoding="utf-8") as f:
         schema_sql = f.read()
@@ -109,8 +113,8 @@ def initialize_schema(
 
 def populate_database(
     dataset: Dict[str, Any],
-    db_path: str | Path = "data/database/procurement.db",
-    schema_path: str | Path = "data/sql/schema.sql",
+    db_path: str | Path = "output/database/procurement.db",
+    schema_path: str | Path = "output/sql/schema.sql",
     enable_foreign_keys: bool = True,
 ) -> Path:
     """Populate SQLite database from in-memory dataset respecting topological order.

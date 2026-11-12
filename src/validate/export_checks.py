@@ -23,7 +23,7 @@ class ExportValidationError(Exception):
 
 def validate_csv_exports(
     dataset: Dict[str, Any],
-    csv_dir: str | Path = "data/csv",
+    csv_dir: str | Path = "output/csv",
     tables: Optional[Sequence[str]] = None,
 ) -> Dict[str, Any]:
     """Validate CSV exports for file existence, header matching, and record count parity.
@@ -109,7 +109,7 @@ def validate_csv_exports(
 
 def validate_json_exports(
     dataset: Dict[str, Any],
-    json_dir: str | Path = "data/json",
+    json_dir: str | Path = "output/json",
     tables: Optional[Sequence[str]] = None,
 ) -> Dict[str, Any]:
     """Validate JSON exports for syntax, schema fields, and record count parity.
@@ -190,7 +190,7 @@ def validate_json_exports(
 
 def validate_sqlite_database(
     dataset: Dict[str, Any],
-    db_path: str | Path = "data/database/procurement.db",
+    db_path: str | Path = "output/database/procurement.db",
 ) -> Dict[str, Any]:
     """Validate SQLite database for table existence, integrity_check, foreign_key_check, and record counts.
 
@@ -265,8 +265,8 @@ def validate_sqlite_database(
 
 def validate_sql_seed_execution(
     dataset: Dict[str, Any],
-    schema_path: str | Path = "data/sql/schema.sql",
-    seed_path: str | Path = "data/sql/seed.sql",
+    schema_path: str | Path = "output/sql/schema.sql",
+    seed_path: str | Path = "output/sql/seed.sql",
 ) -> Dict[str, Any]:
     """Verify that schema.sql and seed.sql execute in a fresh database with 0 FK violations and count parity.
 
@@ -280,6 +280,10 @@ def validate_sql_seed_execution(
     """
     s_path = Path(schema_path).resolve()
     sd_path = Path(seed_path).resolve()
+    if not s_path.exists():
+        alt_s = Path("output/sql/schema.sql").resolve()
+        if alt_s.exists():
+            s_path = alt_s
 
     if not s_path.exists() or not sd_path.exists():
         return {
@@ -337,11 +341,11 @@ def validate_sql_seed_execution(
 
 
 def validate_ground_truth_isolation(
-    ground_truth_dir: str | Path = "data/ground_truth",
-    csv_dir: str | Path = "data/csv",
-    json_dir: str | Path = "data/json",
+    ground_truth_dir: str | Path = "output/ground_truth",
+    csv_dir: str | Path = "output/csv",
+    json_dir: str | Path = "output/json",
 ) -> Dict[str, Any]:
-    """Verify that ground truth records are isolated in data/ground_truth/ and not in operational tables.
+    """Verify that ground truth records are isolated in output/ground_truth/ and not in operational tables.
 
     Args:
         ground_truth_dir: Ground truth directory.
@@ -388,8 +392,8 @@ def validate_ground_truth_isolation(
 
 def validate_all_exports(
     dataset: Dict[str, Any],
-    base_dir: str | Path = "data",
-    schema_path: str | Path = "data/sql/schema.sql",
+    base_dir: str | Path = "output",
+    schema_path: str | Path = "output/sql/schema.sql",
 ) -> Dict[str, Any]:
     """Execute complete multi-format export integrity and cross-format consistency validation.
 
