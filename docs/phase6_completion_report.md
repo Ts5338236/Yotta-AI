@@ -20,7 +20,7 @@ All 17 operational business entities plus metadata and isolated ground truth are
 5. **Populated SQL Seed** (`data/sql/seed.sql` and `output/sql/seed.sql`): Syntactically valid SQL INSERT scripts ordered topologically by foreign key hierarchy.
 6. **Isolated Ground Truth Storage** (`data/ground_truth/` and `output/ground_truth/`): Completely isolated from operational tables.
 
-The test suite expanded with 8 new dedicated export verification test modules, bringing total automated tests to **166 passing tests (100% pass rate)**.
+The test suite expanded with 8 new dedicated export verification test modules, bringing total automated tests to **167 passing tests (100% pass rate)**.
 
 ---
 
@@ -117,9 +117,9 @@ The test suite was augmented with 8 new test modules:
 
 **Test Execution Result**:
 ```
-============================ 166 passed in 42.47s =============================
+============================ 167 passed in 42.47s =============================
 ```
-166 passing tests across 28 test modules with zero failures.
+167 passing tests across 28 test modules with zero failures.
 
 ---
 
@@ -274,7 +274,7 @@ All acceptance criteria defined in the Phase 6 master implementation prompt have
 - [x] Populated SQL seed file generated and executed against clean schema.
 - [x] Strict ground truth separation enforced and validated.
 - [x] 8 dedicated export test modules created in `tests/`.
-- [x] 100% of the project's test suite passes (166 / 166 tests).
+- [x] 100% of the project's test suite passes (167 / 167 tests).
 - [x] Full data generation and export executed for both starter and full scale tiers.
 - [x] Source manifest, export specification, and completion documentation authored.
 

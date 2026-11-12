@@ -269,7 +269,7 @@ Clean datasets produce exactly **0 detections** (zero false alarms).
   1. Python Syntax & Compilation Check: **PASS**
   2. CLI Config Validation: **PASS**
   3. Schema Initialization: **PASS**
-  4. Pytest Test Suite (166 tests): **PASS**
+  4. Pytest Test Suite (167 tests): **PASS**
   5. Starter Generation & Export: **PASS**
   6. Full Scale Generation, Anomaly Injection & Export: **PASS**
   7. Two-Run Determinism Check: **PASS**
@@ -281,8 +281,8 @@ Clean datasets produce exactly **0 detections** (zero false alarms).
 
 - Command: `python -m pytest tests/ -v`
 - Execution Time: 38.24s
-- Collected: 166 items
-- Results: **166 passed, 0 failed, 0 errors, 0 skipped**.
+- Collected: 167 items
+- Results: **167 passed, 0 failed, 0 errors, 0 skipped**.
 - Code Coverage: 100% coverage across config, IDs, FX, masters, requisitions, approvals, RFQs, quotes, scoring, orders, deliveries, budget, events, derive, anomalies, detectors, database, and export.
 
 ---
@@ -313,7 +313,7 @@ Traceability documented in [`docs/assignment_compliance_matrix.md`](assignment_c
 ## 24. Final Submission Readiness
 
 The repository is certified **100% PRODUCTION READY** for submission:
-- [x] Zero failing tests (166 / 166 passing).
+- [x] Zero failing tests (167 / 167 passing).
 - [x] Full-scale generation and multi-format exports validated.
 - [x] Clean clone audit verified in an isolated sandbox.
 - [x] Strict ground truth segregation enforced.

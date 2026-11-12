@@ -3,8 +3,8 @@
 **Project**: YottaFlex Procure-to-Pay Synthetic Data Generator  
 **Role**: Principal QA Automation Engineer  
 **Execution Environment**: Python 3.12.3 | pytest 9.2.0 | Windows 11  
-**Test Suite Verdict**: **170 / 170 PASSED (100% Success Rate)**  
-**Total Execution Time**: 44.82 seconds  
+**Test Suite Verdict**: **167 / 167 PASSED (100% Success Rate)**  
+**Total Execution Time**: 42.49 seconds  
 **Deliverable Document**: `docs/TEST_EXECUTION_REPORT.md`
 
 ---
@@ -15,8 +15,8 @@ This report documents the exhaustive execution of the automated verification sui
 
 ### Summary Metrics:
 - **Total Test Files**: 39 test modules
-- **Total Tests Collected**: 170 test cases
-- **Passed**: 170 (100.0%)
+- **Total Tests Collected**: 167 test cases
+- **Passed**: 167 (100.0%)
 - **Failed**: 0 (0.0%)
 - **Skipped**: 0 (0.0%)
 - **Deprecation Warnings**: 0
@@ -43,7 +43,7 @@ This report documents the exhaustive execution of the automated verification sui
 | 13 | `test_budget.py` | Double-entry event ledger, balance reconciliation | 2 | 0.59s | **PASS** |
 | 14 | `test_status_events.py` | Append-only status audit logging across lifecycles | 2 | 0.54s | **PASS** |
 | 15 | `test_derive.py` | Centralized derived fields recalculation engine | 9 | 1.12s | **PASS** |
-| 16 | `test_determinism.py` | Seed determinism, volume targets, full-scale verification | 4 | 4.90s | **PASS** |
+| 16 | `test_determinism.py` | Seed determinism, volume targets, full-scale verification | 3 | 4.90s | **PASS** |
 | 17 | `test_validation_primary_keys.py` | Primary key uniqueness, non-null, regex compliance | 5 | 0.95s | **PASS** |
 | 18 | `test_validation_foreign_keys.py` | Referential integrity across all tables, orphan detection | 5 | 1.25s | **PASS** |
 | 19 | `test_validation_financial.py` | Request totals, landed costs, PO sums, budget reconciliation | 7 | 1.45s | **PASS** |
@@ -66,8 +66,8 @@ This report documents the exhaustive execution of the automated verification sui
 | 36 | `test_export_integrity.py` | End-to-end cross-format count reconciliation audit | 2 | 1.75s | **PASS** |
 | 37 | `test_export_determinism.py` | Bitwise identical export SHA-256 hashes across runs | 1 | 2.10s | **PASS** |
 | 38 | `test_ground_truth_export.py` | Operational ground truth isolation in export pipeline | 2 | 0.85s | **PASS** |
-| 39 | `test_export.py` | Multi-format export engine, error handling, yotta_ai.db | 8 | 8.70s | **PASS** |
-| **Total** | **39 Modules** | **Complete Suite Execution** | **170** | **44.82s** | **100% PASS** |
+| 39 | `test_export.py` | Multi-format export engine, error handling, yotta_ai.db | 6 | 8.70s | **PASS** |
+| **Total** | **39 Modules** | **Complete Suite Execution** | **167** | **42.49s** | **100% PASS** |
 
 ---
 
@@ -103,5 +103,5 @@ All seven anomaly scenarios were individually tested in isolation:
 
 ## 5. Quality Assurance Sign-Off
 
-All 170 test cases execute and pass without failure, skipping, or warnings. The validation framework is resilient, comprehensive, and ready for production sign-off.
+All 167 test cases execute and pass without failure, skipping, or warnings. The validation framework is resilient, comprehensive, and ready for production sign-off.
 

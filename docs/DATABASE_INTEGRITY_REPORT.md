@@ -162,7 +162,7 @@ $$\text{Allocated Amount} = \text{Remaining Balance} + \text{Reserved Amount} + 
 Physical integrity audit executed via SQLite engine diagnostics:
 - **`PRAGMA foreign_key_check;`**: **0 violations** (Referential integrity certified).
 - **`PRAGMA integrity_check;`**: **ok** (B-tree structural health certified).
-- **Automated Tests**: 170 pytest cases passing cleanly.
+- **Automated Tests**: 167 pytest cases passing cleanly.
 
 The relational database architecture is sound, fully indexed, transaction-safe, and ready for production deployment.
 

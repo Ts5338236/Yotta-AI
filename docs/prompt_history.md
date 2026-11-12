@@ -14,7 +14,7 @@ This document records the master prompt history, implementation milestones, and 
 | **Phase 4** | Derived Fields Engine & Comprehensive Validation | [`ai/prompts/04_phase4_derived_validation.md`](../ai/prompts/04_phase4_derived_validation.md) | **Completed** | Centralized `derive.py`, 7-domain independent validator (`validate`), SQLite schema integrity checks. |
 | **Phase 5** | Anomaly Injection & Ground Truth Generation | [`ai/prompts/05_phase5_anomalies.md`](../ai/prompts/05_phase5_anomalies.md) | **Completed** | Anomaly engine (`anomalies.py`), Ground Truth schema (`ANOM-######`), 7 independent detectors (`anomaly_checks.py`), evaluation engine. |
 | **Phase 6** | Data Export, Database Integration & Deliverables | Canonical Master Prompt | **Completed** | Multi-format export engine (`export.py`, `database.py`, `export_checks.py`), CSV (`data/csv/`), JSON (`data/json/`), SQLite DB (`data/database/procurement.db`), canonical DDL (`schema.sql`), populated SQL seed (`seed.sql`), isolated ground truth (`data/ground_truth/`). |
-| **Phase 7** | Final Audit, Fresh Clone & Submission Readiness | Canonical Master Prompt | **Completed** | Full repository audit (`phase7_initial_audit.md`), PRD compliance matrix (`assignment_compliance_matrix.md`), 24-point technical audit report (`final_audit_report.md`), 7-stage automated fresh clone verification, 166 automated tests passing. |
+| **Phase 7** | Final Audit, Fresh Clone & Submission Readiness | Canonical Master Prompt | **Completed** | Full repository audit (`phase7_initial_audit.md`), PRD compliance matrix (`assignment_compliance_matrix.md`), 24-point technical audit report (`final_audit_report.md`), 7-stage automated fresh clone verification, 167 automated tests passing. |
 
 ---
 
@@ -69,7 +69,7 @@ This document records the master prompt history, implementation milestones, and 
   - `src/datagen/database.py`: Context-managed SQLite connection with active FK enforcement, schema initialization, and transactional batch insertion.
   - `src/datagen/export.py`: Multi-format exporter producing RFC 4180 CSVs, formatted JSONs, SQLite database, canonical DDL schema, topologically ordered SQL seed, and cryptographic source manifest.
   - `src/validate/export_checks.py`: Comprehensive multi-format integrity auditor verifying CSV, JSON, SQLite, SQL seed re-execution, and ground truth isolation.
-- **Test Baseline**: 166 automated tests passing across 28 test modules.
+- **Test Baseline**: 167 automated tests passing across 28 test modules.
 
 ### Phase 7: Final End-to-End Audit, Fresh Clone Verification & Submission Readiness
 - **Objective**: Complete end-to-end audit, compliance verification against all 52 PRD requirements, 2-run bitwise determinism confirmation, and 7-stage fresh clone audit in an isolated temporary sandbox.
@@ -79,5 +79,5 @@ This document records the master prompt history, implementation milestones, and 
   - `docs/final_audit_report.md`: Definitive 24-section technical audit report.
   - `scratch/verify_determinism_2runs.py`: Cryptographic hash comparison proving 100% bitwise determinism across runs.
   - `scratch/fresh_clone_audit.py`: Automated 7-stage fresh clone simulation harness.
-- **Final Benchmark**: 166 passed, 0 failed, 100.0% requirement compliance, verified fresh clone readiness.
+- **Final Benchmark**: 167 passed, 0 failed, 100.0% requirement compliance, verified fresh clone readiness.
 

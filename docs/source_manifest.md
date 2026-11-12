@@ -49,7 +49,7 @@
 
 ## 3. Test Suites (`tests/`)
 
-39 test modules comprising 170 passing test cases:
+39 test modules comprising 167 passing test cases:
 - `test_config.py`, `test_ids.py`, `test_fx.py`, `test_schema.py`, `test_masters.py`, `test_requests.py`, `test_distributions.py`, `test_approvals.py`, `test_sourcing.py`, `test_quotes.py`, `test_orders.py`, `test_delivery.py`, `test_budget.py`, `test_status_events.py`, `test_derive.py`, `test_determinism.py`, `test_validation_primary_keys.py`, `test_validation_foreign_keys.py`, `test_validation_financial.py`, `test_validation_dates.py`, `test_validation_lifecycle.py`, `test_validation_approvals.py`, `test_validation_budget.py`, `test_validation_integration.py`, `test_workflow_integration.py`, `test_anomaly_injection.py`, `test_anomaly_detection.py`, `test_anomaly_metrics.py`, `test_anomaly_determinism.py`, `test_ground_truth.py`, `test_csv_export.py`, `test_json_export.py`, `test_database_export.py`, `test_sql_schema.py`, `test_sql_seed.py`, `test_export_integrity.py`, `test_export_determinism.py`, `test_ground_truth_export.py`, `test_export.py`.
 
 ---
@@ -66,7 +66,7 @@
 - **`FINAL_GAP_ANALYSIS.md`**: Comprehensive 24-point PRD requirement traceability matrix (100% complete).
 - **`SUBMISSION_CHECKLIST.md`**: Certified submission readiness checklist.
 - **`FINAL_VALIDATION_REPORT.md`**: Audit summary verifying 111,827 constraints with 0 defects.
-- **`TEST_EXECUTION_REPORT.md`**: Formal execution logs of all 170 passing automated tests.
+- **`TEST_EXECUTION_REPORT.md`**: Formal execution logs of all 167 passing automated tests.
 - **`DATASET_GENERATION_REPORT.md`**: Detailed volume configuration and empirical row count report.
 - **`EXPORT_VALIDATION_REPORT.md`**: Multi-format export and row-for-row reconciliation report.
 - **`DATABASE_INTEGRITY_REPORT.md`**: Relational foreign-key and join audit report.

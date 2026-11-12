@@ -2,7 +2,7 @@
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Tests: 170 Passed](https://img.shields.io/badge/tests-170%20passed-brightgreen.svg)]()
+[![Tests: 167 Passed](https://img.shields.io/badge/tests-167%20passed-brightgreen.svg)]()
 [![Validation: F1 1.0000](https://img.shields.io/badge/validation%20F1-1.0000-brightgreen.svg)]()
 [![Determinism: 100% SHA--256](https://img.shields.io/badge/determinism-100%25%20SHA--256-brightgreen.svg)]()
 [![Status: Complete & Submission Ready](https://img.shields.io/badge/Status-Complete%20%26%20Submission%20Ready-green.svg)]()
@@ -246,7 +246,7 @@ erDiagram
 - **Runtime Environment**: Python 3.11+ (verified on Python 3.12.3)
 - **Data Engineering**: NumPy 2.2.3, Pandas 2.2.3, PyYAML 6.0.3
 - **Database Engine**: SQLite 3 with `PRAGMA foreign_keys = ON` and WAL journaling
-- **Testing Framework**: pytest 9.2.0 (170 test cases across 39 modules)
+- **Testing Framework**: pytest 9.2.0 (167 test cases across 39 modules)
 - **Standard Library Modules**: `decimal` (financial precision), `sqlite3`, `pathlib`, `hashlib` (SHA-256 parity), `argparse`, `json`, `csv`
 
 ---
@@ -296,10 +296,10 @@ procure-to-pay-datagen/
 │   ├── LIMITATIONS.md          # Project boundary conditions and limits
 │   ├── REPRODUCIBILITY_REPORT.md # Bitwise SHA-256 hash comparison across 2 runs
 │   ├── PERFORMANCE_REPORT.md   # Wall-clock timings & memory profiling
-│   ├── TEST_EXECUTION_REPORT.md# Complete 170-test breakdown
+│   ├── TEST_EXECUTION_REPORT.md# Complete 167-test breakdown
 │   ├── FINAL_GAP_ANALYSIS.md   # Requirement traceability matrix (100% complete)
 │   └── SUBMISSION_CHECKLIST.md # Full candidate submission checklist
-├── tests/                      # Automated pytest suite (170 unit & integration tests)
+├── tests/                      # Automated pytest suite (167 unit & integration tests)
 ├── ai/
 │   └── prompts/                # Preserved prompt history (01 through 09)
 ├── pyproject.toml              # Build & packaging configuration
@@ -649,7 +649,7 @@ The independent anomaly detection engine ([`src/validate/anomaly_checks.py`](src
 
 ## 18. Testing Instructions
 
-The repository includes a comprehensive automated test suite consisting of **170 test cases across 39 test modules**:
+The repository includes a comprehensive automated test suite consisting of **167 test cases across 39 test modules**:
 
 ```powershell
 # Execute the complete automated pytest suite

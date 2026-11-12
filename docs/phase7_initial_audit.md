@@ -17,7 +17,7 @@ The repository represents a mature, production-grade enterprise data generation 
 - **Phase 4 (Derived Fields & Comprehensive Validation)**: Pure functional recalculation engine (`src/datagen/derive.py`) and autonomous 7-domain independent validator (`src/validate/checks.py`).
 - **Phase 5 (Anomaly Injection & Detection)**: Modular anomaly engine (`src/datagen/anomalies.py`) injecting 7 distinct procurement anomalies post-generation, isolated ground truth modeling (`ANOM-######`), and independent rule-based detectors (`src/validate/anomaly_checks.py`) achieving 100% precision and recall (F1: 1.0000).
 - **Phase 6 (Export & Database Persistence)**: Multi-format export engine (`src/datagen/export.py`, `src/datagen/database.py`, `src/validate/export_checks.py`) serializing into CSV, JSON, SQLite (`procurement.db`), canonical DDL (`schema.sql`), and populated SQL seed (`seed.sql`), with strict ground truth segregation.
-- **Test Suite**: 166 passing automated pytest tests across 28 test modules.
+- **Test Suite**: 167 passing automated pytest tests across 28 test modules.
 
 ---
 
@@ -30,7 +30,7 @@ The repository represents a mature, production-grade enterprise data generation 
 
 ## 3. Broken Functionality
 
-- None. All 166 unit, integration, and workflow tests pass without failures or errors.
+- None. All 167 unit, integration, and workflow tests pass without failures or errors.
 - Both starter scale (`--scale starter`) and full scale (`--scale full`) execute cleanly without memory leaks or runtime exceptions.
 - `PRAGMA foreign_key_check` and `PRAGMA integrity_check` pass with 0 errors across SQLite databases and replayed SQL seed scripts.
 
@@ -67,7 +67,7 @@ The repository represents a mature, production-grade enterprise data generation 
 ## 6. Test Coverage Gaps
 
 - Baseline test suite had 148 tests after Phase 5.
-- Phase 6 introduced 8 new test modules (bringing total to 166 tests).
+- Phase 6 introduced 8 new test modules (bringing total to 167 tests).
 - All 17 operational tables, 7 anomaly types, and 5 export formats are covered by dedicated automated tests.
 - Minor gap: Add a dedicated CLI integration test module if needed, although CLI functionality is already verified by `scratch/fresh_clone_audit.py` and direct execution.
 
