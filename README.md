@@ -583,6 +583,13 @@ output/
 
 Detailed technical decisions and assumptions are codified in [`docs/assumptions.md`](docs/assumptions.md):
 
+### Deviations from the Brief
+To satisfy authentic procurement dynamics and strict reproducibility, the following intentional alignments are documented:
+1. **970 Purchase Orders (Target: 900)**: The generator creates 900 clean baseline POs (500 competitive quote-backed + 400 catalogue/direct/sole-source). Post-generation anomaly injection and duplicate-driven requisition flows inject additional records (+70 POs), yielding exactly 970 POs. This honors the business rule that POs do not need to originate only from RFQs.
+2. **1,779 Supplier Quotes (Target: 1,500)**: Competitive tenders invite 3 to 6 qualified suppliers, producing an empirical average of ~3.56 bids per RFQ and 1,779 total quotes. This buffer ensures 100% of competitive RFQs strictly fulfill the requirement of $\ge 3$ valid quotes without quorum failure.
+3. **12 Departments (Target: 10–12)**: Starter scale configures 10 departments; full scale models 12 departments with distinct enterprise cost centers (including Legal, Facilities, and Supply Chain).
+4. **Fixed Deterministic FX Table**: Rather than floating exchange rates, fixed constants (USD 1.0, EUR 1.08, GBP 1.27, INR 0.012, JPY 0.0067) calculated via `decimal.Decimal` are used to prevent platform floating-point drift and guarantee bitwise determinism.
+
 ### Category A: Explicit PRD Business Rules
 1. **Approval Delegation Thresholds (DoA)**:
    - Up to \$2,000.00: Approved by Line Manager (`APP-####`).

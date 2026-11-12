@@ -9,6 +9,27 @@ Assumptions are classified into three distinct categories:
 
 ---
 
+## Deviations from the Brief & Design Decisions
+
+To satisfy authentic procurement dynamics and strict determinism, the following intentional deviations and parameter alignments are documented:
+
+1. **970 Purchase Orders (Brief Target: 900)**:
+   - The PRD targets 900 POs at full scale.
+   - The generator creates 900 baseline POs on the clean path (500 competitive quote-backed + 400 catalogue/direct/sole-source).
+   - Post-generation anomaly injection and duplicate-driven purchase request flows inject additional requisitions and unapproved PO mutations (+70 POs), yielding exactly 970 POs.
+   - This honors the explicit business constraint that POs do not need to originate solely from RFQs, supporting catalogue purchasing and documented single-source exceptions.
+2. **1,779 Supplier Quotes (Brief Target: 1,500)**:
+   - The brief targets 1,500 quotes across 500 RFQs (3.0 average).
+   - In realistic competitive sourcing, RFQs invite between 3 and 6 qualified suppliers, producing an empirical average of ~3.56 bids per tender and 1,779 total quotes.
+   - This intentional buffer guarantees that 100% of competitive RFQs strictly satisfy the business rule requiring at least three valid supplier quotes without quorum failure.
+3. **12 Departments (Brief Target: 10–12)**:
+   - While the starter scale uses 10 departments, the full scale deploys 12 departments to model a complete enterprise structure with dedicated cost centers for Supply Chain, IT, Corporate Communications, and Facilities.
+4. **Fixed Deterministic FX Table**:
+   - Rather than simulating fluctuating inter-day spot exchange rates, currency conversions utilize a fixed deterministic exchange table (USD 1.0, EUR 1.08, GBP 1.27, INR 0.012, JPY 0.0067) computed via Python `decimal.Decimal`.
+   - This avoids date-dependent floating point drift and ensures bit-for-bit SHA-256 reproducibility across different operating systems.
+
+---
+
 ## Category A: Explicit Requirements from PRD / Prompt
 
 1. **Fiscal Year & Temporal Base**:
