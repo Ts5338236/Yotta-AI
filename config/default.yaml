@@ -22,7 +22,7 @@ scale:
     requesters: 300
     suppliers: 120
     departments: 12
-    purchase_requests: 1150
+    purchase_requests: 1200
     rfqs: 500
     quotes: 1500
     purchase_orders: 900

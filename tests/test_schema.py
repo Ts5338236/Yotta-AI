@@ -159,7 +159,7 @@ def test_quote_requires_rfq_supplier_invitation(db_conn):
         db_conn.execute(
             """
             INSERT INTO supplier_quotes VALUES (
-                'QUO-2026-000001', 'RFQ-2026-000001', 'SUP-0001', '2026-01-05', 'USD', 1.0,
+                'QUO-SUP-C-0001-2026-000001', 'RFQ-2026-000001', 'SUP-0001', '2026-01-05', 'USD', 1.0,
                 19500, 19500, 5, 'SUBMITTED', '2026-01-05T00:00:00Z'
             );
             """
@@ -174,11 +174,11 @@ def test_quote_requires_rfq_supplier_invitation(db_conn):
     db_conn.execute(
         """
         INSERT INTO supplier_quotes VALUES (
-            'QUO-2026-000001', 'RFQ-2026-000001', 'SUP-0001', '2026-01-05', 'USD', 1.0,
+            'QUO-SUP-C-0001-2026-000001', 'RFQ-2026-000001', 'SUP-0001', '2026-01-05', 'USD', 1.0,
             19500, 19500, 5, 'SUBMITTED', '2026-01-05T00:00:00Z'
         );
         """
     )
     cursor = db_conn.cursor()
-    cursor.execute("SELECT quote_id FROM supplier_quotes WHERE quote_id = 'QUO-2026-000001';")
-    assert cursor.fetchone()[0] == "QUO-2026-000001"
+    cursor.execute("SELECT quote_id FROM supplier_quotes WHERE quote_id = 'QUO-SUP-C-0001-2026-000001';")
+    assert cursor.fetchone()[0] == "QUO-SUP-C-0001-2026-000001"

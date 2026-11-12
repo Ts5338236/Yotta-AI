@@ -1,0 +1,13 @@
+{
+  "scale": "full",
+  "seed": 20261022,
+  "fiscal_year": 2026,
+  "base_currency": "USD",
+  "competitive_pos_count": 500,
+  "non_competitive_pos_count": 470,
+  "rejected_requests_count": 43,
+  "approved_requests_count": 970,
+  "anomalies_injected": 35,
+  "anomaly_rate": 0.0131,
+  "anomaly_categories_count": 7
+}

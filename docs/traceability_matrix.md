@@ -91,3 +91,4 @@ This traceability matrix maps every technical requirement from the original Prod
 | **JSON Export Engine** | Export all tables and metadata to JSON format | `src/datagen/export.py` | `tests/test_export.py` | `data/json/*.json` | **PASS** |
 | **SQLite Ingestion** | Bulk insert with foreign-key compliance into SQLite DB | `src/datagen/export.py` | `tests/test_export.py` | `data/p2p_procurement.db` | **PASS** |
 | **Clean Environment Execution**| Verified fresh clone simulation in clean temporary directory | `scratch/fresh_clone_verify.py` | Integration CLI tests | End-to-end execution | **PASS** |
+

@@ -1,0 +1,243 @@
+{
+  "manifest_version": "1.0.0",
+  "project": "YottaFlex Procure-to-Pay Synthetic Data Generator",
+  "repository": "https://github.com/Ts5338236/Yotta-AI.git",
+  "generated_at": "2026-11-12T15:10:02.253568+00:00",
+  "data_provenance": {
+    "synthetic": true,
+    "external_proprietary_data": false,
+    "external_web_apis_used": false,
+    "real_world_pii_present": false,
+    "generation_method": "Deterministic Algorithmic Simulation via isolated NumPy Seeded RNG",
+    "certification": "100% synthetically generated data; zero external datasets imported"
+  },
+  "reproducibility": {
+    "default_seed": 20261022,
+    "scale_tier": "full",
+    "deterministic": true,
+    "python_version": "3.12.3",
+    "platform": "Windows-11-10.0.26100-SP0"
+  },
+  "record_counts": {
+    "departments": 12,
+    "budgets": 12,
+    "requesters": 300,
+    "suppliers": 125,
+    "approvers": 26,
+    "purchase_requests": 1205,
+    "request_lines": 2529,
+    "approvals": 1018,
+    "rfqs": 500,
+    "rfq_supplier_invites": 1779,
+    "supplier_quotes": 1779,
+    "quote_lines": 4497,
+    "purchase_orders": 970,
+    "purchase_order_lines": 2051,
+    "deliveries": 1048,
+    "budget_events": 3970,
+    "status_events": 9664,
+    "ground_truth": 35
+  },
+  "exported_artifacts": {
+    "sqlite_db": {
+      "path": "database\\procurement.db",
+      "size_bytes": 7049216,
+      "sha256": "afd2b1c2915e3e8cc1f4f1581d214b3c4b4c62cf98d15944d6414e7289ca983a"
+    },
+    "schema_ddl": {
+      "path": "sql\\schema.sql",
+      "size_bytes": 16841,
+      "sha256": "58fcb27e488184f9e360375dc8c2ae48f98dbfba2df9241b9c4ce2015836c3e9"
+    },
+    "seed_sql": {
+      "path": "sql\\seed.sql",
+      "size_bytes": 4779369,
+      "sha256": "8e8757b68734a305d8c4fc3a95ec2ccdd55e1a81c3b15d9bd1105466454141f9"
+    },
+    "csv_departments": {
+      "path": "csv\\departments.csv",
+      "size_bytes": 1129,
+      "sha256": "9f1e4a71ea7982fe1455e7ad96d17c99a67f3a7b48483b0a53885c654e884f06"
+    },
+    "csv_budgets": {
+      "path": "csv\\budgets.csv",
+      "size_bytes": 1334,
+      "sha256": "c2f15e00ffc219753bb9713450b3eecd54450fb63357ec0a1cbb201bd48c36bb"
+    },
+    "csv_requesters": {
+      "path": "csv\\requesters.csv",
+      "size_bytes": 40161,
+      "sha256": "b8515c465dba03ec7f18e58ae4602a60b75cb276b531ae7a00d28d8ddca28552"
+    },
+    "csv_suppliers": {
+      "path": "csv\\suppliers.csv",
+      "size_bytes": 24213,
+      "sha256": "9a2303543be1c108c47d773c6d19f1f0127f3f7cecf9d6d7a043de40fb409048"
+    },
+    "csv_approvers": {
+      "path": "csv\\approvers.csv",
+      "size_bytes": 3028,
+      "sha256": "9d13cd1fad39e12a5d05ad3dc22e08bc68a54bf1fca5d5b8713cd178445fdc08"
+    },
+    "csv_purchase_requests": {
+      "path": "csv\\purchase_requests.csv",
+      "size_bytes": 263355,
+      "sha256": "c84d98c6dbe5239281ab8ec7b8c242ec35c8a8d038a5114f2c6e54747d44f46f"
+    },
+    "csv_request_lines": {
+      "path": "csv\\request_lines.csv",
+      "size_bytes": 497068,
+      "sha256": "713daffca38aa53e8a436b914fe3e64a6cbdb17bf2fff79b04651b27a6c8adcc"
+    },
+    "csv_approvals": {
+      "path": "csv\\approvals.csv",
+      "size_bytes": 171585,
+      "sha256": "c6500694c4c92dcf2657d90f5b19200c1d342fb308341cf0d80aa6873b18270d"
+    },
+    "csv_rfqs": {
+      "path": "csv\\rfqs.csv",
+      "size_bytes": 43566,
+      "sha256": "774fd31e3e246857150a2444296316eb70933b145134003a54157411300415db"
+    },
+    "csv_rfq_supplier_invites": {
+      "path": "csv\\rfq_supplier_invites.csv",
+      "size_bytes": 119252,
+      "sha256": "7c4156e2a4414b527e265e66bf2bad58e2b1842d3a72ce0c7e0f9eabe9f1fd07"
+    },
+    "csv_supplier_quotes": {
+      "path": "csv\\supplier_quotes.csv",
+      "size_bytes": 2785917,
+      "sha256": "4476a52dd7b7bfd91e206b3a291d1c3511215903229e7309d7643d0779391909"
+    },
+    "csv_quote_lines": {
+      "path": "csv\\quote_lines.csv",
+      "size_bytes": 520487,
+      "sha256": "ca208b07c110a6284b22e4f3ddf8d5262fe10ea73e752907473169d68dfac5b4"
+    },
+    "csv_purchase_orders": {
+      "path": "csv\\purchase_orders.csv",
+      "size_bytes": 908326,
+      "sha256": "d86bd9ae6114929fea037b2e3f3ec5998d846435b0d500a7de1ae0d1ecb7dcca"
+    },
+    "csv_purchase_order_lines": {
+      "path": "csv\\purchase_order_lines.csv",
+      "size_bytes": 195891,
+      "sha256": "615af56e67f4db4e44a8819d38202b8c2acb3d85630e94d8e3c18bea47c90ffa"
+    },
+    "csv_deliveries": {
+      "path": "csv\\deliveries.csv",
+      "size_bytes": 165279,
+      "sha256": "1311c14699a8e2f3726ac0f7992ac145eb3f3d6a5dbcf86d8362cbf970caa00e"
+    },
+    "csv_budget_events": {
+      "path": "csv\\budget_events.csv",
+      "size_bytes": 686249,
+      "sha256": "9deb0fe4af784e7fd78f9fad8d785a584082710b607ff601d94bbe860fa5c8f4"
+    },
+    "csv_status_events": {
+      "path": "csv\\status_events.csv",
+      "size_bytes": 2008628,
+      "sha256": "52948681f1967eea1748ce43244c4e8e1b0dc370be17700ec995f28a731b6c88"
+    },
+    "csv_ground_truth": {
+      "path": "csv\\ground_truth.csv",
+      "size_bytes": 9200,
+      "sha256": "e14c9c3be0d002d3d600969d57272bc5ff4670d55c8c8abb19f6d485920956c2"
+    },
+    "json_departments": {
+      "path": "json\\departments.json",
+      "size_bytes": 3120,
+      "sha256": "a732e36b1e7ed7c407038645b0b0ea3eee45f27260cf66556f0e22d3c295f51d"
+    },
+    "json_budgets": {
+      "path": "json\\budgets.json",
+      "size_bytes": 4638,
+      "sha256": "d0dadf0f1b0b481dc5ce8a7d54c2004f4a006b0677333bfb8b45dbb52c11ae46"
+    },
+    "json_requesters": {
+      "path": "json\\requesters.json",
+      "size_bytes": 91435,
+      "sha256": "c77c9dc7441511b859c931b5a22c83899ce404da6df1fa49ce8d7db9902e38b2"
+    },
+    "json_suppliers": {
+      "path": "json\\suppliers.json",
+      "size_bytes": 67781,
+      "sha256": "405a18b02d65903168acb168b0876b5a2d68b6f811e6b644524f7af7a22981d7"
+    },
+    "json_approvers": {
+      "path": "json\\approvers.json",
+      "size_bytes": 8107,
+      "sha256": "0e61c2e4d5e6139ae75c57397c76f83b915c7db754dd967b05ee44619afd20f9"
+    },
+    "json_purchase_requests": {
+      "path": "json\\purchase_requests.json",
+      "size_bytes": 752963,
+      "sha256": "537ce38960fe3e4d1a0733fe4d16a1bf1da99c9644e66254e39aef254869d38e"
+    },
+    "json_request_lines": {
+      "path": "json\\request_lines.json",
+      "size_bytes": 1253080,
+      "sha256": "ea17f69fc86f8f98f47be3515cd63ecf2fbe44acd0f5510ffc70156070378bff"
+    },
+    "json_approvals": {
+      "path": "json\\approvals.json",
+      "size_bytes": 425963,
+      "sha256": "97ecbceefc282fc988a990d51488b44e08ba3dc46fccc7d2b7d473cb67e1cc5e"
+    },
+    "json_rfqs": {
+      "path": "json\\rfqs.json",
+      "size_bytes": 119003,
+      "sha256": "261a255f8372e9dc3234e01a15db1c93a5a51ec8bad14be461d08859ef87caa7"
+    },
+    "json_rfq_supplier_invites": {
+      "path": "json\\rfq_supplier_invites.json",
+      "size_bytes": 336234,
+      "sha256": "13310075e4f3e9971e40ca853ea6d69eddf24bf20a075cfa4798cd3ce15cf98c"
+    },
+    "json_supplier_quotes": {
+      "path": "json\\supplier_quotes.json",
+      "size_bytes": 4350052,
+      "sha256": "885727f1156f5c3ccaa49af6069ef85e18261a567000f58bcc86304a26096c6d"
+    },
+    "json_quote_lines": {
+      "path": "json\\quote_lines.json",
+      "size_bytes": 1842438,
+      "sha256": "382d3a616a8a8fb77b263400fc5cfaa81710f92f739b07ca1ca4064476f53230"
+    },
+    "json_purchase_orders": {
+      "path": "json\\purchase_orders.json",
+      "size_bytes": 1672455,
+      "sha256": "bb069b3b7b5f06812f66a08e29da96487d85e98c0fdf4a09084136b1e67a4440"
+    },
+    "json_purchase_order_lines": {
+      "path": "json\\purchase_order_lines.json",
+      "size_bytes": 724441,
+      "sha256": "520fd831102f774c63e2dbb6e0e34e159beebb0fb98c5cea5d9ecf493cac7d89"
+    },
+    "json_deliveries": {
+      "path": "json\\deliveries.json",
+      "size_bytes": 467843,
+      "sha256": "4224a4710e0e2083ea76e795cf42b32a0d0bb6e4fd0abba1a830bf7cb6b15297"
+    },
+    "json_budget_events": {
+      "path": "json\\budget_events.json",
+      "size_bytes": 1664739,
+      "sha256": "a9fe457062037c4813329b51e412d41205829a6178ba9e74fb5eefbedab79e8a"
+    },
+    "json_status_events": {
+      "path": "json\\status_events.json",
+      "size_bytes": 5245753,
+      "sha256": "5311947bfb430d47ebf853df3f361e9c8716efd260e9fc5a6903342a6564815e"
+    },
+    "json_ground_truth": {
+      "path": "json\\ground_truth.json",
+      "size_bytes": 15299,
+      "sha256": "988045b32e720911f7bd911d580f483055bb56013e5edd0fec20dc390f5651f3"
+    },
+    "json_metadata": {
+      "path": "json\\metadata.json",
+      "size_bytes": 324,
+      "sha256": "9eb7252c07971d9f3ef8b9642b7cbc02bfd7c1923924145fa12e3aa27879dc4f"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+approver_id,name,email,department_id,role,approval_limit,approval_limit_usd,is_active,created_at
+APP-0001,Kendall Martinez,kendall.martinez.app01@example.com,DEPT-01,LINE_MANAGER,200000,2000,1,2026-01-01T00:00:00Z
+APP-0002,Kendall Brown,kendall.brown.app02@example.com,DEPT-01,DEPARTMENT_HEAD,2500000,25000,1,2026-01-01T00:00:00Z
+APP-0003,Taylor Garcia,taylor.garcia.app03@example.com,DEPT-02,LINE_MANAGER,200000,2000,1,2026-01-01T00:00:00Z
+APP-0004,Jamie Lee,jamie.lee.app04@example.com,DEPT-02,DEPARTMENT_HEAD,2500000,25000,1,2026-01-01T00:00:00Z
+APP-0005,Adrian Young,adrian.young.app05@example.com,DEPT-03,LINE_MANAGER,200000,2000,1,2026-01-01T00:00:00Z
+APP-0006,Taylor Gonzalez,taylor.gonzalez.app06@example.com,DEPT-03,DEPARTMENT_HEAD,2500000,25000,1,2026-01-01T00:00:00Z
+APP-0007,Sage Young,sage.young.app07@example.com,DEPT-04,LINE_MANAGER,200000,2000,1,2026-01-01T00:00:00Z
+APP-0008,Reese Walker,reese.walker.app08@example.com,DEPT-04,DEPARTMENT_HEAD,2500000,25000,1,2026-01-01T00:00:00Z
+APP-0009,Elliott Thomas,elliott.thomas.app09@example.com,DEPT-05,LINE_MANAGER,200000,2000,1,2026-01-01T00:00:00Z
+APP-0010,Kai Williams,kai.williams.app10@example.com,DEPT-05,DEPARTMENT_HEAD,2500000,25000,1,2026-01-01T00:00:00Z
+APP-0011,Drew Taylor,drew.taylor.app11@example.com,DEPT-06,LINE_MANAGER,200000,2000,1,2026-01-01T00:00:00Z
+APP-0012,Avery Lopez,avery.lopez.app12@example.com,DEPT-06,DEPARTMENT_HEAD,2500000,25000,1,2026-01-01T00:00:00Z
+APP-0013,Alex Wilson,alex.wilson.app13@example.com,DEPT-07,LINE_MANAGER,200000,2000,1,2026-01-01T00:00:00Z
+APP-0014,Quinn Walker,quinn.walker.app14@example.com,DEPT-07,DEPARTMENT_HEAD,2500000,25000,1,2026-01-01T00:00:00Z
+APP-0015,Emerson Johnson,emerson.johnson.app15@example.com,DEPT-08,LINE_MANAGER,200000,2000,1,2026-01-01T00:00:00Z
+APP-0016,Sage Williams,sage.williams.app16@example.com,DEPT-08,DEPARTMENT_HEAD,2500000,25000,1,2026-01-01T00:00:00Z
+APP-0017,Kai Miller,kai.miller.app17@example.com,DEPT-09,LINE_MANAGER,200000,2000,1,2026-01-01T00:00:00Z
+APP-0018,Drew Ramirez,drew.ramirez.app18@example.com,DEPT-09,DEPARTMENT_HEAD,2500000,25000,1,2026-01-01T00:00:00Z
+APP-0019,Casey Davis,casey.davis.app19@example.com,DEPT-10,LINE_MANAGER,200000,2000,1,2026-01-01T00:00:00Z
+APP-0020,Cameron Williams,cameron.williams.app20@example.com,DEPT-10,DEPARTMENT_HEAD,2500000,25000,1,2026-01-01T00:00:00Z
+APP-0021,Alex Brown,alex.brown.app21@example.com,DEPT-11,LINE_MANAGER,200000,2000,1,2026-01-01T00:00:00Z
+APP-0022,Taylor Thompson,taylor.thompson.app22@example.com,DEPT-11,DEPARTMENT_HEAD,2500000,25000,1,2026-01-01T00:00:00Z
+APP-0023,Drew Walker,drew.walker.app23@example.com,DEPT-12,LINE_MANAGER,200000,2000,1,2026-01-01T00:00:00Z
+APP-0024,Kai Lee,kai.lee.app24@example.com,DEPT-12,DEPARTMENT_HEAD,2500000,25000,1,2026-01-01T00:00:00Z
+APP-0025,Chris Martin,chris.martin.app25@example.com,DEPT-03,FINANCE,100000000,1000000,1,2026-01-01T00:00:00Z
+APP-0026,Jordan Wilson,jordan.wilson.app26@example.com,DEPT-03,FINANCE,100000000,1000000,1,2026-01-01T00:00:00Z

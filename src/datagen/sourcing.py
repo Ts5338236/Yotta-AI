@@ -181,7 +181,8 @@ def generate_sourcing(
             })
 
             # 2. Quotation
-            quote_id = id_factory.next_supplier_quote_id()
+            sup_code = sup.get("supplier_code", sup_id)
+            quote_id = id_factory.next_supplier_quote_id(supplier_code=sup_code)
             quote_date = _add_days(issue_date, int(rng.integers(3, 7)))
             valid_until = _add_days(quote_date, int(rng.integers(30, 60)))
 

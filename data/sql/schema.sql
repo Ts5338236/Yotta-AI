@@ -331,3 +331,18 @@ CREATE INDEX IF NOT EXISTS idx_budget_events_budget ON budget_events(budget_id);
 CREATE INDEX IF NOT EXISTS idx_budget_events_request ON budget_events(request_id);
 CREATE INDEX IF NOT EXISTS idx_budget_events_po ON budget_events(po_id);
 CREATE INDEX IF NOT EXISTS idx_exception_logs_entity ON exception_logs(affected_entity_type, affected_entity_id);
+
+-- ----------------------------------------------------------------------------
+-- 19. Ground Truth Anomalies
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS ground_truth (
+    anomaly_id TEXT PRIMARY KEY,
+    issue_type TEXT NOT NULL,
+    entity TEXT NOT NULL,
+    record_id TEXT NOT NULL,
+    expected_decision TEXT NOT NULL,
+    reason TEXT NOT NULL,
+    metadata TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_ground_truth_record ON ground_truth(record_id);

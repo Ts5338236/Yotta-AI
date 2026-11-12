@@ -1,0 +1,278 @@
+{
+  "status": "PASS",
+  "verified_at": "2026-11-12T15:10:01.816360+00:00",
+  "total_checks": 39,
+  "passed_checks": 39,
+  "failed_checks": 0,
+  "checks": [
+    {
+      "artifact": "csv/departments.csv",
+      "check": "record_count_match",
+      "expected": 12,
+      "actual": 12,
+      "passed": true
+    },
+    {
+      "artifact": "csv/budgets.csv",
+      "check": "record_count_match",
+      "expected": 12,
+      "actual": 12,
+      "passed": true
+    },
+    {
+      "artifact": "csv/requesters.csv",
+      "check": "record_count_match",
+      "expected": 300,
+      "actual": 300,
+      "passed": true
+    },
+    {
+      "artifact": "csv/approvers.csv",
+      "check": "record_count_match",
+      "expected": 26,
+      "actual": 26,
+      "passed": true
+    },
+    {
+      "artifact": "csv/suppliers.csv",
+      "check": "record_count_match",
+      "expected": 125,
+      "actual": 125,
+      "passed": true
+    },
+    {
+      "artifact": "csv/purchase_requests.csv",
+      "check": "record_count_match",
+      "expected": 1205,
+      "actual": 1205,
+      "passed": true
+    },
+    {
+      "artifact": "csv/request_lines.csv",
+      "check": "record_count_match",
+      "expected": 2529,
+      "actual": 2529,
+      "passed": true
+    },
+    {
+      "artifact": "csv/rfqs.csv",
+      "check": "record_count_match",
+      "expected": 500,
+      "actual": 500,
+      "passed": true
+    },
+    {
+      "artifact": "csv/rfq_supplier_invites.csv",
+      "check": "record_count_match",
+      "expected": 1779,
+      "actual": 1779,
+      "passed": true
+    },
+    {
+      "artifact": "csv/supplier_quotes.csv",
+      "check": "record_count_match",
+      "expected": 1779,
+      "actual": 1779,
+      "passed": true
+    },
+    {
+      "artifact": "csv/quote_lines.csv",
+      "check": "record_count_match",
+      "expected": 4497,
+      "actual": 4497,
+      "passed": true
+    },
+    {
+      "artifact": "csv/approvals.csv",
+      "check": "record_count_match",
+      "expected": 1018,
+      "actual": 1018,
+      "passed": true
+    },
+    {
+      "artifact": "csv/purchase_orders.csv",
+      "check": "record_count_match",
+      "expected": 970,
+      "actual": 970,
+      "passed": true
+    },
+    {
+      "artifact": "csv/purchase_order_lines.csv",
+      "check": "record_count_match",
+      "expected": 2051,
+      "actual": 2051,
+      "passed": true
+    },
+    {
+      "artifact": "csv/deliveries.csv",
+      "check": "record_count_match",
+      "expected": 1048,
+      "actual": 1048,
+      "passed": true
+    },
+    {
+      "artifact": "csv/status_events.csv",
+      "check": "record_count_match",
+      "expected": 9664,
+      "actual": 9664,
+      "passed": true
+    },
+    {
+      "artifact": "csv/budget_events.csv",
+      "check": "record_count_match",
+      "expected": 3970,
+      "actual": 3970,
+      "passed": true
+    },
+    {
+      "artifact": "csv/ground_truth.csv",
+      "check": "record_count_match",
+      "expected": 35,
+      "actual": 35,
+      "passed": true
+    },
+    {
+      "artifact": "json/departments.json",
+      "check": "record_count_match",
+      "expected": 12,
+      "actual": 12,
+      "passed": true
+    },
+    {
+      "artifact": "json/budgets.json",
+      "check": "record_count_match",
+      "expected": 12,
+      "actual": 12,
+      "passed": true
+    },
+    {
+      "artifact": "json/requesters.json",
+      "check": "record_count_match",
+      "expected": 300,
+      "actual": 300,
+      "passed": true
+    },
+    {
+      "artifact": "json/approvers.json",
+      "check": "record_count_match",
+      "expected": 26,
+      "actual": 26,
+      "passed": true
+    },
+    {
+      "artifact": "json/suppliers.json",
+      "check": "record_count_match",
+      "expected": 125,
+      "actual": 125,
+      "passed": true
+    },
+    {
+      "artifact": "json/purchase_requests.json",
+      "check": "record_count_match",
+      "expected": 1205,
+      "actual": 1205,
+      "passed": true
+    },
+    {
+      "artifact": "json/request_lines.json",
+      "check": "record_count_match",
+      "expected": 2529,
+      "actual": 2529,
+      "passed": true
+    },
+    {
+      "artifact": "json/rfqs.json",
+      "check": "record_count_match",
+      "expected": 500,
+      "actual": 500,
+      "passed": true
+    },
+    {
+      "artifact": "json/rfq_supplier_invites.json",
+      "check": "record_count_match",
+      "expected": 1779,
+      "actual": 1779,
+      "passed": true
+    },
+    {
+      "artifact": "json/supplier_quotes.json",
+      "check": "record_count_match",
+      "expected": 1779,
+      "actual": 1779,
+      "passed": true
+    },
+    {
+      "artifact": "json/quote_lines.json",
+      "check": "record_count_match",
+      "expected": 4497,
+      "actual": 4497,
+      "passed": true
+    },
+    {
+      "artifact": "json/approvals.json",
+      "check": "record_count_match",
+      "expected": 1018,
+      "actual": 1018,
+      "passed": true
+    },
+    {
+      "artifact": "json/purchase_orders.json",
+      "check": "record_count_match",
+      "expected": 970,
+      "actual": 970,
+      "passed": true
+    },
+    {
+      "artifact": "json/purchase_order_lines.json",
+      "check": "record_count_match",
+      "expected": 2051,
+      "actual": 2051,
+      "passed": true
+    },
+    {
+      "artifact": "json/deliveries.json",
+      "check": "record_count_match",
+      "expected": 1048,
+      "actual": 1048,
+      "passed": true
+    },
+    {
+      "artifact": "json/status_events.json",
+      "check": "record_count_match",
+      "expected": 9664,
+      "actual": 9664,
+      "passed": true
+    },
+    {
+      "artifact": "json/budget_events.json",
+      "check": "record_count_match",
+      "expected": 3970,
+      "actual": 3970,
+      "passed": true
+    },
+    {
+      "artifact": "json/ground_truth.json",
+      "check": "record_count_match",
+      "expected": 35,
+      "actual": 35,
+      "passed": true
+    },
+    {
+      "artifact": "procurement.db",
+      "check": "integrity_check",
+      "passed": true
+    },
+    {
+      "artifact": "procurement.db",
+      "check": "foreign_key_check",
+      "violations_count": 0,
+      "passed": true
+    },
+    {
+      "artifact": "seed.sql",
+      "check": "execution_against_clean_schema",
+      "foreign_key_violations": 0,
+      "passed": true
+    }
+  ]
+}

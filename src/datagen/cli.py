@@ -86,7 +86,13 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument(
         "--export",
         action="store_true",
-        help="Persist generated dataset to CSV, JSON, and SQLite database",
+        help="Persist generated dataset to CSV, JSON, SQLite database, DDL schema, and seed script",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=str,
+        default="output",
+        help="Root directory for exported artifacts (default: output)",
     )
     parser.add_argument(
         "--scale",
@@ -139,6 +145,7 @@ def main(argv: list[str] | None = None) -> None:
                 cfg = load_config(args.config)
                 rng = np.random.default_rng(meta["seed"])
                 dataset, gt_records = inject_anomalies(dataset, cfg, rng)
+                dataset["ground_truth"] = [r if isinstance(r, dict) else r.to_dict() for r in gt_records]
 
             print("=== Procurement Workflow Generation Successful ===")
             print(f"Scale Tier        : {meta['scale']}")
@@ -170,11 +177,64 @@ def main(argv: list[str] | None = None) -> None:
 
             if args.export:
                 from datagen.export import export_all
-                print("\n=== Persisting Dataset to Disk ===")
-                exp_res = export_all(dataset)
-                print(f"CSV Tables Exported: {exp_res['total_tables_exported']} -> data/csv/")
-                print(f"JSON Files Exported: {len(exp_res['json_files'])} -> data/json/")
+                from validate.checks import validate_dataset
+                from validate.anomaly_checks import detect_all_anomalies, evaluate_detections
+                import json
+
+                out_root = Path(args.output_dir).resolve()
+                print(f"\n=== Persisting Dataset to Disk ({out_root}) ===")
+                exp_res = export_all(dataset, output_dir=out_root)
+                print(f"CSV Tables Exported: {exp_res['total_tables_exported']} -> {out_root}/csv/")
+                print(f"JSON Files Exported: {len(exp_res['json_files'])} -> {out_root}/json/")
                 print(f"SQLite DB Created  : {exp_res['sqlite_db']}")
+                print(f"DDL Schema Exported: {exp_res['schema_ddl']}")
+                print(f"SQL Seed Generated : {exp_res['seed_sql']}")
+                print(f"Source Manifest    : {exp_res['manifest']}")
+
+                rep_dir = out_root / "reports"
+                rep_dir.mkdir(parents=True, exist_ok=True)
+
+                # Generate validation report
+                val_report = validate_dataset(dataset)
+                with open(rep_dir / "validation_report.json", "w", encoding="utf-8") as f:
+                    json.dump(val_report.to_dict(), f, indent=2)
+                with open(rep_dir / "validation_report.md", "w", encoding="utf-8") as f:
+                    f.write(val_report.to_markdown())
+                print(f"Validation Report  : {rep_dir}/validation_report.md (Status: {val_report.status})")
+
+                # Generate anomaly evaluation report if ground truth present
+                if gt_records:
+                    findings = detect_all_anomalies(dataset)
+                    eval_metrics = evaluate_detections(findings, gt_records)
+                    with open(rep_dir / "anomaly_evaluation_report.json", "w", encoding="utf-8") as f:
+                        json.dump(eval_metrics, f, indent=2)
+
+                    md_anom = [
+                        "# Anomaly Detection Evaluation Report",
+                        "",
+                        f"- **Total Ground Truth**: `{eval_metrics['total_ground_truth']}`",
+                        f"- **Total Detected**: `{eval_metrics['total_detected']}`",
+                        f"- **True Positives**: `{eval_metrics['true_positives']}`",
+                        f"- **False Positives**: `{eval_metrics['false_positives']}`",
+                        f"- **False Negatives**: `{eval_metrics['false_negatives']}`",
+                        f"- **Overall Precision**: `{eval_metrics['precision']:.4f}`",
+                        f"- **Overall Recall**: `{eval_metrics['recall']:.4f}`",
+                        f"- **Overall F1 Score**: `{eval_metrics['f1_score']:.4f}`",
+                        "",
+                        "## Metrics by Anomaly Category",
+                        "",
+                        "| Category | Ground Truth | Detected | TP | FP | FN | Precision | Recall | F1 Score |",
+                        "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |",
+                    ]
+                    for cat, c_met in eval_metrics.get("by_category", {}).items():
+                        md_anom.append(
+                            f"| `{cat}` | {c_met['ground_truth_count']} | {c_met['detected_count']} | "
+                            f"{c_met['true_positives']} | {c_met['false_positives']} | {c_met['false_negatives']} | "
+                            f"{c_met['precision']:.4f} | {c_met['recall']:.4f} | {c_met['f1_score']:.4f} |"
+                        )
+                    with open(rep_dir / "anomaly_evaluation_report.md", "w", encoding="utf-8") as f:
+                        f.write("\n".join(md_anom) + "\n")
+                    print(f"Anomaly Evaluation : {rep_dir}/anomaly_evaluation_report.md (F1: {eval_metrics['f1_score']:.4f})")
 
             sys.exit(0)
         except Exception as err:

@@ -2,7 +2,7 @@
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Status: Phase 5 Complete](https://img.shields.io/badge/Status-Phase%205%20Complete-green.svg)]()
+[![Status: Complete & Submission Ready](https://img.shields.io/badge/Status-Complete%20%26%20Submission%20Ready-green.svg)]()
 
 Production-quality Procure-to-Pay (P2P) Synthetic Data Generator built for the **YottaFlex AI** technical coding round.
 
@@ -12,7 +12,7 @@ Production-quality Procure-to-Pay (P2P) Synthetic Data Generator built for the *
 
 The **Procure-to-Pay Synthetic Data Generator** is an enterprise data engineering framework designed to simulate an authentic corporate procurement lifecycle. The platform generates realistic, normalized, relational procurement datasets with controlled anomalies for testing downstream data warehouses, fraud detection systems, and machine learning models.
 
-### Key Capabilities (Phases 1, 2, 3, 4, and 5 Complete):
+### Key Capabilities (Phases 1 through 7 Complete):
 - **Master Data Generation**: Organizational hierarchy (Departments, Budgets, Requesters with DAG reporting trees, Approvers, and Suppliers).
 - **Purchase Requisitions**: Itemized Purchase Requests and Request Lines with category-based log-normal pricing and 2026 calendar seasonality.
 - **Multi-Level Approvals**: Tiered approval routing by total estimate ($2,000 line manager, $25,000 department head, >$25,000 corporate finance) with natural ~5% business rejections.
@@ -25,11 +25,12 @@ The **Procure-to-Pay Synthetic Data Generator** is an enterprise data engineerin
 - **Modular Anomaly Injection Engine (`anomalies.py`)**: Post-generation mutations introducing 7 procurement anomaly types (`po_without_approval`, `expired_quote_before_award`, `non_cheapest_quote_without_rationale`, `inactive_supplier_used`, `budget_overrun`, `duplicate_purchase_request`, `quote_currency_mismatch`).
 - **Ground Truth Isolation**: Segregated ground truth records with `ANOM-######` IDs and recommended operational decisions (`REJECT`, `DISQUALIFY`, `JUSTIFY_OR_REVERT`, `BLOCK`, `FLAG`, `REVISE`).
 - **Independent Anomaly Detectors & Evaluator (`anomaly_checks.py`)**: 7 independent rule-based detectors and an evaluation engine calculating True Positives, False Positives, False Negatives, Precision, Recall, and F1-score (100% precision and 100% recall achieved).
-- **Relational Integrity**: 100% normalized 3NF relational schema in SQLite enforcing strict foreign keys, unique constraints, and check constraints across all 18 tables.
+- **Multi-Format Export Engine (`export.py`)**: Seamless disk persistence to CSV (`output/csv/`), JSON (`output/json/`), SQLite database (`output/database/procurement.db`), canonical DDL (`output/sql/schema.sql`), and self-contained SQL seed (`output/sql/seed.sql`).
+- **Relational Integrity**: 100% normalized 3NF relational schema in SQLite enforcing strict foreign keys, unique constraints, and check constraints across all 19 tables.
 - **Deterministic & Reproducible**: Fully reproducible sequence identifiers and zero uncontrolled randomness (single shared RNG pass-through).
 - **Financial Precision**: Absolute precision in monetary amounts and currency conversions using Python `decimal.Decimal` and SQLite integer minor units.
 
-> **Status Notice**: Phase 1 (Foundation & Schema), Phase 2 (Master Data & Requests), Phase 3 (Complete Procurement Workflow), Phase 4 (Derived Fields Engine & Comprehensive Validation), and **Phase 5 (Anomaly Injection & Ground Truth Generation)** are **COMPLETE**. Final export engine and relational SQLite storage (Phase 6) will be implemented next.
+> **Status Notice**: All phases from Phase 1 (Foundation & Architecture) through Phase 7 (Final Audit, Fresh Clone Verification & Submission Readiness) are **100% COMPLETE**. The codebase is verified to run cleanly in fresh environments with 148 passing tests and 100% bitwise determinism.
 
 ---
 
@@ -269,43 +270,56 @@ JSON Report Saved     : docs/validation_summary.json
 
 ---
 
-## 7. Running the Automated Test Suite
+## 7. Full-Scale Generation & Export (Assignment Deliverables)
 
-Execute the full automated test suite using `pytest`:
+Generate the full-scale procurement dataset (1,200 requisitions, 500 RFQs, ~1,779 quotes, 970 POs) with controlled anomaly injection and complete disk persistence:
 
 ```powershell
-python -m pytest -v
+python -m datagen --generate --scale full --inject-anomalies --export --output-dir output
 ```
 
-All 142 automated unit and integration tests cover:
-- Post-generation anomaly mutations for all 7 PRD categories with synchronized ID generation.
-- Independent anomaly detection without reading ground truth or injection metadata.
-- True Positive, False Positive, False Negative, Precision, Recall, and F1 calculations.
-- Ground truth isolation (`ANOM-######`) and operational table non-contamination.
-- Dual-mode validation (`clean` vs `anomaly_aware`).
-- Centralized derived fields recalculation across all 11 modular functions in `derive.py`.
-- Primary key uniqueness, nullability checks, and canonical regex format enforcement.
-- Foreign key and cross-entity relationship verification across all 18 tables.
-- Financial arithmetic: request lines, PR totals, quote landed costs, PO line totals, and delivery quantities.
-- Multi-tier approval thresholds, approver roles, and natural ~5% business rejections.
-- Strategic sourcing classification, RFQ invitation pools, multi-currency quote landed costs, and multicriteria scoring.
-- Delivery lifecycle states, on-time delivery (~80%), late delivery (~10%), and multi-shipment partial fulfillments (~10%).
-- Double-entry budget ledger integrity (`ALLOCATE`, `RESERVE`, `COMMIT`, `RELEASE`, `SPEND`) with zero clean-path overruns.
-- Complete state transition audit events for PR, RFQ, PO, and Delivery lifecycles.
-- Transaction chronology and fiscal year 2026 boundaries.
-- Intentionally corrupted test fixtures to prove validator detection capabilities.
-- Deterministic byte-for-byte reproducibility across runs with identical seeds.
+This populates all required submission artifacts into `output/`:
+- **`output/csv/`**: 18 entity CSV files + `ground_truth.csv`
+- **`output/json/`**: 18 entity JSON files + `ground_truth.json` + `metadata.json`
+- **`output/database/procurement.db`**: Fully populated SQLite database with `PRAGMA foreign_keys = ON`
+- **`output/sql/schema.sql`**: Canonical 19-table DDL schema with check constraints and indexes
+- **`output/sql/seed.sql`**: Self-contained, topologically ordered SQL `INSERT` statements
+- **`output/source_manifest.json`**: Cryptographic provenance manifest with SHA-256 hashes
+- **`output/reports/`**: Comprehensive markdown and JSON reports for validation, anomaly detection, export integrity, and dataset statistics.
 
 ---
 
-## 8. Development Roadmap
+## 8. Running the Automated Test Suite & Fresh Clone Verification
 
-| Phase | Milestone | Scope | Status |
-| :---: | :--- | :--- | :---: |
-| **Phase 1** | **Project Foundation & Architecture** | Package structure, SQLite schema, IDFactory, FX engine, config management, docs, foundational tests | **COMPLETED** |
-| **Phase 2** | **Master Data & Purchase Requests** | Departments, Budgets, Requesters (DAG), Suppliers, PRs, Request Lines, Log-normal Pricing, Seasonality | **COMPLETED** |
-| **Phase 3** | **Complete Procurement Workflow** | Multi-level Approvals, RFQs, Supplier Quotes & Scoring, POs, Deliveries, Budget Ledger, Lifecycle Events | **COMPLETED** |
-| **Phase 4** | **Derived Fields & Comprehensive Validation** | Centralized derivation engine (`derive.py`), 7-domain independent validator (`validate/`), financial reconciliation, audit reports | **COMPLETED** |
-| **Phase 5** | **Anomaly Injection & Ground Truth Generation** | 7 procurement anomaly types (`anomalies.py`), isolated ground truth (`ANOM-######`), 7 independent detectors (`anomaly_checks.py`), evaluation engine (100% precision & recall) | **COMPLETED** |
-| Phase 6 | Data Export & Storage Engine | CSV / JSON export engine, relational SQLite ingestion, bulk insert optimization | Next |
-| Phase 7 | End-to-End Validation & Audit | Cross-entity reconciliation, audit ground truth manifest, production test bench | Upcoming |
+### Pytest Test Suite
+Execute the entire 148-test automated verification suite:
+
+```powershell
+python -m pytest tests/ -v
+```
+
+### Two-Run Bitwise Determinism Verification
+Verify 100% bitwise reproducibility across independent runs with seed `20261022`:
+
+```powershell
+python scratch/verify_determinism_2runs.py
+```
+
+### Complete 7-Stage Fresh Clone Audit
+Execute automated clean-room verification in an isolated temporary sandbox:
+
+```powershell
+python scratch/fresh_clone_audit.py
+```
+
+---
+
+## 9. Assignment Compliance Matrix & Documentation Index
+
+- **Assignment Compliance Matrix (100% Complete)**: [`docs/assignment_compliance_matrix.md`](docs/assignment_compliance_matrix.md)
+- **Final Technical Audit Report (20 Points)**: [`docs/final_audit_report.md`](docs/final_audit_report.md)
+- **System Architecture & Lifecycle DAG**: [`docs/architecture.md`](docs/architecture.md)
+- **Data Dictionary (All 19 Tables)**: [`docs/data_dictionary.md`](docs/data_dictionary.md)
+- **Anomaly Catalog & Detection Criteria**: [`docs/anomaly_catalog.md`](docs/anomaly_catalog.md)
+- **Reproducibility & Determinism Guide**: [`docs/reproducibility.md`](docs/reproducibility.md)
+- **AI Governance & Prompt History**: [`AI_USAGE.md`](AI_USAGE.md) and [`docs/prompt_history.md`](docs/prompt_history.md)

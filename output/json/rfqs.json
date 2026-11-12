@@ -1,0 +1,4502 @@
+[
+  {
+    "rfq_id": "RFQ-2026-000001",
+    "request_id": "PR-2026-000799",
+    "currency": "USD",
+    "issue_date": "2026-01-05",
+    "due_date": "2026-01-17",
+    "status": "AWARDED",
+    "created_at": "2026-01-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000002",
+    "request_id": "PR-2026-000249",
+    "currency": "USD",
+    "issue_date": "2026-01-05",
+    "due_date": "2026-01-18",
+    "status": "AWARDED",
+    "created_at": "2026-01-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000003",
+    "request_id": "PR-2026-001162",
+    "currency": "USD",
+    "issue_date": "2026-01-06",
+    "due_date": "2026-01-14",
+    "status": "AWARDED",
+    "created_at": "2026-01-06T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000004",
+    "request_id": "PR-2026-000613",
+    "currency": "USD",
+    "issue_date": "2026-01-08",
+    "due_date": "2026-01-21",
+    "status": "AWARDED",
+    "created_at": "2026-01-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000005",
+    "request_id": "PR-2026-000638",
+    "currency": "USD",
+    "issue_date": "2026-01-07",
+    "due_date": "2026-01-15",
+    "status": "AWARDED",
+    "created_at": "2026-01-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000006",
+    "request_id": "PR-2026-000041",
+    "currency": "USD",
+    "issue_date": "2026-01-07",
+    "due_date": "2026-01-16",
+    "status": "AWARDED",
+    "created_at": "2026-01-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000007",
+    "request_id": "PR-2026-000676",
+    "currency": "USD",
+    "issue_date": "2026-01-08",
+    "due_date": "2026-01-16",
+    "status": "AWARDED",
+    "created_at": "2026-01-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000008",
+    "request_id": "PR-2026-000222",
+    "currency": "USD",
+    "issue_date": "2026-01-09",
+    "due_date": "2026-01-20",
+    "status": "AWARDED",
+    "created_at": "2026-01-09T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000009",
+    "request_id": "PR-2026-000263",
+    "currency": "USD",
+    "issue_date": "2026-01-09",
+    "due_date": "2026-01-16",
+    "status": "AWARDED",
+    "created_at": "2026-01-09T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000010",
+    "request_id": "PR-2026-000027",
+    "currency": "USD",
+    "issue_date": "2026-01-12",
+    "due_date": "2026-01-23",
+    "status": "AWARDED",
+    "created_at": "2026-01-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000011",
+    "request_id": "PR-2026-000076",
+    "currency": "USD",
+    "issue_date": "2026-01-11",
+    "due_date": "2026-01-18",
+    "status": "AWARDED",
+    "created_at": "2026-01-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000012",
+    "request_id": "PR-2026-000942",
+    "currency": "USD",
+    "issue_date": "2026-01-10",
+    "due_date": "2026-01-18",
+    "status": "AWARDED",
+    "created_at": "2026-01-10T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000013",
+    "request_id": "PR-2026-000735",
+    "currency": "USD",
+    "issue_date": "2026-01-12",
+    "due_date": "2026-01-24",
+    "status": "AWARDED",
+    "created_at": "2026-01-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000014",
+    "request_id": "PR-2026-000455",
+    "currency": "USD",
+    "issue_date": "2026-01-12",
+    "due_date": "2026-01-24",
+    "status": "AWARDED",
+    "created_at": "2026-01-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000015",
+    "request_id": "PR-2026-000562",
+    "currency": "USD",
+    "issue_date": "2026-01-14",
+    "due_date": "2026-01-25",
+    "status": "AWARDED",
+    "created_at": "2026-01-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000016",
+    "request_id": "PR-2026-000794",
+    "currency": "USD",
+    "issue_date": "2026-01-14",
+    "due_date": "2026-01-21",
+    "status": "AWARDED",
+    "created_at": "2026-01-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000017",
+    "request_id": "PR-2026-001074",
+    "currency": "USD",
+    "issue_date": "2026-01-13",
+    "due_date": "2026-01-25",
+    "status": "AWARDED",
+    "created_at": "2026-01-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000018",
+    "request_id": "PR-2026-001121",
+    "currency": "USD",
+    "issue_date": "2026-01-14",
+    "due_date": "2026-01-24",
+    "status": "AWARDED",
+    "created_at": "2026-01-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000019",
+    "request_id": "PR-2026-000577",
+    "currency": "USD",
+    "issue_date": "2026-01-15",
+    "due_date": "2026-01-22",
+    "status": "AWARDED",
+    "created_at": "2026-01-15T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000020",
+    "request_id": "PR-2026-000175",
+    "currency": "USD",
+    "issue_date": "2026-01-17",
+    "due_date": "2026-01-26",
+    "status": "AWARDED",
+    "created_at": "2026-01-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000021",
+    "request_id": "PR-2026-000727",
+    "currency": "USD",
+    "issue_date": "2026-01-18",
+    "due_date": "2026-01-30",
+    "status": "AWARDED",
+    "created_at": "2026-01-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000022",
+    "request_id": "PR-2026-001104",
+    "currency": "USD",
+    "issue_date": "2026-01-17",
+    "due_date": "2026-01-25",
+    "status": "AWARDED",
+    "created_at": "2026-01-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000023",
+    "request_id": "PR-2026-000397",
+    "currency": "USD",
+    "issue_date": "2026-01-20",
+    "due_date": "2026-01-31",
+    "status": "AWARDED",
+    "created_at": "2026-01-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000024",
+    "request_id": "PR-2026-001096",
+    "currency": "USD",
+    "issue_date": "2026-01-20",
+    "due_date": "2026-01-31",
+    "status": "AWARDED",
+    "created_at": "2026-01-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000025",
+    "request_id": "PR-2026-000371",
+    "currency": "USD",
+    "issue_date": "2026-01-21",
+    "due_date": "2026-01-28",
+    "status": "AWARDED",
+    "created_at": "2026-01-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000026",
+    "request_id": "PR-2026-000739",
+    "currency": "USD",
+    "issue_date": "2026-01-23",
+    "due_date": "2026-01-30",
+    "status": "AWARDED",
+    "created_at": "2026-01-23T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000027",
+    "request_id": "PR-2026-000835",
+    "currency": "USD",
+    "issue_date": "2026-01-26",
+    "due_date": "2026-02-07",
+    "status": "AWARDED",
+    "created_at": "2026-01-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000028",
+    "request_id": "PR-2026-000021",
+    "currency": "USD",
+    "issue_date": "2026-01-26",
+    "due_date": "2026-02-03",
+    "status": "AWARDED",
+    "created_at": "2026-01-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000029",
+    "request_id": "PR-2026-000151",
+    "currency": "USD",
+    "issue_date": "2026-01-26",
+    "due_date": "2026-02-06",
+    "status": "AWARDED",
+    "created_at": "2026-01-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000030",
+    "request_id": "PR-2026-000540",
+    "currency": "USD",
+    "issue_date": "2026-01-26",
+    "due_date": "2026-02-02",
+    "status": "AWARDED",
+    "created_at": "2026-01-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000031",
+    "request_id": "PR-2026-000945",
+    "currency": "USD",
+    "issue_date": "2026-01-28",
+    "due_date": "2026-02-10",
+    "status": "AWARDED",
+    "created_at": "2026-01-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000032",
+    "request_id": "PR-2026-001197",
+    "currency": "USD",
+    "issue_date": "2026-01-27",
+    "due_date": "2026-02-04",
+    "status": "AWARDED",
+    "created_at": "2026-01-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000033",
+    "request_id": "PR-2026-000146",
+    "currency": "USD",
+    "issue_date": "2026-01-30",
+    "due_date": "2026-02-07",
+    "status": "AWARDED",
+    "created_at": "2026-01-30T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000034",
+    "request_id": "PR-2026-000398",
+    "currency": "USD",
+    "issue_date": "2026-01-30",
+    "due_date": "2026-02-06",
+    "status": "AWARDED",
+    "created_at": "2026-01-30T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000035",
+    "request_id": "PR-2026-000897",
+    "currency": "USD",
+    "issue_date": "2026-01-30",
+    "due_date": "2026-02-10",
+    "status": "AWARDED",
+    "created_at": "2026-01-30T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000036",
+    "request_id": "PR-2026-000026",
+    "currency": "USD",
+    "issue_date": "2026-01-30",
+    "due_date": "2026-02-12",
+    "status": "AWARDED",
+    "created_at": "2026-01-30T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000037",
+    "request_id": "PR-2026-000301",
+    "currency": "USD",
+    "issue_date": "2026-02-01",
+    "due_date": "2026-02-12",
+    "status": "AWARDED",
+    "created_at": "2026-02-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000038",
+    "request_id": "PR-2026-000911",
+    "currency": "USD",
+    "issue_date": "2026-01-31",
+    "due_date": "2026-02-08",
+    "status": "AWARDED",
+    "created_at": "2026-01-31T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000039",
+    "request_id": "PR-2026-000197",
+    "currency": "USD",
+    "issue_date": "2026-02-01",
+    "due_date": "2026-02-14",
+    "status": "AWARDED",
+    "created_at": "2026-02-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000040",
+    "request_id": "PR-2026-000210",
+    "currency": "USD",
+    "issue_date": "2026-02-03",
+    "due_date": "2026-02-13",
+    "status": "AWARDED",
+    "created_at": "2026-02-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000041",
+    "request_id": "PR-2026-000357",
+    "currency": "USD",
+    "issue_date": "2026-02-01",
+    "due_date": "2026-02-08",
+    "status": "AWARDED",
+    "created_at": "2026-02-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000042",
+    "request_id": "PR-2026-000304",
+    "currency": "USD",
+    "issue_date": "2026-02-03",
+    "due_date": "2026-02-11",
+    "status": "AWARDED",
+    "created_at": "2026-02-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000043",
+    "request_id": "PR-2026-000340",
+    "currency": "USD",
+    "issue_date": "2026-02-05",
+    "due_date": "2026-02-17",
+    "status": "AWARDED",
+    "created_at": "2026-02-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000044",
+    "request_id": "PR-2026-001073",
+    "currency": "USD",
+    "issue_date": "2026-02-04",
+    "due_date": "2026-02-13",
+    "status": "AWARDED",
+    "created_at": "2026-02-04T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000045",
+    "request_id": "PR-2026-000037",
+    "currency": "USD",
+    "issue_date": "2026-02-05",
+    "due_date": "2026-02-17",
+    "status": "AWARDED",
+    "created_at": "2026-02-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000046",
+    "request_id": "PR-2026-000543",
+    "currency": "USD",
+    "issue_date": "2026-02-07",
+    "due_date": "2026-02-19",
+    "status": "AWARDED",
+    "created_at": "2026-02-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000047",
+    "request_id": "PR-2026-000569",
+    "currency": "USD",
+    "issue_date": "2026-02-07",
+    "due_date": "2026-02-15",
+    "status": "AWARDED",
+    "created_at": "2026-02-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000048",
+    "request_id": "PR-2026-001075",
+    "currency": "USD",
+    "issue_date": "2026-02-08",
+    "due_date": "2026-02-21",
+    "status": "AWARDED",
+    "created_at": "2026-02-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000049",
+    "request_id": "PR-2026-001019",
+    "currency": "USD",
+    "issue_date": "2026-02-09",
+    "due_date": "2026-02-22",
+    "status": "AWARDED",
+    "created_at": "2026-02-09T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000050",
+    "request_id": "PR-2026-001024",
+    "currency": "USD",
+    "issue_date": "2026-02-09",
+    "due_date": "2026-02-18",
+    "status": "AWARDED",
+    "created_at": "2026-02-09T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000051",
+    "request_id": "PR-2026-000490",
+    "currency": "USD",
+    "issue_date": "2026-02-10",
+    "due_date": "2026-02-18",
+    "status": "AWARDED",
+    "created_at": "2026-02-10T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000052",
+    "request_id": "PR-2026-000122",
+    "currency": "USD",
+    "issue_date": "2026-02-11",
+    "due_date": "2026-02-24",
+    "status": "AWARDED",
+    "created_at": "2026-02-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000053",
+    "request_id": "PR-2026-000235",
+    "currency": "USD",
+    "issue_date": "2026-02-13",
+    "due_date": "2026-02-21",
+    "status": "AWARDED",
+    "created_at": "2026-02-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000054",
+    "request_id": "PR-2026-000380",
+    "currency": "USD",
+    "issue_date": "2026-02-13",
+    "due_date": "2026-02-26",
+    "status": "AWARDED",
+    "created_at": "2026-02-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000055",
+    "request_id": "PR-2026-000841",
+    "currency": "USD",
+    "issue_date": "2026-02-13",
+    "due_date": "2026-02-22",
+    "status": "AWARDED",
+    "created_at": "2026-02-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000056",
+    "request_id": "PR-2026-000231",
+    "currency": "USD",
+    "issue_date": "2026-02-13",
+    "due_date": "2026-02-26",
+    "status": "AWARDED",
+    "created_at": "2026-02-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000057",
+    "request_id": "PR-2026-000646",
+    "currency": "USD",
+    "issue_date": "2026-02-13",
+    "due_date": "2026-02-21",
+    "status": "AWARDED",
+    "created_at": "2026-02-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000058",
+    "request_id": "PR-2026-001021",
+    "currency": "USD",
+    "issue_date": "2026-02-13",
+    "due_date": "2026-02-23",
+    "status": "AWARDED",
+    "created_at": "2026-02-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000059",
+    "request_id": "PR-2026-001134",
+    "currency": "USD",
+    "issue_date": "2026-02-13",
+    "due_date": "2026-02-25",
+    "status": "AWARDED",
+    "created_at": "2026-02-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000060",
+    "request_id": "PR-2026-001071",
+    "currency": "USD",
+    "issue_date": "2026-02-13",
+    "due_date": "2026-02-24",
+    "status": "AWARDED",
+    "created_at": "2026-02-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000061",
+    "request_id": "PR-2026-001174",
+    "currency": "USD",
+    "issue_date": "2026-02-13",
+    "due_date": "2026-02-22",
+    "status": "AWARDED",
+    "created_at": "2026-02-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000062",
+    "request_id": "PR-2026-000804",
+    "currency": "USD",
+    "issue_date": "2026-02-14",
+    "due_date": "2026-02-27",
+    "status": "AWARDED",
+    "created_at": "2026-02-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000063",
+    "request_id": "PR-2026-000993",
+    "currency": "USD",
+    "issue_date": "2026-02-16",
+    "due_date": "2026-02-24",
+    "status": "AWARDED",
+    "created_at": "2026-02-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000064",
+    "request_id": "PR-2026-000052",
+    "currency": "USD",
+    "issue_date": "2026-02-16",
+    "due_date": "2026-02-23",
+    "status": "AWARDED",
+    "created_at": "2026-02-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000065",
+    "request_id": "PR-2026-000741",
+    "currency": "USD",
+    "issue_date": "2026-02-18",
+    "due_date": "2026-02-28",
+    "status": "AWARDED",
+    "created_at": "2026-02-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000066",
+    "request_id": "PR-2026-000516",
+    "currency": "USD",
+    "issue_date": "2026-02-19",
+    "due_date": "2026-03-04",
+    "status": "AWARDED",
+    "created_at": "2026-02-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000067",
+    "request_id": "PR-2026-000520",
+    "currency": "USD",
+    "issue_date": "2026-02-19",
+    "due_date": "2026-03-03",
+    "status": "AWARDED",
+    "created_at": "2026-02-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000068",
+    "request_id": "PR-2026-001172",
+    "currency": "USD",
+    "issue_date": "2026-02-21",
+    "due_date": "2026-03-02",
+    "status": "AWARDED",
+    "created_at": "2026-02-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000069",
+    "request_id": "PR-2026-001187",
+    "currency": "USD",
+    "issue_date": "2026-02-22",
+    "due_date": "2026-03-06",
+    "status": "AWARDED",
+    "created_at": "2026-02-22T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000070",
+    "request_id": "PR-2026-000797",
+    "currency": "USD",
+    "issue_date": "2026-02-23",
+    "due_date": "2026-03-05",
+    "status": "AWARDED",
+    "created_at": "2026-02-23T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000071",
+    "request_id": "PR-2026-000072",
+    "currency": "USD",
+    "issue_date": "2026-02-24",
+    "due_date": "2026-03-06",
+    "status": "AWARDED",
+    "created_at": "2026-02-24T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000072",
+    "request_id": "PR-2026-000944",
+    "currency": "USD",
+    "issue_date": "2026-02-25",
+    "due_date": "2026-03-08",
+    "status": "AWARDED",
+    "created_at": "2026-02-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000073",
+    "request_id": "PR-2026-000003",
+    "currency": "USD",
+    "issue_date": "2026-02-27",
+    "due_date": "2026-03-06",
+    "status": "AWARDED",
+    "created_at": "2026-02-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000074",
+    "request_id": "PR-2026-000958",
+    "currency": "USD",
+    "issue_date": "2026-02-27",
+    "due_date": "2026-03-06",
+    "status": "AWARDED",
+    "created_at": "2026-02-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000075",
+    "request_id": "PR-2026-000867",
+    "currency": "USD",
+    "issue_date": "2026-02-27",
+    "due_date": "2026-03-07",
+    "status": "AWARDED",
+    "created_at": "2026-02-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000076",
+    "request_id": "PR-2026-000976",
+    "currency": "USD",
+    "issue_date": "2026-02-27",
+    "due_date": "2026-03-08",
+    "status": "AWARDED",
+    "created_at": "2026-02-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000077",
+    "request_id": "PR-2026-000298",
+    "currency": "USD",
+    "issue_date": "2026-03-01",
+    "due_date": "2026-03-10",
+    "status": "AWARDED",
+    "created_at": "2026-03-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000078",
+    "request_id": "PR-2026-000898",
+    "currency": "USD",
+    "issue_date": "2026-02-28",
+    "due_date": "2026-03-09",
+    "status": "AWARDED",
+    "created_at": "2026-02-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000079",
+    "request_id": "PR-2026-000226",
+    "currency": "USD",
+    "issue_date": "2026-03-03",
+    "due_date": "2026-03-10",
+    "status": "AWARDED",
+    "created_at": "2026-03-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000080",
+    "request_id": "PR-2026-000872",
+    "currency": "USD",
+    "issue_date": "2026-03-03",
+    "due_date": "2026-03-13",
+    "status": "AWARDED",
+    "created_at": "2026-03-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000081",
+    "request_id": "PR-2026-001193",
+    "currency": "USD",
+    "issue_date": "2026-03-04",
+    "due_date": "2026-03-11",
+    "status": "AWARDED",
+    "created_at": "2026-03-04T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000082",
+    "request_id": "PR-2026-000348",
+    "currency": "USD",
+    "issue_date": "2026-03-04",
+    "due_date": "2026-03-14",
+    "status": "AWARDED",
+    "created_at": "2026-03-04T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000083",
+    "request_id": "PR-2026-000482",
+    "currency": "USD",
+    "issue_date": "2026-03-05",
+    "due_date": "2026-03-14",
+    "status": "AWARDED",
+    "created_at": "2026-03-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000084",
+    "request_id": "PR-2026-000075",
+    "currency": "USD",
+    "issue_date": "2026-03-08",
+    "due_date": "2026-03-21",
+    "status": "AWARDED",
+    "created_at": "2026-03-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000085",
+    "request_id": "PR-2026-000374",
+    "currency": "USD",
+    "issue_date": "2026-03-06",
+    "due_date": "2026-03-17",
+    "status": "AWARDED",
+    "created_at": "2026-03-06T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000086",
+    "request_id": "PR-2026-000725",
+    "currency": "USD",
+    "issue_date": "2026-03-07",
+    "due_date": "2026-03-17",
+    "status": "AWARDED",
+    "created_at": "2026-03-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000087",
+    "request_id": "PR-2026-000784",
+    "currency": "USD",
+    "issue_date": "2026-03-07",
+    "due_date": "2026-03-20",
+    "status": "AWARDED",
+    "created_at": "2026-03-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000088",
+    "request_id": "PR-2026-000218",
+    "currency": "USD",
+    "issue_date": "2026-03-08",
+    "due_date": "2026-03-15",
+    "status": "AWARDED",
+    "created_at": "2026-03-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000089",
+    "request_id": "PR-2026-000584",
+    "currency": "USD",
+    "issue_date": "2026-03-11",
+    "due_date": "2026-03-23",
+    "status": "AWARDED",
+    "created_at": "2026-03-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000090",
+    "request_id": "PR-2026-001083",
+    "currency": "USD",
+    "issue_date": "2026-03-10",
+    "due_date": "2026-03-21",
+    "status": "AWARDED",
+    "created_at": "2026-03-10T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000091",
+    "request_id": "PR-2026-000068",
+    "currency": "USD",
+    "issue_date": "2026-03-11",
+    "due_date": "2026-03-20",
+    "status": "AWARDED",
+    "created_at": "2026-03-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000092",
+    "request_id": "PR-2026-001115",
+    "currency": "USD",
+    "issue_date": "2026-03-12",
+    "due_date": "2026-03-25",
+    "status": "AWARDED",
+    "created_at": "2026-03-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000093",
+    "request_id": "PR-2026-000184",
+    "currency": "USD",
+    "issue_date": "2026-03-12",
+    "due_date": "2026-03-21",
+    "status": "AWARDED",
+    "created_at": "2026-03-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000094",
+    "request_id": "PR-2026-000444",
+    "currency": "USD",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-03-30",
+    "status": "AWARDED",
+    "created_at": "2026-03-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000095",
+    "request_id": "PR-2026-000501",
+    "currency": "USD",
+    "issue_date": "2026-03-15",
+    "due_date": "2026-03-24",
+    "status": "AWARDED",
+    "created_at": "2026-03-15T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000096",
+    "request_id": "PR-2026-000869",
+    "currency": "USD",
+    "issue_date": "2026-03-15",
+    "due_date": "2026-03-23",
+    "status": "AWARDED",
+    "created_at": "2026-03-15T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000097",
+    "request_id": "PR-2026-000315",
+    "currency": "USD",
+    "issue_date": "2026-03-15",
+    "due_date": "2026-03-27",
+    "status": "AWARDED",
+    "created_at": "2026-03-15T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000098",
+    "request_id": "PR-2026-000442",
+    "currency": "USD",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-03-30",
+    "status": "AWARDED",
+    "created_at": "2026-03-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000099",
+    "request_id": "PR-2026-001097",
+    "currency": "USD",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-03-25",
+    "status": "AWARDED",
+    "created_at": "2026-03-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000100",
+    "request_id": "PR-2026-000134",
+    "currency": "USD",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-03-28",
+    "status": "AWARDED",
+    "created_at": "2026-03-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000101",
+    "request_id": "PR-2026-000266",
+    "currency": "USD",
+    "issue_date": "2026-03-16",
+    "due_date": "2026-03-28",
+    "status": "AWARDED",
+    "created_at": "2026-03-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000102",
+    "request_id": "PR-2026-001008",
+    "currency": "USD",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-03-26",
+    "status": "AWARDED",
+    "created_at": "2026-03-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000103",
+    "request_id": "PR-2026-000078",
+    "currency": "USD",
+    "issue_date": "2026-03-19",
+    "due_date": "2026-03-29",
+    "status": "AWARDED",
+    "created_at": "2026-03-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000104",
+    "request_id": "PR-2026-000156",
+    "currency": "USD",
+    "issue_date": "2026-03-18",
+    "due_date": "2026-03-26",
+    "status": "AWARDED",
+    "created_at": "2026-03-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000105",
+    "request_id": "PR-2026-000903",
+    "currency": "USD",
+    "issue_date": "2026-03-17",
+    "due_date": "2026-03-25",
+    "status": "AWARDED",
+    "created_at": "2026-03-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000106",
+    "request_id": "PR-2026-000283",
+    "currency": "USD",
+    "issue_date": "2026-03-19",
+    "due_date": "2026-03-27",
+    "status": "AWARDED",
+    "created_at": "2026-03-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000107",
+    "request_id": "PR-2026-000409",
+    "currency": "USD",
+    "issue_date": "2026-03-20",
+    "due_date": "2026-04-02",
+    "status": "AWARDED",
+    "created_at": "2026-03-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000108",
+    "request_id": "PR-2026-001123",
+    "currency": "USD",
+    "issue_date": "2026-03-21",
+    "due_date": "2026-03-29",
+    "status": "AWARDED",
+    "created_at": "2026-03-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000109",
+    "request_id": "PR-2026-000557",
+    "currency": "USD",
+    "issue_date": "2026-03-21",
+    "due_date": "2026-04-01",
+    "status": "AWARDED",
+    "created_at": "2026-03-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000110",
+    "request_id": "PR-2026-001147",
+    "currency": "USD",
+    "issue_date": "2026-03-21",
+    "due_date": "2026-04-01",
+    "status": "AWARDED",
+    "created_at": "2026-03-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000111",
+    "request_id": "PR-2026-000775",
+    "currency": "USD",
+    "issue_date": "2026-03-21",
+    "due_date": "2026-03-31",
+    "status": "AWARDED",
+    "created_at": "2026-03-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000112",
+    "request_id": "PR-2026-000095",
+    "currency": "USD",
+    "issue_date": "2026-03-22",
+    "due_date": "2026-04-03",
+    "status": "AWARDED",
+    "created_at": "2026-03-22T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000113",
+    "request_id": "PR-2026-000379",
+    "currency": "USD",
+    "issue_date": "2026-03-23",
+    "due_date": "2026-04-02",
+    "status": "AWARDED",
+    "created_at": "2026-03-23T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000114",
+    "request_id": "PR-2026-000155",
+    "currency": "USD",
+    "issue_date": "2026-03-25",
+    "due_date": "2026-04-04",
+    "status": "AWARDED",
+    "created_at": "2026-03-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000115",
+    "request_id": "PR-2026-000499",
+    "currency": "USD",
+    "issue_date": "2026-03-24",
+    "due_date": "2026-04-06",
+    "status": "AWARDED",
+    "created_at": "2026-03-24T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000116",
+    "request_id": "PR-2026-001050",
+    "currency": "USD",
+    "issue_date": "2026-03-25",
+    "due_date": "2026-04-02",
+    "status": "AWARDED",
+    "created_at": "2026-03-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000117",
+    "request_id": "PR-2026-001116",
+    "currency": "USD",
+    "issue_date": "2026-03-24",
+    "due_date": "2026-03-31",
+    "status": "AWARDED",
+    "created_at": "2026-03-24T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000118",
+    "request_id": "PR-2026-000910",
+    "currency": "USD",
+    "issue_date": "2026-03-26",
+    "due_date": "2026-04-04",
+    "status": "AWARDED",
+    "created_at": "2026-03-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000119",
+    "request_id": "PR-2026-000268",
+    "currency": "USD",
+    "issue_date": "2026-03-25",
+    "due_date": "2026-04-03",
+    "status": "AWARDED",
+    "created_at": "2026-03-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000120",
+    "request_id": "PR-2026-000524",
+    "currency": "USD",
+    "issue_date": "2026-03-25",
+    "due_date": "2026-04-03",
+    "status": "AWARDED",
+    "created_at": "2026-03-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000121",
+    "request_id": "PR-2026-000861",
+    "currency": "USD",
+    "issue_date": "2026-03-27",
+    "due_date": "2026-04-08",
+    "status": "AWARDED",
+    "created_at": "2026-03-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000122",
+    "request_id": "PR-2026-000884",
+    "currency": "USD",
+    "issue_date": "2026-03-27",
+    "due_date": "2026-04-09",
+    "status": "AWARDED",
+    "created_at": "2026-03-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000123",
+    "request_id": "PR-2026-001063",
+    "currency": "USD",
+    "issue_date": "2026-03-25",
+    "due_date": "2026-04-04",
+    "status": "AWARDED",
+    "created_at": "2026-03-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000124",
+    "request_id": "PR-2026-001179",
+    "currency": "USD",
+    "issue_date": "2026-03-26",
+    "due_date": "2026-04-06",
+    "status": "AWARDED",
+    "created_at": "2026-03-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000125",
+    "request_id": "PR-2026-000020",
+    "currency": "USD",
+    "issue_date": "2026-03-26",
+    "due_date": "2026-04-07",
+    "status": "AWARDED",
+    "created_at": "2026-03-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000126",
+    "request_id": "PR-2026-000245",
+    "currency": "USD",
+    "issue_date": "2026-03-27",
+    "due_date": "2026-04-04",
+    "status": "AWARDED",
+    "created_at": "2026-03-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000127",
+    "request_id": "PR-2026-000419",
+    "currency": "USD",
+    "issue_date": "2026-03-27",
+    "due_date": "2026-04-08",
+    "status": "AWARDED",
+    "created_at": "2026-03-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000128",
+    "request_id": "PR-2026-001167",
+    "currency": "USD",
+    "issue_date": "2026-03-27",
+    "due_date": "2026-04-06",
+    "status": "AWARDED",
+    "created_at": "2026-03-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000129",
+    "request_id": "PR-2026-000889",
+    "currency": "USD",
+    "issue_date": "2026-03-28",
+    "due_date": "2026-04-08",
+    "status": "AWARDED",
+    "created_at": "2026-03-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000130",
+    "request_id": "PR-2026-001070",
+    "currency": "USD",
+    "issue_date": "2026-03-27",
+    "due_date": "2026-04-06",
+    "status": "AWARDED",
+    "created_at": "2026-03-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000131",
+    "request_id": "PR-2026-000101",
+    "currency": "USD",
+    "issue_date": "2026-04-01",
+    "due_date": "2026-04-12",
+    "status": "AWARDED",
+    "created_at": "2026-04-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000132",
+    "request_id": "PR-2026-000278",
+    "currency": "USD",
+    "issue_date": "2026-04-01",
+    "due_date": "2026-04-11",
+    "status": "AWARDED",
+    "created_at": "2026-04-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000133",
+    "request_id": "PR-2026-000936",
+    "currency": "USD",
+    "issue_date": "2026-03-31",
+    "due_date": "2026-04-08",
+    "status": "AWARDED",
+    "created_at": "2026-03-31T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000134",
+    "request_id": "PR-2026-000446",
+    "currency": "USD",
+    "issue_date": "2026-04-01",
+    "due_date": "2026-04-12",
+    "status": "AWARDED",
+    "created_at": "2026-04-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000135",
+    "request_id": "PR-2026-000959",
+    "currency": "USD",
+    "issue_date": "2026-04-01",
+    "due_date": "2026-04-13",
+    "status": "AWARDED",
+    "created_at": "2026-04-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000136",
+    "request_id": "PR-2026-000663",
+    "currency": "USD",
+    "issue_date": "2026-04-03",
+    "due_date": "2026-04-12",
+    "status": "AWARDED",
+    "created_at": "2026-04-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000137",
+    "request_id": "PR-2026-000982",
+    "currency": "USD",
+    "issue_date": "2026-04-02",
+    "due_date": "2026-04-14",
+    "status": "AWARDED",
+    "created_at": "2026-04-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000138",
+    "request_id": "PR-2026-000626",
+    "currency": "USD",
+    "issue_date": "2026-04-03",
+    "due_date": "2026-04-12",
+    "status": "AWARDED",
+    "created_at": "2026-04-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000139",
+    "request_id": "PR-2026-000718",
+    "currency": "USD",
+    "issue_date": "2026-04-05",
+    "due_date": "2026-04-14",
+    "status": "AWARDED",
+    "created_at": "2026-04-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000140",
+    "request_id": "PR-2026-001166",
+    "currency": "USD",
+    "issue_date": "2026-04-03",
+    "due_date": "2026-04-10",
+    "status": "AWARDED",
+    "created_at": "2026-04-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000141",
+    "request_id": "PR-2026-000005",
+    "currency": "USD",
+    "issue_date": "2026-04-04",
+    "due_date": "2026-04-16",
+    "status": "AWARDED",
+    "created_at": "2026-04-04T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000142",
+    "request_id": "PR-2026-000295",
+    "currency": "USD",
+    "issue_date": "2026-04-08",
+    "due_date": "2026-04-19",
+    "status": "AWARDED",
+    "created_at": "2026-04-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000143",
+    "request_id": "PR-2026-000721",
+    "currency": "USD",
+    "issue_date": "2026-04-08",
+    "due_date": "2026-04-17",
+    "status": "AWARDED",
+    "created_at": "2026-04-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000144",
+    "request_id": "PR-2026-001182",
+    "currency": "USD",
+    "issue_date": "2026-04-08",
+    "due_date": "2026-04-16",
+    "status": "AWARDED",
+    "created_at": "2026-04-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000145",
+    "request_id": "PR-2026-000147",
+    "currency": "USD",
+    "issue_date": "2026-04-08",
+    "due_date": "2026-04-15",
+    "status": "AWARDED",
+    "created_at": "2026-04-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000146",
+    "request_id": "PR-2026-001089",
+    "currency": "USD",
+    "issue_date": "2026-04-09",
+    "due_date": "2026-04-18",
+    "status": "AWARDED",
+    "created_at": "2026-04-09T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000147",
+    "request_id": "PR-2026-000267",
+    "currency": "USD",
+    "issue_date": "2026-04-10",
+    "due_date": "2026-04-20",
+    "status": "AWARDED",
+    "created_at": "2026-04-10T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000148",
+    "request_id": "PR-2026-000332",
+    "currency": "USD",
+    "issue_date": "2026-04-09",
+    "due_date": "2026-04-17",
+    "status": "AWARDED",
+    "created_at": "2026-04-09T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000149",
+    "request_id": "PR-2026-000651",
+    "currency": "USD",
+    "issue_date": "2026-04-10",
+    "due_date": "2026-04-18",
+    "status": "AWARDED",
+    "created_at": "2026-04-10T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000150",
+    "request_id": "PR-2026-000658",
+    "currency": "USD",
+    "issue_date": "2026-04-11",
+    "due_date": "2026-04-19",
+    "status": "AWARDED",
+    "created_at": "2026-04-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000151",
+    "request_id": "PR-2026-000924",
+    "currency": "USD",
+    "issue_date": "2026-04-11",
+    "due_date": "2026-04-24",
+    "status": "AWARDED",
+    "created_at": "2026-04-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000152",
+    "request_id": "PR-2026-001132",
+    "currency": "USD",
+    "issue_date": "2026-04-12",
+    "due_date": "2026-04-23",
+    "status": "AWARDED",
+    "created_at": "2026-04-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000153",
+    "request_id": "PR-2026-001140",
+    "currency": "USD",
+    "issue_date": "2026-04-12",
+    "due_date": "2026-04-23",
+    "status": "AWARDED",
+    "created_at": "2026-04-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000154",
+    "request_id": "PR-2026-000131",
+    "currency": "USD",
+    "issue_date": "2026-04-13",
+    "due_date": "2026-04-22",
+    "status": "AWARDED",
+    "created_at": "2026-04-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000155",
+    "request_id": "PR-2026-000999",
+    "currency": "USD",
+    "issue_date": "2026-04-14",
+    "due_date": "2026-04-25",
+    "status": "AWARDED",
+    "created_at": "2026-04-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000156",
+    "request_id": "PR-2026-000309",
+    "currency": "USD",
+    "issue_date": "2026-04-14",
+    "due_date": "2026-04-25",
+    "status": "AWARDED",
+    "created_at": "2026-04-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000157",
+    "request_id": "PR-2026-000314",
+    "currency": "USD",
+    "issue_date": "2026-04-16",
+    "due_date": "2026-04-25",
+    "status": "AWARDED",
+    "created_at": "2026-04-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000158",
+    "request_id": "PR-2026-000604",
+    "currency": "USD",
+    "issue_date": "2026-04-15",
+    "due_date": "2026-04-26",
+    "status": "AWARDED",
+    "created_at": "2026-04-15T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000159",
+    "request_id": "PR-2026-000874",
+    "currency": "USD",
+    "issue_date": "2026-04-15",
+    "due_date": "2026-04-22",
+    "status": "AWARDED",
+    "created_at": "2026-04-15T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000160",
+    "request_id": "PR-2026-000932",
+    "currency": "USD",
+    "issue_date": "2026-04-16",
+    "due_date": "2026-04-25",
+    "status": "AWARDED",
+    "created_at": "2026-04-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000161",
+    "request_id": "PR-2026-000286",
+    "currency": "USD",
+    "issue_date": "2026-04-17",
+    "due_date": "2026-04-30",
+    "status": "AWARDED",
+    "created_at": "2026-04-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000162",
+    "request_id": "PR-2026-000337",
+    "currency": "USD",
+    "issue_date": "2026-04-19",
+    "due_date": "2026-04-30",
+    "status": "AWARDED",
+    "created_at": "2026-04-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000163",
+    "request_id": "PR-2026-000762",
+    "currency": "USD",
+    "issue_date": "2026-04-18",
+    "due_date": "2026-04-28",
+    "status": "AWARDED",
+    "created_at": "2026-04-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000164",
+    "request_id": "PR-2026-000935",
+    "currency": "USD",
+    "issue_date": "2026-04-20",
+    "due_date": "2026-05-03",
+    "status": "AWARDED",
+    "created_at": "2026-04-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000165",
+    "request_id": "PR-2026-000461",
+    "currency": "USD",
+    "issue_date": "2026-04-20",
+    "due_date": "2026-04-27",
+    "status": "AWARDED",
+    "created_at": "2026-04-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000166",
+    "request_id": "PR-2026-000617",
+    "currency": "USD",
+    "issue_date": "2026-04-20",
+    "due_date": "2026-04-30",
+    "status": "AWARDED",
+    "created_at": "2026-04-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000167",
+    "request_id": "PR-2026-000702",
+    "currency": "USD",
+    "issue_date": "2026-04-19",
+    "due_date": "2026-04-28",
+    "status": "AWARDED",
+    "created_at": "2026-04-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000168",
+    "request_id": "PR-2026-000195",
+    "currency": "USD",
+    "issue_date": "2026-04-22",
+    "due_date": "2026-05-04",
+    "status": "AWARDED",
+    "created_at": "2026-04-22T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000169",
+    "request_id": "PR-2026-000092",
+    "currency": "USD",
+    "issue_date": "2026-04-23",
+    "due_date": "2026-05-02",
+    "status": "AWARDED",
+    "created_at": "2026-04-23T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000170",
+    "request_id": "PR-2026-000232",
+    "currency": "USD",
+    "issue_date": "2026-04-23",
+    "due_date": "2026-05-05",
+    "status": "AWARDED",
+    "created_at": "2026-04-23T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000171",
+    "request_id": "PR-2026-000633",
+    "currency": "USD",
+    "issue_date": "2026-04-23",
+    "due_date": "2026-05-05",
+    "status": "AWARDED",
+    "created_at": "2026-04-23T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000172",
+    "request_id": "PR-2026-000800",
+    "currency": "USD",
+    "issue_date": "2026-04-23",
+    "due_date": "2026-05-02",
+    "status": "AWARDED",
+    "created_at": "2026-04-23T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000173",
+    "request_id": "PR-2026-000811",
+    "currency": "USD",
+    "issue_date": "2026-04-24",
+    "due_date": "2026-05-06",
+    "status": "AWARDED",
+    "created_at": "2026-04-24T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000174",
+    "request_id": "PR-2026-000396",
+    "currency": "USD",
+    "issue_date": "2026-04-27",
+    "due_date": "2026-05-06",
+    "status": "AWARDED",
+    "created_at": "2026-04-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000175",
+    "request_id": "PR-2026-000368",
+    "currency": "USD",
+    "issue_date": "2026-04-28",
+    "due_date": "2026-05-06",
+    "status": "AWARDED",
+    "created_at": "2026-04-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000176",
+    "request_id": "PR-2026-000381",
+    "currency": "USD",
+    "issue_date": "2026-04-27",
+    "due_date": "2026-05-07",
+    "status": "AWARDED",
+    "created_at": "2026-04-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000177",
+    "request_id": "PR-2026-001108",
+    "currency": "USD",
+    "issue_date": "2026-04-28",
+    "due_date": "2026-05-08",
+    "status": "AWARDED",
+    "created_at": "2026-04-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000178",
+    "request_id": "PR-2026-001109",
+    "currency": "USD",
+    "issue_date": "2026-04-28",
+    "due_date": "2026-05-09",
+    "status": "AWARDED",
+    "created_at": "2026-04-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000179",
+    "request_id": "PR-2026-000292",
+    "currency": "USD",
+    "issue_date": "2026-04-29",
+    "due_date": "2026-05-07",
+    "status": "AWARDED",
+    "created_at": "2026-04-29T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000180",
+    "request_id": "PR-2026-000421",
+    "currency": "USD",
+    "issue_date": "2026-04-29",
+    "due_date": "2026-05-09",
+    "status": "AWARDED",
+    "created_at": "2026-04-29T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000181",
+    "request_id": "PR-2026-000616",
+    "currency": "USD",
+    "issue_date": "2026-04-29",
+    "due_date": "2026-05-09",
+    "status": "AWARDED",
+    "created_at": "2026-04-29T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000182",
+    "request_id": "PR-2026-000145",
+    "currency": "USD",
+    "issue_date": "2026-04-30",
+    "due_date": "2026-05-12",
+    "status": "AWARDED",
+    "created_at": "2026-04-30T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000183",
+    "request_id": "PR-2026-000019",
+    "currency": "USD",
+    "issue_date": "2026-05-03",
+    "due_date": "2026-05-13",
+    "status": "AWARDED",
+    "created_at": "2026-05-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000184",
+    "request_id": "PR-2026-000992",
+    "currency": "USD",
+    "issue_date": "2026-05-02",
+    "due_date": "2026-05-13",
+    "status": "AWARDED",
+    "created_at": "2026-05-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000185",
+    "request_id": "PR-2026-000105",
+    "currency": "USD",
+    "issue_date": "2026-05-02",
+    "due_date": "2026-05-11",
+    "status": "AWARDED",
+    "created_at": "2026-05-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000186",
+    "request_id": "PR-2026-000717",
+    "currency": "USD",
+    "issue_date": "2026-05-06",
+    "due_date": "2026-05-13",
+    "status": "AWARDED",
+    "created_at": "2026-05-06T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000187",
+    "request_id": "PR-2026-000829",
+    "currency": "USD",
+    "issue_date": "2026-05-06",
+    "due_date": "2026-05-13",
+    "status": "AWARDED",
+    "created_at": "2026-05-06T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000188",
+    "request_id": "PR-2026-000881",
+    "currency": "USD",
+    "issue_date": "2026-05-05",
+    "due_date": "2026-05-18",
+    "status": "AWARDED",
+    "created_at": "2026-05-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000189",
+    "request_id": "PR-2026-000114",
+    "currency": "USD",
+    "issue_date": "2026-05-06",
+    "due_date": "2026-05-15",
+    "status": "AWARDED",
+    "created_at": "2026-05-06T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000190",
+    "request_id": "PR-2026-000179",
+    "currency": "USD",
+    "issue_date": "2026-05-06",
+    "due_date": "2026-05-13",
+    "status": "AWARDED",
+    "created_at": "2026-05-06T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000191",
+    "request_id": "PR-2026-000488",
+    "currency": "USD",
+    "issue_date": "2026-05-07",
+    "due_date": "2026-05-15",
+    "status": "AWARDED",
+    "created_at": "2026-05-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000192",
+    "request_id": "PR-2026-000678",
+    "currency": "USD",
+    "issue_date": "2026-05-08",
+    "due_date": "2026-05-17",
+    "status": "AWARDED",
+    "created_at": "2026-05-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000193",
+    "request_id": "PR-2026-000096",
+    "currency": "USD",
+    "issue_date": "2026-05-09",
+    "due_date": "2026-05-16",
+    "status": "AWARDED",
+    "created_at": "2026-05-09T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000194",
+    "request_id": "PR-2026-000161",
+    "currency": "USD",
+    "issue_date": "2026-05-07",
+    "due_date": "2026-05-17",
+    "status": "AWARDED",
+    "created_at": "2026-05-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000195",
+    "request_id": "PR-2026-000454",
+    "currency": "USD",
+    "issue_date": "2026-05-07",
+    "due_date": "2026-05-20",
+    "status": "AWARDED",
+    "created_at": "2026-05-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000196",
+    "request_id": "PR-2026-000955",
+    "currency": "USD",
+    "issue_date": "2026-05-09",
+    "due_date": "2026-05-17",
+    "status": "AWARDED",
+    "created_at": "2026-05-09T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000197",
+    "request_id": "PR-2026-001100",
+    "currency": "USD",
+    "issue_date": "2026-05-11",
+    "due_date": "2026-05-20",
+    "status": "AWARDED",
+    "created_at": "2026-05-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000198",
+    "request_id": "PR-2026-000028",
+    "currency": "USD",
+    "issue_date": "2026-05-13",
+    "due_date": "2026-05-25",
+    "status": "AWARDED",
+    "created_at": "2026-05-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000199",
+    "request_id": "PR-2026-000922",
+    "currency": "USD",
+    "issue_date": "2026-05-13",
+    "due_date": "2026-05-23",
+    "status": "AWARDED",
+    "created_at": "2026-05-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000200",
+    "request_id": "PR-2026-000034",
+    "currency": "USD",
+    "issue_date": "2026-05-12",
+    "due_date": "2026-05-23",
+    "status": "AWARDED",
+    "created_at": "2026-05-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000201",
+    "request_id": "PR-2026-000941",
+    "currency": "USD",
+    "issue_date": "2026-05-12",
+    "due_date": "2026-05-19",
+    "status": "AWARDED",
+    "created_at": "2026-05-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000202",
+    "request_id": "PR-2026-000926",
+    "currency": "USD",
+    "issue_date": "2026-05-13",
+    "due_date": "2026-05-23",
+    "status": "AWARDED",
+    "created_at": "2026-05-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000203",
+    "request_id": "PR-2026-000997",
+    "currency": "USD",
+    "issue_date": "2026-05-14",
+    "due_date": "2026-05-22",
+    "status": "AWARDED",
+    "created_at": "2026-05-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000204",
+    "request_id": "PR-2026-001041",
+    "currency": "USD",
+    "issue_date": "2026-05-14",
+    "due_date": "2026-05-27",
+    "status": "AWARDED",
+    "created_at": "2026-05-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000205",
+    "request_id": "PR-2026-000803",
+    "currency": "USD",
+    "issue_date": "2026-05-15",
+    "due_date": "2026-05-27",
+    "status": "AWARDED",
+    "created_at": "2026-05-15T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000206",
+    "request_id": "PR-2026-000783",
+    "currency": "USD",
+    "issue_date": "2026-05-16",
+    "due_date": "2026-05-28",
+    "status": "AWARDED",
+    "created_at": "2026-05-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000207",
+    "request_id": "PR-2026-000677",
+    "currency": "USD",
+    "issue_date": "2026-05-18",
+    "due_date": "2026-05-28",
+    "status": "AWARDED",
+    "created_at": "2026-05-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000208",
+    "request_id": "PR-2026-000868",
+    "currency": "USD",
+    "issue_date": "2026-05-17",
+    "due_date": "2026-05-28",
+    "status": "AWARDED",
+    "created_at": "2026-05-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000209",
+    "request_id": "PR-2026-000040",
+    "currency": "USD",
+    "issue_date": "2026-05-19",
+    "due_date": "2026-05-31",
+    "status": "AWARDED",
+    "created_at": "2026-05-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000210",
+    "request_id": "PR-2026-001081",
+    "currency": "USD",
+    "issue_date": "2026-05-19",
+    "due_date": "2026-05-28",
+    "status": "AWARDED",
+    "created_at": "2026-05-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000211",
+    "request_id": "PR-2026-001113",
+    "currency": "USD",
+    "issue_date": "2026-05-18",
+    "due_date": "2026-05-30",
+    "status": "AWARDED",
+    "created_at": "2026-05-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000212",
+    "request_id": "PR-2026-001065",
+    "currency": "USD",
+    "issue_date": "2026-05-19",
+    "due_date": "2026-05-28",
+    "status": "AWARDED",
+    "created_at": "2026-05-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000213",
+    "request_id": "PR-2026-000711",
+    "currency": "USD",
+    "issue_date": "2026-05-20",
+    "due_date": "2026-06-02",
+    "status": "AWARDED",
+    "created_at": "2026-05-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000214",
+    "request_id": "PR-2026-000768",
+    "currency": "USD",
+    "issue_date": "2026-05-21",
+    "due_date": "2026-05-28",
+    "status": "AWARDED",
+    "created_at": "2026-05-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000215",
+    "request_id": "PR-2026-001013",
+    "currency": "USD",
+    "issue_date": "2026-05-21",
+    "due_date": "2026-06-02",
+    "status": "AWARDED",
+    "created_at": "2026-05-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000216",
+    "request_id": "PR-2026-001101",
+    "currency": "USD",
+    "issue_date": "2026-05-20",
+    "due_date": "2026-06-02",
+    "status": "AWARDED",
+    "created_at": "2026-05-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000217",
+    "request_id": "PR-2026-000394",
+    "currency": "USD",
+    "issue_date": "2026-05-21",
+    "due_date": "2026-05-30",
+    "status": "AWARDED",
+    "created_at": "2026-05-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000218",
+    "request_id": "PR-2026-000837",
+    "currency": "USD",
+    "issue_date": "2026-05-21",
+    "due_date": "2026-05-31",
+    "status": "AWARDED",
+    "created_at": "2026-05-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000219",
+    "request_id": "PR-2026-000705",
+    "currency": "USD",
+    "issue_date": "2026-05-22",
+    "due_date": "2026-05-30",
+    "status": "AWARDED",
+    "created_at": "2026-05-22T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000220",
+    "request_id": "PR-2026-000163",
+    "currency": "USD",
+    "issue_date": "2026-05-22",
+    "due_date": "2026-06-03",
+    "status": "AWARDED",
+    "created_at": "2026-05-22T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000221",
+    "request_id": "PR-2026-001068",
+    "currency": "USD",
+    "issue_date": "2026-05-24",
+    "due_date": "2026-06-01",
+    "status": "AWARDED",
+    "created_at": "2026-05-24T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000222",
+    "request_id": "PR-2026-000062",
+    "currency": "USD",
+    "issue_date": "2026-05-25",
+    "due_date": "2026-06-02",
+    "status": "AWARDED",
+    "created_at": "2026-05-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000223",
+    "request_id": "PR-2026-000168",
+    "currency": "USD",
+    "issue_date": "2026-05-26",
+    "due_date": "2026-06-04",
+    "status": "AWARDED",
+    "created_at": "2026-05-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000224",
+    "request_id": "PR-2026-000290",
+    "currency": "USD",
+    "issue_date": "2026-05-28",
+    "due_date": "2026-06-05",
+    "status": "AWARDED",
+    "created_at": "2026-05-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000225",
+    "request_id": "PR-2026-000462",
+    "currency": "USD",
+    "issue_date": "2026-05-30",
+    "due_date": "2026-06-12",
+    "status": "AWARDED",
+    "created_at": "2026-05-30T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000226",
+    "request_id": "PR-2026-001171",
+    "currency": "USD",
+    "issue_date": "2026-05-31",
+    "due_date": "2026-06-09",
+    "status": "AWARDED",
+    "created_at": "2026-05-31T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000227",
+    "request_id": "PR-2026-000667",
+    "currency": "USD",
+    "issue_date": "2026-06-02",
+    "due_date": "2026-06-10",
+    "status": "AWARDED",
+    "created_at": "2026-06-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000228",
+    "request_id": "PR-2026-000883",
+    "currency": "USD",
+    "issue_date": "2026-06-02",
+    "due_date": "2026-06-13",
+    "status": "AWARDED",
+    "created_at": "2026-06-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000229",
+    "request_id": "PR-2026-001034",
+    "currency": "USD",
+    "issue_date": "2026-06-01",
+    "due_date": "2026-06-11",
+    "status": "AWARDED",
+    "created_at": "2026-06-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000230",
+    "request_id": "PR-2026-000142",
+    "currency": "USD",
+    "issue_date": "2026-06-03",
+    "due_date": "2026-06-12",
+    "status": "AWARDED",
+    "created_at": "2026-06-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000231",
+    "request_id": "PR-2026-000422",
+    "currency": "USD",
+    "issue_date": "2026-06-03",
+    "due_date": "2026-06-11",
+    "status": "AWARDED",
+    "created_at": "2026-06-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000232",
+    "request_id": "PR-2026-000502",
+    "currency": "USD",
+    "issue_date": "2026-06-03",
+    "due_date": "2026-06-15",
+    "status": "AWARDED",
+    "created_at": "2026-06-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000233",
+    "request_id": "PR-2026-000579",
+    "currency": "USD",
+    "issue_date": "2026-06-02",
+    "due_date": "2026-06-11",
+    "status": "AWARDED",
+    "created_at": "2026-06-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000234",
+    "request_id": "PR-2026-001032",
+    "currency": "USD",
+    "issue_date": "2026-06-02",
+    "due_date": "2026-06-09",
+    "status": "AWARDED",
+    "created_at": "2026-06-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000235",
+    "request_id": "PR-2026-000568",
+    "currency": "USD",
+    "issue_date": "2026-06-03",
+    "due_date": "2026-06-16",
+    "status": "AWARDED",
+    "created_at": "2026-06-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000236",
+    "request_id": "PR-2026-000250",
+    "currency": "USD",
+    "issue_date": "2026-06-03",
+    "due_date": "2026-06-15",
+    "status": "AWARDED",
+    "created_at": "2026-06-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000237",
+    "request_id": "PR-2026-000611",
+    "currency": "USD",
+    "issue_date": "2026-06-04",
+    "due_date": "2026-06-15",
+    "status": "AWARDED",
+    "created_at": "2026-06-04T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000238",
+    "request_id": "PR-2026-000215",
+    "currency": "USD",
+    "issue_date": "2026-06-07",
+    "due_date": "2026-06-15",
+    "status": "AWARDED",
+    "created_at": "2026-06-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000239",
+    "request_id": "PR-2026-000352",
+    "currency": "USD",
+    "issue_date": "2026-06-08",
+    "due_date": "2026-06-15",
+    "status": "AWARDED",
+    "created_at": "2026-06-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000240",
+    "request_id": "PR-2026-001001",
+    "currency": "USD",
+    "issue_date": "2026-06-07",
+    "due_date": "2026-06-15",
+    "status": "AWARDED",
+    "created_at": "2026-06-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000241",
+    "request_id": "PR-2026-000159",
+    "currency": "USD",
+    "issue_date": "2026-06-09",
+    "due_date": "2026-06-18",
+    "status": "AWARDED",
+    "created_at": "2026-06-09T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000242",
+    "request_id": "PR-2026-000699",
+    "currency": "USD",
+    "issue_date": "2026-06-09",
+    "due_date": "2026-06-18",
+    "status": "AWARDED",
+    "created_at": "2026-06-09T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000243",
+    "request_id": "PR-2026-000788",
+    "currency": "USD",
+    "issue_date": "2026-06-10",
+    "due_date": "2026-06-21",
+    "status": "AWARDED",
+    "created_at": "2026-06-10T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000244",
+    "request_id": "PR-2026-000334",
+    "currency": "USD",
+    "issue_date": "2026-06-10",
+    "due_date": "2026-06-22",
+    "status": "AWARDED",
+    "created_at": "2026-06-10T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000245",
+    "request_id": "PR-2026-000597",
+    "currency": "USD",
+    "issue_date": "2026-06-10",
+    "due_date": "2026-06-19",
+    "status": "AWARDED",
+    "created_at": "2026-06-10T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000246",
+    "request_id": "PR-2026-000640",
+    "currency": "USD",
+    "issue_date": "2026-06-10",
+    "due_date": "2026-06-23",
+    "status": "AWARDED",
+    "created_at": "2026-06-10T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000247",
+    "request_id": "PR-2026-001143",
+    "currency": "USD",
+    "issue_date": "2026-06-12",
+    "due_date": "2026-06-22",
+    "status": "AWARDED",
+    "created_at": "2026-06-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000248",
+    "request_id": "PR-2026-000655",
+    "currency": "USD",
+    "issue_date": "2026-06-12",
+    "due_date": "2026-06-21",
+    "status": "AWARDED",
+    "created_at": "2026-06-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000249",
+    "request_id": "PR-2026-000856",
+    "currency": "USD",
+    "issue_date": "2026-06-13",
+    "due_date": "2026-06-21",
+    "status": "AWARDED",
+    "created_at": "2026-06-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000250",
+    "request_id": "PR-2026-001085",
+    "currency": "USD",
+    "issue_date": "2026-06-14",
+    "due_date": "2026-06-23",
+    "status": "AWARDED",
+    "created_at": "2026-06-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000251",
+    "request_id": "PR-2026-000431",
+    "currency": "USD",
+    "issue_date": "2026-06-13",
+    "due_date": "2026-06-23",
+    "status": "AWARDED",
+    "created_at": "2026-06-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000252",
+    "request_id": "PR-2026-000766",
+    "currency": "USD",
+    "issue_date": "2026-06-13",
+    "due_date": "2026-06-20",
+    "status": "AWARDED",
+    "created_at": "2026-06-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000253",
+    "request_id": "PR-2026-000807",
+    "currency": "USD",
+    "issue_date": "2026-06-14",
+    "due_date": "2026-06-21",
+    "status": "AWARDED",
+    "created_at": "2026-06-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000254",
+    "request_id": "PR-2026-000975",
+    "currency": "USD",
+    "issue_date": "2026-06-14",
+    "due_date": "2026-06-21",
+    "status": "AWARDED",
+    "created_at": "2026-06-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000255",
+    "request_id": "PR-2026-001141",
+    "currency": "USD",
+    "issue_date": "2026-06-14",
+    "due_date": "2026-06-25",
+    "status": "AWARDED",
+    "created_at": "2026-06-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000256",
+    "request_id": "PR-2026-001048",
+    "currency": "USD",
+    "issue_date": "2026-06-15",
+    "due_date": "2026-06-25",
+    "status": "AWARDED",
+    "created_at": "2026-06-15T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000257",
+    "request_id": "PR-2026-001144",
+    "currency": "USD",
+    "issue_date": "2026-06-15",
+    "due_date": "2026-06-28",
+    "status": "AWARDED",
+    "created_at": "2026-06-15T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000258",
+    "request_id": "PR-2026-000240",
+    "currency": "USD",
+    "issue_date": "2026-06-16",
+    "due_date": "2026-06-28",
+    "status": "AWARDED",
+    "created_at": "2026-06-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000259",
+    "request_id": "PR-2026-000627",
+    "currency": "USD",
+    "issue_date": "2026-06-16",
+    "due_date": "2026-06-25",
+    "status": "AWARDED",
+    "created_at": "2026-06-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000260",
+    "request_id": "PR-2026-000957",
+    "currency": "USD",
+    "issue_date": "2026-06-15",
+    "due_date": "2026-06-23",
+    "status": "AWARDED",
+    "created_at": "2026-06-15T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000261",
+    "request_id": "PR-2026-000118",
+    "currency": "USD",
+    "issue_date": "2026-06-17",
+    "due_date": "2026-06-30",
+    "status": "AWARDED",
+    "created_at": "2026-06-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000262",
+    "request_id": "PR-2026-000180",
+    "currency": "USD",
+    "issue_date": "2026-06-17",
+    "due_date": "2026-06-30",
+    "status": "AWARDED",
+    "created_at": "2026-06-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000263",
+    "request_id": "PR-2026-000181",
+    "currency": "USD",
+    "issue_date": "2026-06-16",
+    "due_date": "2026-06-25",
+    "status": "AWARDED",
+    "created_at": "2026-06-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000264",
+    "request_id": "PR-2026-000774",
+    "currency": "USD",
+    "issue_date": "2026-06-17",
+    "due_date": "2026-06-29",
+    "status": "AWARDED",
+    "created_at": "2026-06-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000265",
+    "request_id": "PR-2026-000479",
+    "currency": "USD",
+    "issue_date": "2026-06-18",
+    "due_date": "2026-07-01",
+    "status": "AWARDED",
+    "created_at": "2026-06-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000266",
+    "request_id": "PR-2026-001006",
+    "currency": "USD",
+    "issue_date": "2026-06-18",
+    "due_date": "2026-06-29",
+    "status": "AWARDED",
+    "created_at": "2026-06-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000267",
+    "request_id": "PR-2026-001151",
+    "currency": "USD",
+    "issue_date": "2026-06-18",
+    "due_date": "2026-06-28",
+    "status": "AWARDED",
+    "created_at": "2026-06-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000268",
+    "request_id": "PR-2026-000865",
+    "currency": "USD",
+    "issue_date": "2026-06-20",
+    "due_date": "2026-06-29",
+    "status": "AWARDED",
+    "created_at": "2026-06-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000269",
+    "request_id": "PR-2026-000468",
+    "currency": "USD",
+    "issue_date": "2026-06-20",
+    "due_date": "2026-07-02",
+    "status": "AWARDED",
+    "created_at": "2026-06-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000270",
+    "request_id": "PR-2026-000755",
+    "currency": "USD",
+    "issue_date": "2026-06-22",
+    "due_date": "2026-07-03",
+    "status": "AWARDED",
+    "created_at": "2026-06-22T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000271",
+    "request_id": "PR-2026-000363",
+    "currency": "USD",
+    "issue_date": "2026-06-21",
+    "due_date": "2026-06-30",
+    "status": "AWARDED",
+    "created_at": "2026-06-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000272",
+    "request_id": "PR-2026-000547",
+    "currency": "USD",
+    "issue_date": "2026-06-24",
+    "due_date": "2026-07-05",
+    "status": "AWARDED",
+    "created_at": "2026-06-24T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000273",
+    "request_id": "PR-2026-000786",
+    "currency": "USD",
+    "issue_date": "2026-06-22",
+    "due_date": "2026-07-02",
+    "status": "AWARDED",
+    "created_at": "2026-06-22T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000274",
+    "request_id": "PR-2026-000486",
+    "currency": "USD",
+    "issue_date": "2026-06-25",
+    "due_date": "2026-07-03",
+    "status": "AWARDED",
+    "created_at": "2026-06-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000275",
+    "request_id": "PR-2026-000335",
+    "currency": "USD",
+    "issue_date": "2026-06-26",
+    "due_date": "2026-07-06",
+    "status": "AWARDED",
+    "created_at": "2026-06-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000276",
+    "request_id": "PR-2026-000342",
+    "currency": "USD",
+    "issue_date": "2026-06-25",
+    "due_date": "2026-07-07",
+    "status": "AWARDED",
+    "created_at": "2026-06-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000277",
+    "request_id": "PR-2026-000552",
+    "currency": "USD",
+    "issue_date": "2026-06-27",
+    "due_date": "2026-07-06",
+    "status": "AWARDED",
+    "created_at": "2026-06-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000278",
+    "request_id": "PR-2026-000685",
+    "currency": "USD",
+    "issue_date": "2026-06-26",
+    "due_date": "2026-07-04",
+    "status": "AWARDED",
+    "created_at": "2026-06-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000279",
+    "request_id": "PR-2026-001126",
+    "currency": "USD",
+    "issue_date": "2026-06-27",
+    "due_date": "2026-07-04",
+    "status": "AWARDED",
+    "created_at": "2026-06-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000280",
+    "request_id": "PR-2026-000453",
+    "currency": "USD",
+    "issue_date": "2026-06-26",
+    "due_date": "2026-07-09",
+    "status": "AWARDED",
+    "created_at": "2026-06-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000281",
+    "request_id": "PR-2026-000586",
+    "currency": "USD",
+    "issue_date": "2026-06-28",
+    "due_date": "2026-07-06",
+    "status": "AWARDED",
+    "created_at": "2026-06-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000282",
+    "request_id": "PR-2026-000949",
+    "currency": "USD",
+    "issue_date": "2026-06-28",
+    "due_date": "2026-07-11",
+    "status": "AWARDED",
+    "created_at": "2026-06-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000283",
+    "request_id": "PR-2026-000166",
+    "currency": "USD",
+    "issue_date": "2026-06-28",
+    "due_date": "2026-07-06",
+    "status": "AWARDED",
+    "created_at": "2026-06-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000284",
+    "request_id": "PR-2026-000575",
+    "currency": "USD",
+    "issue_date": "2026-06-30",
+    "due_date": "2026-07-10",
+    "status": "AWARDED",
+    "created_at": "2026-06-30T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000285",
+    "request_id": "PR-2026-000233",
+    "currency": "USD",
+    "issue_date": "2026-07-01",
+    "due_date": "2026-07-14",
+    "status": "AWARDED",
+    "created_at": "2026-07-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000286",
+    "request_id": "PR-2026-000392",
+    "currency": "USD",
+    "issue_date": "2026-06-30",
+    "due_date": "2026-07-12",
+    "status": "AWARDED",
+    "created_at": "2026-06-30T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000287",
+    "request_id": "PR-2026-000103",
+    "currency": "USD",
+    "issue_date": "2026-07-04",
+    "due_date": "2026-07-17",
+    "status": "AWARDED",
+    "created_at": "2026-07-04T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000288",
+    "request_id": "PR-2026-000792",
+    "currency": "USD",
+    "issue_date": "2026-07-03",
+    "due_date": "2026-07-10",
+    "status": "AWARDED",
+    "created_at": "2026-07-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000289",
+    "request_id": "PR-2026-000963",
+    "currency": "USD",
+    "issue_date": "2026-07-03",
+    "due_date": "2026-07-14",
+    "status": "AWARDED",
+    "created_at": "2026-07-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000290",
+    "request_id": "PR-2026-000582",
+    "currency": "USD",
+    "issue_date": "2026-07-06",
+    "due_date": "2026-07-15",
+    "status": "AWARDED",
+    "created_at": "2026-07-06T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000291",
+    "request_id": "PR-2026-000972",
+    "currency": "USD",
+    "issue_date": "2026-07-07",
+    "due_date": "2026-07-19",
+    "status": "AWARDED",
+    "created_at": "2026-07-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000292",
+    "request_id": "PR-2026-000601",
+    "currency": "USD",
+    "issue_date": "2026-07-07",
+    "due_date": "2026-07-15",
+    "status": "AWARDED",
+    "created_at": "2026-07-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000293",
+    "request_id": "PR-2026-001103",
+    "currency": "USD",
+    "issue_date": "2026-07-09",
+    "due_date": "2026-07-18",
+    "status": "AWARDED",
+    "created_at": "2026-07-09T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000294",
+    "request_id": "PR-2026-000544",
+    "currency": "USD",
+    "issue_date": "2026-07-11",
+    "due_date": "2026-07-23",
+    "status": "AWARDED",
+    "created_at": "2026-07-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000295",
+    "request_id": "PR-2026-000670",
+    "currency": "USD",
+    "issue_date": "2026-07-11",
+    "due_date": "2026-07-19",
+    "status": "AWARDED",
+    "created_at": "2026-07-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000296",
+    "request_id": "PR-2026-000858",
+    "currency": "USD",
+    "issue_date": "2026-07-12",
+    "due_date": "2026-07-23",
+    "status": "AWARDED",
+    "created_at": "2026-07-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000297",
+    "request_id": "PR-2026-000819",
+    "currency": "USD",
+    "issue_date": "2026-07-12",
+    "due_date": "2026-07-24",
+    "status": "AWARDED",
+    "created_at": "2026-07-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000298",
+    "request_id": "PR-2026-000288",
+    "currency": "USD",
+    "issue_date": "2026-07-13",
+    "due_date": "2026-07-21",
+    "status": "AWARDED",
+    "created_at": "2026-07-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000299",
+    "request_id": "PR-2026-000219",
+    "currency": "USD",
+    "issue_date": "2026-07-16",
+    "due_date": "2026-07-24",
+    "status": "AWARDED",
+    "created_at": "2026-07-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000300",
+    "request_id": "PR-2026-001078",
+    "currency": "USD",
+    "issue_date": "2026-07-16",
+    "due_date": "2026-07-26",
+    "status": "AWARDED",
+    "created_at": "2026-07-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000301",
+    "request_id": "PR-2026-000816",
+    "currency": "USD",
+    "issue_date": "2026-07-17",
+    "due_date": "2026-07-25",
+    "status": "AWARDED",
+    "created_at": "2026-07-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000302",
+    "request_id": "PR-2026-000529",
+    "currency": "USD",
+    "issue_date": "2026-07-18",
+    "due_date": "2026-07-28",
+    "status": "AWARDED",
+    "created_at": "2026-07-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000303",
+    "request_id": "PR-2026-001055",
+    "currency": "USD",
+    "issue_date": "2026-07-18",
+    "due_date": "2026-07-29",
+    "status": "AWARDED",
+    "created_at": "2026-07-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000304",
+    "request_id": "PR-2026-000265",
+    "currency": "USD",
+    "issue_date": "2026-07-19",
+    "due_date": "2026-07-31",
+    "status": "AWARDED",
+    "created_at": "2026-07-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000305",
+    "request_id": "PR-2026-001145",
+    "currency": "USD",
+    "issue_date": "2026-07-19",
+    "due_date": "2026-07-31",
+    "status": "AWARDED",
+    "created_at": "2026-07-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000306",
+    "request_id": "PR-2026-000046",
+    "currency": "USD",
+    "issue_date": "2026-07-21",
+    "due_date": "2026-07-30",
+    "status": "AWARDED",
+    "created_at": "2026-07-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000307",
+    "request_id": "PR-2026-000554",
+    "currency": "USD",
+    "issue_date": "2026-07-21",
+    "due_date": "2026-07-28",
+    "status": "AWARDED",
+    "created_at": "2026-07-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000308",
+    "request_id": "PR-2026-000713",
+    "currency": "USD",
+    "issue_date": "2026-07-21",
+    "due_date": "2026-08-03",
+    "status": "AWARDED",
+    "created_at": "2026-07-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000309",
+    "request_id": "PR-2026-000991",
+    "currency": "USD",
+    "issue_date": "2026-07-20",
+    "due_date": "2026-08-01",
+    "status": "AWARDED",
+    "created_at": "2026-07-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000310",
+    "request_id": "PR-2026-000417",
+    "currency": "USD",
+    "issue_date": "2026-07-21",
+    "due_date": "2026-08-02",
+    "status": "AWARDED",
+    "created_at": "2026-07-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000311",
+    "request_id": "PR-2026-000734",
+    "currency": "USD",
+    "issue_date": "2026-07-21",
+    "due_date": "2026-07-31",
+    "status": "AWARDED",
+    "created_at": "2026-07-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000312",
+    "request_id": "PR-2026-000212",
+    "currency": "USD",
+    "issue_date": "2026-07-23",
+    "due_date": "2026-07-31",
+    "status": "AWARDED",
+    "created_at": "2026-07-23T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000313",
+    "request_id": "PR-2026-000423",
+    "currency": "USD",
+    "issue_date": "2026-07-23",
+    "due_date": "2026-07-31",
+    "status": "AWARDED",
+    "created_at": "2026-07-23T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000314",
+    "request_id": "PR-2026-000826",
+    "currency": "USD",
+    "issue_date": "2026-07-25",
+    "due_date": "2026-08-04",
+    "status": "AWARDED",
+    "created_at": "2026-07-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000315",
+    "request_id": "PR-2026-000913",
+    "currency": "USD",
+    "issue_date": "2026-07-24",
+    "due_date": "2026-08-06",
+    "status": "AWARDED",
+    "created_at": "2026-07-24T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000316",
+    "request_id": "PR-2026-000686",
+    "currency": "USD",
+    "issue_date": "2026-07-25",
+    "due_date": "2026-08-07",
+    "status": "AWARDED",
+    "created_at": "2026-07-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000317",
+    "request_id": "PR-2026-000919",
+    "currency": "USD",
+    "issue_date": "2026-07-26",
+    "due_date": "2026-08-07",
+    "status": "AWARDED",
+    "created_at": "2026-07-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000318",
+    "request_id": "PR-2026-000144",
+    "currency": "USD",
+    "issue_date": "2026-07-29",
+    "due_date": "2026-08-09",
+    "status": "AWARDED",
+    "created_at": "2026-07-29T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000319",
+    "request_id": "PR-2026-000169",
+    "currency": "USD",
+    "issue_date": "2026-07-27",
+    "due_date": "2026-08-08",
+    "status": "AWARDED",
+    "created_at": "2026-07-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000320",
+    "request_id": "PR-2026-000239",
+    "currency": "USD",
+    "issue_date": "2026-07-28",
+    "due_date": "2026-08-08",
+    "status": "AWARDED",
+    "created_at": "2026-07-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000321",
+    "request_id": "PR-2026-000927",
+    "currency": "USD",
+    "issue_date": "2026-07-28",
+    "due_date": "2026-08-08",
+    "status": "AWARDED",
+    "created_at": "2026-07-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000322",
+    "request_id": "PR-2026-000649",
+    "currency": "USD",
+    "issue_date": "2026-07-30",
+    "due_date": "2026-08-12",
+    "status": "AWARDED",
+    "created_at": "2026-07-30T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000323",
+    "request_id": "PR-2026-000839",
+    "currency": "USD",
+    "issue_date": "2026-07-29",
+    "due_date": "2026-08-07",
+    "status": "AWARDED",
+    "created_at": "2026-07-29T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000324",
+    "request_id": "PR-2026-001040",
+    "currency": "USD",
+    "issue_date": "2026-07-31",
+    "due_date": "2026-08-09",
+    "status": "AWARDED",
+    "created_at": "2026-07-31T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000325",
+    "request_id": "PR-2026-000519",
+    "currency": "USD",
+    "issue_date": "2026-08-01",
+    "due_date": "2026-08-13",
+    "status": "AWARDED",
+    "created_at": "2026-08-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000326",
+    "request_id": "PR-2026-000847",
+    "currency": "USD",
+    "issue_date": "2026-08-02",
+    "due_date": "2026-08-15",
+    "status": "AWARDED",
+    "created_at": "2026-08-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000327",
+    "request_id": "PR-2026-000507",
+    "currency": "USD",
+    "issue_date": "2026-08-01",
+    "due_date": "2026-08-09",
+    "status": "AWARDED",
+    "created_at": "2026-08-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000328",
+    "request_id": "PR-2026-000153",
+    "currency": "USD",
+    "issue_date": "2026-08-02",
+    "due_date": "2026-08-11",
+    "status": "AWARDED",
+    "created_at": "2026-08-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000329",
+    "request_id": "PR-2026-000570",
+    "currency": "USD",
+    "issue_date": "2026-08-06",
+    "due_date": "2026-08-13",
+    "status": "AWARDED",
+    "created_at": "2026-08-06T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000330",
+    "request_id": "PR-2026-000840",
+    "currency": "USD",
+    "issue_date": "2026-08-04",
+    "due_date": "2026-08-16",
+    "status": "AWARDED",
+    "created_at": "2026-08-04T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000331",
+    "request_id": "PR-2026-001142",
+    "currency": "USD",
+    "issue_date": "2026-08-04",
+    "due_date": "2026-08-17",
+    "status": "AWARDED",
+    "created_at": "2026-08-04T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000332",
+    "request_id": "PR-2026-000050",
+    "currency": "USD",
+    "issue_date": "2026-08-06",
+    "due_date": "2026-08-18",
+    "status": "AWARDED",
+    "created_at": "2026-08-06T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000333",
+    "request_id": "PR-2026-000220",
+    "currency": "USD",
+    "issue_date": "2026-08-06",
+    "due_date": "2026-08-19",
+    "status": "AWARDED",
+    "created_at": "2026-08-06T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000334",
+    "request_id": "PR-2026-000281",
+    "currency": "USD",
+    "issue_date": "2026-08-06",
+    "due_date": "2026-08-14",
+    "status": "AWARDED",
+    "created_at": "2026-08-06T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000335",
+    "request_id": "PR-2026-000831",
+    "currency": "USD",
+    "issue_date": "2026-08-06",
+    "due_date": "2026-08-16",
+    "status": "AWARDED",
+    "created_at": "2026-08-06T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000336",
+    "request_id": "PR-2026-000011",
+    "currency": "USD",
+    "issue_date": "2026-08-07",
+    "due_date": "2026-08-20",
+    "status": "AWARDED",
+    "created_at": "2026-08-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000337",
+    "request_id": "PR-2026-000440",
+    "currency": "USD",
+    "issue_date": "2026-08-07",
+    "due_date": "2026-08-16",
+    "status": "AWARDED",
+    "created_at": "2026-08-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000338",
+    "request_id": "PR-2026-000653",
+    "currency": "USD",
+    "issue_date": "2026-08-08",
+    "due_date": "2026-08-20",
+    "status": "AWARDED",
+    "created_at": "2026-08-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000339",
+    "request_id": "PR-2026-000107",
+    "currency": "USD",
+    "issue_date": "2026-08-08",
+    "due_date": "2026-08-18",
+    "status": "AWARDED",
+    "created_at": "2026-08-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000340",
+    "request_id": "PR-2026-000745",
+    "currency": "USD",
+    "issue_date": "2026-08-08",
+    "due_date": "2026-08-17",
+    "status": "AWARDED",
+    "created_at": "2026-08-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000341",
+    "request_id": "PR-2026-000912",
+    "currency": "USD",
+    "issue_date": "2026-08-08",
+    "due_date": "2026-08-16",
+    "status": "AWARDED",
+    "created_at": "2026-08-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000342",
+    "request_id": "PR-2026-000193",
+    "currency": "USD",
+    "issue_date": "2026-08-11",
+    "due_date": "2026-08-23",
+    "status": "AWARDED",
+    "created_at": "2026-08-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000343",
+    "request_id": "PR-2026-000234",
+    "currency": "USD",
+    "issue_date": "2026-08-11",
+    "due_date": "2026-08-24",
+    "status": "AWARDED",
+    "created_at": "2026-08-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000344",
+    "request_id": "PR-2026-000645",
+    "currency": "USD",
+    "issue_date": "2026-08-11",
+    "due_date": "2026-08-21",
+    "status": "AWARDED",
+    "created_at": "2026-08-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000345",
+    "request_id": "PR-2026-000688",
+    "currency": "USD",
+    "issue_date": "2026-08-12",
+    "due_date": "2026-08-23",
+    "status": "AWARDED",
+    "created_at": "2026-08-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000346",
+    "request_id": "PR-2026-000931",
+    "currency": "USD",
+    "issue_date": "2026-08-12",
+    "due_date": "2026-08-25",
+    "status": "AWARDED",
+    "created_at": "2026-08-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000347",
+    "request_id": "PR-2026-000165",
+    "currency": "USD",
+    "issue_date": "2026-08-15",
+    "due_date": "2026-08-26",
+    "status": "AWARDED",
+    "created_at": "2026-08-15T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000348",
+    "request_id": "PR-2026-000436",
+    "currency": "USD",
+    "issue_date": "2026-08-14",
+    "due_date": "2026-08-22",
+    "status": "AWARDED",
+    "created_at": "2026-08-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000349",
+    "request_id": "PR-2026-000740",
+    "currency": "USD",
+    "issue_date": "2026-08-13",
+    "due_date": "2026-08-21",
+    "status": "AWARDED",
+    "created_at": "2026-08-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000350",
+    "request_id": "PR-2026-000748",
+    "currency": "USD",
+    "issue_date": "2026-08-18",
+    "due_date": "2026-08-26",
+    "status": "AWARDED",
+    "created_at": "2026-08-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000351",
+    "request_id": "PR-2026-000930",
+    "currency": "USD",
+    "issue_date": "2026-08-15",
+    "due_date": "2026-08-22",
+    "status": "AWARDED",
+    "created_at": "2026-08-15T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000352",
+    "request_id": "PR-2026-000988",
+    "currency": "USD",
+    "issue_date": "2026-08-16",
+    "due_date": "2026-08-24",
+    "status": "AWARDED",
+    "created_at": "2026-08-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000353",
+    "request_id": "PR-2026-000311",
+    "currency": "USD",
+    "issue_date": "2026-08-17",
+    "due_date": "2026-08-27",
+    "status": "AWARDED",
+    "created_at": "2026-08-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000354",
+    "request_id": "PR-2026-000714",
+    "currency": "USD",
+    "issue_date": "2026-08-18",
+    "due_date": "2026-08-30",
+    "status": "AWARDED",
+    "created_at": "2026-08-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000355",
+    "request_id": "PR-2026-000793",
+    "currency": "USD",
+    "issue_date": "2026-08-18",
+    "due_date": "2026-08-30",
+    "status": "AWARDED",
+    "created_at": "2026-08-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000356",
+    "request_id": "PR-2026-001057",
+    "currency": "USD",
+    "issue_date": "2026-08-17",
+    "due_date": "2026-08-26",
+    "status": "AWARDED",
+    "created_at": "2026-08-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000357",
+    "request_id": "PR-2026-000227",
+    "currency": "USD",
+    "issue_date": "2026-08-18",
+    "due_date": "2026-08-31",
+    "status": "AWARDED",
+    "created_at": "2026-08-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000358",
+    "request_id": "PR-2026-000696",
+    "currency": "USD",
+    "issue_date": "2026-08-18",
+    "due_date": "2026-08-25",
+    "status": "AWARDED",
+    "created_at": "2026-08-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000359",
+    "request_id": "PR-2026-000307",
+    "currency": "USD",
+    "issue_date": "2026-08-19",
+    "due_date": "2026-08-29",
+    "status": "AWARDED",
+    "created_at": "2026-08-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000360",
+    "request_id": "PR-2026-000712",
+    "currency": "USD",
+    "issue_date": "2026-08-19",
+    "due_date": "2026-08-26",
+    "status": "AWARDED",
+    "created_at": "2026-08-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000361",
+    "request_id": "PR-2026-000565",
+    "currency": "USD",
+    "issue_date": "2026-08-21",
+    "due_date": "2026-09-03",
+    "status": "AWARDED",
+    "created_at": "2026-08-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000362",
+    "request_id": "PR-2026-000838",
+    "currency": "USD",
+    "issue_date": "2026-08-21",
+    "due_date": "2026-08-28",
+    "status": "AWARDED",
+    "created_at": "2026-08-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000363",
+    "request_id": "PR-2026-000375",
+    "currency": "USD",
+    "issue_date": "2026-08-23",
+    "due_date": "2026-09-05",
+    "status": "AWARDED",
+    "created_at": "2026-08-23T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000364",
+    "request_id": "PR-2026-000430",
+    "currency": "USD",
+    "issue_date": "2026-08-24",
+    "due_date": "2026-09-02",
+    "status": "AWARDED",
+    "created_at": "2026-08-24T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000365",
+    "request_id": "PR-2026-001035",
+    "currency": "USD",
+    "issue_date": "2026-08-25",
+    "due_date": "2026-09-04",
+    "status": "AWARDED",
+    "created_at": "2026-08-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000366",
+    "request_id": "PR-2026-000082",
+    "currency": "USD",
+    "issue_date": "2026-08-27",
+    "due_date": "2026-09-03",
+    "status": "AWARDED",
+    "created_at": "2026-08-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000367",
+    "request_id": "PR-2026-000135",
+    "currency": "USD",
+    "issue_date": "2026-08-26",
+    "due_date": "2026-09-06",
+    "status": "AWARDED",
+    "created_at": "2026-08-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000368",
+    "request_id": "PR-2026-000628",
+    "currency": "USD",
+    "issue_date": "2026-08-25",
+    "due_date": "2026-09-07",
+    "status": "AWARDED",
+    "created_at": "2026-08-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000369",
+    "request_id": "PR-2026-000751",
+    "currency": "USD",
+    "issue_date": "2026-08-27",
+    "due_date": "2026-09-07",
+    "status": "AWARDED",
+    "created_at": "2026-08-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000370",
+    "request_id": "PR-2026-001189",
+    "currency": "USD",
+    "issue_date": "2026-08-28",
+    "due_date": "2026-09-07",
+    "status": "AWARDED",
+    "created_at": "2026-08-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000371",
+    "request_id": "PR-2026-000492",
+    "currency": "USD",
+    "issue_date": "2026-08-27",
+    "due_date": "2026-09-05",
+    "status": "AWARDED",
+    "created_at": "2026-08-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000372",
+    "request_id": "PR-2026-000806",
+    "currency": "USD",
+    "issue_date": "2026-08-27",
+    "due_date": "2026-09-03",
+    "status": "AWARDED",
+    "created_at": "2026-08-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000373",
+    "request_id": "PR-2026-000087",
+    "currency": "USD",
+    "issue_date": "2026-08-30",
+    "due_date": "2026-09-10",
+    "status": "AWARDED",
+    "created_at": "2026-08-30T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000374",
+    "request_id": "PR-2026-001011",
+    "currency": "USD",
+    "issue_date": "2026-08-28",
+    "due_date": "2026-09-10",
+    "status": "AWARDED",
+    "created_at": "2026-08-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000375",
+    "request_id": "PR-2026-000754",
+    "currency": "USD",
+    "issue_date": "2026-09-01",
+    "due_date": "2026-09-14",
+    "status": "AWARDED",
+    "created_at": "2026-09-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000376",
+    "request_id": "PR-2026-000764",
+    "currency": "USD",
+    "issue_date": "2026-09-01",
+    "due_date": "2026-09-09",
+    "status": "AWARDED",
+    "created_at": "2026-09-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000377",
+    "request_id": "PR-2026-000036",
+    "currency": "USD",
+    "issue_date": "2026-09-03",
+    "due_date": "2026-09-16",
+    "status": "AWARDED",
+    "created_at": "2026-09-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000378",
+    "request_id": "PR-2026-000758",
+    "currency": "USD",
+    "issue_date": "2026-09-04",
+    "due_date": "2026-09-15",
+    "status": "AWARDED",
+    "created_at": "2026-09-04T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000379",
+    "request_id": "PR-2026-001160",
+    "currency": "USD",
+    "issue_date": "2026-09-04",
+    "due_date": "2026-09-13",
+    "status": "AWARDED",
+    "created_at": "2026-09-04T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000380",
+    "request_id": "PR-2026-000223",
+    "currency": "USD",
+    "issue_date": "2026-09-05",
+    "due_date": "2026-09-12",
+    "status": "AWARDED",
+    "created_at": "2026-09-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000381",
+    "request_id": "PR-2026-000463",
+    "currency": "USD",
+    "issue_date": "2026-09-07",
+    "due_date": "2026-09-19",
+    "status": "AWARDED",
+    "created_at": "2026-09-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000382",
+    "request_id": "PR-2026-001200",
+    "currency": "USD",
+    "issue_date": "2026-09-05",
+    "due_date": "2026-09-17",
+    "status": "AWARDED",
+    "created_at": "2026-09-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000383",
+    "request_id": "PR-2026-000395",
+    "currency": "USD",
+    "issue_date": "2026-09-08",
+    "due_date": "2026-09-15",
+    "status": "AWARDED",
+    "created_at": "2026-09-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000384",
+    "request_id": "PR-2026-000862",
+    "currency": "USD",
+    "issue_date": "2026-09-08",
+    "due_date": "2026-09-16",
+    "status": "AWARDED",
+    "created_at": "2026-09-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000385",
+    "request_id": "PR-2026-000349",
+    "currency": "USD",
+    "issue_date": "2026-09-08",
+    "due_date": "2026-09-15",
+    "status": "AWARDED",
+    "created_at": "2026-09-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000386",
+    "request_id": "PR-2026-001124",
+    "currency": "USD",
+    "issue_date": "2026-09-11",
+    "due_date": "2026-09-20",
+    "status": "AWARDED",
+    "created_at": "2026-09-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000387",
+    "request_id": "PR-2026-000790",
+    "currency": "USD",
+    "issue_date": "2026-09-12",
+    "due_date": "2026-09-20",
+    "status": "AWARDED",
+    "created_at": "2026-09-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000388",
+    "request_id": "PR-2026-001163",
+    "currency": "USD",
+    "issue_date": "2026-09-12",
+    "due_date": "2026-09-23",
+    "status": "AWARDED",
+    "created_at": "2026-09-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000389",
+    "request_id": "PR-2026-000428",
+    "currency": "USD",
+    "issue_date": "2026-09-12",
+    "due_date": "2026-09-19",
+    "status": "AWARDED",
+    "created_at": "2026-09-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000390",
+    "request_id": "PR-2026-000264",
+    "currency": "USD",
+    "issue_date": "2026-09-14",
+    "due_date": "2026-09-27",
+    "status": "AWARDED",
+    "created_at": "2026-09-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000391",
+    "request_id": "PR-2026-000548",
+    "currency": "USD",
+    "issue_date": "2026-09-14",
+    "due_date": "2026-09-27",
+    "status": "AWARDED",
+    "created_at": "2026-09-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000392",
+    "request_id": "PR-2026-000029",
+    "currency": "USD",
+    "issue_date": "2026-09-15",
+    "due_date": "2026-09-23",
+    "status": "AWARDED",
+    "created_at": "2026-09-15T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000393",
+    "request_id": "PR-2026-000679",
+    "currency": "USD",
+    "issue_date": "2026-09-14",
+    "due_date": "2026-09-23",
+    "status": "AWARDED",
+    "created_at": "2026-09-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000394",
+    "request_id": "PR-2026-000618",
+    "currency": "USD",
+    "issue_date": "2026-09-17",
+    "due_date": "2026-09-24",
+    "status": "AWARDED",
+    "created_at": "2026-09-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000395",
+    "request_id": "PR-2026-000827",
+    "currency": "USD",
+    "issue_date": "2026-09-16",
+    "due_date": "2026-09-29",
+    "status": "AWARDED",
+    "created_at": "2026-09-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000396",
+    "request_id": "PR-2026-001199",
+    "currency": "USD",
+    "issue_date": "2026-09-17",
+    "due_date": "2026-09-25",
+    "status": "AWARDED",
+    "created_at": "2026-09-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000397",
+    "request_id": "PR-2026-000196",
+    "currency": "USD",
+    "issue_date": "2026-09-18",
+    "due_date": "2026-09-28",
+    "status": "AWARDED",
+    "created_at": "2026-09-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000398",
+    "request_id": "PR-2026-000313",
+    "currency": "USD",
+    "issue_date": "2026-09-17",
+    "due_date": "2026-09-24",
+    "status": "AWARDED",
+    "created_at": "2026-09-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000399",
+    "request_id": "PR-2026-000592",
+    "currency": "USD",
+    "issue_date": "2026-09-16",
+    "due_date": "2026-09-25",
+    "status": "AWARDED",
+    "created_at": "2026-09-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000400",
+    "request_id": "PR-2026-001060",
+    "currency": "USD",
+    "issue_date": "2026-09-17",
+    "due_date": "2026-09-28",
+    "status": "AWARDED",
+    "created_at": "2026-09-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000401",
+    "request_id": "PR-2026-000149",
+    "currency": "USD",
+    "issue_date": "2026-09-19",
+    "due_date": "2026-09-27",
+    "status": "AWARDED",
+    "created_at": "2026-09-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000402",
+    "request_id": "PR-2026-000199",
+    "currency": "USD",
+    "issue_date": "2026-09-19",
+    "due_date": "2026-09-26",
+    "status": "AWARDED",
+    "created_at": "2026-09-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000403",
+    "request_id": "PR-2026-000578",
+    "currency": "USD",
+    "issue_date": "2026-09-19",
+    "due_date": "2026-09-29",
+    "status": "AWARDED",
+    "created_at": "2026-09-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000404",
+    "request_id": "PR-2026-000692",
+    "currency": "USD",
+    "issue_date": "2026-09-18",
+    "due_date": "2026-09-30",
+    "status": "AWARDED",
+    "created_at": "2026-09-18T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000405",
+    "request_id": "PR-2026-000738",
+    "currency": "USD",
+    "issue_date": "2026-09-19",
+    "due_date": "2026-09-30",
+    "status": "AWARDED",
+    "created_at": "2026-09-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000406",
+    "request_id": "PR-2026-000513",
+    "currency": "USD",
+    "issue_date": "2026-09-20",
+    "due_date": "2026-10-01",
+    "status": "AWARDED",
+    "created_at": "2026-09-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000407",
+    "request_id": "PR-2026-000522",
+    "currency": "USD",
+    "issue_date": "2026-09-22",
+    "due_date": "2026-09-30",
+    "status": "AWARDED",
+    "created_at": "2026-09-22T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000408",
+    "request_id": "PR-2026-000386",
+    "currency": "USD",
+    "issue_date": "2026-09-21",
+    "due_date": "2026-10-01",
+    "status": "AWARDED",
+    "created_at": "2026-09-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000409",
+    "request_id": "PR-2026-000859",
+    "currency": "USD",
+    "issue_date": "2026-09-22",
+    "due_date": "2026-10-03",
+    "status": "AWARDED",
+    "created_at": "2026-09-22T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000410",
+    "request_id": "PR-2026-000918",
+    "currency": "USD",
+    "issue_date": "2026-09-22",
+    "due_date": "2026-09-29",
+    "status": "AWARDED",
+    "created_at": "2026-09-22T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000411",
+    "request_id": "PR-2026-000709",
+    "currency": "USD",
+    "issue_date": "2026-09-22",
+    "due_date": "2026-10-02",
+    "status": "AWARDED",
+    "created_at": "2026-09-22T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000412",
+    "request_id": "PR-2026-001091",
+    "currency": "USD",
+    "issue_date": "2026-09-24",
+    "due_date": "2026-10-02",
+    "status": "AWARDED",
+    "created_at": "2026-09-24T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000413",
+    "request_id": "PR-2026-000186",
+    "currency": "USD",
+    "issue_date": "2026-09-25",
+    "due_date": "2026-10-08",
+    "status": "AWARDED",
+    "created_at": "2026-09-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000414",
+    "request_id": "PR-2026-000556",
+    "currency": "USD",
+    "issue_date": "2026-09-24",
+    "due_date": "2026-10-02",
+    "status": "AWARDED",
+    "created_at": "2026-09-24T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000415",
+    "request_id": "PR-2026-000778",
+    "currency": "USD",
+    "issue_date": "2026-09-25",
+    "due_date": "2026-10-07",
+    "status": "AWARDED",
+    "created_at": "2026-09-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000416",
+    "request_id": "PR-2026-001194",
+    "currency": "USD",
+    "issue_date": "2026-09-25",
+    "due_date": "2026-10-06",
+    "status": "AWARDED",
+    "created_at": "2026-09-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000417",
+    "request_id": "PR-2026-000355",
+    "currency": "USD",
+    "issue_date": "2026-09-26",
+    "due_date": "2026-10-09",
+    "status": "AWARDED",
+    "created_at": "2026-09-26T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000418",
+    "request_id": "PR-2026-000400",
+    "currency": "USD",
+    "issue_date": "2026-09-27",
+    "due_date": "2026-10-09",
+    "status": "AWARDED",
+    "created_at": "2026-09-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000419",
+    "request_id": "PR-2026-000415",
+    "currency": "USD",
+    "issue_date": "2026-09-27",
+    "due_date": "2026-10-08",
+    "status": "AWARDED",
+    "created_at": "2026-09-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000420",
+    "request_id": "PR-2026-001022",
+    "currency": "USD",
+    "issue_date": "2026-09-27",
+    "due_date": "2026-10-07",
+    "status": "AWARDED",
+    "created_at": "2026-09-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000421",
+    "request_id": "PR-2026-000622",
+    "currency": "USD",
+    "issue_date": "2026-09-27",
+    "due_date": "2026-10-08",
+    "status": "AWARDED",
+    "created_at": "2026-09-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000422",
+    "request_id": "PR-2026-000491",
+    "currency": "USD",
+    "issue_date": "2026-09-27",
+    "due_date": "2026-10-06",
+    "status": "AWARDED",
+    "created_at": "2026-09-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000423",
+    "request_id": "PR-2026-000273",
+    "currency": "USD",
+    "issue_date": "2026-09-28",
+    "due_date": "2026-10-10",
+    "status": "AWARDED",
+    "created_at": "2026-09-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000424",
+    "request_id": "PR-2026-000300",
+    "currency": "USD",
+    "issue_date": "2026-09-29",
+    "due_date": "2026-10-09",
+    "status": "AWARDED",
+    "created_at": "2026-09-29T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000425",
+    "request_id": "PR-2026-000449",
+    "currency": "USD",
+    "issue_date": "2026-09-29",
+    "due_date": "2026-10-08",
+    "status": "AWARDED",
+    "created_at": "2026-09-29T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000426",
+    "request_id": "PR-2026-000730",
+    "currency": "USD",
+    "issue_date": "2026-09-30",
+    "due_date": "2026-10-07",
+    "status": "AWARDED",
+    "created_at": "2026-09-30T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000427",
+    "request_id": "PR-2026-000871",
+    "currency": "USD",
+    "issue_date": "2026-09-29",
+    "due_date": "2026-10-07",
+    "status": "AWARDED",
+    "created_at": "2026-09-29T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000428",
+    "request_id": "PR-2026-000666",
+    "currency": "USD",
+    "issue_date": "2026-09-30",
+    "due_date": "2026-10-13",
+    "status": "AWARDED",
+    "created_at": "2026-09-30T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000429",
+    "request_id": "PR-2026-000130",
+    "currency": "USD",
+    "issue_date": "2026-10-01",
+    "due_date": "2026-10-12",
+    "status": "AWARDED",
+    "created_at": "2026-10-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000430",
+    "request_id": "PR-2026-000736",
+    "currency": "USD",
+    "issue_date": "2026-10-02",
+    "due_date": "2026-10-13",
+    "status": "AWARDED",
+    "created_at": "2026-10-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000431",
+    "request_id": "PR-2026-000876",
+    "currency": "USD",
+    "issue_date": "2026-10-01",
+    "due_date": "2026-10-09",
+    "status": "AWARDED",
+    "created_at": "2026-10-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000432",
+    "request_id": "PR-2026-000039",
+    "currency": "USD",
+    "issue_date": "2026-10-03",
+    "due_date": "2026-10-14",
+    "status": "AWARDED",
+    "created_at": "2026-10-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000433",
+    "request_id": "PR-2026-000660",
+    "currency": "USD",
+    "issue_date": "2026-10-02",
+    "due_date": "2026-10-15",
+    "status": "AWARDED",
+    "created_at": "2026-10-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000434",
+    "request_id": "PR-2026-001198",
+    "currency": "USD",
+    "issue_date": "2026-10-02",
+    "due_date": "2026-10-11",
+    "status": "AWARDED",
+    "created_at": "2026-10-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000435",
+    "request_id": "PR-2026-000402",
+    "currency": "USD",
+    "issue_date": "2026-10-04",
+    "due_date": "2026-10-11",
+    "status": "AWARDED",
+    "created_at": "2026-10-04T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000436",
+    "request_id": "PR-2026-000504",
+    "currency": "USD",
+    "issue_date": "2026-10-04",
+    "due_date": "2026-10-14",
+    "status": "AWARDED",
+    "created_at": "2026-10-04T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000437",
+    "request_id": "PR-2026-000480",
+    "currency": "USD",
+    "issue_date": "2026-10-05",
+    "due_date": "2026-10-12",
+    "status": "AWARDED",
+    "created_at": "2026-10-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000438",
+    "request_id": "PR-2026-001181",
+    "currency": "USD",
+    "issue_date": "2026-10-07",
+    "due_date": "2026-10-19",
+    "status": "AWARDED",
+    "created_at": "2026-10-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000439",
+    "request_id": "PR-2026-000387",
+    "currency": "USD",
+    "issue_date": "2026-10-08",
+    "due_date": "2026-10-19",
+    "status": "AWARDED",
+    "created_at": "2026-10-08T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000440",
+    "request_id": "PR-2026-000330",
+    "currency": "USD",
+    "issue_date": "2026-10-09",
+    "due_date": "2026-10-22",
+    "status": "AWARDED",
+    "created_at": "2026-10-09T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000441",
+    "request_id": "PR-2026-000620",
+    "currency": "USD",
+    "issue_date": "2026-10-09",
+    "due_date": "2026-10-16",
+    "status": "AWARDED",
+    "created_at": "2026-10-09T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000442",
+    "request_id": "PR-2026-000139",
+    "currency": "USD",
+    "issue_date": "2026-10-10",
+    "due_date": "2026-10-17",
+    "status": "AWARDED",
+    "created_at": "2026-10-10T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000443",
+    "request_id": "PR-2026-000172",
+    "currency": "USD",
+    "issue_date": "2026-10-10",
+    "due_date": "2026-10-19",
+    "status": "AWARDED",
+    "created_at": "2026-10-10T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000444",
+    "request_id": "PR-2026-000615",
+    "currency": "USD",
+    "issue_date": "2026-10-10",
+    "due_date": "2026-10-18",
+    "status": "AWARDED",
+    "created_at": "2026-10-10T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000445",
+    "request_id": "PR-2026-000767",
+    "currency": "USD",
+    "issue_date": "2026-10-11",
+    "due_date": "2026-10-22",
+    "status": "AWARDED",
+    "created_at": "2026-10-11T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000446",
+    "request_id": "PR-2026-000830",
+    "currency": "USD",
+    "issue_date": "2026-10-12",
+    "due_date": "2026-10-22",
+    "status": "AWARDED",
+    "created_at": "2026-10-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000447",
+    "request_id": "PR-2026-000606",
+    "currency": "USD",
+    "issue_date": "2026-10-13",
+    "due_date": "2026-10-22",
+    "status": "AWARDED",
+    "created_at": "2026-10-13T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000448",
+    "request_id": "PR-2026-000624",
+    "currency": "USD",
+    "issue_date": "2026-10-12",
+    "due_date": "2026-10-25",
+    "status": "AWARDED",
+    "created_at": "2026-10-12T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000449",
+    "request_id": "PR-2026-000056",
+    "currency": "USD",
+    "issue_date": "2026-10-14",
+    "due_date": "2026-10-26",
+    "status": "AWARDED",
+    "created_at": "2026-10-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000450",
+    "request_id": "PR-2026-001128",
+    "currency": "USD",
+    "issue_date": "2026-10-14",
+    "due_date": "2026-10-23",
+    "status": "AWARDED",
+    "created_at": "2026-10-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000451",
+    "request_id": "PR-2026-000590",
+    "currency": "USD",
+    "issue_date": "2026-10-16",
+    "due_date": "2026-10-28",
+    "status": "AWARDED",
+    "created_at": "2026-10-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000452",
+    "request_id": "PR-2026-000683",
+    "currency": "USD",
+    "issue_date": "2026-10-14",
+    "due_date": "2026-10-26",
+    "status": "AWARDED",
+    "created_at": "2026-10-14T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000453",
+    "request_id": "PR-2026-000822",
+    "currency": "USD",
+    "issue_date": "2026-10-16",
+    "due_date": "2026-10-26",
+    "status": "AWARDED",
+    "created_at": "2026-10-16T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000454",
+    "request_id": "PR-2026-000523",
+    "currency": "USD",
+    "issue_date": "2026-10-17",
+    "due_date": "2026-10-27",
+    "status": "AWARDED",
+    "created_at": "2026-10-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000455",
+    "request_id": "PR-2026-000700",
+    "currency": "USD",
+    "issue_date": "2026-10-17",
+    "due_date": "2026-10-30",
+    "status": "AWARDED",
+    "created_at": "2026-10-17T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000456",
+    "request_id": "PR-2026-000083",
+    "currency": "USD",
+    "issue_date": "2026-10-20",
+    "due_date": "2026-10-29",
+    "status": "AWARDED",
+    "created_at": "2026-10-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000457",
+    "request_id": "PR-2026-000472",
+    "currency": "USD",
+    "issue_date": "2026-10-19",
+    "due_date": "2026-11-01",
+    "status": "AWARDED",
+    "created_at": "2026-10-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000458",
+    "request_id": "PR-2026-000007",
+    "currency": "USD",
+    "issue_date": "2026-10-19",
+    "due_date": "2026-11-01",
+    "status": "AWARDED",
+    "created_at": "2026-10-19T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000459",
+    "request_id": "PR-2026-000484",
+    "currency": "USD",
+    "issue_date": "2026-10-20",
+    "due_date": "2026-11-02",
+    "status": "AWARDED",
+    "created_at": "2026-10-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000460",
+    "request_id": "PR-2026-000698",
+    "currency": "USD",
+    "issue_date": "2026-10-20",
+    "due_date": "2026-10-28",
+    "status": "AWARDED",
+    "created_at": "2026-10-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000461",
+    "request_id": "PR-2026-000038",
+    "currency": "USD",
+    "issue_date": "2026-10-21",
+    "due_date": "2026-11-01",
+    "status": "AWARDED",
+    "created_at": "2026-10-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000462",
+    "request_id": "PR-2026-000842",
+    "currency": "USD",
+    "issue_date": "2026-10-21",
+    "due_date": "2026-10-30",
+    "status": "AWARDED",
+    "created_at": "2026-10-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000463",
+    "request_id": "PR-2026-000923",
+    "currency": "USD",
+    "issue_date": "2026-10-20",
+    "due_date": "2026-10-27",
+    "status": "AWARDED",
+    "created_at": "2026-10-20T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000464",
+    "request_id": "PR-2026-001037",
+    "currency": "USD",
+    "issue_date": "2026-10-21",
+    "due_date": "2026-11-02",
+    "status": "AWARDED",
+    "created_at": "2026-10-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000465",
+    "request_id": "PR-2026-001148",
+    "currency": "USD",
+    "issue_date": "2026-10-21",
+    "due_date": "2026-10-28",
+    "status": "AWARDED",
+    "created_at": "2026-10-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000466",
+    "request_id": "PR-2026-001191",
+    "currency": "USD",
+    "issue_date": "2026-10-21",
+    "due_date": "2026-11-01",
+    "status": "AWARDED",
+    "created_at": "2026-10-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000467",
+    "request_id": "PR-2026-000567",
+    "currency": "USD",
+    "issue_date": "2026-10-23",
+    "due_date": "2026-11-03",
+    "status": "AWARDED",
+    "created_at": "2026-10-23T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000468",
+    "request_id": "PR-2026-001072",
+    "currency": "USD",
+    "issue_date": "2026-10-21",
+    "due_date": "2026-11-03",
+    "status": "AWARDED",
+    "created_at": "2026-10-21T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000469",
+    "request_id": "PR-2026-000071",
+    "currency": "USD",
+    "issue_date": "2026-10-23",
+    "due_date": "2026-11-01",
+    "status": "AWARDED",
+    "created_at": "2026-10-23T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000470",
+    "request_id": "PR-2026-000657",
+    "currency": "USD",
+    "issue_date": "2026-10-24",
+    "due_date": "2026-11-04",
+    "status": "AWARDED",
+    "created_at": "2026-10-24T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000471",
+    "request_id": "PR-2026-001053",
+    "currency": "USD",
+    "issue_date": "2026-10-23",
+    "due_date": "2026-10-30",
+    "status": "AWARDED",
+    "created_at": "2026-10-23T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000472",
+    "request_id": "PR-2026-000429",
+    "currency": "USD",
+    "issue_date": "2026-10-25",
+    "due_date": "2026-11-01",
+    "status": "AWARDED",
+    "created_at": "2026-10-25T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000473",
+    "request_id": "PR-2026-000051",
+    "currency": "USD",
+    "issue_date": "2026-10-27",
+    "due_date": "2026-11-08",
+    "status": "AWARDED",
+    "created_at": "2026-10-27T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000474",
+    "request_id": "PR-2026-000347",
+    "currency": "USD",
+    "issue_date": "2026-10-28",
+    "due_date": "2026-11-04",
+    "status": "AWARDED",
+    "created_at": "2026-10-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000475",
+    "request_id": "PR-2026-000733",
+    "currency": "USD",
+    "issue_date": "2026-10-28",
+    "due_date": "2026-11-05",
+    "status": "AWARDED",
+    "created_at": "2026-10-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000476",
+    "request_id": "PR-2026-000271",
+    "currency": "USD",
+    "issue_date": "2026-10-29",
+    "due_date": "2026-11-10",
+    "status": "AWARDED",
+    "created_at": "2026-10-29T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000477",
+    "request_id": "PR-2026-000473",
+    "currency": "USD",
+    "issue_date": "2026-10-28",
+    "due_date": "2026-11-07",
+    "status": "AWARDED",
+    "created_at": "2026-10-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000478",
+    "request_id": "PR-2026-000481",
+    "currency": "USD",
+    "issue_date": "2026-10-28",
+    "due_date": "2026-11-06",
+    "status": "AWARDED",
+    "created_at": "2026-10-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000479",
+    "request_id": "PR-2026-000017",
+    "currency": "USD",
+    "issue_date": "2026-10-29",
+    "due_date": "2026-11-07",
+    "status": "AWARDED",
+    "created_at": "2026-10-29T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000480",
+    "request_id": "PR-2026-000690",
+    "currency": "USD",
+    "issue_date": "2026-10-28",
+    "due_date": "2026-11-09",
+    "status": "AWARDED",
+    "created_at": "2026-10-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000481",
+    "request_id": "PR-2026-000801",
+    "currency": "USD",
+    "issue_date": "2026-10-28",
+    "due_date": "2026-11-04",
+    "status": "AWARDED",
+    "created_at": "2026-10-28T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000482",
+    "request_id": "PR-2026-001025",
+    "currency": "USD",
+    "issue_date": "2026-10-30",
+    "due_date": "2026-11-07",
+    "status": "AWARDED",
+    "created_at": "2026-10-30T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000483",
+    "request_id": "PR-2026-000279",
+    "currency": "USD",
+    "issue_date": "2026-10-31",
+    "due_date": "2026-11-09",
+    "status": "AWARDED",
+    "created_at": "2026-10-31T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000484",
+    "request_id": "PR-2026-000977",
+    "currency": "USD",
+    "issue_date": "2026-11-01",
+    "due_date": "2026-11-14",
+    "status": "AWARDED",
+    "created_at": "2026-11-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000485",
+    "request_id": "PR-2026-000609",
+    "currency": "USD",
+    "issue_date": "2026-11-02",
+    "due_date": "2026-11-14",
+    "status": "AWARDED",
+    "created_at": "2026-11-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000486",
+    "request_id": "PR-2026-000850",
+    "currency": "USD",
+    "issue_date": "2026-10-31",
+    "due_date": "2026-11-10",
+    "status": "AWARDED",
+    "created_at": "2026-10-31T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000487",
+    "request_id": "PR-2026-001066",
+    "currency": "USD",
+    "issue_date": "2026-11-01",
+    "due_date": "2026-11-11",
+    "status": "AWARDED",
+    "created_at": "2026-11-01T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000488",
+    "request_id": "PR-2026-000796",
+    "currency": "USD",
+    "issue_date": "2026-11-02",
+    "due_date": "2026-11-09",
+    "status": "AWARDED",
+    "created_at": "2026-11-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000489",
+    "request_id": "PR-2026-001062",
+    "currency": "USD",
+    "issue_date": "2026-11-02",
+    "due_date": "2026-11-09",
+    "status": "AWARDED",
+    "created_at": "2026-11-02T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000490",
+    "request_id": "PR-2026-000206",
+    "currency": "USD",
+    "issue_date": "2026-11-03",
+    "due_date": "2026-11-10",
+    "status": "AWARDED",
+    "created_at": "2026-11-03T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000491",
+    "request_id": "PR-2026-000680",
+    "currency": "USD",
+    "issue_date": "2026-11-04",
+    "due_date": "2026-11-14",
+    "status": "AWARDED",
+    "created_at": "2026-11-04T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000492",
+    "request_id": "PR-2026-000770",
+    "currency": "USD",
+    "issue_date": "2026-11-05",
+    "due_date": "2026-11-15",
+    "status": "AWARDED",
+    "created_at": "2026-11-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000493",
+    "request_id": "PR-2026-000773",
+    "currency": "USD",
+    "issue_date": "2026-11-05",
+    "due_date": "2026-11-14",
+    "status": "AWARDED",
+    "created_at": "2026-11-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000494",
+    "request_id": "PR-2026-000882",
+    "currency": "USD",
+    "issue_date": "2026-11-05",
+    "due_date": "2026-11-15",
+    "status": "AWARDED",
+    "created_at": "2026-11-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000495",
+    "request_id": "PR-2026-000084",
+    "currency": "USD",
+    "issue_date": "2026-11-07",
+    "due_date": "2026-11-16",
+    "status": "AWARDED",
+    "created_at": "2026-11-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000496",
+    "request_id": "PR-2026-000173",
+    "currency": "USD",
+    "issue_date": "2026-11-06",
+    "due_date": "2026-11-18",
+    "status": "AWARDED",
+    "created_at": "2026-11-06T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000497",
+    "request_id": "PR-2026-001027",
+    "currency": "USD",
+    "issue_date": "2026-11-05",
+    "due_date": "2026-11-15",
+    "status": "AWARDED",
+    "created_at": "2026-11-05T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000498",
+    "request_id": "PR-2026-001046",
+    "currency": "USD",
+    "issue_date": "2026-11-07",
+    "due_date": "2026-11-17",
+    "status": "AWARDED",
+    "created_at": "2026-11-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000499",
+    "request_id": "PR-2026-000047",
+    "currency": "USD",
+    "issue_date": "2026-11-07",
+    "due_date": "2026-11-15",
+    "status": "AWARDED",
+    "created_at": "2026-11-07T09:00:00Z"
+  },
+  {
+    "rfq_id": "RFQ-2026-000500",
+    "request_id": "PR-2026-000252",
+    "currency": "USD",
+    "issue_date": "2026-11-08",
+    "due_date": "2026-11-15",
+    "status": "AWARDED",
+    "created_at": "2026-11-08T09:00:00Z"
+  }
+]

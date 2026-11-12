@@ -235,13 +235,15 @@ def inject_non_cheapest_quote_without_rationale(
         # Pick 2nd or 3rd quote (more expensive)
         expensive_quote = sorted_quotes[-1]
 
-        award_date = cheapest_quote.get("award_date") or rfq_id
+        award_date = cheapest_quote.get("award_date") or cheapest_quote.get("quote_date") or "2026-06-01"
+        if isinstance(award_date, str) and (award_date.startswith("RFQ") or len(award_date) < 10):
+            award_date = cheapest_quote.get("quote_date", "2026-06-01")
 
         # Update previous winner to REJECTED
         for q in q_list:
             if q["quote_id"] == expensive_quote["quote_id"]:
                 q["status"] = "AWARDED"
-                q["award_date"] = award_date if isinstance(award_date, str) else "2026-06-01"
+                q["award_date"] = award_date[:10]
                 q["award_rationale"] = None  # Missing justification!
             else:
                 q["status"] = "REJECTED"

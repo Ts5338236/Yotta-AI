@@ -70,10 +70,10 @@ def test_detects_competitive_po_missing_awarded_quote(starter_dataset):
     corrupted = copy.deepcopy(starter_dataset)
     comp_pos = [p for p in corrupted["purchase_orders"] if p["sourcing_path"] == "competitive"]
     assert len(comp_pos) > 0
-    comp_pos[0]["awarded_quote_id"] = "QUO-2026-999999"
+    comp_pos[0]["awarded_quote_id"] = "QUO-SUP-C-0001-2026-999999"
 
     results = validate_foreign_keys(corrupted)
     failures = [r for r in results if r.check_name == "fk_competitive_po_awarded_quote" and not r.passed]
     assert len(failures) >= 1
-    assert failures[0].actual_value == "QUO-2026-999999"
+    assert failures[0].actual_value == "QUO-SUP-C-0001-2026-999999"
 

@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-11-12T15:10:01.834746+00:00",
+  "summary_counts": {
+    "departments": 12,
+    "budgets": 12,
+    "requesters": 300,
+    "suppliers": 125,
+    "approvers": 26,
+    "purchase_requests": 1205,
+    "request_lines": 2529,
+    "rfqs": 500,
+    "supplier_quotes": 1779,
+    "quote_lines": 4497,
+    "approvals": 1018,
+    "purchase_orders": 970,
+    "purchase_order_lines": 2051,
+    "deliveries": 1048,
+    "status_events": 9664,
+    "budget_events": 3970,
+    "ground_truth_anomalies": 35
+  },
+  "financial_totals": {
+    "total_estimated_spend_usd": 5836299.32,
+    "total_committed_po_value_usd": 0.0,
+    "average_po_value_usd": 0.0,
+    "competitive_pos_count": 500,
+    "competitive_pos_value_usd": 0.0,
+    "non_competitive_pos_count": 470,
+    "non_competitive_pos_value_usd": 0.0
+  },
+  "supplier_breakdown": {
+    "active": 87,
+    "preferred": 14,
+    "probation": 14,
+    "inactive": 10
+  },
+  "anomaly_breakdown": {
+    "total_anomalies": 35,
+    "by_type": {
+      "po_without_approval": 5,
+      "expired_quote_before_award": 5,
+      "non_cheapest_quote_without_rationale": 5,
+      "inactive_supplier_used": 5,
+      "budget_overrun": 5,
+      "duplicate_purchase_request": 5,
+      "quote_currency_mismatch": 5
+    }
+  }
+}

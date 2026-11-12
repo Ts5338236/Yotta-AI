@@ -40,9 +40,9 @@ def test_all_id_patterns_format():
     assert re.match(r"^RFQ-2026-\d{6}$", rfq_id)
     assert rfq_id == "RFQ-2026-000001"
 
-    quo_id = factory.next_supplier_quote_id()
-    assert re.match(r"^QUO-2026-\d{6}$", quo_id)
-    assert quo_id == "QUO-2026-000001"
+    quo_id = factory.next_supplier_quote_id(supplier_code="SUP-C-0001")
+    assert re.match(r"^QUO-[A-Za-z0-9_-]+-2026-\d{6}$", quo_id)
+    assert quo_id == "QUO-SUP-C-0001-2026-000001"
 
     po_id = factory.next_purchase_order_id()
     assert re.match(r"^PO-2026-\d{6}$", po_id)
@@ -159,6 +159,9 @@ def test_validate_id_utility():
 
     assert factory.validate_id("purchase_order", "PO-2026-000001")
     assert not factory.validate_id("purchase_order", "PO-2026-1")
+
+    assert factory.validate_id("supplier_quote", "QUO-SUP-C-0001-2026-000001")
+    assert not factory.validate_id("supplier_quote", "QUO-2026-1")
 
     assert factory.validate_id("delivery", "DEL-PO-2026-000001-01")
     assert not factory.validate_id("delivery", "DEL-01")

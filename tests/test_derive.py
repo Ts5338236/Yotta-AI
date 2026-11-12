@@ -73,7 +73,7 @@ def test_derive_purchase_request_totals():
 def test_derive_quote_landed_costs():
     """Verify quote landed cost calculation includes freight, duty, and taxes."""
     quotes = [{
-        "quote_id": "QUO-2026-000001",
+        "quote_id": "QUO-SUP-C-0001-2026-000001",
         "currency": "USD",
         "fx_rate_to_base": 1.0,
         "freight": 50.0,
@@ -81,10 +81,10 @@ def test_derive_quote_landed_costs():
         "tax_nonrecoverable": 30.0,
     }]
     lines = [
-        {"quote_id": "QUO-2026-000001", "line_total": 100000, "line_total_base": 100000},  # $1,000.00
+        {"quote_id": "QUO-SUP-C-0001-2026-000001", "line_total": 100000, "line_total_base": 100000},  # $1,000.00
     ]
     derived = derive_quote_landed_costs(quotes, lines)
-    quo_res = derived["QUO-2026-000001"]
+    quo_res = derived["QUO-SUP-C-0001-2026-000001"]
 
     # Merchandise = $1,000.00, Landed = 1000 + 50 + 25 + 30 = $1,105.00
     assert quo_res["total_quoted_amount_usd"] == 1000.0

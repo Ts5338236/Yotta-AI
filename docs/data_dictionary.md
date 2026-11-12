@@ -173,7 +173,7 @@ Commercial bids submitted by invited suppliers. Generated in Phase 3 by `src/dat
 
 | Field Name | Data Type | Constraint | Required | Description | Allowed Values / Format | Units |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `quote_id` | TEXT | PRIMARY KEY | Yes | Quote identifier | `^QUO-\d{4}-\d{6}$` (e.g. `QUO-2026-000001`) | Dimension |
+| `quote_id` | TEXT | PRIMARY KEY | Yes | Quote identifier | `^QUO-[A-Za-z0-9_-]+-\d{4}-\d{6}$` (e.g. `QUO-SUP-C-0001-2026-000001`) | Dimension |
 | `rfq_id` | TEXT | FK (`rfqs`), NOT NULL | Yes | Quoted RFQ | Valid `rfq_id` | Dimension |
 | `supplier_id` | TEXT | FK (`suppliers`), NOT NULL | Yes | Bidding supplier | Valid `supplier_id` | Dimension |
 | `quote_date` | TEXT | NOT NULL | Yes | Quotation submission date | `YYYY-MM-DD` | Date |

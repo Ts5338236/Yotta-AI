@@ -20,7 +20,7 @@ ID_REGEX_MAP: Dict[str, str] = {
     "approver": r"^APP-\d{4}$",
     "purchase_request": r"^PR-\d{4}-\d{6}$",
     "rfq": r"^RFQ-\d{4}-\d{6}$",
-    "supplier_quote": r"^QUO-\d{4}-\d{6}$",
+    "supplier_quote": r"^QUO-[A-Za-z0-9_-]+-\d{4}-\d{6}$",
     "purchase_order": r"^PO-\d{4}-\d{6}$",
     "delivery": r"^DEL-PO-\d{4}-\d{6}-\d{2}$",
     "request_line": r"^RL-\d{6}$",
@@ -120,11 +120,11 @@ class IDFactory:
         seq = self._counters["rfq"]
         return self._generate("rfq", f"RFQ-{self.fiscal_year}-{seq:06d}")
 
-    def next_supplier_quote_id(self) -> str:
-        """Generate next Supplier Quote ID (e.g. QUO-2026-000001)."""
+    def next_supplier_quote_id(self, supplier_code: str = "SUP-C-0001") -> str:
+        """Generate next Supplier Quote ID (e.g. QUO-SUP-C-0001-2026-000001)."""
         self._counters["supplier_quote"] += 1
         seq = self._counters["supplier_quote"]
-        return self._generate("supplier_quote", f"QUO-{self.fiscal_year}-{seq:06d}")
+        return self._generate("supplier_quote", f"QUO-{supplier_code}-{self.fiscal_year}-{seq:06d}")
 
     def next_purchase_order_id(self) -> str:
         """Generate next Purchase Order ID (e.g. PO-2026-000001)."""

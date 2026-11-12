@@ -61,5 +61,5 @@ def test_scale_tier_differentiation():
     assert len(full["suppliers"]) == 120
 
     assert len(starter["purchase_requests"]) == 115
-    assert len(full["purchase_requests"]) == 1150
+    assert len(full["purchase_requests"]) == 1200
 
