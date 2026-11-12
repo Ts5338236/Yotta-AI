@@ -86,11 +86,10 @@ Every architectural decision, data model choice, mathematical equation, and code
 2. **Corrupted Test Fixture Permutations**: Synthesizing diverse, intentionally malformed test inputs across 28 pytest test modules (167 test cases) to stress-test validation boundaries.
 3. **Draft Documentation Layouts**: Scaffold initial markdown templates for compliance matrices, gap analysis, and data dictionaries.
 
-### What Was Personally Reviewed, Changed, and Validated
-1. **Mathematical Invariant Verification**: Personally verified all integer minor units (cents) arithmetic, currency conversions, and landed cost recalculations to guarantee zero IEEE 754 floating-point rounding drift.
-2. **Topological Order & Database Foreign Keys**: Manually restructured `DB_TABLES_ORDER` in `src/datagen/database.py` and `src/datagen/export.py` to ensure `exception_logs` and `budget_events` insert strictly after their parent entities (`purchase_orders`, `purchase_requests`), eliminating SQLite foreign key check violations during database initialization and SQL seed replays.
-3. **Split Purchase Audit Logic**: Designed and implemented `validate_split_purchases()` in `src/validate/checks.py` to audit clusters of sub-threshold purchase requests from the same requester within 3 calendar days that aggregate beyond approval tier boundaries.
-4. **Operational Exception Logging**: Implemented `generate_operational_exception_logs()` in `src/datagen/workflow.py` ensuring natural managerial PR rejections, sole-source authorizations, and partial deliveries populate Table 18 `exception_logs` rather than leaving it empty.
-5. **Strict Ground Truth Isolation**: Verified and enforced that ground truth files are exported strictly to isolated directories (`ground_truth/ground_truth.csv` and `ground_truth.json`), guaranteeing zero operational leakage or model contamination.
-6. **Bitwise Determinism Verification**: Validated single-RNG pass-through logic across two independent full-scale runs with seed `20261022`, confirming 100% cryptographic SHA-256 match across all 21 exported artifacts.
-7. **Zero Unsanctioned Data or Deep Learning Models**: Enforced 100% pure Python data engineering; zero unapproved third-party APIs, web scraping, or black-box dependencies.
+### Known AI-Generated Errors, Challenges & Remediation
+1. **Field Name Hallucinations & Key Mismatches**: Initial AI-suggested helper scripts assumed standard ORM names like `purchase_request_id` or `purchase_order_id` instead of the canonical schema names `request_id` and `po_id`. Similarly, quote status was assumed to be a boolean `q["awarded"]` instead of enum `q["status"] == "AWARDED"`. Caught through unit test assertions and refactored.
+2. **Topological Order in SQL Seeds**: Initial AI-generated SQL seed dumps attempted to insert `exception_logs` and `budget_events` before child relationships were established. Resolved by manually computing the topological DAG dependency rank across all 18 tables.
+3. **Approval Tier Role vs Numeric Matching**: Initial test verification script compared `approver_role` against numeric integers (1, 2) rather than string roles (`LINE_MANAGER`, `DEPARTMENT_HEAD`, `FINANCE`). Corrected to role-based resolution.
+4. **Currency Field Discrepancies**: Landed cost in base currency was named `landed_cost_base` rather than `landed_cost_usd`. Realigned across derivation and reporting modules.
+5. **Clean Baseline Preserved**: Guarded against AI tendency to inline anomaly injection flags into operational tables, ensuring strict ground truth quarantine.
+

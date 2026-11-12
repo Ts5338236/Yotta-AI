@@ -469,6 +469,13 @@ def export_all(
 
     # 3. Export SQLite Database
     sqlite_db = export_to_sqlite(dataset, db_path=db_file, schema_path=schema_path)
+    # Also support data/sql/yotta_ai.db requested for relational persistence
+    yotta_db_path = root / "sql" / "yotta_ai.db"
+    yotta_db_path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        shutil.copyfile(sqlite_db, yotta_db_path)
+    except Exception:
+        pass
 
     # 4. Export DDL Schema
     if schema_file != Path(schema_path).resolve():
@@ -480,6 +487,14 @@ def export_all(
     # 6. Export Ground Truth Separately
     gt_data = ground_truth or dataset.get("ground_truth", [])
     gt_files = export_ground_truth(gt_data, output_dir=gt_dir)
+    # Provide data/ground_truth.csv and data/ground_truth.json directly in root
+    try:
+        if gt_files.get("csv") and Path(gt_files["csv"]).exists():
+            shutil.copyfile(gt_files["csv"], root / "ground_truth.csv")
+        if gt_files.get("json") and Path(gt_files["json"]).exists():
+            shutil.copyfile(gt_files["json"], root / "ground_truth.json")
+    except Exception:
+        pass
 
     # Assemble tracked artifacts for manifest
     tracked: Dict[str, Path] = {
