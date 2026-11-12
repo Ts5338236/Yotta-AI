@@ -315,7 +315,7 @@ procure-to-pay-datagen/
 
 1. Clone or navigate to the repository directory:
    ```powershell
-   cd C:\Users\sony\Desktop\Yotta
+   cd procure-to-pay-datagen
    ```
 
 2. Create and activate a Python virtual environment:

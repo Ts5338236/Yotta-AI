@@ -34,9 +34,9 @@ All 24 core PRD requirements, relational constraints, business rules, multi-tier
 - **Secret & Credential Scan**: Executed comprehensive recursive regex audit for API keys, secret keys, bearer tokens, private keys, and cloud credentials across all code, configuration, documentation, and data files. **Result: 0 secrets or sensitive credentials found.**
 
 ### STEP 2: Fresh Clone Test (Clean Room Execution)
-Performed a clean installation in an isolated sandbox directory (`c:\Users\sony\Desktop\Yotta_Fresh_Clone_Test`):
+Performed a clean installation in an isolated sandbox directory (`<temp-dir>/fresh_clone_test`):
 1. **Repository Clone**:
-   `git clone https://github.com/Ts5338236/Yotta-AI.git c:\Users\sony\Desktop\Yotta_Fresh_Clone_Test`
+   `git clone https://github.com/Ts5338236/Yotta-AI.git <temp-dir>/fresh_clone_test`
    - Cloned commit `7f7ee96` successfully from the public GitHub remote.
 2. **Documented Starter Generation Execution**:
    `python -m datagen --generate --scale starter --inject-anomalies --export --output-dir data --validate-exports`

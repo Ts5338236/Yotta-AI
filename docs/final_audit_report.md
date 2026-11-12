@@ -111,7 +111,7 @@ All entity identifiers strictly follow the required parameterized patterns:
 | **Purchase Order** | `PO-2026-000001` | `PO-2026-000001` | `^PO-\d{4}-\d{6}$` | **PASS** |
 | **Delivery** | `DEL-<PO-id>-01` | `DEL-PO-2026-000001-01` | `^DEL-PO-\d{4}-\d{6}-\d{2}$` | **PASS** |
 
-Tested in [`tests/test_ids.py`](file:///c:/Users/sony/Desktop/Yotta/tests/test_ids.py) and [`tests/test_validation_primary_keys.py`](file:///c:/Users/sony/Desktop/Yotta/tests/test_validation_primary_keys.py).
+Tested in [`tests/test_ids.py`](../tests/test_ids.py) and [`tests/test_validation_primary_keys.py`](../tests/test_validation_primary_keys.py).
 
 ---
 
@@ -156,7 +156,7 @@ All financial derivations are recalculated using high-precision Decimal arithmet
 
 ## 9. Validation Results
 
-The independent validation suite ([`src/validate/checks.py`](file:///c:/Users/sony/Desktop/Yotta/src/validate/checks.py)) audits seven distinct operational domains:
+The independent validation suite ([`src/validate/checks.py`](../src/validate/checks.py)) audits seven distinct operational domains:
 1. Primary Keys: 100% unique, non-null, valid format.
 2. Foreign Keys: 100% referentially valid, zero orphans.
 3. Financial Reconciliation: 100% arithmetic balance.
@@ -190,7 +190,7 @@ All 7 PRD-mandated procurement anomaly types were implemented, injected, and det
 
 ## 12. Precision and Recall
 
-Evaluated by [`src/validate/anomaly_checks.py`](file:///c:/Users/sony/Desktop/Yotta/src/validate/anomaly_checks.py) on full-scale dataset (35 injected anomalies):
+Evaluated by [`src/validate/anomaly_checks.py`](../src/validate/anomaly_checks.py) on full-scale dataset (35 injected anomalies):
 
 | Metric | Empirical Score | Benchmark Target | Result |
 | :--- | :--- | :--- | :---: |
@@ -239,7 +239,7 @@ Clean datasets produce exactly **0 detections** (zero false alarms).
 
 - Location: `data/sql/schema.sql` and `output/sql/schema.sql`.
 - Content: Canonical DDL defining 19 tables with explicit data types, primary keys, foreign keys, CHECK constraints, and performance indexes.
-- Verification: Tested and verified by [`tests/test_sql_schema.py`](file:///c:/Users/sony/Desktop/Yotta/tests/test_sql_schema.py).
+- Verification: Tested and verified by [`tests/test_sql_schema.py`](../tests/test_sql_schema.py).
 
 ---
 
@@ -255,7 +255,7 @@ Clean datasets produce exactly **0 detections** (zero false alarms).
 ## 18. Determinism Results
 
 - Default Seed: `20261022`.
-- Verification: Executed [`scratch/verify_determinism_2runs.py`](file:///c:/Users/sony/Desktop/Yotta/scratch/verify_determinism_2runs.py).
+- Verification: Executed [`scratch/verify_determinism_2runs.py`](../scratch/verify_determinism_2runs.py).
 - Outcome: **100% identical SHA-256 hashes** across all 20 exported CSV, SQL, and ground truth artifacts.
 - Divergence: Changing the seed produces distinct, realistic data while maintaining valid business rules.
 
@@ -263,7 +263,7 @@ Clean datasets produce exactly **0 detections** (zero false alarms).
 
 ## 19. Fresh-Clone Results
 
-- Automated Test Harness: [`scratch/fresh_clone_audit.py`](file:///c:/Users/sony/Desktop/Yotta/scratch/fresh_clone_audit.py).
+- Automated Test Harness: [`scratch/fresh_clone_audit.py`](../scratch/fresh_clone_audit.py).
 - Simulation: Completely clean, isolated temporary directory (`tmpi38fq3o6\Yotta-Clone`).
 - Execution Stages:
   1. Python Syntax & Compilation Check: **PASS**
@@ -291,7 +291,7 @@ Clean datasets produce exactly **0 detections** (zero false alarms).
 
 $$\text{Verified Compliance Percentage} = \frac{52 \text{ Passed Requirements}}{52 \text{ Total Requirements}} \times 100 = \mathbf{100.0\%}$$
 
-Traceability documented in [`docs/assignment_compliance_matrix.md`](file:///c:/Users/sony/Desktop/Yotta/docs/assignment_compliance_matrix.md).
+Traceability documented in [`docs/assignment_compliance_matrix.md`](assignment_compliance_matrix.md).
 
 ---
 

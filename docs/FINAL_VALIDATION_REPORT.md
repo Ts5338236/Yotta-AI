@@ -11,7 +11,7 @@
 
 ## 1. Executive Summary & Validation Framework
 
-This report documents the exhaustive validation performed by the independent validation package ([`src/validate/`](file:///c:/Users/sony/Desktop/Yotta/src/validate/)) on the generated Procure-to-Pay enterprise dataset.
+This report documents the exhaustive validation performed by the independent validation package ([`src/validate/`](../src/validate/)) on the generated Procure-to-Pay enterprise dataset.
 
 The validation architecture enforces a strict non-circular design:
 1. **Zero Shared Code**: The validation engines recalculate all sums, landed costs, scores, and balance ledgers from raw inputs without importing or reusing the generator's internal calculation utilities.
