@@ -126,7 +126,7 @@ Audited the generated full-scale procurement dataset:
   - `test_validation_integration.py`: 4 passed
 
 ### STEP 5: Final Reproducibility Audit
-Executed `python scratch/verify_determinism_2runs.py` across two independent full-scale runs with seed `20261022`:
+Executed `python scripts/verify_determinism_2runs.py` across two independent full-scale runs with seed `20261022`:
 - **Run 1 vs Run 2 SHA-256 Parity**:
   - `csv\approvals.csv`: `c6500694c4c92dcf...` (MATCH)
   - `csv\approvers.csv`: `9d13cd1fad39e12a...` (MATCH)
@@ -193,7 +193,7 @@ Executed `python scratch/verify_determinism_2runs.py` across two independent ful
 | **19** | **SQLite and SQL Exports** | `src/datagen/database.py`, `src/datagen/export.py` | `tests/test_database_export.py`, `tests/test_sql_schema.py`, `tests/test_sql_seed.py` | **PASS** | SQLite (`procurement.db` & `yotta_ai.db`), DDL `schema.sql`, seed `seed.sql`. |
 | **20** | **Data Validation Framework** | `src/validate/checks.py`, `src/validate/anomaly_checks.py` | `tests/test_validation_*.py`, `tests/test_anomaly_metrics.py` | **PASS** | 8 validation domains + 7 detectors (**P: 1.0, R: 1.0, F1: 1.0000**). |
 | **21** | **Automated Tests** | Entire `tests/` directory (39 modules) | Full pytest run: `pytest tests/ -v` (167 passed in 42.49s) | **PASS** | Comprehensive unit, negative, and integration coverage. |
-| **22** | **Fixed-Seed Reproducibility** | Single PRNG pass-through, fixed base date (`2026-01-01`) | `scratch/verify_determinism_2runs.py`, `tests/test_determinism.py` | **PASS** | 100% SHA-256 hash match across 2 independent runs. |
+| **22** | **Fixed-Seed Reproducibility** | Single PRNG pass-through, fixed base date (`2026-01-01`) | `scripts/verify_determinism_2runs.py`, `tests/test_determinism.py` | **PASS** | 100% SHA-256 hash match across 2 independent runs. |
 | **23** | **AI Prompt History** | Preserved prompt files in `ai/prompts/` | Manual inspection of prompts 01 through 09 | **PASS** | Actual historical prompts preserved without synthetic invention. |
 | **24** | **Documentation** | `README.md`, `docs/data_dictionary.md`, `docs/AI_USAGE.md` | Manual technical review of all documents | **PASS** | Exhaustive 20-topic README, data dictionary, and AI governance. |
 

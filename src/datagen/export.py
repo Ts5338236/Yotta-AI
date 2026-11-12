@@ -124,7 +124,13 @@ def export_to_csv(
             # Sort records by primary key if present for deterministic row ordering
             pk = next(iter(records[0].keys()), None)
             sorted_records = sorted(records, key=lambda r: str(r.get(pk, ""))) if pk else records
-            cleaned = [_sanitize_record(r) for r in sorted_records]
+            cleaned = []
+            for r in sorted_records:
+                if table_name in ("supplier_quotes", "purchase_orders"):
+                    filtered_r = {k: v for k, v in r.items() if k not in ("_lines", "_supplier")}
+                else:
+                    filtered_r = r
+                cleaned.append(_sanitize_record(filtered_r))
             df = pd.DataFrame(cleaned)
             df.to_csv(csv_path, index=False, encoding="utf-8")
         else:

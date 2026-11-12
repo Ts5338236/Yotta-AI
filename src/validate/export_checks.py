@@ -61,8 +61,11 @@ def validate_csv_exports(
             expected_count = len(source_rows)
             count_match = (actual_count == expected_count)
 
-            # Check header
-            expected_headers = list(source_rows[0].keys()) if source_rows else []
+            # Check header (excluding internal/transient helper keys)
+            expected_headers = [
+                k for k in source_rows[0].keys()
+                if not (t in ("supplier_quotes", "purchase_orders") and k in ("_lines", "_supplier"))
+            ] if source_rows else []
             actual_headers = list(df.columns) if not df.empty else []
             header_match = True
             if expected_headers and actual_headers:

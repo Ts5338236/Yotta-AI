@@ -11,8 +11,8 @@
         "table": "departments",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 10,
-        "actual_count": 10,
+        "expected_count": 12,
+        "actual_count": 12,
         "pk_unique": true,
         "header_match": true
       },
@@ -20,8 +20,8 @@
         "table": "budgets",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 10,
-        "actual_count": 10,
+        "expected_count": 12,
+        "actual_count": 12,
         "pk_unique": true,
         "header_match": true
       },
@@ -29,8 +29,8 @@
         "table": "requesters",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 30,
-        "actual_count": 30,
+        "expected_count": 300,
+        "actual_count": 300,
         "pk_unique": true,
         "header_match": true
       },
@@ -38,8 +38,8 @@
         "table": "approvers",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 22,
-        "actual_count": 22,
+        "expected_count": 26,
+        "actual_count": 26,
         "pk_unique": true,
         "header_match": true
       },
@@ -47,8 +47,8 @@
         "table": "suppliers",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 13,
-        "actual_count": 13,
+        "expected_count": 126,
+        "actual_count": 126,
         "pk_unique": true,
         "header_match": true
       },
@@ -56,8 +56,8 @@
         "table": "purchase_requests",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 116,
-        "actual_count": 116,
+        "expected_count": 1206,
+        "actual_count": 1206,
         "pk_unique": true,
         "header_match": true
       },
@@ -65,8 +65,8 @@
         "table": "request_lines",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 227,
-        "actual_count": 227,
+        "expected_count": 2529,
+        "actual_count": 2529,
         "pk_unique": true,
         "header_match": true
       },
@@ -74,8 +74,8 @@
         "table": "rfqs",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 50,
-        "actual_count": 50,
+        "expected_count": 500,
+        "actual_count": 500,
         "pk_unique": true,
         "header_match": true
       },
@@ -83,8 +83,8 @@
         "table": "rfq_supplier_invites",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 183,
-        "actual_count": 183,
+        "expected_count": 1779,
+        "actual_count": 1779,
         "pk_unique": true,
         "header_match": true
       },
@@ -92,8 +92,8 @@
         "table": "supplier_quotes",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 183,
-        "actual_count": 183,
+        "expected_count": 1779,
+        "actual_count": 1779,
         "pk_unique": true,
         "header_match": true
       },
@@ -101,8 +101,8 @@
         "table": "quote_lines",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 414,
-        "actual_count": 414,
+        "expected_count": 4497,
+        "actual_count": 4497,
         "pk_unique": true,
         "header_match": true
       },
@@ -110,8 +110,8 @@
         "table": "approvals",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 96,
-        "actual_count": 96,
+        "expected_count": 1017,
+        "actual_count": 1017,
         "pk_unique": true,
         "header_match": true
       },
@@ -119,8 +119,8 @@
         "table": "purchase_orders",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 93,
-        "actual_count": 93,
+        "expected_count": 970,
+        "actual_count": 970,
         "pk_unique": true,
         "header_match": true
       },
@@ -128,8 +128,8 @@
         "table": "purchase_order_lines",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 188,
-        "actual_count": 188,
+        "expected_count": 2051,
+        "actual_count": 2051,
         "pk_unique": true,
         "header_match": true
       },
@@ -137,8 +137,8 @@
         "table": "deliveries",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 101,
-        "actual_count": 101,
+        "expected_count": 1048,
+        "actual_count": 1048,
         "pk_unique": true,
         "header_match": true
       },
@@ -146,8 +146,8 @@
         "table": "status_events",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 930,
-        "actual_count": 930,
+        "expected_count": 9664,
+        "actual_count": 9664,
         "pk_unique": true,
         "header_match": true
       },
@@ -155,8 +155,8 @@
         "table": "budget_events",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 390,
-        "actual_count": 390,
+        "expected_count": 3970,
+        "actual_count": 3970,
         "pk_unique": true,
         "header_match": true
       },
@@ -164,8 +164,8 @@
         "table": "exception_logs",
         "check": "csv_integrity",
         "passed": true,
-        "expected_count": 53,
-        "actual_count": 53,
+        "expected_count": 591,
+        "actual_count": 591,
         "pk_unique": true,
         "header_match": true
       }
@@ -180,144 +180,144 @@
         "table": "departments",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 10,
-        "actual_count": 10,
+        "expected_count": 12,
+        "actual_count": 12,
         "pk_unique": true
       },
       {
         "table": "budgets",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 10,
-        "actual_count": 10,
+        "expected_count": 12,
+        "actual_count": 12,
         "pk_unique": true
       },
       {
         "table": "requesters",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 30,
-        "actual_count": 30,
+        "expected_count": 300,
+        "actual_count": 300,
         "pk_unique": true
       },
       {
         "table": "approvers",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 22,
-        "actual_count": 22,
+        "expected_count": 26,
+        "actual_count": 26,
         "pk_unique": true
       },
       {
         "table": "suppliers",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 13,
-        "actual_count": 13,
+        "expected_count": 126,
+        "actual_count": 126,
         "pk_unique": true
       },
       {
         "table": "purchase_requests",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 116,
-        "actual_count": 116,
+        "expected_count": 1206,
+        "actual_count": 1206,
         "pk_unique": true
       },
       {
         "table": "request_lines",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 227,
-        "actual_count": 227,
+        "expected_count": 2529,
+        "actual_count": 2529,
         "pk_unique": true
       },
       {
         "table": "rfqs",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 50,
-        "actual_count": 50,
+        "expected_count": 500,
+        "actual_count": 500,
         "pk_unique": true
       },
       {
         "table": "rfq_supplier_invites",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 183,
-        "actual_count": 183,
+        "expected_count": 1779,
+        "actual_count": 1779,
         "pk_unique": true
       },
       {
         "table": "supplier_quotes",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 183,
-        "actual_count": 183,
+        "expected_count": 1779,
+        "actual_count": 1779,
         "pk_unique": true
       },
       {
         "table": "quote_lines",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 414,
-        "actual_count": 414,
+        "expected_count": 4497,
+        "actual_count": 4497,
         "pk_unique": true
       },
       {
         "table": "approvals",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 96,
-        "actual_count": 96,
+        "expected_count": 1017,
+        "actual_count": 1017,
         "pk_unique": true
       },
       {
         "table": "purchase_orders",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 93,
-        "actual_count": 93,
+        "expected_count": 970,
+        "actual_count": 970,
         "pk_unique": true
       },
       {
         "table": "purchase_order_lines",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 188,
-        "actual_count": 188,
+        "expected_count": 2051,
+        "actual_count": 2051,
         "pk_unique": true
       },
       {
         "table": "deliveries",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 101,
-        "actual_count": 101,
+        "expected_count": 1048,
+        "actual_count": 1048,
         "pk_unique": true
       },
       {
         "table": "status_events",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 930,
-        "actual_count": 930,
+        "expected_count": 9664,
+        "actual_count": 9664,
         "pk_unique": true
       },
       {
         "table": "budget_events",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 390,
-        "actual_count": 390,
+        "expected_count": 3970,
+        "actual_count": 3970,
         "pk_unique": true
       },
       {
         "table": "exception_logs",
         "check": "json_integrity",
         "passed": true,
-        "expected_count": 53,
-        "actual_count": 53,
+        "expected_count": 591,
+        "actual_count": 591,
         "pk_unique": true
       }
     ]
@@ -331,110 +331,110 @@
     "table_results": [
       {
         "table": "departments",
-        "expected": 10,
-        "actual": 10,
+        "expected": 12,
+        "actual": 12,
         "passed": true
       },
       {
         "table": "budgets",
-        "expected": 10,
-        "actual": 10,
+        "expected": 12,
+        "actual": 12,
         "passed": true
       },
       {
         "table": "requesters",
-        "expected": 30,
-        "actual": 30,
+        "expected": 300,
+        "actual": 300,
         "passed": true
       },
       {
         "table": "approvers",
-        "expected": 22,
-        "actual": 22,
+        "expected": 26,
+        "actual": 26,
         "passed": true
       },
       {
         "table": "suppliers",
-        "expected": 13,
-        "actual": 13,
+        "expected": 126,
+        "actual": 126,
         "passed": true
       },
       {
         "table": "purchase_requests",
-        "expected": 116,
-        "actual": 116,
+        "expected": 1206,
+        "actual": 1206,
         "passed": true
       },
       {
         "table": "request_lines",
-        "expected": 227,
-        "actual": 227,
+        "expected": 2529,
+        "actual": 2529,
         "passed": true
       },
       {
         "table": "rfqs",
-        "expected": 50,
-        "actual": 50,
+        "expected": 500,
+        "actual": 500,
         "passed": true
       },
       {
         "table": "rfq_supplier_invites",
-        "expected": 183,
-        "actual": 183,
+        "expected": 1779,
+        "actual": 1779,
         "passed": true
       },
       {
         "table": "supplier_quotes",
-        "expected": 183,
-        "actual": 183,
+        "expected": 1779,
+        "actual": 1779,
         "passed": true
       },
       {
         "table": "quote_lines",
-        "expected": 414,
-        "actual": 414,
+        "expected": 4497,
+        "actual": 4497,
         "passed": true
       },
       {
         "table": "approvals",
-        "expected": 96,
-        "actual": 96,
+        "expected": 1017,
+        "actual": 1017,
         "passed": true
       },
       {
         "table": "purchase_orders",
-        "expected": 93,
-        "actual": 93,
+        "expected": 970,
+        "actual": 970,
         "passed": true
       },
       {
         "table": "purchase_order_lines",
-        "expected": 188,
-        "actual": 188,
+        "expected": 2051,
+        "actual": 2051,
         "passed": true
       },
       {
         "table": "deliveries",
-        "expected": 101,
-        "actual": 101,
+        "expected": 1048,
+        "actual": 1048,
         "passed": true
       },
       {
         "table": "status_events",
-        "expected": 930,
-        "actual": 930,
+        "expected": 9664,
+        "actual": 9664,
         "passed": true
       },
       {
         "table": "budget_events",
-        "expected": 390,
-        "actual": 390,
+        "expected": 3970,
+        "actual": 3970,
         "passed": true
       },
       {
         "table": "exception_logs",
-        "expected": 53,
-        "actual": 53,
+        "expected": 591,
+        "actual": 591,
         "passed": true
       }
     ]
@@ -446,110 +446,110 @@
     "table_results": [
       {
         "table": "departments",
-        "expected": 10,
-        "actual": 10,
+        "expected": 12,
+        "actual": 12,
         "passed": true
       },
       {
         "table": "budgets",
-        "expected": 10,
-        "actual": 10,
+        "expected": 12,
+        "actual": 12,
         "passed": true
       },
       {
         "table": "requesters",
-        "expected": 30,
-        "actual": 30,
+        "expected": 300,
+        "actual": 300,
         "passed": true
       },
       {
         "table": "approvers",
-        "expected": 22,
-        "actual": 22,
+        "expected": 26,
+        "actual": 26,
         "passed": true
       },
       {
         "table": "suppliers",
-        "expected": 13,
-        "actual": 13,
+        "expected": 126,
+        "actual": 126,
         "passed": true
       },
       {
         "table": "purchase_requests",
-        "expected": 116,
-        "actual": 116,
+        "expected": 1206,
+        "actual": 1206,
         "passed": true
       },
       {
         "table": "request_lines",
-        "expected": 227,
-        "actual": 227,
+        "expected": 2529,
+        "actual": 2529,
         "passed": true
       },
       {
         "table": "rfqs",
-        "expected": 50,
-        "actual": 50,
+        "expected": 500,
+        "actual": 500,
         "passed": true
       },
       {
         "table": "rfq_supplier_invites",
-        "expected": 183,
-        "actual": 183,
+        "expected": 1779,
+        "actual": 1779,
         "passed": true
       },
       {
         "table": "supplier_quotes",
-        "expected": 183,
-        "actual": 183,
+        "expected": 1779,
+        "actual": 1779,
         "passed": true
       },
       {
         "table": "quote_lines",
-        "expected": 414,
-        "actual": 414,
+        "expected": 4497,
+        "actual": 4497,
         "passed": true
       },
       {
         "table": "approvals",
-        "expected": 96,
-        "actual": 96,
+        "expected": 1017,
+        "actual": 1017,
         "passed": true
       },
       {
         "table": "purchase_orders",
-        "expected": 93,
-        "actual": 93,
+        "expected": 970,
+        "actual": 970,
         "passed": true
       },
       {
         "table": "purchase_order_lines",
-        "expected": 188,
-        "actual": 188,
+        "expected": 2051,
+        "actual": 2051,
         "passed": true
       },
       {
         "table": "deliveries",
-        "expected": 101,
-        "actual": 101,
+        "expected": 1048,
+        "actual": 1048,
         "passed": true
       },
       {
         "table": "status_events",
-        "expected": 930,
-        "actual": 930,
+        "expected": 9664,
+        "actual": 9664,
         "passed": true
       },
       {
         "table": "budget_events",
-        "expected": 390,
-        "actual": 390,
+        "expected": 3970,
+        "actual": 3970,
         "passed": true
       },
       {
         "table": "exception_logs",
-        "expected": 53,
-        "actual": 53,
+        "expected": 591,
+        "actual": 591,
         "passed": true
       }
     ]
@@ -560,7 +560,7 @@
     "files_exist": true,
     "isolated_from_operational_csv": true,
     "isolated_from_operational_json": true,
-    "anomalies_count": 7,
+    "anomalies_count": 42,
     "anom_ids_unique": true
   }
 }

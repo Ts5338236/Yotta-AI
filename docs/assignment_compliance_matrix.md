@@ -38,12 +38,12 @@
 | **Requester Hierarchy** | `src/datagen/masters.py` (30 starter / 300 full requesters in acyclic managerial DAG) | `tests/test_masters.py` | **PASS** | None |
 | **Supplier Profiles** | `src/datagen/masters.py` (13 starter / 125 full suppliers, currency, risk, status) | `tests/test_masters.py` | **PASS** | None |
 | **Approver Tiers** | `src/datagen/masters.py`, `src/datagen/approvals.py` ($2k Line Mgr, $25k Dept Head, >$25k Finance) | `tests/test_masters.py`, `tests/test_approvals.py` | **PASS** | None |
-| **Full-Scale Requester Target** | `src/datagen/workflow.py` (Exactly 300 requesters generated) | `scratch/fresh_clone_audit.py` | **PASS** | None |
-| **Full-Scale Supplier Target** | `src/datagen/workflow.py` (125 suppliers generated, meeting >= 120 target) | `scratch/fresh_clone_audit.py` | **PASS** | None |
+| **Full-Scale Requester Target** | `src/datagen/workflow.py` (Exactly 300 requesters generated) | `scripts/fresh_clone_audit.py` | **PASS** | None |
+| **Full-Scale Supplier Target** | `src/datagen/workflow.py` (125 suppliers generated, meeting >= 120 target) | `scripts/fresh_clone_audit.py` | **PASS** | None |
 | **Full-Scale PR Target** | `src/datagen/workflow.py` (1,205 PRs generated, meeting ~1,200 target) | `tests/test_determinism.py` | **PASS** | None |
-| **Full-Scale RFQ Target** | `src/datagen/workflow.py` (Exactly 500 competitive RFQs generated) | `scratch/fresh_clone_audit.py` | **PASS** | None |
-| **Full-Scale Quote Target** | `src/datagen/workflow.py` (1,779 quotes generated, meeting >= 1,500 target) | `scratch/fresh_clone_audit.py` | **PASS** | None |
-| **Full-Scale PO Target** | `src/datagen/workflow.py` (970 POs generated, meeting >= 900 target) | `scratch/fresh_clone_audit.py` | **PASS** | None |
+| **Full-Scale RFQ Target** | `src/datagen/workflow.py` (Exactly 500 competitive RFQs generated) | `scripts/fresh_clone_audit.py` | **PASS** | None |
+| **Full-Scale Quote Target** | `src/datagen/workflow.py` (1,779 quotes generated, meeting >= 1,500 target) | `scripts/fresh_clone_audit.py` | **PASS** | None |
+| **Full-Scale PO Target** | `src/datagen/workflow.py` (970 POs generated, meeting >= 900 target) | `scripts/fresh_clone_audit.py` | **PASS** | None |
 
 ---
 
@@ -108,8 +108,8 @@
 | **Canonical DDL (`schema.sql`)** | `data/sql/schema.sql` (19 tables with indexes and check constraints) | `tests/test_sql_schema.py` (2 tests) | **PASS** | None |
 | **Populated SQL Seed (`seed.sql`)**| `src/datagen/export.py` (Topologically ordered INSERT statements, 0 FK violations) | `tests/test_sql_seed.py` (2 tests) | **PASS** | None |
 | **Source Provenance Manifest** | `source_manifest.json` (SHA-256 hashes, zero external proprietary data) | `tests/test_export.py` | **PASS** | None |
-| **Two-Run Bitwise Determinism** | Seed `20261022` yields 100% identical SHA-256 hashes across all 21 artifacts | `scratch/verify_determinism_2runs.py` | **PASS** | None |
-| **Clean Fresh Clone Verification** | 7-stage fresh clone verification in temporary sandbox passes 100% | `scratch/fresh_clone_audit.py` | **PASS** | None |
+| **Two-Run Bitwise Determinism** | Seed `20261022` yields 100% identical SHA-256 hashes across all 21 artifacts | `scripts/verify_determinism_2runs.py` | **PASS** | None |
+| **Clean Fresh Clone Verification** | 7-stage fresh clone verification in temporary sandbox passes 100% | `scripts/fresh_clone_audit.py` | **PASS** | None |
 
 ---
 

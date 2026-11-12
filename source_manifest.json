@@ -2,7 +2,7 @@
   "manifest_version": "1.0.0",
   "project": "YottaFlex Procure-to-Pay Synthetic Data Generator",
   "repository": "https://github.com/Ts5338236/Yotta-AI.git",
-  "generated_at": "2026-11-12T19:52:09.959156+00:00",
+  "generated_at": "2026-11-12T21:37:06.343758+00:00",
   "data_provenance": {
     "synthetic": true,
     "external_datasets_used": false,
@@ -13,242 +13,241 @@
   },
   "reproducibility": {
     "default_seed": 20261022,
-    "scale_tier": "full",
+    "scale_tier": "starter",
     "deterministic": true,
     "python_version": "3.12.3",
     "platform": "Windows-11-10.0.26100-SP0"
   },
   "record_counts": {
-    "departments": 12,
-    "budgets": 12,
-    "requesters": 300,
-    "suppliers": 125,
-    "approvers": 26,
-    "purchase_requests": 1205,
-    "request_lines": 2529,
-    "approvals": 1018,
-    "rfqs": 500,
-    "rfq_supplier_invites": 1779,
-    "supplier_quotes": 1779,
-    "quote_lines": 4497,
-    "purchase_orders": 970,
-    "purchase_order_lines": 2051,
-    "deliveries": 1048,
-    "budget_events": 3970,
-    "status_events": 9664,
-    "exception_logs": 591,
-    "ground_truth": 35
+    "departments": 10,
+    "budgets": 10,
+    "requesters": 30,
+    "suppliers": 13,
+    "approvers": 22,
+    "purchase_requests": 116,
+    "request_lines": 227,
+    "approvals": 96,
+    "rfqs": 50,
+    "rfq_supplier_invites": 183,
+    "supplier_quotes": 183,
+    "quote_lines": 414,
+    "purchase_orders": 93,
+    "purchase_order_lines": 188,
+    "deliveries": 101,
+    "budget_events": 390,
+    "status_events": 930,
+    "exception_logs": 53
   },
   "exported_artifacts": {
     "sqlite_db": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\database\\procurement.db",
-      "size_bytes": 7184384,
-      "sha256": "2956142728d3f9c6bc1fa7ec91e41de4146e363d31d9b6f4732efb36ac22499c"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\database\\procurement.db",
+      "size_bytes": 958464,
+      "sha256": "942a1e436d6eb4acc9599dc418f2da82d1cbd5d8e7dc81c087d33edd44add5f0"
     },
     "schema_ddl": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\sql\\schema.sql",
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\sql\\schema.sql",
       "size_bytes": 16841,
       "sha256": "58fcb27e488184f9e360375dc8c2ae48f98dbfba2df9241b9c4ce2015836c3e9"
     },
     "seed_sql": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\sql\\seed.sql",
-      "size_bytes": 4884943,
-      "sha256": "01c02bddf253112c7e7ed8d05304a18168763dbd7ed856534147c75d2bbfd333"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\sql\\seed.sql",
+      "size_bytes": 477821,
+      "sha256": "14f4376d0875a4667e869113de2a15ff6934283c654bc28a5318bea7190a67a7"
     },
     "csv_departments": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\departments.csv",
-      "size_bytes": 1129,
-      "sha256": "9f1e4a71ea7982fe1455e7ad96d17c99a67f3a7b48483b0a53885c654e884f06"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\departments.csv",
+      "size_bytes": 964,
+      "sha256": "b3391b11540187b2b23921b938753e09a5e77947c12fbd917ad226fcd176b780"
     },
     "csv_budgets": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\budgets.csv",
-      "size_bytes": 1334,
-      "sha256": "c2f15e00ffc219753bb9713450b3eecd54450fb63357ec0a1cbb201bd48c36bb"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\budgets.csv",
+      "size_bytes": 1120,
+      "sha256": "08733568f312a8d3d42406c6c6edf554f2cc93256a71cd715be96f756b82630b"
     },
     "csv_requesters": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\requesters.csv",
-      "size_bytes": 40161,
-      "sha256": "b8515c465dba03ec7f18e58ae4602a60b75cb276b531ae7a00d28d8ddca28552"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\requesters.csv",
+      "size_bytes": 3830,
+      "sha256": "4a9404d7d2302afd10f4fa6e7a8eb2eb78c7f81d7ce95463d94a06a8990144a0"
     },
     "csv_approvers": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\approvers.csv",
-      "size_bytes": 3028,
-      "sha256": "9d13cd1fad39e12a5d05ad3dc22e08bc68a54bf1fca5d5b8713cd178445fdc08"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\approvers.csv",
+      "size_bytes": 2614,
+      "sha256": "6d6d19b8fdaae693adcfc94e2a585643b986eab3074d38a7bf67afc041176de8"
     },
     "csv_suppliers": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\suppliers.csv",
-      "size_bytes": 24203,
-      "sha256": "39b131272e3118947b94e3befd34fed39b76b307022ae82ca82a0804aa75e4b7"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\suppliers.csv",
+      "size_bytes": 2701,
+      "sha256": "cff9004d27113b2c7403a964bb83d63f1a5aceace342651725e69ba99763c34a"
     },
     "csv_purchase_requests": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\purchase_requests.csv",
-      "size_bytes": 263355,
-      "sha256": "c674fed47ef78d0a9ab53101b6371d6f5f0ed8d83c9c5dc663eb36ed9997c7ed"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\purchase_requests.csv",
+      "size_bytes": 25528,
+      "sha256": "1d1eb2de14fe486b5ba0241197796684d46f9c79d7ae272dcda790e7cf37eca6"
     },
     "csv_request_lines": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\request_lines.csv",
-      "size_bytes": 497068,
-      "sha256": "713daffca38aa53e8a436b914fe3e64a6cbdb17bf2fff79b04651b27a6c8adcc"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\request_lines.csv",
+      "size_bytes": 44475,
+      "sha256": "4031295f305989f5020bc7be0060af1322787ea6aac4ce96b1b8a61c20a1c6dd"
     },
     "csv_rfqs": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\rfqs.csv",
-      "size_bytes": 43566,
-      "sha256": "774fd31e3e246857150a2444296316eb70933b145134003a54157411300415db"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\rfqs.csv",
+      "size_bytes": 4416,
+      "sha256": "8a78c4ed048d5e618589798c20270d67f3d02ab1a7c15f443e1059ac429c533e"
     },
     "csv_rfq_supplier_invites": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\rfq_supplier_invites.csv",
-      "size_bytes": 119252,
-      "sha256": "7c4156e2a4414b527e265e66bf2bad58e2b1842d3a72ce0c7e0f9eabe9f1fd07"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\rfq_supplier_invites.csv",
+      "size_bytes": 12320,
+      "sha256": "33a4dc5d5b2bd6bb5a67ec01cbdc8d19dfa5764d01d5de29f323bc14a9abecb3"
     },
     "csv_supplier_quotes": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\supplier_quotes.csv",
-      "size_bytes": 2965401,
-      "sha256": "a032530f81c099b650d966b653718226e564c411ace3e0e1aba76af2e1d2d863"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\supplier_quotes.csv",
+      "size_bytes": 37315,
+      "sha256": "5f26ce504b43415d0f5527f6f04f2780f8c0f2cbdf0b6274308a689679991d2e"
     },
     "csv_quote_lines": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\quote_lines.csv",
-      "size_bytes": 520487,
-      "sha256": "ca208b07c110a6284b22e4f3ddf8d5262fe10ea73e752907473169d68dfac5b4"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\quote_lines.csv",
+      "size_bytes": 49460,
+      "sha256": "a6073019d590a534ed3baccc4b66b556727bb8208775d7ead3e7aab2189d56ca"
     },
     "csv_approvals": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\approvals.csv",
-      "size_bytes": 171585,
-      "sha256": "c6500694c4c92dcf2657d90f5b19200c1d342fb308341cf0d80aa6873b18270d"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\approvals.csv",
+      "size_bytes": 16274,
+      "sha256": "cd2fbcb745151ec159f5c0712fc84e301348ec22a583ef6e16a7179294071b5f"
     },
     "csv_purchase_orders": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\purchase_orders.csv",
-      "size_bytes": 972378,
-      "sha256": "2db509946866532293662cbbd3d82a4dcf41c0638c1dcda8e9f7564459a7ce5e"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\purchase_orders.csv",
+      "size_bytes": 30138,
+      "sha256": "b0b46b3a5bb5e7797e2a62105f22c723b9669088ab6c57c09e3344c0a3a49407"
     },
     "csv_purchase_order_lines": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\purchase_order_lines.csv",
-      "size_bytes": 195891,
-      "sha256": "615af56e67f4db4e44a8819d38202b8c2acb3d85630e94d8e3c18bea47c90ffa"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\purchase_order_lines.csv",
+      "size_bytes": 18101,
+      "sha256": "e14a8a9d010814e5d30938fb7bc3aaa7e8a7fb49f6da184702aaad806685dab0"
     },
     "csv_deliveries": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\deliveries.csv",
-      "size_bytes": 165279,
-      "sha256": "50ea21710affb728fe1d96046317bb024bc8c3f2ad3d1c36da8d36429e8d4245"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\deliveries.csv",
+      "size_bytes": 16111,
+      "sha256": "de37e97d32bf3af765dfbe25f61c9882d3787db4944d17ef18ba7bb609983450"
     },
     "csv_status_events": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\status_events.csv",
-      "size_bytes": 2008628,
-      "sha256": "a92cbd9f7f410df001914439e72ad1fdad1678251eb8a229088ea210b5a1ce2a"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\status_events.csv",
+      "size_bytes": 193184,
+      "sha256": "858a0912c1640e5bc25d61840000c4d7df33a1cc4245fc8228745015f85e1905"
     },
     "csv_budget_events": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\budget_events.csv",
-      "size_bytes": 686249,
-      "sha256": "3c36c04575264820302988928540604a91af3ee9bbee6c7ce60d49d3d1350128"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\budget_events.csv",
+      "size_bytes": 67317,
+      "sha256": "288f88f2689f2accc661b51c21d937157dca1f18d3ca012569fa53c41074006d"
     },
     "csv_exception_logs": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\csv\\exception_logs.csv",
-      "size_bytes": 101989,
-      "sha256": "d314640017b78c963658e7cececff32a4159fcd098b593787ece3bc358706cc4"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\csv\\exception_logs.csv",
+      "size_bytes": 9230,
+      "sha256": "36bec6724c6656d0df01e7a2919967ecb678ecb6e32366928ea04d77d6b91811"
     },
     "json_departments": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\departments.json",
-      "size_bytes": 3120,
-      "sha256": "a732e36b1e7ed7c407038645b0b0ea3eee45f27260cf66556f0e22d3c295f51d"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\departments.json",
+      "size_bytes": 2609,
+      "sha256": "6e266cac1d04712437a6330ced65aa3c0e0070e350e287b6b4c42ed010cc7970"
     },
     "json_budgets": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\budgets.json",
-      "size_bytes": 4638,
-      "sha256": "d0dadf0f1b0b481dc5ce8a7d54c2004f4a006b0677333bfb8b45dbb52c11ae46"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\budgets.json",
+      "size_bytes": 3848,
+      "sha256": "5c6d2cb219fbc452147b9622a2a84ce59883d37b5ce2991c030b19ad72191a41"
     },
     "json_requesters": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\requesters.json",
-      "size_bytes": 91435,
-      "sha256": "c77c9dc7441511b859c931b5a22c83899ce404da6df1fa49ce8d7db9902e38b2"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\requesters.json",
+      "size_bytes": 8926,
+      "sha256": "a56c772d5ec749531b981ce91811b4fa2ca6aa93f62b88684b01773464ff2ed3"
     },
     "json_approvers": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\approvers.json",
-      "size_bytes": 8107,
-      "sha256": "0e61c2e4d5e6139ae75c57397c76f83b915c7db754dd967b05ee44619afd20f9"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\approvers.json",
+      "size_bytes": 6897,
+      "sha256": "107abdece50839f3d11496cbf3841c4d25d196f83d4b1f86263851a45e858a84"
     },
     "json_suppliers": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\suppliers.json",
-      "size_bytes": 67761,
-      "sha256": "bdbc98051f3912e96ebff02238cce1546baa01567664ac523222f0e187b8954c"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\suppliers.json",
+      "size_bytes": 7015,
+      "sha256": "55c8ee265e964246baae94719587e28b0289e3174965206b7bb2a8b9cc26e13a"
     },
     "json_purchase_requests": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\purchase_requests.json",
-      "size_bytes": 752963,
-      "sha256": "5d3ec0679d6683ca5d3c3213d03149ce2714b4d840a3dcedad13e3cba628e792"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\purchase_requests.json",
+      "size_bytes": 72487,
+      "sha256": "a65530451aea992d8df7d088f6d93368d9d120d53389541608f760f14de3c9e5"
     },
     "json_request_lines": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\request_lines.json",
-      "size_bytes": 1253080,
-      "sha256": "ea17f69fc86f8f98f47be3515cd63ecf2fbe44acd0f5510ffc70156070378bff"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\request_lines.json",
+      "size_bytes": 112189,
+      "sha256": "8f6e8bb27d434cb4a9e4841180e09110be66ca57b637ffa26ca37f4679a7e34c"
     },
     "json_rfqs": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\rfqs.json",
-      "size_bytes": 119003,
-      "sha256": "261a255f8372e9dc3234e01a15db1c93a5a51ec8bad14be461d08859ef87caa7"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\rfqs.json",
+      "size_bytes": 11903,
+      "sha256": "cc7d2606f9aec0c867e92a5b0cdc29fb6add03c10e03ccb7e18d9592719060ba"
     },
     "json_rfq_supplier_invites": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\rfq_supplier_invites.json",
-      "size_bytes": 336234,
-      "sha256": "13310075e4f3e9971e40ca853ea6d69eddf24bf20a075cfa4798cd3ce15cf98c"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\rfq_supplier_invites.json",
+      "size_bytes": 34590,
+      "sha256": "064d5c94e3f262fd27ec2d341d299d106d940901a968fdc47719a0d71df7a48c"
     },
     "json_supplier_quotes": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\supplier_quotes.json",
-      "size_bytes": 3831367,
-      "sha256": "0e7a8c9915ce44582713028568b7a9ea220c4ab520e85c7863fd2a1fba5c484e"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\supplier_quotes.json",
+      "size_bytes": 377243,
+      "sha256": "cdacdacea8b4b9d19444d3e0845a3c25aa8ef32078818cb4197352a8a1750172"
     },
     "json_quote_lines": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\quote_lines.json",
-      "size_bytes": 1842438,
-      "sha256": "382d3a616a8a8fb77b263400fc5cfaa81710f92f739b07ca1ca4064476f53230"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\quote_lines.json",
+      "size_bytes": 171009,
+      "sha256": "b4906c23bbcb458e8557d42504eedd5f6b36e0989d33c3fe1e61e7264ca1119d"
     },
     "json_approvals": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\approvals.json",
-      "size_bytes": 425963,
-      "sha256": "97ecbceefc282fc988a990d51488b44e08ba3dc46fccc7d2b7d473cb67e1cc5e"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\approvals.json",
+      "size_bytes": 40152,
+      "sha256": "9dbd863274fa7a3cc5997bf367db729ba2e711d52df39f6f2d37511ad08e1f81"
     },
     "json_purchase_orders": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\purchase_orders.json",
-      "size_bytes": 1495792,
-      "sha256": "a98275b12fd8a747d57724901085f263d2fb5c59a2ac2c41e1c4c4602330f4bf"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\purchase_orders.json",
+      "size_bytes": 140776,
+      "sha256": "3a84314bb15dad96afa190070fe159969c9c0e4857a4cc23038c534df5b55ab4"
     },
     "json_purchase_order_lines": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\purchase_order_lines.json",
-      "size_bytes": 724441,
-      "sha256": "520fd831102f774c63e2dbb6e0e34e159beebb0fb98c5cea5d9ecf493cac7d89"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\purchase_order_lines.json",
+      "size_bytes": 66430,
+      "sha256": "47a7a6102da63f0d7b8b40668f6a2eb47beb4519c677740a1c43bdf64ffdb7f7"
     },
     "json_deliveries": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\deliveries.json",
-      "size_bytes": 467843,
-      "sha256": "c6f6683ebeadaf3241d28233b8ad16158e97b343a3c12a69830aef80acfb75f5"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\deliveries.json",
+      "size_bytes": 45132,
+      "sha256": "14bacc7fc302d85c351f239bec57aea2433f67ab516aa8933f2c932c09452fdb"
     },
     "json_status_events": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\status_events.json",
-      "size_bytes": 5245753,
-      "sha256": "d19e8aef06ac2ee2cda2afc2d8ab54513baa5d1918b2f018af518c527e3d6e51"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\status_events.json",
+      "size_bytes": 504559,
+      "sha256": "c8a00cf6a082f2142a833d3111ef043a614eb68bae3622c7d2f07851edc35933"
     },
     "json_budget_events": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\budget_events.json",
-      "size_bytes": 1664739,
-      "sha256": "4d8041506c79fe9b71188e17349ca104bb5903fa0b23dcdab1674d2b3a65d52a"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\budget_events.json",
+      "size_bytes": 163365,
+      "sha256": "bc5aee1fbe914cb05ba8650cbb8b5900cfc2a7b7450733e5cbb7a57a60eb47aa"
     },
     "json_exception_logs": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\exception_logs.json",
-      "size_bytes": 218906,
-      "sha256": "4adb12ace905b5b987ae69b898610af608c7f0c0700d97fc9716a79b8c8292ba"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\exception_logs.json",
+      "size_bytes": 19623,
+      "sha256": "9c37878df41c0c5dd8bdcd66fed0b2a84b45ffd8796441bc1bcf264c99c61d3d"
     },
     "json_metadata": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\json\\metadata.json",
-      "size_bytes": 324,
-      "sha256": "9eb7252c07971d9f3ef8b9642b7cbc02bfd7c1923924145fa12e3aa27879dc4f"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\json\\metadata.json",
+      "size_bytes": 321,
+      "sha256": "587d65fd451d73930f444c7036873dfb63bdc183485227ab8d2855505bc82cb9"
     },
     "gt_csv": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\ground_truth\\ground_truth.csv",
-      "size_bytes": 9480,
-      "sha256": "b1ce7cc8c579ea6908855deea2bc34559ddafad4e4c64684aab1d9072655cc95"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\ground_truth\\ground_truth.csv",
+      "size_bytes": 1949,
+      "sha256": "7262d999e917a88a2b5910ad662ea3621203fd4064f52b67816f7077a95abbd2"
     },
     "gt_json": {
-      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\tmp7caiosoq\\output\\ground_truth\\ground_truth.json",
-      "size_bytes": 14884,
-      "sha256": "3060abfbf00c2ef7391a62b980f49e4423a3cf2ea84ab2714120262a6812fb7b"
+      "path": "C:\\Users\\sony\\AppData\\Local\\Temp\\pytest-of-sony\\pytest-66\\test_ground_truth_isolation_in0\\data\\ground_truth\\ground_truth.json",
+      "size_bytes": 2973,
+      "sha256": "c0be7efddbb51eba356445147d041cb4a7102b42f3162498e2bbbde7c0f522c2"
     }
   }
 }

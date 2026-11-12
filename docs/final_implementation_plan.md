@@ -78,9 +78,9 @@ All foundational work from Phases 1–5 has been audited. Phases 6 and 7 are ful
 1. **Test Suite Verification**:
    - Execute complete pytest suite across all 28 modules: 167 passing tests (100% pass rate).
 2. **Deterministic Re-execution**:
-   - Run two independent runs with seed `20261022` via `scratch/verify_determinism_2runs.py` confirming 100% bitwise matching across all 20 artifacts.
+   - Run two independent runs with seed `20261022` via `scripts/verify_determinism_2runs.py` confirming 100% bitwise matching across all 20 artifacts.
 3. **Fresh Clone Sandbox Audit**:
-   - Execute clean-room 7-stage fresh clone verification in an isolated temporary directory via `scratch/fresh_clone_audit.py`.
+   - Execute clean-room 7-stage fresh clone verification in an isolated temporary directory via `scripts/fresh_clone_audit.py`.
 4. **Documentation & Compliance Deliverables**:
    - Author `docs/phase7_initial_audit.md`.
    - Author `docs/assignment_compliance_matrix.md` (52 requirements, 100.0% completion).

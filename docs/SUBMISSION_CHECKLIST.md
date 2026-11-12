@@ -16,7 +16,7 @@
 | **Dedicated Repository** | Dedicated GitHub repo with clear commits | `https://github.com/Ts5338236/Yotta-AI.git` with phase-wise commit trajectory | **PASS** |
 | **Working Software** | Functional Python 3 generator & validator | CLI tool `p2p-datagen`, automated test suite (167 passing tests) | **PASS** |
 | **Zero Secrets / PII** | No real corporate PII, API tokens, or secrets | 100% synthetic dataset, zero API keys, clean repository audit | **PASS** |
-| **Clean Installation** | Works out-of-the-box in clean environment | 7-stage automated fresh clone audit verified (`scratch/fresh_clone_audit.py`) | **PASS** |
+| **Clean Installation** | Works out-of-the-box in clean environment | 7-stage automated fresh clone audit verified (`scripts/fresh_clone_audit.py`) | **PASS** |
 | **Data Integrity** | Strict 3NF relational schema with 0 errors | 111,827 assertions verified with 0 FK/PK/arithmetic defects | **PASS** |
 | **Business Rules** | Multi-tier approvals, DoA, landed cost, budget | Full approval hierarchy, 60/25/15 scoring, double-entry ledger | **PASS** |
 | **Anomaly Engine** | 7 controlled anomalies + ground truth | Injected, labeled, and detected with Precision 1.0, Recall 1.0, F1 1.0000 | **PASS** |
@@ -30,7 +30,7 @@
 ## 2. Detailed Verification Checklist
 
 ### 2.1 Repository & Code Quality
-- [x] **Repository Structure**: Clean modular architecture separating `src/datagen/`, `src/validate/`, `config/`, `data/`, `docs/`, `tests/`, and `scratch/`.
+- [x] **Repository Structure**: Clean modular architecture separating `src/datagen/`, `src/validate/`, `config/`, `data/`, `docs/`, `tests/`, and `scripts/`.
 - [x] **No Unused / Dead Files**: All modules imported and executed in generation, validation, or test suites.
 - [x] **No Hardcoded Absolute Paths**: Paths resolved relative to repository root via `pathlib.Path(__file__).resolve().parent`.
 - [x] **Python Compatibility**: Built and tested on Python 3.11+ (verified on Python 3.12.3).
@@ -73,8 +73,8 @@
 
 ### 2.6 Reproducibility & Testing
 - [x] **Pytest Automated Suite**: 167 unit and integration tests passing in 40.08s across 28 modules.
-- [x] **Bitwise Hash Parity**: Confirmed 100% SHA-256 identity across two independent generation runs for all 21 exported files (`scratch/verify_determinism_2runs.py`).
-- [x] **Clean Installation Audit**: All 7 stages of clean-room verification passed (`scratch/fresh_clone_audit.py`).
+- [x] **Bitwise Hash Parity**: Confirmed 100% SHA-256 identity across two independent generation runs for all 21 exported files (`scripts/verify_determinism_2runs.py`).
+- [x] **Clean Installation Audit**: All 7 stages of clean-room verification passed (`scripts/fresh_clone_audit.py`).
 
 ### 2.7 Documentation Suite
 - [x] **`README.md`**: Project overview, architecture, installation, CLI commands, workflow, limitations.

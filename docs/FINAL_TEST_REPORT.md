@@ -223,7 +223,7 @@ All 18 operational CSV tables, the ground truth CSV file, canonical DDL schema, 
 ---
 
 ### TEST 11: Fresh Installation & Environment Verification
-An automated fresh clone audit was executed in an isolated temporary sandbox (`scratch/fresh_clone_audit.py`):
+An automated fresh clone audit was executed in an isolated temporary sandbox (`scripts/fresh_clone_audit.py`):
 
 1. **Stage 1: Python Syntax & Compilation Check** — `compileall` on `src/` and `tests/` $\rightarrow$ **PASS**
 2. **Stage 2: CLI Config Validation** — `p2p-datagen --validate-config` $\rightarrow$ **PASS**
@@ -231,7 +231,7 @@ An automated fresh clone audit was executed in an isolated temporary sandbox (`s
 4. **Stage 4: Automated Test Suite** — `pytest tests/ -v` (167 tests) $\rightarrow$ **PASS (167 passed in 40.08s)**
 5. **Stage 5: Starter Scale Generation & Export** — `p2p-datagen --generate --scale starter --export` $\rightarrow$ **PASS**
 6. **Stage 6: Full Scale Generation, Anomaly Injection & Export** — `p2p-datagen --generate --scale full --inject-anomalies --export --validate-exports` $\rightarrow$ **PASS**
-7. **Stage 7: Two-Run Determinism Re-Verification** — `python scratch/verify_determinism_2runs.py` $\rightarrow$ **PASS**
+7. **Stage 7: Two-Run Determinism Re-Verification** — `python scripts/verify_determinism_2runs.py` $\rightarrow$ **PASS**
 
 *Verdict*: **PASS (7/7 stages passed)**
 

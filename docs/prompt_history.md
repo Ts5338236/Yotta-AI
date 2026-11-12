@@ -77,7 +77,7 @@ This document records the master prompt history, implementation milestones, and 
   - `docs/phase7_initial_audit.md`: Detailed baseline repository audit.
   - `docs/assignment_compliance_matrix.md`: 100.0% traceability matrix mapping all 52 requirements to code, tests, and evidence.
   - `docs/final_audit_report.md`: Definitive 24-section technical audit report.
-  - `scratch/verify_determinism_2runs.py`: Cryptographic hash comparison proving 100% bitwise determinism across runs.
-  - `scratch/fresh_clone_audit.py`: Automated 7-stage fresh clone simulation harness.
+  - `scripts/verify_determinism_2runs.py`: Cryptographic hash comparison proving 100% bitwise determinism across runs.
+  - `scripts/fresh_clone_audit.py`: Automated 7-stage fresh clone simulation harness.
 - **Final Benchmark**: 167 passed, 0 failed, 100.0% requirement compliance, verified fresh clone readiness.
 

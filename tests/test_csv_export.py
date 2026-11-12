@@ -53,10 +53,14 @@ def test_csv_headers_and_row_counts(starter_dataset, tmp_path):
 
         assert len(rows) == len(source_rows), f"Count mismatch in {table}"
 
-        # Verify expected columns
-        expected_keys = set(source_rows[0].keys())
+        # Verify expected columns (excluding dropped internal helper keys)
+        expected_keys = {k for k in source_rows[0].keys() if k not in ("_lines", "_supplier")}
         actual_keys = set(rows[0].keys())
         assert expected_keys.issubset(actual_keys), f"Missing columns in {table}"
+        if table in ("supplier_quotes", "purchase_orders"):
+            assert "_lines" not in actual_keys
+        if table == "supplier_quotes":
+            assert "_supplier" not in actual_keys
 
 
 def test_csv_deterministic_row_ordering(starter_dataset, tmp_path):

@@ -173,7 +173,7 @@ Quotes and supplier invoices support multi-currency pricing using fixed institut
 
 ### Verification Evidence:
 - Running `python -m pytest tests/test_determinism.py` confirms that two independent generation executions yield 100% bit-for-bit identical records across all entities.
-- Running `python scratch/verify_determinism_2runs.py` confirms identical SHA-256 checksums across all 21 exported files.
+- Running `python scripts/verify_determinism_2runs.py` confirms identical SHA-256 checksums across all 21 exported files.
 
 ---
 

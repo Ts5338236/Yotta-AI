@@ -40,3 +40,4 @@ While the YottaFlex Procure-to-Pay Synthetic Data Generator generates production
 
 ### C. Anomaly Scope
 - Seven specific procurement anomalies are injected and audited. While these cover major financial and compliance vulnerabilities, broader forensic scenarios (such as collusion kickbacks or phantom shell companies) are outside the core assignment scope.
+

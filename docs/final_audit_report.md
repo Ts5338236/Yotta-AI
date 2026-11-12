@@ -68,7 +68,7 @@ src/
 | **Phase 4** | Derived Fields Engine & Validation | **COMPLETE** | `derive.py`, `validate/checks.py`, `test_derive.py`, `test_validation_*.py` |
 | **Phase 5** | Anomaly Injection & Detection | **COMPLETE** | `anomalies.py`, `validate/anomaly_checks.py`, `test_anomaly_*.py`, `test_ground_truth.py` |
 | **Phase 6** | Data Export & Database Integration | **COMPLETE** | `database.py`, `export.py`, `validate/export_checks.py`, `test_*export*.py`, `test_sql_*.py` |
-| **Phase 7** | Final Audit & Fresh Clone Verification | **COMPLETE** | `scratch/fresh_clone_audit.py`, `scratch/verify_determinism_2runs.py`, `assignment_compliance_matrix.md` |
+| **Phase 7** | Final Audit & Fresh Clone Verification | **COMPLETE** | `scripts/fresh_clone_audit.py`, `scripts/verify_determinism_2runs.py`, `assignment_compliance_matrix.md` |
 
 ---
 
@@ -255,7 +255,7 @@ Clean datasets produce exactly **0 detections** (zero false alarms).
 ## 18. Determinism Results
 
 - Default Seed: `20261022`.
-- Verification: Executed [`scratch/verify_determinism_2runs.py`](../scratch/verify_determinism_2runs.py).
+- Verification: Executed [`scripts/verify_determinism_2runs.py`](../scripts/verify_determinism_2runs.py).
 - Outcome: **100% identical SHA-256 hashes** across all 20 exported CSV, SQL, and ground truth artifacts.
 - Divergence: Changing the seed produces distinct, realistic data while maintaining valid business rules.
 
@@ -263,7 +263,7 @@ Clean datasets produce exactly **0 detections** (zero false alarms).
 
 ## 19. Fresh-Clone Results
 
-- Automated Test Harness: [`scratch/fresh_clone_audit.py`](../scratch/fresh_clone_audit.py).
+- Automated Test Harness: [`scripts/fresh_clone_audit.py`](../scripts/fresh_clone_audit.py).
 - Simulation: Completely clean, isolated temporary directory (`tmpi38fq3o6\Yotta-Clone`).
 - Execution Stages:
   1. Python Syntax & Compilation Check: **PASS**

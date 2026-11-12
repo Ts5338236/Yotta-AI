@@ -69,7 +69,7 @@ The repository represents a mature, production-grade enterprise data generation 
 - Baseline test suite had 148 tests after Phase 5.
 - Phase 6 introduced 8 new test modules (bringing total to 167 tests).
 - All 17 operational tables, 7 anomaly types, and 5 export formats are covered by dedicated automated tests.
-- Minor gap: Add a dedicated CLI integration test module if needed, although CLI functionality is already verified by `scratch/fresh_clone_audit.py` and direct execution.
+- Minor gap: Add a dedicated CLI integration test module if needed, although CLI functionality is already verified by `scripts/fresh_clone_audit.py` and direct execution.
 
 ---
 
@@ -90,7 +90,7 @@ The repository represents a mature, production-grade enterprise data generation 
 
 ## 9. Remaining Submission Risks & Action Plan
 
-1. **Clean Clone Verification**: Successfully executed via `scratch/fresh_clone_audit.py` across 7 stages in an isolated sandbox.
+1. **Clean Clone Verification**: Successfully executed via `scripts/fresh_clone_audit.py` across 7 stages in an isolated sandbox.
 2. **Compliance Matrix**: Build comprehensive 100% traceability matrix in `docs/assignment_compliance_matrix.md`.
 3. **Final Technical Audit Report**: Author `docs/final_audit_report.md` covering all 24 required sections.
 4. **Git Submission Hygiene**: Inspect `git status`, confirm untracked files are staged cleanly, ensure no secret leakage, and prepare clean commit message.
