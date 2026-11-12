@@ -7,7 +7,7 @@
 [![Determinism: 100% SHA--256](https://img.shields.io/badge/determinism-100%25%20SHA--256-brightgreen.svg)]()
 [![Status: Complete & Submission Ready](https://img.shields.io/badge/Status-Complete%20%26%20Submission%20Ready-green.svg)]()
 
-Production-quality Procure-to-Pay (P2P) Synthetic Data Generator built for the **YottaFlex AI** technical coding round.
+Production-quality Procure-to-Pay (P2P) Synthetic Data Generator built for the **YottaFlex AI**.
 
 ---
 
