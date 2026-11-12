@@ -12,6 +12,7 @@ Production-quality Procure-to-Pay (P2P) Synthetic Data Generator built for the *
 ---
 
 ## Table of Contents
+- [Quick Start](#quick-start)
 1. [Project Overview](#1-project-overview)
 2. [Problem Statement](#2-problem-statement)
 3. [Business Objectives](#3-business-objectives)
@@ -32,6 +33,37 @@ Production-quality Procure-to-Pay (P2P) Synthetic Data Generator built for the *
 18. [Testing Instructions](#18-testing-instructions)
 19. [Reproducibility Instructions](#19-reproducibility-instructions)
 20. [Known Limitations](#20-known-limitations)
+
+---
+
+## Quick Start
+
+```powershell
+# 1. Clone repository
+git clone https://github.com/Ts5338236/Yotta-AI.git
+cd Yotta-AI
+
+# 2. Set up virtual environment & install dependencies
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1       # On Linux/macOS: source .venv/bin/activate
+pip install -r requirements.txt
+$env:PYTHONPATH = "src"            # On Linux/macOS: export PYTHONPATH=src
+
+# 3. Run full automated test suite (167 tests pass)
+python -m pytest tests -q
+
+# 4. Generate Starter Dataset (fast validation)
+python -m datagen --generate --scale starter --inject-anomalies --export --output-dir output --validate-exports
+
+# 5. Generate Full-Scale Benchmark Dataset (Seed: 20261022, 42 injected anomalies)
+python -m datagen --generate --scale full --seed 20261022 --inject-anomalies --export --output-dir output --validate-exports
+
+# 6. Run Independent Dataset Validation & Anomaly Detection (out-of-the-box PASS)
+python -m validate
+
+# 7. Verify 100% Bitwise Reproducibility Across 2 Independent Runs
+python scripts/verify_determinism_2runs.py
+```
 
 ---
 
@@ -412,7 +444,7 @@ fx_rates:
 Generate the starter scale dataset (ideal for rapid development, testing, and CI pipelines):
 
 ```powershell
-python -m datagen --generate --scale starter --inject-anomalies --export --output-dir data --validate-exports
+python -m datagen --generate --scale starter --inject-anomalies --export --output-dir output --validate-exports
 ```
 
 ### Generated Starter Counts:
