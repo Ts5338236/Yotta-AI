@@ -6,18 +6,10 @@ This document transparently records how Artificial Intelligence (AI) tools were 
 
 ## 1. AI Tools Utilized
 
-- **AI Model**: Antigravity Assistant (Google DeepMind / Anthropic Claude Sonnet 4.6).
+The following AI tools and interfaces were used during development:
+- **Primary AI Assistant**: Antigravity Assistant (Google DeepMind / Anthropic Claude Sonnet 4.6), utilized for architectural design, code generation, refactoring, test drafting, and compliance documentation.
+- **Code Autocompletion**: GitHub Copilot / Cursor IDE AI assistance, used for repetitive boilerplate, DDL typing, and test fixture expansion.
 - **Execution Environment**: Windows 11 PowerShell pair-programming environment.
-- **Reference Implementation Prompts**:
-  - Phase 1: `ai/prompts/01_phase1_foundation.md`
-  - Phase 2: `ai/prompts/02_phase2_generation.md`
-  - Phase 3: `ai/prompts/03_phase3_procurement_workflow.md`
-  - Phase 4: `ai/prompts/04_phase4_derived_validation.md`
-  - Phase 5: `ai/prompts/05_phase5_anomalies.md`
-  - Phase 6: `ai/prompts/06_phase6_data_export.md`
-  - Phase 7: `ai/prompts/07_phase7_final_audit.md`
-  - QA Final Verification: `ai/prompts/08_qa_final_verification.md`
-  - Final Submission Preparation: `ai/prompts/09_final_submission_prep.md`
 
 ---
 
@@ -40,7 +32,7 @@ This document transparently records how Artificial Intelligence (AI) tools were 
 - **Centralized Derived Fields Engine (`src/datagen/derive.py`)**:
   - Recalculates all derived fields directly from source records: request line totals, PR estimate sums, quote landed costs, multicriteria scores, PO totals, delivery fulfillments, current statuses, and budget balances.
 - **Independent Validation Framework (`src/validate/checks.py`)**:
-  - Built 6 autonomous check domains operating independently of `derive.py` to prevent circular verification.
+  - Built autonomous check domains operating independently of `derive.py` to prevent circular verification.
   - Implemented structured validation results with severity ratings (`CRITICAL`, `ERROR`, `WARNING`, `INFO`).
   - Added automated report generation for GitHub-flavored Markdown (`docs/validation_summary.md`) and deterministic JSON (`docs/validation_summary.json`).
 - **Testing & Corrupted Fixture Design (`tests/`)**:
@@ -72,7 +64,7 @@ This document transparently records how Artificial Intelligence (AI) tools were 
 
 ### Phase 7 Final Audit, Determinism & Fresh Clone Verification
 - Complete verification of 100% bitwise determinism across two independent runs with seed `20261022`.
-- Complete execution of 7-stage automated fresh clone verification in a clean temporary directory.
+- Complete execution of fresh clone verification in an isolated directory.
 - Full requirement traceability matrix and technical audit report authored at `docs/assignment_compliance_matrix.md` and `docs/final_audit_report.md`.
 
 ---
@@ -83,7 +75,7 @@ Every architectural decision, data model choice, mathematical equation, and code
 
 ### Where AI Assistance was Significant
 1. **Boilerplate & Schema Definitions**: Emitting repetitive DDL and dataclass boilerplate across 19 relational entities (`schema.sql`, `models.py`).
-2. **Corrupted Test Fixture Permutations**: Synthesizing diverse, intentionally malformed test inputs across 28 pytest test modules (167 test cases) to stress-test validation boundaries.
+2. **Corrupted Test Fixture Permutations**: Synthesizing diverse, intentionally malformed test inputs across 39 pytest test modules (167 test cases) to stress-test validation boundaries.
 3. **Draft Documentation Layouts**: Scaffold initial markdown templates for compliance matrices, gap analysis, and data dictionaries.
 
 ### Known AI-Generated Errors, Challenges & Remediation
@@ -93,3 +85,16 @@ Every architectural decision, data model choice, mathematical equation, and code
 4. **Currency Field Discrepancies**: Landed cost in base currency was named `landed_cost_base` rather than `landed_cost_usd`. Realigned across derivation and reporting modules.
 5. **Clean Baseline Preserved**: Guarded against AI tendency to inline anomaly injection flags into operational tables, ensuring strict ground truth quarantine.
 
+---
+
+## 4. Disclosed Gaps & Prompt Provenance
+
+In the spirit of complete disclosure and academic/professional honesty:
+
+1. **Prompt Completeness**:
+   - `ai/prompts/01_phase1_foundation.md` through `ai/prompts/06_phase6_data_export.md` are the verbatim foundational engineering prompts executed during Phases 1–6.
+   - `ai/prompts/07_phase7_final_audit.md`, `08_qa_final_verification.md`, and `09_final_submission_prep.md` are concise milestone summaries and acceptance checklists rather than verbose conversational transcripts.
+2. **Interactive Chat Logs**:
+   - Spontaneous interactive debugging dialogues, terminal troubleshooting queries, and exploratory conversations conducted during the coding sessions were not exported into markdown or preserved in version control.
+3. **AI Tools Disclosed**:
+   - All AI models and tools utilized (Antigravity Claude Sonnet 4.6 and IDE autocompletion) are fully disclosed above. No undisclosed proprietary LLMs, private codebases, or black-box data generation services were used.
