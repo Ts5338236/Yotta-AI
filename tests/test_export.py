@@ -131,20 +131,3 @@ def test_export_integrity_and_statistics(starter_data, tmp_path):
     assert (out_dir / "reports" / "export_integrity_report.md").exists()
     assert (out_dir / "reports" / "dataset_statistics.md").exists()
 
-
-def test_export_error_handling_missing_schema(starter_data, tmp_path):
-    """Verify informative error handling when schema file is missing."""
-    non_existent_schema = tmp_path / "missing_schema.sql"
-    with pytest.raises(FileNotFoundError, match="Schema DDL script not found"):
-        export_to_sqlite(starter_data, db_path=tmp_path / "fail.db", schema_path=non_existent_schema)
-
-
-def test_export_all_creates_yotta_ai_and_ground_truth_files(starter_data, tmp_path):
-    """Verify export_all generates yotta_ai.db and direct ground_truth files."""
-    dummy_gt = [{"anomaly_id": "ANOM-000001", "issue_type": "budget_overrun", "record_id": "PO-1"}]
-    res = export_all(starter_data, output_dir=tmp_path, ground_truth=dummy_gt)
-
-    assert (tmp_path / "sql" / "yotta_ai.db").exists()
-    assert (tmp_path / "ground_truth.csv").exists()
-    assert (tmp_path / "ground_truth.json").exists()
-

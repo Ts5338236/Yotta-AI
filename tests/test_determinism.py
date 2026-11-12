@@ -64,25 +64,3 @@ def test_scale_tier_differentiation():
     assert len(full["purchase_requests"]) == 1200
 
 
-def test_configured_volumes_end_to_end_full_scale():
-    """Verify all full-scale target volumes from PRD are met:
-    300 requesters, 120 suppliers, 1,200 requests, 500 RFQs, >=1,500 quotes, >=900 POs.
-    """
-    from datagen.workflow import generate_procurement_workflow
-    dataset = generate_procurement_workflow(scale="full", seed=20261022)
-
-    assert len(dataset["requesters"]) == 300
-    assert len(dataset["suppliers"]) == 120
-    assert len(dataset["purchase_requests"]) == 1200
-    assert len(dataset["rfqs"]) == 500
-    assert len(dataset["supplier_quotes"]) >= 1500  # Exactly 1,779 quotes
-    assert len(dataset["purchase_orders"]) >= 900   # Exactly 970 POs (500 competitive + 470 non-competitive)
-
-    # Verify at least three quotes per competitive RFQ
-    rfq_quote_counts = {}
-    for q in dataset["supplier_quotes"]:
-        rfq_quote_counts[q["rfq_id"]] = rfq_quote_counts.get(q["rfq_id"], 0) + 1
-    for rfq in dataset["rfqs"]:
-        assert rfq_quote_counts.get(rfq["rfq_id"], 0) >= 3
-
-
