@@ -10,7 +10,7 @@ This traceability matrix maps every technical requirement from the original Prod
 
 | PRD Requirement | Specification Details | Implementation Module | Automated Test File | Output / Artifact | Status |
 | :--- | :--- | :--- | :--- | :--- | :---: |
-| **Strict 3NF Schema** | 18 normalized relational tables with check & unique constraints | `data/sql/schema.sql` | `tests/test_schema.py` | `data/p2p_procurement.db` | **PASS** |
+| **Strict 3NF Schema** | 18 normalized relational tables with check & unique constraints | `output/sql/schema.sql` | `tests/test_schema.py` | `output/database/procurement.db` | **PASS** |
 | **Centralized Config** | Strict YAML parsing with scale, approval, and FX parameters | `src/datagen/config.py` | `tests/test_config.py` | `config/default.yaml` | **PASS** |
 | **Deterministic IDs** | Zero-padded canonical regexes across all 18 entities | `src/datagen/ids.py` | `tests/test_ids.py` | Entity Primary Keys | **PASS** |
 | **Fixed Decimal FX** | Deterministic exchange conversions using Python `Decimal` | `src/datagen/fx.py` | `tests/test_fx.py` | Landed costs & base totals | **PASS** |
@@ -87,8 +87,8 @@ This traceability matrix maps every technical requirement from the original Prod
 
 | PRD Requirement | Specification Details | Implementation Module | Automated Test File | Output / Artifact | Status |
 | :--- | :--- | :--- | :--- | :--- | :---: |
-| **CSV Export Engine** | Export all 17 operational tables and ground truth to CSV | `src/datagen/export.py` | `tests/test_export.py` | `data/csv/*.csv` | **PASS** |
-| **JSON Export Engine** | Export all tables and metadata to JSON format | `src/datagen/export.py` | `tests/test_export.py` | `data/json/*.json` | **PASS** |
-| **SQLite Ingestion** | Bulk insert with foreign-key compliance into SQLite DB | `src/datagen/export.py` | `tests/test_export.py` | `data/p2p_procurement.db` | **PASS** |
-| **Clean Environment Execution**| Verified fresh clone simulation in clean temporary directory | `scripts/fresh_clone_verify.py` | Integration CLI tests | End-to-end execution | **PASS** |
+| **CSV Export Engine** | Export all 18 operational tables and ground truth to CSV | `src/datagen/export.py` | `tests/test_export.py` | `output/csv/*.csv` | **PASS** |
+| **JSON Export Engine** | Export all tables and metadata to JSON format | `src/datagen/export.py` | `tests/test_export.py` | `output/json/*.json` | **PASS** |
+| **SQLite Ingestion** | Bulk insert with foreign-key compliance into SQLite DB | `src/datagen/export.py` | `tests/test_export.py` | `output/database/procurement.db` | **PASS** |
+| **Clean Environment Execution**| Verified fresh clone simulation in clean temporary directory | `scripts/fresh_clone_audit.py` | Integration CLI tests | End-to-end execution | **PASS** |
 

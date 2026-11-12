@@ -11,12 +11,12 @@
 ## 1. Executive Summary
 
 This report provides the verification and reconciliation evidence for Phase 6 of the Procure-to-Pay Synthetic Data Generator. The export engine generates synthetic procurement workflows into multi-format persistence tiers:
-1. **RFC 4180-Compliant CSV**: 17 operational tables (`data/csv/*.csv`)
-2. **UTF-8 Encoded JSON**: 17 operational tables + system metadata (`data/json/*.json`)
-3. **Relational SQLite Database**: Normalized schema with active foreign key enforcement (`data/database/procurement.db`)
-4. **Canonical DDL Schema**: Complete 19-table DDL with composite indices and constraints (`data/sql/schema.sql`)
-5. **Populated SQL Seed**: Syntactically valid SQL INSERT statements sequenced in topological dependency order (`data/sql/seed.sql`)
-6. **Isolated Ground Truth Storage**: Supervised anomaly detection ground truth isolated from operational directories (`data/ground_truth/ground_truth.csv` and `data/ground_truth/ground_truth.json`)
+1. **RFC 4180-Compliant CSV**: 18 operational tables (`output/csv/*.csv`)
+2. **UTF-8 Encoded JSON**: 18 operational tables + system metadata (`output/json/*.json`)
+3. **Relational SQLite Database**: Normalized schema with active foreign key enforcement (`output/database/procurement.db`)
+4. **Canonical DDL Schema**: Complete 19-table DDL with composite indices and constraints (`output/sql/schema.sql`)
+5. **Populated SQL Seed**: Syntactically valid SQL INSERT statements sequenced in topological dependency order (`output/sql/seed.sql`)
+6. **Isolated Ground Truth Storage**: Supervised anomaly detection ground truth isolated from operational directories (`output/ground_truth/ground_truth.csv` and `output/ground_truth/ground_truth.json`)
 
 ---
 
@@ -46,7 +46,7 @@ This report provides the verification and reconciliation evidence for Phase 6 of
 
 ## 3. SQLite Database Verification
 
-- **Database File**: `data/database/procurement.db` (946 KB)
+- **Database File**: `output/database/procurement.db` (946 KB)
 - **Foreign Key Enforcement**: `PRAGMA foreign_keys = ON;`
 - **Integrity Check**:
   ```sql
@@ -62,10 +62,10 @@ This report provides the verification and reconciliation evidence for Phase 6 of
 
 ---
 
-## 4. SQL Seed Verification (`data/sql/seed.sql`)
+## 4. SQL Seed Verification (`output/sql/seed.sql`)
 
 - **File Status**: Non-placeholder, real SQL script (466 KB).
-- **Execution Test**: Executed completely against a fresh in-memory SQLite database populated strictly from `data/sql/schema.sql`.
+- **Execution Test**: Executed completely against a fresh in-memory SQLite database populated strictly from `output/sql/schema.sql`.
 - **Foreign Key Check Post-Execution**: 0 violations.
 - **Topological Ingestion Order**:
   1. `departments`
@@ -92,10 +92,10 @@ This report provides the verification and reconciliation evidence for Phase 6 of
 
 - **Isolation Requirement**: Operational CSV and JSON exports must NOT leak ground truth labels.
 - **Verification Findings**:
-  - `data/csv/ground_truth.csv`: **ABSENT** (Strictly isolated)
-  - `data/json/ground_truth.json`: **ABSENT** (Strictly isolated)
-  - `data/ground_truth/ground_truth.csv`: **PRESENT** (7 records)
-  - `data/ground_truth/ground_truth.json`: **PRESENT** (7 records)
+  - `output/csv/ground_truth.csv`: **ABSENT** (Strictly isolated)
+  - `output/json/ground_truth.json`: **ABSENT** (Strictly isolated)
+  - `output/ground_truth/ground_truth.csv`: **PRESENT**
+  - `output/ground_truth/ground_truth.json`: **PRESENT**
   - `anomaly_id` Uniqueness: 100% Unique primary identifiers conforming to `ANOM-\d{4}`.
 
 ---

@@ -17,7 +17,7 @@ The following AI tools and interfaces were used during development:
 
 ### Phase 1 & 2 Foundations
 - **Foundational Infrastructure**: Package layout (`src/datagen`), YAML configuration parsing with schema validation (`src/datagen/config.py`), fixed foreign exchange engine with high-precision Decimal arithmetic (`src/datagen/fx.py`), and centralized deterministic ID generator (`src/datagen/ids.py`).
-- **Normalized SQLite Schema**: Complete 19-table 3NF relational DDL with compound foreign keys, unique indexes, and domain check constraints (`data/sql/schema.sql`).
+- **Normalized SQLite Schema**: Complete 19-table 3NF relational DDL with compound foreign keys, unique indexes, and domain check constraints (`output/sql/schema.sql`).
 - **Master Data Generation (`src/datagen/masters.py`)**: Acyclic hierarchical reporting tree (DAG) for requesters, department cost centers, budget allocations, and synthetic supplier profiles.
 - **Purchase Requisitions (`src/datagen/requests.py`)**: Category-specific log-normal pricing across 10 procurement categories, 2026 calendar seasonality curves, and strict PR total estimate derivations.
 

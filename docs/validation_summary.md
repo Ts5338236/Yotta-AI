@@ -2,8 +2,8 @@
 
 **Validation Mode**: `clean`  
 **Overall Status**: `PASS`  
-**Total Checks Executed**: 10,830  
-**Passed Checks**: 10,830  
+**Total Checks Executed**: 111,827  
+**Passed Checks**: 111,827  
 **Failed Checks**: 0  
 **Warnings**: 0  
 
@@ -13,13 +13,13 @@
 
 | Category | Total Checks | Passed | Failed | Warnings | Status |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| `APPROVALS` | 195 | 195 | 0 | 0 | **PASSED** |
-| `BUDGET` | 40 | 40 | 0 | 0 | **PASSED** |
-| `DATES` | 739 | 739 | 0 | 0 | **PASSED** |
-| `FINANCIAL` | 1,871 | 1,871 | 0 | 0 | **PASSED** |
-| `FOREIGN_KEYS` | 3,588 | 3,588 | 0 | 0 | **PASSED** |
-| `LIFECYCLE` | 1,343 | 1,343 | 0 | 0 | **PASSED** |
-| `PRIMARY_KEYS` | 3,054 | 3,054 | 0 | 0 | **PASSED** |
+| `APPROVALS` | 1,990 | 1,990 | 0 | 0 | **PASSED** |
+| `BUDGET` | 48 | 48 | 0 | 0 | **PASSED** |
+| `DATES` | 7,520 | 7,520 | 0 | 0 | **PASSED** |
+| `FINANCIAL` | 19,334 | 19,334 | 0 | 0 | **PASSED** |
+| `FOREIGN_KEYS` | 37,434 | 37,434 | 0 | 0 | **PASSED** |
+| `LIFECYCLE` | 14,032 | 14,032 | 0 | 0 | **PASSED** |
+| `PRIMARY_KEYS` | 31,469 | 31,469 | 0 | 0 | **PASSED** |
 
 ---
 
@@ -27,24 +27,24 @@
 
 | Entity Table | Record Count |
 | :--- | :---: |
-| `approvals` | 97 |
-| `approvers` | 22 |
-| `budget_events` | 390 |
-| `budgets` | 10 |
-| `deliveries` | 101 |
-| `departments` | 10 |
-| `exception_logs` | 53 |
-| `purchase_order_lines` | 188 |
-| `purchase_orders` | 93 |
-| `purchase_requests` | 115 |
-| `quote_lines` | 414 |
-| `request_lines` | 226 |
-| `requesters` | 30 |
-| `rfq_supplier_invites` | 183 |
-| `rfqs` | 50 |
-| `status_events` | 930 |
-| `supplier_quotes` | 183 |
-| `suppliers` | 12 |
+| `approvals` | 1,023 |
+| `approvers` | 26 |
+| `budget_events` | 3,970 |
+| `budgets` | 12 |
+| `deliveries` | 1,048 |
+| `departments` | 12 |
+| `exception_logs` | 591 |
+| `purchase_order_lines` | 2,051 |
+| `purchase_orders` | 970 |
+| `purchase_requests` | 1,200 |
+| `quote_lines` | 4,497 |
+| `request_lines` | 2,518 |
+| `requesters` | 300 |
+| `rfq_supplier_invites` | 1,779 |
+| `rfqs` | 500 |
+| `status_events` | 9,664 |
+| `supplier_quotes` | 1,779 |
+| `suppliers` | 120 |
 
 ---
 

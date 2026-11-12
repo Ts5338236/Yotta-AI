@@ -158,7 +158,7 @@ Export verification executed via `src/validate/export_checks.py`:
    - 18 relational JSON files + `metadata.json` validated.
    - Standard JSON structure, ISO 8601 timestamps, row counts matching CSV tables 1:1.
 3. **SQLite Database (`procurement.db`)**:
-   - Schema created from canonical DDL (`data/sql/schema.sql`).
+   - Schema created from canonical DDL (`output/sql/schema.sql`).
    - `PRAGMA integrity_check` $\rightarrow$ `ok`.
    - `PRAGMA foreign_key_check` $\rightarrow$ `0 violations`.
 4. **DDL Schema (`schema.sql`)**:

@@ -126,7 +126,7 @@ The system manages 17 operational tables mapped to SQLite tables, CSV files, and
   - `PRAGMA foreign_keys = ON;` (Mandatory before all operations).
   - `PRAGMA synchronous = NORMAL;`
 - **Transactions**: Populated using an atomic transaction wrapper. On any failure, full rollback is triggered.
-- **Indices**: All foreign keys and high-frequency join columns indexed per `data/sql/schema.sql`.
+- **Indices**: All foreign keys and high-frequency join columns indexed per `output/sql/schema.sql`.
 
 ### 4.4 SQL DDL & Seed (`sql/schema.sql` & `sql/seed.sql`)
 - **Schema**: Canonical DDL statements defining tables, column types, constraints, and composite indices.

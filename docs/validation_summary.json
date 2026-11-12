@@ -2,76 +2,76 @@
   "status": "PASS",
   "mode": "clean",
   "summary": {
-    "total_checks": 10830,
-    "passed": 10830,
+    "total_checks": 111827,
+    "passed": 111827,
     "failed": 0,
     "warnings": 0
   },
   "categories": {
     "PRIMARY_KEYS": {
-      "total": 3054,
-      "passed": 3054,
+      "total": 31469,
+      "passed": 31469,
       "failed": 0,
       "warnings": 0
     },
     "FOREIGN_KEYS": {
-      "total": 3588,
-      "passed": 3588,
+      "total": 37434,
+      "passed": 37434,
       "failed": 0,
       "warnings": 0
     },
     "FINANCIAL": {
-      "total": 1871,
-      "passed": 1871,
+      "total": 19334,
+      "passed": 19334,
       "failed": 0,
       "warnings": 0
     },
     "LIFECYCLE": {
-      "total": 1343,
-      "passed": 1343,
+      "total": 14032,
+      "passed": 14032,
       "failed": 0,
       "warnings": 0
     },
     "DATES": {
-      "total": 739,
-      "passed": 739,
+      "total": 7520,
+      "passed": 7520,
       "failed": 0,
       "warnings": 0
     },
     "APPROVALS": {
-      "total": 195,
-      "passed": 195,
+      "total": 1990,
+      "passed": 1990,
       "failed": 0,
       "warnings": 0
     },
     "BUDGET": {
-      "total": 40,
-      "passed": 40,
+      "total": 48,
+      "passed": 48,
       "failed": 0,
       "warnings": 0
     }
   },
   "entities": {
-    "departments": 10,
-    "budgets": 10,
-    "requesters": 30,
-    "suppliers": 12,
-    "approvers": 22,
-    "purchase_requests": 115,
-    "request_lines": 226,
-    "approvals": 97,
-    "rfqs": 50,
-    "rfq_supplier_invites": 183,
-    "supplier_quotes": 183,
-    "quote_lines": 414,
-    "purchase_orders": 93,
-    "purchase_order_lines": 188,
-    "deliveries": 101,
-    "budget_events": 390,
-    "status_events": 930,
-    "exception_logs": 53
+    "departments": 12,
+    "budgets": 12,
+    "requesters": 300,
+    "suppliers": 120,
+    "approvers": 26,
+    "purchase_requests": 1200,
+    "request_lines": 2518,
+    "approvals": 1023,
+    "rfqs": 500,
+    "rfq_supplier_invites": 1779,
+    "supplier_quotes": 1779,
+    "quote_lines": 4497,
+    "purchase_orders": 970,
+    "purchase_order_lines": 2051,
+    "deliveries": 1048,
+    "budget_events": 3970,
+    "status_events": 9664,
+    "exception_logs": 591
   },
-  "checks_count": 10830,
+  "checks_count": 111827,
   "failures": [],
   "warnings": []
 }

@@ -14,7 +14,7 @@ The platform incorporates a controlled anomaly injection and independent auditin
 
 ### Core Governance Principles:
 1. **Preservation of Baseline Integrity**: The base generation engine produces a pristine, 100% compliant dataset. Anomalies are injected through targeted mutations on cloned candidate records without corrupting unrelated baseline transactions.
-2. **Quarantined Ground Truth**: Ground truth labels (`ANOM-######`) are strictly segregated from operational tables (`data/csv/` and `data/json/`) to prevent target leakage into downstream ML models.
+2. **Quarantined Ground Truth**: Ground truth labels (`ANOM-######`) are strictly segregated from operational tables (`output/csv/` and `output/json/`) to prevent target leakage into downstream ML models.
 3. **Discretion Between Business Exceptions and Anomalies**:
    - **Legitimate Exceptions** (Logged in `exception_logs`): Natural PR rejections, authorized sole-source contracts, and partial shipment fulfillments.
    - **Invalid Anomalies** (Logged in `ground_truth`): Unauthorized POs, expired quote awards, inactive supplier usage, unbudgeted overruns, unapproved duplicate requisitions, and currency mismatches.
@@ -80,7 +80,7 @@ Ground truth records are persisted strictly to dedicated manifests (`data/ground
 ```
 
 ### Storage Quarantine Verification:
-- `validate_ground_truth_isolation()` verifies that ground truth files are stored in `data/ground_truth/` and root `data/`, and are completely absent from `data/csv/` and `data/json/`.
+- `validate_ground_truth_isolation()` verifies that ground truth files are stored in `output/ground_truth/` and root `output/`, and are completely absent from `output/csv/` and `output/json/`.
 - No ground truth columns (`anomaly_id`, `expected_decision`, etc.) pollute the 18 operational relational database tables.
 
 ---

@@ -20,7 +20,7 @@ All foundational work from Phases 1–5 has been audited. Phases 6 and 7 are ful
 
 | Subsystem / Phase | Core Modules | Status | Verification Summary |
 | :--- | :--- | :---: | :--- |
-| **Phase 1: Foundation & Architecture** | `src/datagen/config.py`, `src/datagen/ids.py`, `src/datagen/fx.py`, `data/sql/schema.sql` | **VERIFIED** | Strict YAML validation, deterministic monotonic ID generation, fixed Decimal FX rates, and 3NF SQLite schema DDL. |
+| **Phase 1: Foundation & Architecture** | `src/datagen/config.py`, `src/datagen/ids.py`, `src/datagen/fx.py`, `output/sql/schema.sql` | **VERIFIED** | Strict YAML validation, deterministic monotonic ID generation, fixed Decimal FX rates, and 3NF SQLite schema DDL. |
 | **Phase 2: Master Data & Requisitions** | `src/datagen/masters.py`, `src/datagen/requests.py` | **VERIFIED** | Acyclic requester DAG, department cost centers, budgets, suppliers, and itemized PRs with category-based log-normal pricing and 2026 seasonality. |
 | **Phase 3: Clean Procurement Workflow** | `src/datagen/approvals.py`, `src/datagen/sourcing.py`, `src/datagen/orders.py`, `src/datagen/delivery.py`, `src/datagen/budget.py`, `src/datagen/events.py` | **VERIFIED** | Tiered approvals ($2k, $25k, >$25k), RFQ issuance (3–5 quotes), landed costs, multicriteria scoring (60/25/15), quote awards, POs, deliveries (including partials), double-entry budget events, and status audit trail. |
 | **Phase 4: Derived Fields & Comprehensive Validation** | `src/datagen/derive.py`, `src/validate/checks.py`, `src/validate/models.py` | **VERIFIED** | Pure functional recalculation engine and autonomous 7-domain validator auditing primary keys, foreign keys, financials, dates, lifecycles, business rules, and budgets. |
@@ -57,12 +57,12 @@ All foundational work from Phases 1–5 has been audited. Phases 6 and 7 are ful
    - `execute_sql_file()` for atomic execution of SQL seed scripts.
 
 2. **Multi-Format Export Engine (`src/datagen/export.py`)**:
-   - RFC 4180 CSV export for all 17 operational tables (`data/csv/` and `output/csv/`).
-   - UTF-8 JSON export for all 17 operational tables + `metadata.json` (`data/json/` and `output/json/`).
-   - SQLite DB export (`data/database/procurement.db` and `output/database/procurement.db`).
-   - Canonical DDL schema export (`data/sql/schema.sql` and `output/sql/schema.sql`).
-   - Topologically ordered SQL seed script (`data/sql/seed.sql` and `output/sql/seed.sql`).
-   - Strictly isolated ground truth export (`data/ground_truth/` and `output/ground_truth/`).
+   - RFC 4180 CSV export for all 18 operational tables (`output/csv/`).
+   - UTF-8 JSON export for all 18 operational tables + `metadata.json` (`output/json/`).
+   - SQLite DB export (`output/database/procurement.db`).
+   - Canonical DDL schema export (`output/sql/schema.sql`).
+   - Topologically ordered SQL seed script (`output/sql/seed.sql`).
+   - Strictly isolated ground truth export (`output/ground_truth/`).
    - Cryptographic source manifest (`source_manifest.json`) recording SHA-256 hashes and 100% synthetic provenance.
 
 3. **Multi-Format Export Integrity Auditor (`src/validate/export_checks.py`)**:

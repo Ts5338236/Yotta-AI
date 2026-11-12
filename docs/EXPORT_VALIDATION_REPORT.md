@@ -10,11 +10,11 @@
 ## 1. Executive Summary & Deliverables Verification
 
 All export operations have been executed and verified in disk storage. The export engine fulfills every deliverable specification:
-- **CSV Export**: 18 normalized tables exported to `data/csv/` (starter) and `output/csv/` (full).
-- **JSON Export**: 18 normalized tables + `metadata.json` exported to `data/json/` and `output/json/`.
-- **Ground Truth**: Quarantined manifests generated as `data/ground_truth.csv` and `data/ground_truth.json` (7 anomalies in starter, 35 in full).
-- **SQLite Database**: Production relational database generated as `data/sql/yotta_ai.db` and `data/database/procurement.db` with strict foreign keys, check constraints, and unique indices.
-- **SQL Scripts**: Canonical DDL exported as `data/sql/schema.sql` and standalone populated replay seed exported as `data/sql/seed.sql`.
+- **CSV Export**: 18 normalized tables exported to `output/csv/`.
+- **JSON Export**: 18 normalized tables + `metadata.json` exported to `output/json/`.
+- **Ground Truth**: Quarantined manifests generated as `output/ground_truth.csv` and `output/ground_truth.json` (42 anomalies).
+- **SQLite Database**: Production relational database generated as `output/sql/yotta_ai.db` and `output/database/procurement.db` with strict foreign keys, check constraints, and unique indices.
+- **SQL Scripts**: Canonical DDL exported as `output/sql/schema.sql` and standalone populated replay seed exported as `output/sql/seed.sql`.
 - **Cross-Format Parity**: **100.0% row-for-row reconciliation** across in-memory source datasets, CSV, JSON, and SQLite tables.
 - **Relational Integrity**: **0 Foreign Key violations** (`PRAGMA foreign_key_check` returns 0); `PRAGMA integrity_check` returns `ok`.
 
@@ -24,16 +24,13 @@ All export operations have been executed and verified in disk storage. The expor
 
 | Output Deliverable | Target Location | File Format | Disk Verification | Status |
 |---|---|:---:|:---:|:---:|
-| **Operational CSVs** | `data/csv/*.csv` | RFC 4180 CSV (UTF-8) | 18 tables present | **VERIFIED** |
-| **Operational JSONs**| `data/json/*.json` | Formatted JSON (UTF-8) | 19 files present (incl. metadata) | **VERIFIED** |
-| **Ground Truth CSV** | `data/ground_truth.csv` | Quarantined CSV | 7 rows (starter) / 35 rows (full) | **VERIFIED** |
-| **Ground Truth JSON**| `data/ground_truth.json` | Quarantined JSON | 7 rows (starter) / 35 rows (full) | **VERIFIED** |
-| **SQLite Database**  | `data/sql/yotta_ai.db` | SQLite 3 (`3NF`) | `integrity_check = ok`, 0 FK errs | **VERIFIED** |
-| **Canonical DDL**    | `data/sql/schema.sql` | SQL DDL Script | 19 tables, indexes, constraints | **VERIFIED** |
-| **Populated Seed**   | `data/sql/seed.sql` | SQL Replay Script | Topological `INSERT` batches | **VERIFIED** |
-| **Full Scale CSVs**  | `output/csv/*.csv` | RFC 4180 CSV (UTF-8) | 18 tables present | **VERIFIED** |
-| **Full Scale JSONs** | `output/json/*.json` | Formatted JSON (UTF-8) | 19 files present | **VERIFIED** |
-| **Full Scale SQLite**| `output/sql/yotta_ai.db`| SQLite 3 (`3NF`) | `integrity_check = ok`, 0 FK errs | **VERIFIED** |
+| **Operational CSVs** | `output/csv/*.csv` | RFC 4180 CSV (UTF-8) | 18 tables present | **VERIFIED** |
+| **Operational JSONs**| `output/json/*.json` | Formatted JSON (UTF-8) | 19 files present (incl. metadata) | **VERIFIED** |
+| **Ground Truth CSV** | `output/ground_truth.csv` | Quarantined CSV | 42 rows | **VERIFIED** |
+| **Ground Truth JSON**| `output/ground_truth.json` | Quarantined JSON | 42 rows | **VERIFIED** |
+| **SQLite Database**  | `output/sql/yotta_ai.db` | SQLite 3 (`3NF`) | `integrity_check = ok`, 0 FK errs | **VERIFIED** |
+| **Canonical DDL**    | `output/sql/schema.sql` | SQL DDL Script | 19 tables, indexes, constraints | **VERIFIED** |
+| **Populated Seed**   | `output/sql/seed.sql` | SQL Replay Script | Topological `INSERT` batches | **VERIFIED** |
 
 ---
 
@@ -120,9 +117,9 @@ The table below reports actual row counts queried across source in-memory record
 
 To prevent synthetic labels from leaking into downstream machine learning feature sets:
 1. Ground truth records are written strictly to:
-   - `data/ground_truth.csv` and `data/ground_truth.json`
-   - `data/ground_truth/ground_truth.csv` and `data/ground_truth/ground_truth.json`
-2. Ground truth is **strictly excluded** from operational directories `data/csv/` and `data/json/`.
+   - `output/ground_truth.csv` and `output/ground_truth.json`
+   - `output/ground_truth/ground_truth.csv` and `output/ground_truth/ground_truth.json`
+2. Ground truth is **strictly excluded** from operational directories `output/csv/` and `output/json/`.
 3. Anomaly audit attributes (`anomaly_id`, `issue_type`, `expected_decision`, `reason`) do not pollute operational database tables.
 4. Automated check `validate_ground_truth_isolation()` returns **PASS**.
 

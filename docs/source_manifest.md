@@ -42,8 +42,8 @@
 ## 2. Configuration & Relational Schemas
 
 - **`config/default.yaml`**: Centralized configuration specifying volumes, thresholds, scoring weights, FX rates, pricing bounds, and seasonality weights.
-- **`data/sql/schema.sql`**: Canonical 19-table DDL relational schema with primary keys, foreign keys (`ON DELETE RESTRICT`), unique constraints, check constraints, and performance indexes.
-- **`data/sql/seed.sql`**: Self-contained topological SQL seed executing with zero foreign key violations.
+- **`output/sql/schema.sql`**: Canonical 19-table DDL relational schema with primary keys, foreign keys (`ON DELETE RESTRICT`), unique constraints, check constraints, and performance indexes.
+- **`output/sql/seed.sql`**: Self-contained topological SQL seed executing with zero foreign key violations.
 
 ---
 

@@ -2,8 +2,8 @@
 
 **Project**: YottaFlex Procure-to-Pay Synthetic Data Generator  
 **Role**: Senior Database Architect & Data Engineer  
-**Database Files**: `data/database/procurement.db` and `data/sql/yotta_ai.db` (also in `output/`)  
-**DDL Schema**: `data/sql/schema.sql` (19 normalized relational tables)  
+**Database Files**: `output/database/procurement.db` and `output/sql/yotta_ai.db`  
+**DDL Schema**: `output/sql/schema.sql` (19 normalized relational tables)  
 **Database Engine**: SQLite 3 with `PRAGMA foreign_keys = ON;`  
 **Integrity Status**: **100% PASS** (0 Foreign Key Violations, 0 Orphan Records, 0 Schema Violations)
 
@@ -51,7 +51,7 @@ The database defines 19 normalized tables organized into Core and Supporting dom
 
 ## 3. Relational Cardinality & Integrity Verification
 
-Every relationship specified in the architecture has been verified using live SQL join queries across physical databases `data/database/procurement.db` and `output/database/procurement.db`:
+Every relationship specified in the architecture has been verified using live SQL join queries across physical database `output/database/procurement.db`:
 
 ```
 ┌─────────────────┐       1:N       ┌─────────────────┐       1:N       ┌─────────────────────┐
