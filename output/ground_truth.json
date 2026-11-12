@@ -3,28 +3,28 @@
     "anomaly_id": "ANOM-000001",
     "issue_type": "po_without_approval",
     "entity": "purchase_orders",
-    "record_id": "PO-2026-000267",
+    "record_id": "PO-2026-000575",
     "expected_decision": "REJECT",
-    "reason": "Purchase order PO-2026-000267 issued for requisition PR-2026-001151 lacking required approval records",
-    "metadata": "{\"request_id\": \"PR-2026-001151\"}"
+    "reason": "Purchase order PO-2026-000575 issued for requisition PR-2026-000042 lacking required approval records",
+    "metadata": "{\"request_id\": \"PR-2026-000042\"}"
   },
   {
     "anomaly_id": "ANOM-000002",
     "issue_type": "po_without_approval",
     "entity": "purchase_orders",
-    "record_id": "PO-2026-000562",
+    "record_id": "PO-2026-000650",
     "expected_decision": "REJECT",
-    "reason": "Purchase order PO-2026-000562 issued for requisition PR-2026-000221 lacking required approval records",
-    "metadata": "{\"request_id\": \"PR-2026-000221\"}"
+    "reason": "Purchase order PO-2026-000650 issued for requisition PR-2026-000032 lacking required approval records",
+    "metadata": "{\"request_id\": \"PR-2026-000032\"}"
   },
   {
     "anomaly_id": "ANOM-000003",
     "issue_type": "po_without_approval",
     "entity": "purchase_orders",
-    "record_id": "PO-2026-000745",
+    "record_id": "PO-2026-000560",
     "expected_decision": "REJECT",
-    "reason": "Purchase order PO-2026-000745 issued for requisition PR-2026-001112 lacking required approval records",
-    "metadata": "{\"request_id\": \"PR-2026-001112\"}"
+    "reason": "Purchase order PO-2026-000560 issued for requisition PR-2026-001139 lacking required approval records",
+    "metadata": "{\"request_id\": \"PR-2026-001139\"}"
   },
   {
     "anomaly_id": "ANOM-000004",
@@ -39,46 +39,46 @@
     "anomaly_id": "ANOM-000005",
     "issue_type": "po_without_approval",
     "entity": "purchase_orders",
-    "record_id": "PO-2026-000560",
+    "record_id": "PO-2026-000562",
     "expected_decision": "REJECT",
-    "reason": "Purchase order PO-2026-000560 issued for requisition PR-2026-001139 lacking required approval records",
-    "metadata": "{\"request_id\": \"PR-2026-001139\"}"
+    "reason": "Purchase order PO-2026-000562 issued for requisition PR-2026-000221 lacking required approval records",
+    "metadata": "{\"request_id\": \"PR-2026-000221\"}"
   },
   {
     "anomaly_id": "ANOM-000006",
-    "issue_type": "expired_quote_before_award",
-    "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0002-2026-001330",
-    "expected_decision": "DISQUALIFY",
-    "reason": "Quote QUO-SUP-C-0002-2026-001330 validity expired on 2026-09-06 prior to award on 2026-09-11",
-    "metadata": "{\"award_date\": \"2026-09-11\", \"expired_date\": \"2026-09-06\"}"
+    "issue_type": "po_without_approval",
+    "entity": "purchase_orders",
+    "record_id": "PO-2026-000435",
+    "expected_decision": "REJECT",
+    "reason": "Purchase order PO-2026-000435 issued for requisition PR-2026-000402 lacking required approval records",
+    "metadata": "{\"request_id\": \"PR-2026-000402\"}"
   },
   {
     "anomaly_id": "ANOM-000007",
     "issue_type": "expired_quote_before_award",
     "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0116-2026-000492",
+    "record_id": "QUO-SUP-C-0104-2026-000144",
     "expected_decision": "DISQUALIFY",
-    "reason": "Quote QUO-SUP-C-0116-2026-000492 validity expired on 2026-04-10 prior to award on 2026-04-14",
-    "metadata": "{\"award_date\": \"2026-04-14\", \"expired_date\": \"2026-04-10\"}"
+    "reason": "Quote QUO-SUP-C-0104-2026-000144 validity expired on 2026-02-03 prior to award on 2026-02-09",
+    "metadata": "{\"award_date\": \"2026-02-09\", \"expired_date\": \"2026-02-03\"}"
   },
   {
     "anomaly_id": "ANOM-000008",
     "issue_type": "expired_quote_before_award",
     "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0044-2026-000252",
+    "record_id": "QUO-SUP-C-0091-2026-000812",
     "expected_decision": "DISQUALIFY",
-    "reason": "Quote QUO-SUP-C-0044-2026-000252 validity expired on 2026-03-01 prior to award on 2026-03-07",
-    "metadata": "{\"award_date\": \"2026-03-07\", \"expired_date\": \"2026-03-01\"}"
+    "reason": "Quote QUO-SUP-C-0091-2026-000812 validity expired on 2026-06-10 prior to award on 2026-06-13",
+    "metadata": "{\"award_date\": \"2026-06-13\", \"expired_date\": \"2026-06-10\"}"
   },
   {
     "anomaly_id": "ANOM-000009",
     "issue_type": "expired_quote_before_award",
     "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0091-2026-000547",
+    "record_id": "QUO-SUP-C-0109-2026-001186",
     "expected_decision": "DISQUALIFY",
-    "reason": "Quote QUO-SUP-C-0091-2026-000547 validity expired on 2026-04-21 prior to award on 2026-04-27",
-    "metadata": "{\"award_date\": \"2026-04-27\", \"expired_date\": \"2026-04-21\"}"
+    "reason": "Quote QUO-SUP-C-0109-2026-001186 validity expired on 2026-08-12 prior to award on 2026-08-16",
+    "metadata": "{\"award_date\": \"2026-08-16\", \"expired_date\": \"2026-08-12\"}"
   },
   {
     "anomaly_id": "ANOM-000010",
@@ -86,74 +86,101 @@
     "entity": "supplier_quotes",
     "record_id": "QUO-SUP-C-0009-2026-000014",
     "expected_decision": "DISQUALIFY",
-    "reason": "Quote QUO-SUP-C-0009-2026-000014 validity expired on 2026-01-16 prior to award on 2026-01-22",
-    "metadata": "{\"award_date\": \"2026-01-22\", \"expired_date\": \"2026-01-16\"}"
+    "reason": "Quote QUO-SUP-C-0009-2026-000014 validity expired on 2026-01-18 prior to award on 2026-01-22",
+    "metadata": "{\"award_date\": \"2026-01-22\", \"expired_date\": \"2026-01-18\"}"
   },
   {
     "anomaly_id": "ANOM-000011",
-    "issue_type": "non_cheapest_quote_without_rationale",
+    "issue_type": "expired_quote_before_award",
     "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0069-2026-000119",
-    "expected_decision": "JUSTIFY_OR_REVERT",
-    "reason": "Quotation QUO-SUP-C-0069-2026-000119 awarded at landed cost $25,417.09 over cheaper quote QUO-SUP-C-0038-2026-000120 ($22,732.03) without documented justification rationale",
-    "metadata": "{\"rfq_id\": \"RFQ-2026-000034\", \"awarded_quote_id\": \"QUO-SUP-C-0069-2026-000119\", \"cheapest_quote_id\": \"QUO-SUP-C-0038-2026-000120\"}"
+    "record_id": "QUO-SUP-C-0079-2026-001326",
+    "expected_decision": "DISQUALIFY",
+    "reason": "Quote QUO-SUP-C-0079-2026-001326 validity expired on 2026-08-31 prior to award on 2026-09-07",
+    "metadata": "{\"award_date\": \"2026-09-07\", \"expired_date\": \"2026-08-31\"}"
   },
   {
     "anomaly_id": "ANOM-000012",
-    "issue_type": "non_cheapest_quote_without_rationale",
+    "issue_type": "expired_quote_before_award",
     "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0059-2026-000560",
-    "expected_decision": "JUSTIFY_OR_REVERT",
-    "reason": "Quotation QUO-SUP-C-0059-2026-000560 awarded at landed cost $14,139.78 over cheaper quote QUO-SUP-C-0011-2026-000561 ($12,640.12) without documented justification rationale",
-    "metadata": "{\"rfq_id\": \"RFQ-2026-000159\", \"awarded_quote_id\": \"QUO-SUP-C-0059-2026-000560\", \"cheapest_quote_id\": \"QUO-SUP-C-0011-2026-000561\"}"
+    "record_id": "QUO-SUP-C-0011-2026-000488",
+    "expected_decision": "DISQUALIFY",
+    "reason": "Quote QUO-SUP-C-0011-2026-000488 validity expired on 2026-04-10 prior to award on 2026-04-16",
+    "metadata": "{\"award_date\": \"2026-04-16\", \"expired_date\": \"2026-04-10\"}"
   },
   {
     "anomaly_id": "ANOM-000013",
     "issue_type": "non_cheapest_quote_without_rationale",
     "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0003-2026-000487",
+    "record_id": "QUO-SUP-C-0073-2026-001234",
     "expected_decision": "JUSTIFY_OR_REVERT",
-    "reason": "Quotation QUO-SUP-C-0003-2026-000487 awarded at landed cost $5,190.87 over cheaper quote QUO-SUP-C-0011-2026-000488 ($4,717.36) without documented justification rationale",
-    "metadata": "{\"rfq_id\": \"RFQ-2026-000137\", \"awarded_quote_id\": \"QUO-SUP-C-0003-2026-000487\", \"cheapest_quote_id\": \"QUO-SUP-C-0011-2026-000488\"}"
+    "reason": "Quotation QUO-SUP-C-0073-2026-001234 awarded at landed cost $2,529.03 over cheaper quote QUO-SUP-C-0091-2026-001237 ($2,175.28) without documented justification rationale",
+    "metadata": "{\"rfq_id\": \"RFQ-2026-000348\", \"awarded_quote_id\": \"QUO-SUP-C-0073-2026-001234\", \"cheapest_quote_id\": \"QUO-SUP-C-0091-2026-001237\"}"
   },
   {
     "anomaly_id": "ANOM-000014",
     "issue_type": "non_cheapest_quote_without_rationale",
     "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0071-2026-001325",
+    "record_id": "QUO-SUP-C-0039-2026-000694",
     "expected_decision": "JUSTIFY_OR_REVERT",
-    "reason": "Quotation QUO-SUP-C-0071-2026-001325 awarded at landed cost $5,373.38 over cheaper quote QUO-SUP-C-0079-2026-001326 ($5,127.75) without documented justification rationale",
-    "metadata": "{\"rfq_id\": \"RFQ-2026-000371\", \"awarded_quote_id\": \"QUO-SUP-C-0071-2026-001325\", \"cheapest_quote_id\": \"QUO-SUP-C-0079-2026-001326\"}"
+    "reason": "Quotation QUO-SUP-C-0039-2026-000694 awarded at landed cost $17,953.03 over cheaper quote QUO-SUP-C-0053-2026-000691 ($16,587.26) without documented justification rationale",
+    "metadata": "{\"rfq_id\": \"RFQ-2026-000196\", \"awarded_quote_id\": \"QUO-SUP-C-0039-2026-000694\", \"cheapest_quote_id\": \"QUO-SUP-C-0053-2026-000691\"}"
   },
   {
     "anomaly_id": "ANOM-000015",
     "issue_type": "non_cheapest_quote_without_rationale",
     "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0020-2026-001747",
+    "record_id": "QUO-SUP-C-0044-2026-001103",
     "expected_decision": "JUSTIFY_OR_REVERT",
-    "reason": "Quotation QUO-SUP-C-0020-2026-001747 awarded at landed cost $19,479.82 over cheaper quote QUO-SUP-C-0118-2026-001748 ($18,435.34) without documented justification rationale",
-    "metadata": "{\"rfq_id\": \"RFQ-2026-000491\", \"awarded_quote_id\": \"QUO-SUP-C-0020-2026-001747\", \"cheapest_quote_id\": \"QUO-SUP-C-0118-2026-001748\"}"
+    "reason": "Quotation QUO-SUP-C-0044-2026-001103 awarded at landed cost $2,454.21 over cheaper quote QUO-SUP-C-0054-2026-001105 ($2,136.54) without documented justification rationale",
+    "metadata": "{\"rfq_id\": \"RFQ-2026-000313\", \"awarded_quote_id\": \"QUO-SUP-C-0044-2026-001103\", \"cheapest_quote_id\": \"QUO-SUP-C-0054-2026-001105\"}"
   },
   {
     "anomaly_id": "ANOM-000016",
-    "issue_type": "inactive_supplier_used",
-    "entity": "purchase_orders",
-    "record_id": "PO-2026-000174",
-    "expected_decision": "BLOCK",
-    "reason": "Purchase order PO-2026-000174 issued to inactive/debarred vendor SUP-0121",
-    "metadata": "{\"supplier_id\": \"SUP-0121\"}"
+    "issue_type": "non_cheapest_quote_without_rationale",
+    "entity": "supplier_quotes",
+    "record_id": "QUO-SUP-C-0004-2026-001171",
+    "expected_decision": "JUSTIFY_OR_REVERT",
+    "reason": "Quotation QUO-SUP-C-0004-2026-001171 awarded at landed cost $3,089.69 over cheaper quote QUO-SUP-C-0106-2026-001173 ($2,743.22) without documented justification rationale",
+    "metadata": "{\"rfq_id\": \"RFQ-2026-000330\", \"awarded_quote_id\": \"QUO-SUP-C-0004-2026-001171\", \"cheapest_quote_id\": \"QUO-SUP-C-0106-2026-001173\"}"
   },
   {
     "anomaly_id": "ANOM-000017",
-    "issue_type": "inactive_supplier_used",
-    "entity": "purchase_orders",
-    "record_id": "PO-2026-000235",
-    "expected_decision": "BLOCK",
-    "reason": "Purchase order PO-2026-000235 issued to inactive/debarred vendor SUP-0122",
-    "metadata": "{\"supplier_id\": \"SUP-0122\"}"
+    "issue_type": "non_cheapest_quote_without_rationale",
+    "entity": "supplier_quotes",
+    "record_id": "QUO-SUP-C-0041-2026-001665",
+    "expected_decision": "JUSTIFY_OR_REVERT",
+    "reason": "Quotation QUO-SUP-C-0041-2026-001665 awarded at landed cost $2,350.83 over cheaper quote QUO-SUP-C-0035-2026-001668 ($2,137.71) without documented justification rationale",
+    "metadata": "{\"rfq_id\": \"RFQ-2026-000468\", \"awarded_quote_id\": \"QUO-SUP-C-0041-2026-001665\", \"cheapest_quote_id\": \"QUO-SUP-C-0035-2026-001668\"}"
   },
   {
     "anomaly_id": "ANOM-000018",
+    "issue_type": "non_cheapest_quote_without_rationale",
+    "entity": "supplier_quotes",
+    "record_id": "QUO-SUP-C-0049-2026-001749",
+    "expected_decision": "JUSTIFY_OR_REVERT",
+    "reason": "Quotation QUO-SUP-C-0049-2026-001749 awarded at landed cost $14,704.26 over cheaper quote QUO-SUP-C-0013-2026-001750 ($12,588.30) without documented justification rationale",
+    "metadata": "{\"rfq_id\": \"RFQ-2026-000492\", \"awarded_quote_id\": \"QUO-SUP-C-0049-2026-001749\", \"cheapest_quote_id\": \"QUO-SUP-C-0013-2026-001750\"}"
+  },
+  {
+    "anomaly_id": "ANOM-000019",
+    "issue_type": "inactive_supplier_used",
+    "entity": "purchase_orders",
+    "record_id": "PO-2026-000833",
+    "expected_decision": "BLOCK",
+    "reason": "Purchase order PO-2026-000833 issued to inactive/debarred vendor SUP-0121",
+    "metadata": "{\"supplier_id\": \"SUP-0121\"}"
+  },
+  {
+    "anomaly_id": "ANOM-000020",
+    "issue_type": "inactive_supplier_used",
+    "entity": "purchase_orders",
+    "record_id": "PO-2026-000069",
+    "expected_decision": "BLOCK",
+    "reason": "Purchase order PO-2026-000069 issued to inactive/debarred vendor SUP-0122",
+    "metadata": "{\"supplier_id\": \"SUP-0122\"}"
+  },
+  {
+    "anomaly_id": "ANOM-000021",
     "issue_type": "inactive_supplier_used",
     "entity": "purchase_orders",
     "record_id": "PO-2026-000067",
@@ -162,43 +189,43 @@
     "metadata": "{\"supplier_id\": \"SUP-0123\"}"
   },
   {
-    "anomaly_id": "ANOM-000019",
+    "anomaly_id": "ANOM-000022",
     "issue_type": "inactive_supplier_used",
     "entity": "purchase_orders",
-    "record_id": "PO-2026-000919",
+    "record_id": "PO-2026-000508",
     "expected_decision": "BLOCK",
-    "reason": "Purchase order PO-2026-000919 issued to inactive/debarred vendor SUP-0124",
+    "reason": "Purchase order PO-2026-000508 issued to inactive/debarred vendor SUP-0124",
     "metadata": "{\"supplier_id\": \"SUP-0124\"}"
   },
   {
-    "anomaly_id": "ANOM-000020",
+    "anomaly_id": "ANOM-000023",
     "issue_type": "inactive_supplier_used",
     "entity": "purchase_orders",
-    "record_id": "PO-2026-000921",
+    "record_id": "PO-2026-000270",
     "expected_decision": "BLOCK",
-    "reason": "Purchase order PO-2026-000921 issued to inactive/debarred vendor SUP-0125",
+    "reason": "Purchase order PO-2026-000270 issued to inactive/debarred vendor SUP-0125",
     "metadata": "{\"supplier_id\": \"SUP-0125\"}"
   },
   {
-    "anomaly_id": "ANOM-000021",
-    "issue_type": "budget_overrun",
-    "entity": "budgets",
-    "record_id": "BUD-0009",
-    "expected_decision": "REJECT",
-    "reason": "Department budget BUD-0009 total encumbrances ($258,860.63) exceed allocated budget limit ($155,316.37)",
-    "metadata": "{\"allocated_amount\": 15531637, \"encumbered_amount\": 25886063, \"deficit_cents\": 10354426}"
+    "anomaly_id": "ANOM-000024",
+    "issue_type": "inactive_supplier_used",
+    "entity": "purchase_orders",
+    "record_id": "PO-2026-000797",
+    "expected_decision": "BLOCK",
+    "reason": "Purchase order PO-2026-000797 issued to inactive/debarred vendor SUP-0126",
+    "metadata": "{\"supplier_id\": \"SUP-0126\"}"
   },
   {
-    "anomaly_id": "ANOM-000022",
+    "anomaly_id": "ANOM-000025",
     "issue_type": "budget_overrun",
     "entity": "budgets",
-    "record_id": "BUD-0010",
+    "record_id": "BUD-0001",
     "expected_decision": "REJECT",
-    "reason": "Department budget BUD-0010 total encumbrances ($66,840.11) exceed allocated budget limit ($40,104.06)",
-    "metadata": "{\"allocated_amount\": 4010406, \"encumbered_amount\": 6684011, \"deficit_cents\": 2673605}"
+    "reason": "Department budget BUD-0001 total encumbrances ($974,096.16) exceed allocated budget limit ($584,457.69)",
+    "metadata": "{\"allocated_amount\": 58445769, \"encumbered_amount\": 97409616, \"deficit_cents\": 38963847}"
   },
   {
-    "anomaly_id": "ANOM-000023",
+    "anomaly_id": "ANOM-000026",
     "issue_type": "budget_overrun",
     "entity": "budgets",
     "record_id": "BUD-0005",
@@ -207,7 +234,16 @@
     "metadata": "{\"allocated_amount\": 26644741, \"encumbered_amount\": 44407902, \"deficit_cents\": 17763161}"
   },
   {
-    "anomaly_id": "ANOM-000024",
+    "anomaly_id": "ANOM-000027",
+    "issue_type": "budget_overrun",
+    "entity": "budgets",
+    "record_id": "BUD-0007",
+    "expected_decision": "REJECT",
+    "reason": "Department budget BUD-0007 total encumbrances ($182,285.21) exceed allocated budget limit ($109,371.12)",
+    "metadata": "{\"allocated_amount\": 10937112, \"encumbered_amount\": 18228521, \"deficit_cents\": 7291409}"
+  },
+  {
+    "anomaly_id": "ANOM-000028",
     "issue_type": "budget_overrun",
     "entity": "budgets",
     "record_id": "BUD-0006",
@@ -216,102 +252,129 @@
     "metadata": "{\"allocated_amount\": 28521021, \"encumbered_amount\": 47535035, \"deficit_cents\": 19014014}"
   },
   {
-    "anomaly_id": "ANOM-000025",
+    "anomaly_id": "ANOM-000029",
     "issue_type": "budget_overrun",
     "entity": "budgets",
-    "record_id": "BUD-0004",
+    "record_id": "BUD-0003",
     "expected_decision": "REJECT",
-    "reason": "Department budget BUD-0004 total encumbrances ($447,892.71) exceed allocated budget limit ($268,735.62)",
-    "metadata": "{\"allocated_amount\": 26873562, \"encumbered_amount\": 44789271, \"deficit_cents\": 17915709}"
+    "reason": "Department budget BUD-0003 total encumbrances ($606,558.20) exceed allocated budget limit ($363,934.92)",
+    "metadata": "{\"allocated_amount\": 36393492, \"encumbered_amount\": 60655820, \"deficit_cents\": 24262328}"
   },
   {
-    "anomaly_id": "ANOM-000026",
+    "anomaly_id": "ANOM-000030",
+    "issue_type": "budget_overrun",
+    "entity": "budgets",
+    "record_id": "BUD-0011",
+    "expected_decision": "REJECT",
+    "reason": "Department budget BUD-0011 total encumbrances ($145,944.05) exceed allocated budget limit ($87,566.43)",
+    "metadata": "{\"allocated_amount\": 8756643, \"encumbered_amount\": 14594405, \"deficit_cents\": 5837762}"
+  },
+  {
+    "anomaly_id": "ANOM-000031",
     "issue_type": "duplicate_purchase_request",
     "entity": "purchase_requests",
     "record_id": "PR-2026-001201",
     "expected_decision": "FLAG",
-    "reason": "Duplicate requisition PR-2026-001201 submitted for identical items within short time window of original request PR-2026-000629",
-    "metadata": "{\"original_request_id\": \"PR-2026-000629\", \"duplicate_request_id\": \"PR-2026-001201\", \"requester_id\": \"REQ-0040\"}"
+    "reason": "Duplicate requisition PR-2026-001201 submitted for identical items within short time window of original request PR-2026-000803",
+    "metadata": "{\"original_request_id\": \"PR-2026-000803\", \"duplicate_request_id\": \"PR-2026-001201\", \"requester_id\": \"REQ-0289\"}"
   },
   {
-    "anomaly_id": "ANOM-000027",
+    "anomaly_id": "ANOM-000032",
     "issue_type": "duplicate_purchase_request",
     "entity": "purchase_requests",
     "record_id": "PR-2026-001202",
     "expected_decision": "FLAG",
-    "reason": "Duplicate requisition PR-2026-001202 submitted for identical items within short time window of original request PR-2026-000093",
-    "metadata": "{\"original_request_id\": \"PR-2026-000093\", \"duplicate_request_id\": \"PR-2026-001202\", \"requester_id\": \"REQ-0127\"}"
+    "reason": "Duplicate requisition PR-2026-001202 submitted for identical items within short time window of original request PR-2026-000456",
+    "metadata": "{\"original_request_id\": \"PR-2026-000456\", \"duplicate_request_id\": \"PR-2026-001202\", \"requester_id\": \"REQ-0183\"}"
   },
   {
-    "anomaly_id": "ANOM-000028",
+    "anomaly_id": "ANOM-000033",
     "issue_type": "duplicate_purchase_request",
     "entity": "purchase_requests",
     "record_id": "PR-2026-001203",
     "expected_decision": "FLAG",
-    "reason": "Duplicate requisition PR-2026-001203 submitted for identical items within short time window of original request PR-2026-000139",
-    "metadata": "{\"original_request_id\": \"PR-2026-000139\", \"duplicate_request_id\": \"PR-2026-001203\", \"requester_id\": \"REQ-0049\"}"
+    "reason": "Duplicate requisition PR-2026-001203 submitted for identical items within short time window of original request PR-2026-000307",
+    "metadata": "{\"original_request_id\": \"PR-2026-000307\", \"duplicate_request_id\": \"PR-2026-001203\", \"requester_id\": \"REQ-0071\"}"
   },
   {
-    "anomaly_id": "ANOM-000029",
+    "anomaly_id": "ANOM-000034",
     "issue_type": "duplicate_purchase_request",
     "entity": "purchase_requests",
     "record_id": "PR-2026-001204",
     "expected_decision": "FLAG",
-    "reason": "Duplicate requisition PR-2026-001204 submitted for identical items within short time window of original request PR-2026-000032",
-    "metadata": "{\"original_request_id\": \"PR-2026-000032\", \"duplicate_request_id\": \"PR-2026-001204\", \"requester_id\": \"REQ-0270\"}"
+    "reason": "Duplicate requisition PR-2026-001204 submitted for identical items within short time window of original request PR-2026-000246",
+    "metadata": "{\"original_request_id\": \"PR-2026-000246\", \"duplicate_request_id\": \"PR-2026-001204\", \"requester_id\": \"REQ-0216\"}"
   },
   {
-    "anomaly_id": "ANOM-000030",
+    "anomaly_id": "ANOM-000035",
     "issue_type": "duplicate_purchase_request",
     "entity": "purchase_requests",
     "record_id": "PR-2026-001205",
     "expected_decision": "FLAG",
-    "reason": "Duplicate requisition PR-2026-001205 submitted for identical items within short time window of original request PR-2026-000010",
-    "metadata": "{\"original_request_id\": \"PR-2026-000010\", \"duplicate_request_id\": \"PR-2026-001205\", \"requester_id\": \"REQ-0135\"}"
+    "reason": "Duplicate requisition PR-2026-001205 submitted for identical items within short time window of original request PR-2026-000821",
+    "metadata": "{\"original_request_id\": \"PR-2026-000821\", \"duplicate_request_id\": \"PR-2026-001205\", \"requester_id\": \"REQ-0094\"}"
   },
   {
-    "anomaly_id": "ANOM-000031",
+    "anomaly_id": "ANOM-000036",
+    "issue_type": "duplicate_purchase_request",
+    "entity": "purchase_requests",
+    "record_id": "PR-2026-001206",
+    "expected_decision": "FLAG",
+    "reason": "Duplicate requisition PR-2026-001206 submitted for identical items within short time window of original request PR-2026-001073",
+    "metadata": "{\"original_request_id\": \"PR-2026-001073\", \"duplicate_request_id\": \"PR-2026-001206\", \"requester_id\": \"REQ-0114\"}"
+  },
+  {
+    "anomaly_id": "ANOM-000037",
     "issue_type": "quote_currency_mismatch",
     "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0003-2026-001007",
+    "record_id": "QUO-SUP-C-0058-2026-000994",
     "expected_decision": "REVISE",
-    "reason": "Quote QUO-SUP-C-0003-2026-001007 submitted in unsupported currency XYZ lacking valid FX conversion rate",
+    "reason": "Quote QUO-SUP-C-0058-2026-000994 submitted in unsupported currency XYZ lacking valid FX conversion rate",
     "metadata": "{\"currency\": \"XYZ\"}"
   },
   {
-    "anomaly_id": "ANOM-000032",
+    "anomaly_id": "ANOM-000038",
     "issue_type": "quote_currency_mismatch",
     "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0100-2026-000689",
+    "record_id": "QUO-SUP-C-0120-2026-000490",
     "expected_decision": "REVISE",
-    "reason": "Quote QUO-SUP-C-0100-2026-000689 submitted in unsupported currency XYZ lacking valid FX conversion rate",
+    "reason": "Quote QUO-SUP-C-0120-2026-000490 submitted in unsupported currency XYZ lacking valid FX conversion rate",
     "metadata": "{\"currency\": \"XYZ\"}"
   },
   {
-    "anomaly_id": "ANOM-000033",
+    "anomaly_id": "ANOM-000039",
     "issue_type": "quote_currency_mismatch",
     "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0073-2026-000848",
+    "record_id": "QUO-SUP-C-0034-2026-001542",
     "expected_decision": "REVISE",
-    "reason": "Quote QUO-SUP-C-0073-2026-000848 submitted in unsupported currency XYZ lacking valid FX conversion rate",
+    "reason": "Quote QUO-SUP-C-0034-2026-001542 submitted in unsupported currency XYZ lacking valid FX conversion rate",
     "metadata": "{\"currency\": \"XYZ\"}"
   },
   {
-    "anomaly_id": "ANOM-000034",
+    "anomaly_id": "ANOM-000040",
     "issue_type": "quote_currency_mismatch",
     "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0033-2026-000041",
+    "record_id": "QUO-SUP-C-0042-2026-000632",
     "expected_decision": "REVISE",
-    "reason": "Quote QUO-SUP-C-0033-2026-000041 submitted in unsupported currency XYZ lacking valid FX conversion rate",
+    "reason": "Quote QUO-SUP-C-0042-2026-000632 submitted in unsupported currency XYZ lacking valid FX conversion rate",
     "metadata": "{\"currency\": \"XYZ\"}"
   },
   {
-    "anomaly_id": "ANOM-000035",
+    "anomaly_id": "ANOM-000041",
     "issue_type": "quote_currency_mismatch",
     "entity": "supplier_quotes",
-    "record_id": "QUO-SUP-C-0036-2026-001303",
+    "record_id": "QUO-SUP-C-0033-2026-000282",
     "expected_decision": "REVISE",
-    "reason": "Quote QUO-SUP-C-0036-2026-001303 submitted in unsupported currency XYZ lacking valid FX conversion rate",
+    "reason": "Quote QUO-SUP-C-0033-2026-000282 submitted in unsupported currency XYZ lacking valid FX conversion rate",
+    "metadata": "{\"currency\": \"XYZ\"}"
+  },
+  {
+    "anomaly_id": "ANOM-000042",
+    "issue_type": "quote_currency_mismatch",
+    "entity": "supplier_quotes",
+    "record_id": "QUO-SUP-C-0106-2026-000231",
+    "expected_decision": "REVISE",
+    "reason": "Quote QUO-SUP-C-0106-2026-000231 submitted in unsupported currency XYZ lacking valid FX conversion rate",
     "metadata": "{\"currency\": \"XYZ\"}"
   }
 ]

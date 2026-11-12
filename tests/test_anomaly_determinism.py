@@ -59,7 +59,7 @@ def test_anomaly_injection_divergent_seeds(project_config):
 
 
 def test_anomaly_counts_by_scale_tier(project_config):
-    """Verify starter tier injects 7 anomalies and full tier injects 35 anomalies."""
+    """Verify starter tier injects 7 anomalies and full tier injects 42 anomalies (6 per category, 3.5% of PRs)."""
     clean_starter = generate_procurement_workflow(scale="starter", seed=20261022)
     rng_starter = np.random.default_rng(20261022)
     _, gt_starter = inject_anomalies(clean_starter, project_config, rng_starter)
@@ -68,11 +68,13 @@ def test_anomaly_counts_by_scale_tier(project_config):
     clean_full = generate_procurement_workflow(scale="full", seed=20261022)
     rng_full = np.random.default_rng(20261022)
     _, gt_full = inject_anomalies(clean_full, project_config, rng_full)
-    assert len(gt_full) == 35
+    assert len(gt_full) == 42
 
-    # Full tier should have exactly 5 anomalies per category
+    # Full tier should have exactly 6 anomalies per category
     from collections import Counter
     counts = Counter(r["issue_type"] for r in gt_full)
+    assert len(counts) == 7
+    assert all(c == 6 for c in counts.values())
     for cat in counts:
-        assert counts[cat] == 5, f"Expected 5 anomalies for {cat}, got {counts[cat]}"
+        assert counts[cat] == 6, f"Expected 6 anomalies for {cat}, got {counts[cat]}"
 

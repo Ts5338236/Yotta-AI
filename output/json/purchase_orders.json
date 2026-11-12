@@ -794,8 +794,8 @@
   {
     "po_id": "PO-2026-000034",
     "request_id": "PR-2026-000398",
-    "supplier_id": "SUP-0069",
-    "awarded_quote_id": "QUO-SUP-C-0069-2026-000119",
+    "supplier_id": "SUP-0038",
+    "awarded_quote_id": "QUO-SUP-C-0038-2026-000120",
     "quote_id": "QUO-SUP-C-0038-2026-000120",
     "sourcing_type": "COMPETITIVE",
     "sourcing_path": "competitive",
@@ -1634,7 +1634,7 @@
   {
     "po_id": "PO-2026-000069",
     "request_id": "PR-2026-001187",
-    "supplier_id": "SUP-0111",
+    "supplier_id": "SUP-0122",
     "awarded_quote_id": "QUO-SUP-C-0111-2026-000243",
     "quote_id": "QUO-SUP-C-0111-2026-000243",
     "sourcing_type": "COMPETITIVE",
@@ -3266,8 +3266,8 @@
   {
     "po_id": "PO-2026-000137",
     "request_id": "PR-2026-000982",
-    "supplier_id": "SUP-0003",
-    "awarded_quote_id": "QUO-SUP-C-0003-2026-000487",
+    "supplier_id": "SUP-0011",
+    "awarded_quote_id": "QUO-SUP-C-0011-2026-000488",
     "quote_id": "QUO-SUP-C-0011-2026-000488",
     "sourcing_type": "COMPETITIVE",
     "sourcing_path": "competitive",
@@ -3794,8 +3794,8 @@
   {
     "po_id": "PO-2026-000159",
     "request_id": "PR-2026-000874",
-    "supplier_id": "SUP-0059",
-    "awarded_quote_id": "QUO-SUP-C-0059-2026-000560",
+    "supplier_id": "SUP-0011",
+    "awarded_quote_id": "QUO-SUP-C-0011-2026-000561",
     "quote_id": "QUO-SUP-C-0011-2026-000561",
     "sourcing_type": "COMPETITIVE",
     "sourcing_path": "competitive",
@@ -4154,7 +4154,7 @@
   {
     "po_id": "PO-2026-000174",
     "request_id": "PR-2026-000396",
-    "supplier_id": "SUP-0121",
+    "supplier_id": "SUP-0014",
     "awarded_quote_id": "QUO-SUP-C-0014-2026-000617",
     "quote_id": "QUO-SUP-C-0014-2026-000617",
     "sourcing_type": "COMPETITIVE",
@@ -4682,8 +4682,8 @@
   {
     "po_id": "PO-2026-000196",
     "request_id": "PR-2026-000955",
-    "supplier_id": "SUP-0053",
-    "awarded_quote_id": "QUO-SUP-C-0053-2026-000691",
+    "supplier_id": "SUP-0039",
+    "awarded_quote_id": "QUO-SUP-C-0039-2026-000694",
     "quote_id": "QUO-SUP-C-0053-2026-000691",
     "sourcing_type": "COMPETITIVE",
     "sourcing_path": "competitive",
@@ -5618,7 +5618,7 @@
   {
     "po_id": "PO-2026-000235",
     "request_id": "PR-2026-000568",
-    "supplier_id": "SUP-0122",
+    "supplier_id": "SUP-0025",
     "awarded_quote_id": "QUO-SUP-C-0025-2026-000831",
     "quote_id": "QUO-SUP-C-0025-2026-000831",
     "sourcing_type": "COMPETITIVE",
@@ -6458,7 +6458,7 @@
   {
     "po_id": "PO-2026-000270",
     "request_id": "PR-2026-000755",
-    "supplier_id": "SUP-0049",
+    "supplier_id": "SUP-0125",
     "awarded_quote_id": "QUO-SUP-C-0049-2026-000954",
     "quote_id": "QUO-SUP-C-0049-2026-000954",
     "sourcing_type": "COMPETITIVE",
@@ -7490,8 +7490,8 @@
   {
     "po_id": "PO-2026-000313",
     "request_id": "PR-2026-000423",
-    "supplier_id": "SUP-0054",
-    "awarded_quote_id": "QUO-SUP-C-0054-2026-001105",
+    "supplier_id": "SUP-0044",
+    "awarded_quote_id": "QUO-SUP-C-0044-2026-001103",
     "quote_id": "QUO-SUP-C-0054-2026-001105",
     "sourcing_type": "COMPETITIVE",
     "sourcing_path": "competitive",
@@ -8882,8 +8882,8 @@
   {
     "po_id": "PO-2026-000371",
     "request_id": "PR-2026-000492",
-    "supplier_id": "SUP-0071",
-    "awarded_quote_id": "QUO-SUP-C-0071-2026-001325",
+    "supplier_id": "SUP-0079",
+    "awarded_quote_id": "QUO-SUP-C-0079-2026-001326",
     "quote_id": "QUO-SUP-C-0079-2026-001326",
     "sourcing_type": "COMPETITIVE",
     "sourcing_path": "competitive",
@@ -11210,8 +11210,8 @@
   {
     "po_id": "PO-2026-000468",
     "request_id": "PR-2026-001072",
-    "supplier_id": "SUP-0035",
-    "awarded_quote_id": "QUO-SUP-C-0035-2026-001668",
+    "supplier_id": "SUP-0041",
+    "awarded_quote_id": "QUO-SUP-C-0041-2026-001665",
     "quote_id": "QUO-SUP-C-0035-2026-001668",
     "sourcing_type": "COMPETITIVE",
     "sourcing_path": "competitive",
@@ -11786,8 +11786,8 @@
   {
     "po_id": "PO-2026-000492",
     "request_id": "PR-2026-000770",
-    "supplier_id": "SUP-0013",
-    "awarded_quote_id": "QUO-SUP-C-0013-2026-001750",
+    "supplier_id": "SUP-0049",
+    "awarded_quote_id": "QUO-SUP-C-0049-2026-001749",
     "quote_id": "QUO-SUP-C-0013-2026-001750",
     "sourcing_type": "COMPETITIVE",
     "sourcing_path": "competitive",
@@ -12170,7 +12170,7 @@
   {
     "po_id": "PO-2026-000508",
     "request_id": "PR-2026-000350",
-    "supplier_id": "SUP-0108",
+    "supplier_id": "SUP-0124",
     "awarded_quote_id": null,
     "quote_id": null,
     "sourcing_type": "SOLE_SOURCE",
@@ -19106,7 +19106,7 @@
   {
     "po_id": "PO-2026-000797",
     "request_id": "PR-2026-000189",
-    "supplier_id": "SUP-0091",
+    "supplier_id": "SUP-0126",
     "awarded_quote_id": null,
     "quote_id": null,
     "sourcing_type": "SOLE_SOURCE",
@@ -19970,7 +19970,7 @@
   {
     "po_id": "PO-2026-000833",
     "request_id": "PR-2026-000602",
-    "supplier_id": "SUP-0023",
+    "supplier_id": "SUP-0121",
     "awarded_quote_id": null,
     "quote_id": null,
     "sourcing_type": "SOLE_SOURCE",
@@ -22034,7 +22034,7 @@
   {
     "po_id": "PO-2026-000919",
     "request_id": "PR-2026-000125",
-    "supplier_id": "SUP-0124",
+    "supplier_id": "SUP-0096",
     "awarded_quote_id": null,
     "quote_id": null,
     "sourcing_type": "CONTRACT_RENEWAL",
@@ -22082,7 +22082,7 @@
   {
     "po_id": "PO-2026-000921",
     "request_id": "PR-2026-000351",
-    "supplier_id": "SUP-0125",
+    "supplier_id": "SUP-0018",
     "awarded_quote_id": null,
     "quote_id": null,
     "sourcing_type": "SOLE_SOURCE",

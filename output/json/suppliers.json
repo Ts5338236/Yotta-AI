@@ -2042,7 +2042,7 @@
   {
     "supplier_id": "SUP-0121",
     "name": "Decommissioned Supplier SUP-0121",
-    "supplier_code": "SUP-D-1084",
+    "supplier_code": "SUP-D-4486",
     "country": "US",
     "currency": "USD",
     "contact_email": "support@sup-0121.example.com",
@@ -2058,7 +2058,7 @@
   {
     "supplier_id": "SUP-0122",
     "name": "Decommissioned Supplier SUP-0122",
-    "supplier_code": "SUP-D-4939",
+    "supplier_code": "SUP-D-7123",
     "country": "US",
     "currency": "USD",
     "contact_email": "support@sup-0122.example.com",
@@ -2074,7 +2074,7 @@
   {
     "supplier_id": "SUP-0123",
     "name": "Decommissioned Supplier SUP-0123",
-    "supplier_code": "SUP-D-8807",
+    "supplier_code": "SUP-D-3236",
     "country": "US",
     "currency": "USD",
     "contact_email": "support@sup-0123.example.com",
@@ -2090,7 +2090,7 @@
   {
     "supplier_id": "SUP-0124",
     "name": "Decommissioned Supplier SUP-0124",
-    "supplier_code": "SUP-D-2131",
+    "supplier_code": "SUP-D-2811",
     "country": "US",
     "currency": "USD",
     "contact_email": "support@sup-0124.example.com",
@@ -2106,10 +2106,26 @@
   {
     "supplier_id": "SUP-0125",
     "name": "Decommissioned Supplier SUP-0125",
-    "supplier_code": "SUP-D-7927",
+    "supplier_code": "SUP-D-4460",
     "country": "US",
     "currency": "USD",
     "contact_email": "support@sup-0125.example.com",
+    "risk_score": 0.85,
+    "risk_classification": "HIGH",
+    "lead_time_mean": 21.0,
+    "lead_time_variance": 4.0,
+    "status": "INACTIVE",
+    "active": 0,
+    "created_at": "2025-01-01T00:00:00Z",
+    "notes": "Vendor de-registered due to commercial bankruptcy"
+  },
+  {
+    "supplier_id": "SUP-0126",
+    "name": "Decommissioned Supplier SUP-0126",
+    "supplier_code": "SUP-D-4974",
+    "country": "US",
+    "currency": "USD",
+    "contact_email": "support@sup-0126.example.com",
     "risk_score": 0.85,
     "risk_classification": "HIGH",
     "lead_time_mean": 21.0,

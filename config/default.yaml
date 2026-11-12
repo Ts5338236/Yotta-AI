@@ -39,6 +39,8 @@ supplier_scoring:
 anomalies:
   target_rate_min: 0.03
   target_rate_max: 0.05
+  count_per_type_starter: 1
+  count_per_type_full: 6
 
 procurement:
   minimum_quotes: 3

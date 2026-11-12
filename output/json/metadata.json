@@ -7,7 +7,7 @@
   "non_competitive_pos_count": 470,
   "rejected_requests_count": 43,
   "approved_requests_count": 970,
-  "anomalies_injected": 35,
-  "anomaly_rate": 0.0131,
+  "anomalies_injected": 42,
+  "anomaly_rate": 0.0157,
   "anomaly_categories_count": 7
 }

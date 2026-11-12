@@ -591,7 +591,8 @@ def inject_anomalies(
     sync_factory_counters(factory, dataset)
 
     scale_name = dataset.get("metadata", {}).get("scale") or config.get("generation", {}).get("default_scale", "starter")
-    default_count = 1 if scale_name == "starter" else 5
+    anom_cfg = config.get("anomalies", {})
+    default_count = anom_cfg.get("count_per_type_starter", 1) if scale_name == "starter" else anom_cfg.get("count_per_type_full", 6)
 
     counts = counts_per_category or {
         cat: default_count for cat in ANOMALY_CATEGORIES

@@ -499,9 +499,9 @@ Audit Domain 7: Double-Entry Budget Ledgers          : PASS (0 overruns on clean
 Audit Domain 8: Split Purchase Detection             : PASS (Identifies window-based threshold splits)
 
 === Anomaly Detection Performance Benchmark ===
-Ground Truth Anomalies Injected : 35
-Anomalies Detected by Rules     : 35
-True Positives (TP)             : 35
+Ground Truth Anomalies Injected : 42
+Anomalies Detected by Rules     : 42
+True Positives (TP)             : 42
 False Positives (FP)            : 0
 False Negatives (FN)            : 0
 Precision                       : 100.00%
@@ -566,7 +566,7 @@ output/
 │   ├── seed.sql                    # Topologically ordered SQL seed (4.76 MB)
 │   └── yotta_ai.db                 # Canonical relational SQLite database
 ├── ground_truth/
-│   ├── ground_truth.csv            # 35 isolated ground-truth anomalies
+│   ├── ground_truth.csv            # 42 isolated ground-truth anomalies (3.5% rate)
 │   └── ground_truth.json           # Forensic metadata and recommended actions
 ├── reports/
 │   ├── validation_summary.md       # Markdown validation report
@@ -650,7 +650,7 @@ Ground truth records are quarantined in `ground_truth.csv` and `ground_truth.jso
 
 ### Detection Performance Benchmark:
 The independent anomaly detection engine ([`src/validate/anomaly_checks.py`](src/validate/anomaly_checks.py)) evaluates operational data without inspecting ground truth files:
-- **True Positives (TP)**: 35
+- **True Positives (TP)**: 42
 - **False Positives (FP)**: 0
 - **False Negatives (FN)**: 0
 - **Precision**: 100.00%

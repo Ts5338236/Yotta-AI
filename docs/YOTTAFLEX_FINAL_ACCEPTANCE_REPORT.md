@@ -18,7 +18,7 @@ All 24 core PRD requirements, relational constraints, business rules, multi-tier
 - **Automated Test Suite**: **167 passed** in 42.49s across 39 test modules (0 failures, 0 warnings).
 - **Fresh-Clone Verification**: Successfully cloned from the public GitHub repository into an isolated sandbox; starter generation, full-scale generation, validation, and all 167 automated tests executed cleanly using documented commands.
 - **Bitwise Reproducibility**: Confirmed 100% identical SHA-256 cryptographic hashes across 2 independent runs with seed `20261022` for all 22 persisted artifacts.
-- **Anomaly Detection Performance**: 35 / 35 True Positives, 0 False Positives, 0 False Negatives (**Precision: 100.00%, Recall: 100.00%, F1-Score: 1.0000**).
+- **Anomaly Detection Performance**: 42 / 42 True Positives, 0 False Positives, 0 False Negatives (**Precision: 100.00%, Recall: 100.00%, F1-Score: 1.0000**).
 - **Relational Integrity**: 100% normalized 3NF SQLite database with 0 foreign key violations, 0 orphan records, and 111,855 verified validation constraints.
 - **Documented Limitations**: Fully disclosed non-blocking boundary conditions (single fiscal year 2026, fixed FX rates, USD base currency, in-memory processing up to full scale, and goods receipt physical fulfillment scope).
 
@@ -43,10 +43,10 @@ Performed a clean installation in an isolated sandbox directory (`<temp-dir>/fre
    - Generated 10 depts, 30 requesters, 13 suppliers, 116 PRs, 50 RFQs, 93 POs, and 7 anomalies. Status: **PASS**.
 3. **Documented Full-Scale Generation Execution**:
    `python -m datagen --generate --scale full --seed 20261022 --inject-anomalies --export --output-dir output --validate-exports`
-   - Generated 12 depts, 300 requesters, 125 suppliers, 1,205 PRs, 500 RFQs, 1,779 quotes, 970 POs, and 35 anomalies. Status: **PASS**.
+   - Generated 12 depts, 300 requesters, 126 suppliers, 1,206 PRs, 500 RFQs, 1,779 quotes, 970 POs, and 42 anomalies. Status: **PASS**.
 4. **Documented Validation Execution**:
    `python -m validate output/ --scale full --mode anomaly_aware --inject-anomalies --evaluate`
-   - Audited 111,883 checks, detected 35 / 35 injected anomalies with F1 score = 1.0000. Status: **PASS**.
+   - Audited checks, detected 42 / 42 injected anomalies with F1 score = 1.0000. Status: **PASS**.
 5. **Documented Automated Test Suite Execution**:
    `python -m pytest tests/ -q`
    - **167 passed in 42.49s**. Status: **PASS**.
@@ -187,7 +187,7 @@ Executed `python scratch/verify_determinism_2runs.py` across two independent ful
 | **13** | **Status Event History** | `src/datagen/events.py` (`generate_all_status_events`) | `tests/test_status_events.py::test_status_event_chronology` | **PASS** | Append-only event history tracking all state transitions. |
 | **14** | **Budget Reservation & Reconciliation** | `src/datagen/budget.py` (`generate_budget_events`), `src/validate/checks.py` | `tests/test_budget.py`, `tests/test_validation_budget.py` | **PASS** | Double-entry ledger (`ALLOCATE`, `RESERVE`, `COMMIT`, `RELEASE`, `SPEND`). |
 | **15** | **Exception Logging** | `src/datagen/workflow.py` (`generate_operational_exception_logs`) | `tests/test_csv_export.py::test_exception_logs_export` | **PASS** | 591 records logging rejections, sole-sources, and partials. |
-| **16** | **Seven Required Anomalies** | `src/datagen/anomalies.py` (`inject_anomalies`) | `tests/test_anomaly_injection.py`, `tests/test_anomaly_detection.py` | **PASS** | 35 mutations (5 of each type) injected post-generation. |
+| **16** | **Seven Required Anomalies** | `src/datagen/anomalies.py` (`inject_anomalies`) | `tests/test_anomaly_injection.py`, `tests/test_anomaly_detection.py` | **PASS** | 42 mutations (6 of each type, 3.5% of PRs) injected post-generation. |
 | **17** | **Ground-Truth Generation** | `src/datagen/export.py` (`export_ground_truth`) | `tests/test_ground_truth.py`, `tests/test_ground_truth_export.py` | **PASS** | Quarantined supervisory files (`ground_truth.csv`/`json`); 0 flag leakage. |
 | **18** | **CSV and JSON Exports** | `src/datagen/export.py` (`export_to_csv`, `export_to_json`) | `tests/test_csv_export.py`, `tests/test_json_export.py` | **PASS** | 18 CSV tables (RFC 4180) and 19 JSON files (UTF-8). |
 | **19** | **SQLite and SQL Exports** | `src/datagen/database.py`, `src/datagen/export.py` | `tests/test_database_export.py`, `tests/test_sql_schema.py`, `tests/test_sql_seed.py` | **PASS** | SQLite (`procurement.db` & `yotta_ai.db`), DDL `schema.sql`, seed `seed.sql`. |

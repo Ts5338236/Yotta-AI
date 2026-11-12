@@ -39,23 +39,23 @@ The table below outlines the 7 mandated anomaly types, candidate selection logic
 
 ## 3. Empirical Detection Performance & Confusion Matrix
 
-All 7 anomaly types were evaluated using independent rule-based detectors in `src/validate/anomaly_checks.py`. Performance was verified across both **Starter Scale** (7 anomalies, 1 per category) and **Full Scale** (35 anomalies, 5 per category):
+All 7 anomaly types were evaluated using independent rule-based detectors in `src/validate/anomaly_checks.py`. Performance was verified across both **Starter Scale** (7 anomalies, 1 per category) and **Full Scale** (42 anomalies, 6 per category, 3.5% of PRs):
 
 ### Empirical Results (Full Scale Dataset):
 
 | Anomaly Category | Ground Truth (P) | True Positives (TP) | False Positives (FP) | False Negatives (FN) | Precision | Recall | F1-Score |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| `po_without_approval` | 5 | 5 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
-| `quote_expired_before_award` | 5 | 5 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
-| `non_cheapest_no_rationale` | 5 | 5 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
-| `supplier_inactive` | 5 | 5 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
-| `budget_overrun` | 5 | 5 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
-| `duplicate_request` | 5 | 5 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
-| `quote_currency_mismatch` | 5 | 5 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
-| **Overall Macro Average** | **35** | **35** | **0** | **0** | **1.0000** | **1.0000** | **1.0000** |
+| `po_without_approval` | 6 | 6 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
+| `quote_expired_before_award` | 6 | 6 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
+| `non_cheapest_no_rationale` | 6 | 6 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
+| `supplier_inactive` | 6 | 6 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
+| `budget_overrun` | 6 | 6 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
+| `duplicate_request` | 6 | 6 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
+| `quote_currency_mismatch` | 6 | 6 | 0 | 0 | 1.0000 | 1.0000 | **1.0000** |
+| **Overall Macro Average** | **42** | **42** | **0** | **0** | **1.0000** | **1.0000** | **1.0000** |
 
 ### Confusion Matrix:
-$$\begin{pmatrix} \text{TP} = 35 & \text{FP} = 0 \\ \text{FN} = 0 & \text{TN} = \text{All Valid Transactions} \end{pmatrix}$$
+$$\begin{pmatrix} \text{TP} = 42 & \text{FP} = 0 \\ \text{FN} = 0 & \text{TN} = \text{All Valid Transactions} \end{pmatrix}$$
 - **Clean Baseline Discrimination**: Running detectors against the un-mutated baseline dataset returns **0 findings**, confirming zero false-positive contamination.
 
 ---

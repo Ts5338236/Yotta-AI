@@ -97,7 +97,7 @@ def test_starter_scale_empirical_metrics():
 
 
 def test_full_scale_empirical_metrics():
-    """Verify that full scale dataset (35 anomalies) achieves 100% precision and 100% recall."""
+    """Verify that full scale dataset (42 anomalies) achieves 100% precision and 100% recall."""
     config = load_config()
     clean = generate_procurement_workflow(scale="full", seed=20261022)
     rng = np.random.default_rng(20261022)
@@ -106,9 +106,9 @@ def test_full_scale_empirical_metrics():
     findings = detect_all_anomalies(dataset, config)
     metrics = evaluate_detections(findings, gt)
 
-    assert metrics["total_ground_truth"] == 35
-    assert metrics["total_detected"] == 35
-    assert metrics["true_positives"] == 35
+    assert metrics["total_ground_truth"] == 42
+    assert metrics["total_detected"] == 42
+    assert metrics["true_positives"] == 42
     assert metrics["false_positives"] == 0
     assert metrics["false_negatives"] == 0
     assert metrics["precision"] == 1.0

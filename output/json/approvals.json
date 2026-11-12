@@ -2561,19 +2561,6 @@
     "created_at": "2026-03-20T11:00:00Z"
   },
   {
-    "approval_id": "APR-000201",
-    "request_id": "PR-2026-000042",
-    "approver_id": "APP-0001",
-    "approver_role": "LINE_MANAGER",
-    "approval_level": 1,
-    "level": 1,
-    "decision": "APPROVED",
-    "decision_date": "2026-03-20T11:00:00Z",
-    "decided_at": "2026-03-20T11:00:00Z",
-    "comments": "Approved: Valid operational expenditure.",
-    "created_at": "2026-03-20T11:00:00Z"
-  },
-  {
     "approval_id": "APR-000202",
     "request_id": "PR-2026-000775",
     "approver_id": "APP-0002",
@@ -5577,6 +5564,19 @@
     "created_at": "2026-06-17T11:00:00Z"
   },
   {
+    "approval_id": "APR-000433",
+    "request_id": "PR-2026-001151",
+    "approver_id": "APP-0004",
+    "approver_role": "DEPARTMENT_HEAD",
+    "approval_level": 1,
+    "level": 1,
+    "decision": "APPROVED",
+    "decision_date": "2026-06-16T11:00:00Z",
+    "decided_at": "2026-06-16T11:00:00Z",
+    "comments": "Approved: Valid operational expenditure.",
+    "created_at": "2026-06-16T11:00:00Z"
+  },
+  {
     "approval_id": "APR-000434",
     "request_id": "PR-2026-000474",
     "approver_id": "APP-0001",
@@ -5887,19 +5887,6 @@
     "decided_at": "2026-06-26T11:00:00Z",
     "comments": "Approved: Valid operational expenditure.",
     "created_at": "2026-06-26T11:00:00Z"
-  },
-  {
-    "approval_id": "APR-000458",
-    "request_id": "PR-2026-000032",
-    "approver_id": "APP-0017",
-    "approver_role": "LINE_MANAGER",
-    "approval_level": 1,
-    "level": 1,
-    "decision": "APPROVED",
-    "decision_date": "2026-06-28T11:00:00Z",
-    "decided_at": "2026-06-28T11:00:00Z",
-    "comments": "Approved: Valid operational expenditure.",
-    "created_at": "2026-06-28T11:00:00Z"
   },
   {
     "approval_id": "APR-000459",
@@ -9152,19 +9139,6 @@
     "created_at": "2026-10-01T11:00:00Z"
   },
   {
-    "approval_id": "APR-000709",
-    "request_id": "PR-2026-000402",
-    "approver_id": "APP-0022",
-    "approver_role": "DEPARTMENT_HEAD",
-    "approval_level": 1,
-    "level": 1,
-    "decision": "APPROVED",
-    "decision_date": "2026-10-03T11:00:00Z",
-    "decided_at": "2026-10-03T11:00:00Z",
-    "comments": "Approved: Valid operational expenditure.",
-    "created_at": "2026-10-03T11:00:00Z"
-  },
-  {
     "approval_id": "APR-000710",
     "request_id": "PR-2026-000504",
     "approver_id": "APP-0018",
@@ -9487,6 +9461,19 @@
     "decision_date": "2026-10-12T11:00:00Z",
     "decided_at": "2026-10-12T11:00:00Z",
     "comments": "Rejected: Insufficient department budget allocation.",
+    "created_at": "2026-10-12T11:00:00Z"
+  },
+  {
+    "approval_id": "APR-000735",
+    "request_id": "PR-2026-001112",
+    "approver_id": "APP-0007",
+    "approver_role": "LINE_MANAGER",
+    "approval_level": 1,
+    "level": 1,
+    "decision": "APPROVED",
+    "decision_date": "2026-10-12T11:00:00Z",
+    "decided_at": "2026-10-12T11:00:00Z",
+    "comments": "Approved: Valid operational expenditure.",
     "created_at": "2026-10-12T11:00:00Z"
   },
   {
