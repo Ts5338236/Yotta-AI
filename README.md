@@ -468,13 +468,18 @@ python -m datagen --generate --scale full --seed 20261022 --inject-anomalies --e
 
 ## 13. Validation Command
 
-Execute the independent validation engine to audit relational constraints, lifecycle state machines, financial balance reconciliation, and anomaly detection accuracy:
+Execute the independent validation engine to audit relational constraints, lifecycle state machines, financial balance reconciliation, and anomaly detection accuracy.
+
+### Validation Modes: Clean vs Anomaly-Aware
+- **`clean` mode**: Evaluates the dataset expecting exactly zero anomalies across all operational tables. If any anomaly or corruption is present, the validator flags a `CRITICAL` finding and returns an overall `FAIL`. Use this mode when validating baseline, unmutated generation outputs.
+- **`anomaly_aware` mode**: Acknowledges that controlled procurement anomalies have been intentionally injected. It runs the 7 independent rule-based detectors, cross-references all detected findings against the quarantined `ground_truth` supervisory records, and computes empirical Precision, Recall, and F1-score. When 100% Precision and 100% Recall are achieved on the injected anomalies and all baseline records pass structural checks, the validator returns an overall `PASS`.
+- **Automatic Mode Selection**: When `python -m datagen --export --inject-anomalies` is executed, the pipeline automatically runs in `anomaly_aware` mode against ground truth, ensuring the written validation summary report reflects `PASS` for intentional, perfectly detected anomalies.
 
 ```powershell
-# 1. Clean Validation Mode (expects 0 anomalies)
+# 1. Clean Validation Mode (expects 0 anomalies; clean dataset PASSES)
 python -m validate data/ --scale starter --mode clean
 
-# 2. Anomaly-Aware Mode with Evaluation Benchmark
+# 2. Anomaly-Aware Mode with Evaluation Benchmark (evaluates against Ground Truth; PASSES on F1=1.0)
 python -m validate output/ --scale full --mode anomaly_aware --inject-anomalies --evaluate
 
 # 3. Direct Directory Validation

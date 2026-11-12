@@ -204,7 +204,12 @@ def main(argv: list[str] | None = None) -> None:
                 rep_dir.mkdir(parents=True, exist_ok=True)
 
                 # Generate validation report
-                val_report = validate_dataset(dataset)
+                val_mode = "anomaly_aware" if args.inject_anomalies else "clean"
+                val_report = validate_dataset(
+                    dataset,
+                    mode=val_mode,
+                    ground_truth=gt_records if args.inject_anomalies else None,
+                )
                 with open(rep_dir / "validation_summary.json", "w", encoding="utf-8") as f:
                     json.dump(val_report.to_dict(), f, indent=2)
                 with open(rep_dir / "validation_summary.md", "w", encoding="utf-8") as f:
