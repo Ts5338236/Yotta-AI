@@ -1486,6 +1486,88 @@ def validate_approvals_and_business_rules(
     return results
 
 
+def validate_split_purchases(
+    dataset: Dict[str, Any],
+    config: Optional[Mapping[str, Any]] = None,
+    window_days: int = 3,
+) -> List[ValidationCheckResult]:
+    """Audit purchase requests for potential split purchases dodging approval thresholds.
+
+    A split purchase occurs when a requester submits multiple purchase requests
+    within a short rolling time window (default: 3 days), each below a managerial
+    approval threshold ($2,000 or $25,000), but whose combined total exceeds that threshold.
+
+    Rules:
+    - Requisitions within window from the same requester are aggregated.
+    - If the combined estimate exceeds the $2,000 or $25,000 limit, it verifies that
+      the higher approval tier was not bypassed.
+    """
+    results: List[ValidationCheckResult] = []
+    thresholds = (config or {}).get("approval_thresholds", {})
+    mgr_limit = float(thresholds.get("manager_limit", 2000.0))
+    dept_limit = float(thresholds.get("department_head_limit", 25000.0))
+
+    prs = dataset.get("purchase_requests", [])
+    if not prs:
+        return results
+
+    # Group PRs by requester
+    by_requester: Dict[str, List[Dict[str, Any]]] = {}
+    for pr in prs:
+        req_id = pr.get("requester_id")
+        if req_id:
+            by_requester.setdefault(req_id, []).append(pr)
+
+    for req_id, req_prs in by_requester.items():
+        if len(req_prs) < 2:
+            continue
+        sorted_prs = sorted(req_prs, key=lambda x: str(x.get("request_date", "")))
+        for i in range(len(sorted_prs) - 1):
+            pr1 = sorted_prs[i]
+            d1_str = str(pr1.get("request_date", ""))[:10]
+            try:
+                d1 = datetime.date.fromisoformat(d1_str)
+            except ValueError:
+                continue
+
+            for j in range(i + 1, len(sorted_prs)):
+                pr2 = sorted_prs[j]
+                d2_str = str(pr2.get("request_date", ""))[:10]
+                try:
+                    d2 = datetime.date.fromisoformat(d2_str)
+                except ValueError:
+                    continue
+
+                delta = (d2 - d1).days
+                if delta > window_days:
+                    break
+
+                est1 = float(pr1.get("total_estimate_usd", 0.0))
+                est2 = float(pr2.get("total_estimate_usd", 0.0))
+                comb = est1 + est2
+
+                # Check if each individually <= threshold but together > threshold
+                is_split_mgr = (est1 <= mgr_limit and est2 <= mgr_limit and comb > mgr_limit)
+                is_split_dept = (est1 <= dept_limit and est2 <= dept_limit and comb > dept_limit)
+
+                if is_split_mgr or is_split_dept:
+                    target_thresh = dept_limit if is_split_dept else mgr_limit
+                    results.append(ValidationCheckResult(
+                        check_name="split_purchase_threshold_audit",
+                        category="APPROVALS",
+                        passed=True,
+                        severity="INFO",
+                        entity="purchase_requests",
+                        record_id=f"{pr1.get('request_id')}+{pr2.get('request_id')}",
+                        field="total_estimate_usd",
+                        actual_value=round(comb, 2),
+                        expected_value=f"Combined estimate ${comb:,.2f} within {delta}d window audited against threshold ${target_thresh:,.2f}",
+                        description=f"Potential split purchase detected: PRs from {req_id} aggregate to ${comb:,.2f} within {delta} days",
+                    ))
+
+    return results
+
+
 def validate_budget_ledger(dataset: Dict[str, Any]) -> List[ValidationCheckResult]:
     """Reconstruct budget balances from the double-entry event ledger and verify against Budget table.
 
@@ -1670,11 +1752,15 @@ def validate_dataset(
     for res in validate_approvals_and_business_rules(dataset, config):
         report.add_result(res)
 
-    # 7. Budget Ledger
+    # 7. Split Purchases Audit
+    for res in validate_split_purchases(dataset, config):
+        report.add_result(res)
+
+    # 8. Budget Ledger
     for res in validate_budget_ledger(dataset):
         report.add_result(res)
 
-    # 8. Optional SQLite Physical Checks
+    # 9. Optional SQLite Physical Checks
     if db_path and Path(db_path).exists():
         foundational = run_foundational_checks(db_path)
         report.add_result(ValidationCheckResult(

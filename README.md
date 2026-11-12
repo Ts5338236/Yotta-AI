@@ -30,7 +30,7 @@ The **Procure-to-Pay Synthetic Data Generator** is an enterprise data engineerin
 - **Deterministic & Reproducible**: Fully reproducible sequence identifiers and zero uncontrolled randomness (single shared RNG pass-through).
 - **Financial Precision**: Absolute precision in monetary amounts and currency conversions using Python `decimal.Decimal` and SQLite integer minor units.
 
-> **Status Notice**: All phases from Phase 1 (Foundation & Architecture) through Phase 7 (Final Audit, Fresh Clone Verification & Submission Readiness) are **100% COMPLETE**. The codebase is verified to run cleanly in fresh environments with 166 passing tests and 100% bitwise determinism.
+> **Status Notice**: All phases from Phase 1 (Foundation & Architecture) through Phase 7 (Final Audit, Fresh Clone Verification & Submission Readiness) are **100% COMPLETE**. The codebase is verified to run cleanly in fresh environments with 167 passing tests and 100% bitwise determinism.
 
 ---
 
@@ -83,7 +83,7 @@ procure-to-pay-datagen/
 │       ├── anomaly_checks.py   # Independent anomaly detectors & evaluation engine
 │       └── export_checks.py    # Multi-format export integrity & cross-format validation
 ├── data/
-│   ├── csv/                    # 17 operational CSV tables
+│   ├── csv/                    # 18 operational CSV tables
 │   ├── json/                   # 18 operational & metadata JSON files
 │   ├── database/               # Relational SQLite procurement.db
 │   ├── sql/
@@ -91,8 +91,13 @@ procure-to-pay-datagen/
 │   │   └── seed.sql            # Populated sequential SQL seed script
 │   └── ground_truth/           # Segregated anomaly ground truth (CSV/JSON)
 ├── docs/                       # Architectural & design specifications
+│   ├── FINAL_TEST_REPORT.md    # Lead QA Engineer comprehensive test report
+│   ├── FINAL_VALIDATION_REPORT.md # Final data validation audit report
+│   ├── REPRODUCIBILITY_REPORT.md  # Bitwise SHA-256 hash comparison report
+│   ├── SUBMISSION_CHECKLIST.md    # Full candidate submission checklist
+│   ├── FINAL_GAP_ANALYSIS.md   # Final gap closure analysis & traceability
 │   ├── architecture.md         # System architecture & pipeline data flows
-│   ├── anomaly_catalog.md      # Detailed anomaly specifications, injection logic & detection criteria
+│   ├── anomaly_catalog.md      # Detailed anomaly specifications & detection rules
 │   ├── data_dictionary.md      # Comprehensive field-level data dictionary (all 19 tables)
 │   ├── export_specification.md # Multi-format export engine technical specification
 │   ├── export_integrity_report.md # Verification audit of exported deliverables
@@ -104,7 +109,7 @@ procure-to-pay-datagen/
 │   ├── reproducibility.md      # Determinism & environment guide
 │   ├── source_manifest.md      # Source inventory of all components
 │   └── AI_USAGE.md             # Transparent AI governance log
-├── tests/                      # Automated pytest suite (166 unit & integration tests)
+├── tests/                      # Automated pytest suite (167 unit & integration tests)
 │   ├── __init__.py
 │   ├── test_anomaly_injection.py      # Anomaly injection engine & candidate tests
 │   ├── test_anomaly_detection.py      # Independent detector & discrimination tests
@@ -151,7 +156,11 @@ procure-to-pay-datagen/
         ├── 02_phase2_generation.md
         ├── 03_phase3_procurement_workflow.md
         ├── 04_phase4_derived_validation.md
-        └── 05_phase5_anomalies.md
+        ├── 05_phase5_anomalies.md
+        ├── 06_phase6_data_export.md
+        ├── 07_phase7_final_audit.md
+        ├── 08_qa_final_verification.md
+        └── 09_final_submission_prep.md
 ```
 
 ---
@@ -296,8 +305,8 @@ python -m datagen --generate --scale full --inject-anomalies --export --output-d
 ```
 
 This populates all required submission artifacts into `output/`:
-- **`output/csv/`**: 17 operational entity CSV tables conforming to RFC 4180
-- **`output/json/`**: 17 operational entity JSON files + `metadata.json`
+- **`output/csv/`**: 18 operational entity CSV tables conforming to RFC 4180
+- **`output/json/`**: 18 operational entity JSON files + `metadata.json`
 - **`output/database/procurement.db`**: Fully populated SQLite database with `PRAGMA foreign_keys = ON`
 - **`output/sql/schema.sql`**: Canonical 19-table DDL schema with check constraints and indexes
 - **`output/sql/seed.sql`**: Self-contained, topologically ordered SQL `INSERT` statements
@@ -307,10 +316,68 @@ This populates all required submission artifacts into `output/`:
 
 ---
 
-## 8. Running the Automated Test Suite & Fresh Clone Verification
+## 8. Configuration Architecture (`config/default.yaml`)
 
-### Pytest Test Suite
-Execute the entire 166-test automated verification suite:
+All generation parameters, organizational scales, economic distributions, and business rules are declaratively defined in `config/default.yaml`:
+
+- **Scale Tiers**:
+  - `starter`: 10 departments, 30 requesters, 13 suppliers, ~116 PRs, 50 RFQs, 93 POs.
+  - `full`: 12 departments, 300 requesters, 120 baseline suppliers, 1,200 PRs, 500 RFQs, 970 POs.
+- **Approval Thresholds (DoA)**:
+  - `manager_limit`: \$2,000.00 USD (Line Manager approval required).
+  - `dept_head_limit`: \$25,000.00 USD (Department Head approval required; above requires Corporate Finance).
+- **Pricing & Categories**:
+  - 10 procurement categories (`IT_HARDWARE`, `SOFTWARE_SUBSCRIPTION`, `OFFICE_SUPPLIES`, `PROFESSIONAL_SERVICES`, `FACILITIES`, `MARKETING`, `TRAVEL`, `MANUFACTURING_PARTS`, `TELECOM`, `TRAINING`).
+  - Unit prices governed by category-specific log-normal distributions $\mu, \sigma$ bounded by minimum and maximum clamps.
+- **Seasonality**:
+  - Month-by-month probability curve peaking in Q4 (reflecting enterprise year-end budget utilization).
+- **Supplier Scoring Weights**:
+  - 60% Landed Cost, 25% Lead Time, 15% Risk Score.
+- **Fixed FX Rates**:
+  - EUR (1.08), GBP (1.27), INR (0.012), JPY (0.0067) relative to base USD.
+
+---
+
+## 9. Example End-to-End Procurement Workflow
+
+A single transaction proceeds deterministically through the following sequence:
+
+1. **Requisition Raised**:
+   Requester `REQ-0042` in Engineering raises `PR-2026-000188` requesting 10 laptops and 5 monitors (\$18,500.00 USD estimate). Request lines `RL-000412` and `RL-000413` are itemized.
+2. **Budget Pre-encumbrance**:
+   Budget event `BTE-000512` records `RESERVE` of \$18,500.00 against Engineering's budget account `BUD-0001`.
+3. **Approval Routed**:
+   Because estimate is between \$2,000 and \$25,000, approval `APR-000188` routes to Department Head `APP-0005`, who approves the requisition.
+4. **Strategic Sourcing & RFQ**:
+   Requisition classified as competitive. `RFQ-2026-000084` is issued to 4 suppliers (`SUP-0012`, `SUP-0025`, `SUP-0044`, `SUP-0091`).
+5. **Quotations Received & Landed Cost Calculated**:
+   All 4 suppliers submit quotes with native pricing, freight, duty, and tax. The sourcing engine recalculates landed cost and assigns composite scores.
+6. **Award & Rationale**:
+   `QUO-SUP-C-0012-2026-000084` achieves the lowest evaluated score (0.1245, landed cost \$17,890.00 USD). Contract awarded with rationale recorded.
+7. **Purchase Order Issued**:
+   `PO-2026-000188` is issued to `SUP-0012`. Budget event `BTE-000620` records `RELEASE` of initial reservation and `COMMIT` of \$17,890.00.
+8. **Delivery & Spend Realized**:
+   Delivery `DEL-PO-2026-000188-01` confirms 100% receipt. Status transitions to `DELIVERED`. Budget event `BTE-000890` liquidates commitment into `SPEND`.
+
+---
+
+## 10. Known Limitations & Technical Assumptions
+
+1. **Single Fiscal Year (FY 2026)**:
+   All transactions, calendar seasonalities, and budget allocations are bounded within the 2026 operating calendar (`2026-01-01` to `2026-12-31`). Multi-year contracts and cross-year accruals are out of scope.
+2. **Fixed Exchange Rates**:
+   Foreign exchange conversions use fixed conversion constants defined in configuration. Intra-year currency fluctuations, hedging, and Forex gain/loss ledgers are omitted to maintain strict reproducibility.
+3. **USD Base Currency for General Ledger**:
+   While quotations and suppliers support multi-currency transactions (USD, EUR, GBP, INR, JPY), all corporate budget accounts and financial reconciliations operate in base USD minor units.
+4. **In-Memory Computational Scale**:
+   The generator is optimized for workstation synthesis up to full scale (1,200 PRs, ~10,000 status events, ~4,000 budget events in $< 15$ seconds). Multi-million-row big data synthesis would require chunked streaming to disk rather than in-memory dictionary aggregation.
+
+---
+
+## 11. Running the Automated Test Suite & Verification Reports
+
+### Pytest Verification Suite
+Execute the entire 167-test automated verification suite:
 
 ```powershell
 python -m pytest tests/ -v
@@ -332,12 +399,13 @@ python scratch/fresh_clone_audit.py
 
 ---
 
-## 9. Assignment Compliance Matrix & Documentation Index
+## 12. Submission & Verification Documentation Index
 
+- **Final Submission Checklist**: [`docs/SUBMISSION_CHECKLIST.md`](docs/SUBMISSION_CHECKLIST.md)
+- **Comprehensive QA Test Report**: [`docs/FINAL_TEST_REPORT.md`](docs/FINAL_TEST_REPORT.md)
+- **Final Data Validation Report**: [`docs/FINAL_VALIDATION_REPORT.md`](docs/FINAL_VALIDATION_REPORT.md)
+- **Reproducibility & Hash Report**: [`docs/REPRODUCIBILITY_REPORT.md`](docs/REPRODUCIBILITY_REPORT.md)
+- **Machine-Readable Validation JSON**: [`docs/final_validation_summary.json`](docs/final_validation_summary.json)
 - **Assignment Compliance Matrix (100% Complete)**: [`docs/assignment_compliance_matrix.md`](docs/assignment_compliance_matrix.md)
-- **Final Technical Audit Report (20 Points)**: [`docs/final_audit_report.md`](docs/final_audit_report.md)
-- **System Architecture & Lifecycle DAG**: [`docs/architecture.md`](docs/architecture.md)
-- **Data Dictionary (All 19 Tables)**: [`docs/data_dictionary.md`](docs/data_dictionary.md)
-- **Anomaly Catalog & Detection Criteria**: [`docs/anomaly_catalog.md`](docs/anomaly_catalog.md)
-- **Reproducibility & Determinism Guide**: [`docs/reproducibility.md`](docs/reproducibility.md)
-- **AI Governance & Prompt History**: [`AI_USAGE.md`](AI_USAGE.md) and [`docs/prompt_history.md`](docs/prompt_history.md)
+- **Data Dictionary (All 19 Relational Tables + GT)**: [`docs/data_dictionary.md`](docs/data_dictionary.md)
+- **AI Governance & Prompt History**: [`docs/AI_USAGE.md`](docs/AI_USAGE.md) and [`ai/prompts/`](ai/prompts/)

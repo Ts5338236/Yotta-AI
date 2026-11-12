@@ -171,6 +171,7 @@ def main(argv: list[str] | None = None) -> None:
             print(f"Deliveries        : {len(dataset['deliveries'])}")
             print(f"Budget Events     : {len(dataset['budget_events'])}")
             print(f"Status Events     : {len(dataset['status_events'])}")
+            print(f"Exception Logs    : {len(dataset.get('exception_logs', []))}")
             print(f"Total PO Spend    : ${total_spend:,.2f} {meta['base_currency']}")
 
             if args.inject_anomalies:

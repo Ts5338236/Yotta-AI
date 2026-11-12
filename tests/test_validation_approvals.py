@@ -9,7 +9,7 @@ Verifies detection of:
 import copy
 import pytest
 from datagen.workflow import generate_procurement_workflow
-from validate.checks import validate_approvals_and_business_rules
+from validate.checks import validate_approvals_and_business_rules, validate_split_purchases
 
 
 @pytest.fixture(scope="module")
@@ -100,4 +100,38 @@ def test_detects_non_lowest_score_awarded(starter_dataset):
     ]
     assert len(failures) >= 1
     assert failures[0].severity == "CRITICAL"
+
+
+def test_validate_split_purchases_auditing(starter_dataset):
+    """Verify split purchase detection identifies requisitions aggregating over threshold."""
+    corrupted = copy.deepcopy(starter_dataset)
+    # Inject two PRs for same requester on same date, each $1,500 (total $3,000 > $2,000)
+    req_id = corrupted["requesters"][0]["requester_id"]
+    corrupted["purchase_requests"].append({
+        "request_id": "PR-2026-999001",
+        "requester_id": req_id,
+        "department_id": corrupted["requesters"][0]["department_id"],
+        "budget_id": corrupted["budgets"][0]["budget_id"],
+        "request_date": "2026-05-10",
+        "status": "APPROVED",
+        "priority": "MEDIUM",
+        "total_estimate_usd": 1500.0,
+    })
+    corrupted["purchase_requests"].append({
+        "request_id": "PR-2026-999002",
+        "requester_id": req_id,
+        "department_id": corrupted["requesters"][0]["department_id"],
+        "budget_id": corrupted["budgets"][0]["budget_id"],
+        "request_date": "2026-05-11",
+        "status": "APPROVED",
+        "priority": "MEDIUM",
+        "total_estimate_usd": 1600.0,
+    })
+
+    results = validate_split_purchases(corrupted, window_days=3)
+    audited = [r for r in results if r.check_name == "split_purchase_threshold_audit"]
+    assert len(audited) >= 1
+    found = any("PR-2026-999001+PR-2026-999002" == r.record_id for r in audited)
+    assert found
+
 

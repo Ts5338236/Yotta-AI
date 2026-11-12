@@ -330,16 +330,16 @@ Immutable double-entry style financial ledger tracking budget lifecycle balances
 ---
 
 ## 18. ExceptionLog (`exception_logs`)
-Detailed operational and anomaly event log for data auditing. Population scheduled for Phase 6.
+Operational and anomaly event log for data auditing and compliance tracking. Populated with managerial PR rejections, sole-source procurement justifications, and partial shipment fulfillment records.
 
 | Field Name | Data Type | Constraint | Required | Description | Allowed Values / Format | Units |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `exception_id` | TEXT | PRIMARY KEY | Yes | Exception event ID | `^EXC-\d{6}$` (e.g. `EXC-000001`) | Dimension |
-| `exception_type` | TEXT | NOT NULL | Yes | Categorical classification | e.g. `'SPLIT_PO'`, `'BUDGET_OVERRUN'`, `'LATE_DELIVERY'` | - |
+| `exception_type` | TEXT | CHECK enum, NOT NULL | Yes | Categorical classification | `'PR_REJECTED'`, `'SOLE_SOURCE_EXCEPTION'`, `'PARTIAL_DELIVERY'` | Enum |
 | `severity` | TEXT | CHECK enum, NOT NULL | Yes | Criticality level | `'LOW'`, `'MEDIUM'`, `'HIGH'`, `'CRITICAL'` | Enum |
-| `affected_entity_type` | TEXT | NOT NULL | Yes | Targeted entity category | Entity table name or type | - |
-| `affected_entity_id` | TEXT | NOT NULL | Yes | Targeted entity ID | Valid entity identifier | Dimension |
-| `reason` | TEXT | NOT NULL | Yes | Root cause or violation text | Non-empty string | - |
+| `affected_entity_type` | TEXT | NOT NULL | Yes | Targeted entity category | `'purchase_requests'`, `'purchase_orders'`, `'deliveries'` | Dimension |
+| `affected_entity_id` | TEXT | NOT NULL | Yes | Targeted entity ID | Valid entity identifier (`PR-...`, `PO-...`, `DEL-...`) | Dimension |
+| `reason` | TEXT | NOT NULL | Yes | Root cause or violation text | Non-empty explanatory string | - |
 | `logged_at` | TEXT | NOT NULL | Yes | Exception detection timestamp | ISO 8601 UTC timestamp | Time |
 | `resolved` | INTEGER | CHECK (0, 1), NOT NULL | Yes | Resolution flag | `0` (Unresolved), `1` (Resolved) | Boolean |
 
@@ -369,3 +369,19 @@ All derived attributes are calculated deterministically by `src/datagen/derive.p
 | `spent_amount` | `budgets` | `budget_events` | $\sum \text{SPEND}$ (cents) |
 | `available_amount` | `budgets` | `budgets`, `budget_events` | $\text{allocated} - (\text{reserved} + \text{committed} + \text{spent})$ (cents) |
 | `current_status` | All Lifecycle Entities| `status_events` | Latest $\text{StatusEvent.to\_status}$ ordered by timestamp and ID |
+
+---
+
+## 20. Ground Truth Records (`ground_truth.csv` & `ground_truth.json`)
+
+Isolated supervisory labels for benchmark evaluation of downstream fraud and anomaly detection models. Exported strictly to `data/ground_truth/` and `output/ground_truth/`.
+
+| Field Name | Data Type | Constraint | Required | Description | Allowed Values / Format | Units |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `anomaly_id` | TEXT | PRIMARY KEY | Yes | Unique anomaly identifier | `^ANOM-\d{6}$` (e.g. `ANOM-000001`) | Dimension |
+| `issue_type` | TEXT | CHECK enum, NOT NULL | Yes | Procurement anomaly classification | `'po_without_approval'`, `'expired_quote_before_award'`, `'non_cheapest_quote_without_rationale'`, `'inactive_supplier_used'`, `'budget_overrun'`, `'duplicate_purchase_request'`, `'quote_currency_mismatch'` | Enum |
+| `entity` | TEXT | NOT NULL | Yes | Affected operational table | `'purchase_orders'`, `'supplier_quotes'`, `'suppliers'`, `'budgets'`, `'purchase_requests'` | Dimension |
+| `record_id` | TEXT | NOT NULL | Yes | Primary key of mutated entity | Valid entity identifier | Dimension |
+| `expected_decision`| TEXT | CHECK enum, NOT NULL | Yes | Prescribed compliance resolution | `'REJECT'`, `'DISQUALIFY'`, `'JUSTIFY_OR_REVERT'`, `'BLOCK'`, `'FLAG'`, `'REVISE'` | Enum |
+| `reason` | TEXT | NOT NULL | Yes | Root cause analysis and audit justification | Detailed textual explanation of the anomaly | - |
+| `metadata` | TEXT | Optional | Yes | Corrupted attributes and original values | JSON object string (or dict) with forensic context | - |

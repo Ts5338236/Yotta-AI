@@ -30,6 +30,7 @@ from validate.checks import (
     validate_id_format,
     validate_lifecycle_state_machine,
     validate_primary_keys_and_ids,
+    validate_split_purchases,
 )
 from validate.models import ValidationCheckResult, ValidationReport
 

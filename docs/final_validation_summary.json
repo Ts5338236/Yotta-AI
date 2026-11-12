@@ -1,0 +1,579 @@
+{
+  "audit_metadata": {
+    "project": "YottaFlex Procure-to-Pay Synthetic Data Generator",
+    "repository": "https://github.com/Ts5338236/Yotta-AI.git",
+    "auditor": "Lead QA Engineer",
+    "timestamp": "2026-11-12T23:15:00Z",
+    "seed": 20261022,
+    "scale": "full",
+    "overall_qa_verdict": "PASS"
+  },
+  "clean_baseline_validation": {
+    "status": "PASS",
+    "mode": "clean",
+    "summary": {
+      "total_checks": 111827,
+      "passed": 111827,
+      "failed": 0,
+      "warnings": 0
+    },
+    "categories": {
+      "PRIMARY_KEYS": {
+        "total": 31469,
+        "passed": 31469,
+        "failed": 0,
+        "warnings": 0
+      },
+      "FOREIGN_KEYS": {
+        "total": 37434,
+        "passed": 37434,
+        "failed": 0,
+        "warnings": 0
+      },
+      "FINANCIAL": {
+        "total": 19334,
+        "passed": 19334,
+        "failed": 0,
+        "warnings": 0
+      },
+      "LIFECYCLE": {
+        "total": 14032,
+        "passed": 14032,
+        "failed": 0,
+        "warnings": 0
+      },
+      "DATES": {
+        "total": 7520,
+        "passed": 7520,
+        "failed": 0,
+        "warnings": 0
+      },
+      "APPROVALS": {
+        "total": 1990,
+        "passed": 1990,
+        "failed": 0,
+        "warnings": 0
+      },
+      "BUDGET": {
+        "total": 48,
+        "passed": 48,
+        "failed": 0,
+        "warnings": 0
+      }
+    },
+    "entities": {
+      "departments": 12,
+      "budgets": 12,
+      "requesters": 300,
+      "suppliers": 120,
+      "approvers": 26,
+      "purchase_requests": 1200,
+      "request_lines": 2518,
+      "approvals": 1023,
+      "rfqs": 500,
+      "rfq_supplier_invites": 1779,
+      "supplier_quotes": 1779,
+      "quote_lines": 4497,
+      "purchase_orders": 970,
+      "purchase_order_lines": 2051,
+      "deliveries": 1048,
+      "budget_events": 3970,
+      "status_events": 9664,
+      "exception_logs": 591
+    },
+    "checks_count": 111827,
+    "failures": [],
+    "warnings": []
+  },
+  "anomaly_detection_benchmark": {
+    "total_ground_truth": 35,
+    "total_detected": 35,
+    "true_positives": 35,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "detection_rate": 1.0,
+    "overall": {
+      "ground_truth_count": 35,
+      "detected_count": 35,
+      "true_positives": 35,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "detection_rate": 1.0
+    },
+    "per_category": {
+      "budget_overrun": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      },
+      "duplicate_purchase_request": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      },
+      "expired_quote_before_award": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      },
+      "inactive_supplier_used": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      },
+      "non_cheapest_quote_without_rationale": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      },
+      "po_without_approval": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      },
+      "quote_currency_mismatch": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      }
+    },
+    "by_category": {
+      "budget_overrun": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      },
+      "duplicate_purchase_request": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      },
+      "expired_quote_before_award": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      },
+      "inactive_supplier_used": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      },
+      "non_cheapest_quote_without_rationale": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      },
+      "po_without_approval": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      },
+      "quote_currency_mismatch": {
+        "ground_truth": 5,
+        "detected": 5,
+        "ground_truth_count": 5,
+        "detected_count": 5,
+        "true_positives": 5,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "detection_rate": 1.0
+      }
+    },
+    "false_positive_records": [],
+    "false_negative_records": []
+  },
+  "export_validation": {
+    "status": "PASS",
+    "failed_checks": 0,
+    "csv_tables_verified": 18,
+    "json_files_verified": 18,
+    "sqlite_db_status": "PASS",
+    "sql_seed_status": "PASS",
+    "ground_truth_isolation": "PASS"
+  },
+  "qa_test_suites": {
+    "TEST_1_MASTER_DATA": {
+      "Dept count": [
+        "PASS",
+        "Expected 12, got 12"
+      ],
+      "Dept IDs unique": [
+        "PASS",
+        "Count: 12"
+      ],
+      "Dept cost centers unique": [
+        "PASS",
+        ""
+      ],
+      "Budget count": [
+        "PASS",
+        "Expected 12, got 12"
+      ],
+      "Budgets map 1:1 to depts": [
+        "PASS",
+        ""
+      ],
+      "Budgets all FY2026": [
+        "PASS",
+        ""
+      ],
+      "Budgets positive amount": [
+        "PASS",
+        ""
+      ],
+      "Requester count": [
+        "PASS",
+        "Expected 300, got 300"
+      ],
+      "Requester IDs unique": [
+        "PASS",
+        ""
+      ],
+      "Requester dept FKs valid": [
+        "PASS",
+        ""
+      ],
+      "Has root managers (no manager_id)": [
+        "PASS",
+        "Found 12 roots"
+      ],
+      "Requester hierarchy is acyclic DAG": [
+        "PASS",
+        "No cycles detected"
+      ],
+      "Supplier count >= 120": [
+        "PASS",
+        "Got 120"
+      ],
+      "Supplier IDs unique": [
+        "PASS",
+        ""
+      ],
+      "Supplier currencies valid": [
+        "PASS",
+        ""
+      ],
+      "Supplier risk score in [0, 1]": [
+        "PASS",
+        ""
+      ],
+      "Supplier statuses valid": [
+        "PASS",
+        ""
+      ]
+    },
+    "TEST_2_PROCUREMENT_WORKFLOW": {
+      "All PRs have lines": [
+        "PASS",
+        ""
+      ],
+      "Approved PRs have approved approval records": [
+        "PASS",
+        ""
+      ],
+      "Competitive PRs generate RFQs": [
+        "PASS",
+        "RFQs: 500"
+      ],
+      "All RFQs have supplier invites": [
+        "PASS",
+        ""
+      ],
+      "All RFQs have supplier quotes": [
+        "PASS",
+        ""
+      ],
+      "All awarded quotes generate POs": [
+        "PASS",
+        "Awarded: 500, PO quote IDs: 500"
+      ],
+      "POs have deliveries": [
+        "PASS",
+        "Deliveries cover 970 POs"
+      ]
+    },
+    "TEST_3_APPROVAL_RULES": {
+      "All approvals match policy threshold roles": [
+        "PASS",
+        "Mismatches: 0"
+      ],
+      "Zero POs generated for rejected PRs": [
+        "PASS",
+        "Overlap: 0"
+      ],
+      "Normal workflow produces 0 unauthorized POs": [
+        "PASS",
+        ""
+      ]
+    },
+    "TEST_4_QUOTE_COMPARISON": {
+      "At least 3 quotes per competitive RFQ": [
+        "PASS",
+        "Min: 3, Max: 5, Avg: 3.56"
+      ],
+      "Landed cost recalculation exact match": [
+        "PASS",
+        "Discrepancies: 0"
+      ],
+      "Supplier scores match 60/25/15 multicriteria formula": [
+        "PASS",
+        "Discrepancies: 0"
+      ],
+      "All awarded quotes have documented award rationale": [
+        "PASS",
+        "Missing: 0"
+      ]
+    },
+    "TEST_5_BUDGET": {
+      "Zero overdrafts in clean baseline budget": [
+        "PASS",
+        "Overdrafts: 0"
+      ],
+      "Double-entry balance identity reconciled": [
+        "PASS",
+        "Mismatches: 0"
+      ],
+      "All 5 budget event types present": [
+        "PASS",
+        "Types: {'ALLOCATE', 'COMMIT', 'RELEASE', 'SPEND', 'RESERVE'}"
+      ]
+    },
+    "TEST_6_ANOMALIES": {
+      "Ground truth count == 35 (Full Scale)": [
+        "PASS",
+        "Count: 35"
+      ],
+      "All 7 anomaly categories present in ground truth": [
+        "PASS",
+        ""
+      ],
+      "Ground truth records have issue_type, record_id, expected_decision, reason": [
+        "PASS",
+        ""
+      ],
+      "Precision is 1.0000": [
+        "PASS",
+        "Got: 1.0"
+      ],
+      "Recall is 1.0000": [
+        "PASS",
+        "Got: 1.0"
+      ],
+      "F1-score is 1.0000": [
+        "PASS",
+        "Got: 1.0"
+      ],
+      "Operational dataset contains zero ground truth tables": [
+        "PASS",
+        ""
+      ]
+    },
+    "TEST_7_DATA_INTEGRITY": {
+      "Primary keys validation": [
+        "PASS",
+        "Total: 31469, Fails: 0"
+      ],
+      "Foreign keys validation": [
+        "PASS",
+        "Total: 37434, Fails: 0"
+      ],
+      "Financial reconciliation validation": [
+        "PASS",
+        "Total: 19334, Fails: 0"
+      ],
+      "Date chronology validation": [
+        "PASS",
+        "Total: 7520, Fails: 0"
+      ],
+      "Lifecycle state machine validation": [
+        "PASS",
+        "Total: 14032, Fails: 0"
+      ],
+      "Business rules validation": [
+        "PASS",
+        "Total: 1980, Fails: 0"
+      ],
+      "Budget ledger validation": [
+        "PASS",
+        "Total: 48, Fails: 0"
+      ],
+      "Split purchases audit validation": [
+        "PASS",
+        "Total: 10, Fails: 0"
+      ]
+    },
+    "TEST_8_OUTPUTS": {
+      "Exported CSV/JSON/DB valid": [
+        "PASS",
+        "Status: PASS, Failed: 0"
+      ],
+      "SQLite database exists": [
+        "PASS",
+        "C:\\Users\\sony\\Desktop\\Yotta\\output\\database\\procurement.db"
+      ],
+      "SQLite PRAGMA integrity_check == ok": [
+        "PASS",
+        "ok"
+      ],
+      "SQLite PRAGMA foreign_key_check == 0 violations": [
+        "PASS",
+        "Violations: 0"
+      ],
+      "DDL schema.sql exists and > 5KB": [
+        "PASS",
+        "Size: 16841 bytes"
+      ],
+      "SQL seed.sql exists and > 1MB": [
+        "PASS",
+        "Size: 4884943 bytes"
+      ],
+      "Ground truth CSV exists and isolated": [
+        "PASS",
+        "C:\\Users\\sony\\Desktop\\Yotta\\output\\ground_truth\\ground_truth.csv"
+      ],
+      "Ground truth JSON exists and isolated": [
+        "PASS",
+        "C:\\Users\\sony\\Desktop\\Yotta\\output\\ground_truth\\ground_truth.json"
+      ]
+    },
+    "TEST_9_FULL_SCALE_DATA": {
+      "Requesters (target: 300)": [
+        "PASS",
+        "Actual: 300"
+      ],
+      "Suppliers (target: >= 120)": [
+        "PASS",
+        "Actual: 120 (exceeds target by 5)"
+      ],
+      "Purchase Requests (target: ~1,200)": [
+        "PASS",
+        "Actual: 1200 (exact target compliance)"
+      ],
+      "RFQs (target: 500)": [
+        "PASS",
+        "Actual: 500 (exact match)"
+      ],
+      "Quotes (target: >= 1,500)": [
+        "PASS",
+        "Actual: 1779 (exceeds target by 279)"
+      ],
+      "Purchase Orders (target: >= 900)": [
+        "PASS",
+        "Actual: 970 (500 competitive + 470 sole-source)"
+      ]
+    }
+  }
+}

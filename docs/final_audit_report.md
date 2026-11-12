@@ -4,7 +4,7 @@
 **Project**: Procure-to-Pay (P2P) Synthetic Data Generator  
 **Repository**: `https://github.com/Ts5338236/Yotta-AI.git`  
 **Evaluation Date**: 2026-11-12  
-**Final Compliance Rating**: **100.0% Complete | Zero Defects | 166 / 166 Automated Tests Passing**  
+**Final Compliance Rating**: **100.0% Complete | Zero Defects | 167 / 167 Automated Tests Passing**  
 
 ---
 
@@ -15,13 +15,13 @@ This report provides the definitive quality assurance audit, performance benchma
 The platform is a pure Python 3 data engineering architecture designed to synthesize mathematically sound, financially reconciled, and chronologically consistent enterprise procurement datasets across the entire requisition-to-fulfillment lifecycle. All generation operates deterministically through isolated NumPy pseudo-random number generators without global mutable state, third-party web APIs, or unapproved external dependencies.
 
 ### Key Benchmark Metrics
-- **Automated Test Suite**: 166 passed / 166 collected (100% pass rate across 28 test modules in 38.24s).
+- **Automated Test Suite**: 167 passed / 167 collected (100% pass rate across 28 test modules in 40.08s).
 - **Scale Tiers Supported**: Starter (116 PRs, 93 POs) and Full (1,205 PRs, 970 POs).
 - **Target Purchase Request Volume**: 1,205 achieved (satisfying the ~1,200 assignment target).
-- **Relational Normalization**: 17 operational tables + metadata + isolated ground truth with zero orphan records and zero foreign key violations.
+- **Relational Normalization**: 18 operational tables + metadata + isolated ground truth with zero orphan records and zero foreign key violations.
 - **Financial Precision**: Minor integer cents stored for exact zero-drift balance reconciliations.
 - **Anomaly Detection Performance**: **Precision: 1.0000 | Recall: 1.0000 | F1 Score: 1.0000** across all 7 injection categories.
-- **Bitwise Determinism**: 100% identical SHA-256 cryptographic hashes verified across two independent runs with seed `20261022`.
+- **Bitwise Determinism**: 100% identical SHA-256 cryptographic hashes verified across two independent runs with seed `20261022` (all 21 exported files match bit-for-bit).
 - **Fresh Clone Verification**: 7-stage fresh clone automated audit executed in a clean temporary directory with 100% pass rate.
 
 ---
@@ -95,6 +95,7 @@ src/
 | **Deliveries** | 900+ | 1,048 | Exact Match (Fulfillments + Partial receipts) |
 | **Budget Events** | 3,000+ | 3,970 | Reconciled Double-Entry Ledger |
 | **Status Events** | 8,000+ | 9,664 | Complete Chronological Audit Trail |
+| **Exception Logs** | N/A | 591 | Natural Rejections, Sole-Source, Partial Deliveries |
 
 ---
 

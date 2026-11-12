@@ -110,6 +110,68 @@ def run_clean_path_validation(dataset: Dict[str, Any]) -> Tuple[bool, List[str]]
     return len(errors) == 0, errors
 
 
+def generate_operational_exception_logs(
+    id_factory: IDFactory,
+    rejected_requests: List[Dict[str, Any]],
+    purchase_orders: List[Dict[str, Any]],
+    deliveries: List[Dict[str, Any]],
+) -> List[Dict[str, Any]]:
+    """Generate operational exception audit logs for business exceptions.
+
+    Captures:
+    - Rejection events (PR_REJECTED)
+    - Non-competitive single source authorizations (SOLE_SOURCE_CONTRACT)
+    - Partial shipment fulfillment events (PARTIAL_DELIVERY)
+    """
+    logs: List[Dict[str, Any]] = []
+
+    # 1. Natural Rejections
+    for pr in rejected_requests:
+        logs.append({
+            "exception_id": id_factory.next_exception_log_id(),
+            "exception_type": "PR_REJECTED",
+            "severity": "MEDIUM",
+            "affected_entity_type": "purchase_requests",
+            "affected_entity_id": pr["request_id"],
+            "reason": f"Purchase request {pr['request_id']} rejected by management review",
+            "logged_at": f"{pr['request_date']}T12:00:00Z",
+            "resolved": 1,
+        })
+
+    # 2. Non-competitive Sourcing Exceptions
+    for po in purchase_orders:
+        if po.get("sourcing_path") != "competitive" or po.get("sourcing_type") in ("SOLE_SOURCE", "EMERGENCY", "CONTRACT_RENEWAL"):
+            reason_code = po.get("single_source_reason_code") or "contract"
+            logs.append({
+                "exception_id": id_factory.next_exception_log_id(),
+                "exception_type": "SOLE_SOURCE_EXCEPTION",
+                "severity": "LOW",
+                "affected_entity_type": "purchase_orders",
+                "affected_entity_id": po["po_id"],
+                "reason": f"Direct procurement exception authorized: {po.get('sourcing_justification', reason_code)}",
+                "logged_at": f"{po['po_date']}T09:30:00Z",
+                "resolved": 1,
+            })
+
+    # 3. Partial Deliveries
+    for d in deliveries:
+        if d.get("delivery_status") == "PARTIAL":
+            logs.append({
+                "exception_id": id_factory.next_exception_log_id(),
+                "exception_type": "PARTIAL_DELIVERY",
+                "severity": "LOW",
+                "affected_entity_type": "deliveries",
+                "affected_entity_id": d["delivery_id"],
+                "reason": f"Partial shipment sequence {d.get('delivery_sequence', 1)} for purchase order {d['po_id']}",
+                "logged_at": f"{d['delivery_date']}T14:15:00Z",
+                "resolved": 1,
+            })
+
+    # Sort deterministically by logged_at and exception_id
+    logs.sort(key=lambda x: (x["logged_at"], x["exception_id"]))
+    return logs
+
+
 def generate_procurement_workflow(
     config_path: Optional[str] = None,
     scale: Optional[str] = None,
@@ -242,6 +304,14 @@ def generate_procurement_workflow(
         deliveries,
     )
 
+    # 10. Operational Exception Logs
+    exception_logs = generate_operational_exception_logs(
+        id_factory,
+        rejected_requests,
+        purchase_orders,
+        deliveries,
+    )
+
     dataset: Dict[str, Any] = {
         "departments": masters["departments"],
         "budgets": reconciled_budgets,
@@ -260,6 +330,7 @@ def generate_procurement_workflow(
         "deliveries": deliveries,
         "budget_events": budget_events,
         "status_events": status_events,
+        "exception_logs": exception_logs,
         "metadata": {
             "scale": used_scale,
             "seed": used_seed,

@@ -15,7 +15,7 @@
 
 | Requirement | Implementation File | Test Evidence | Result | Remaining Work |
 | :--- | :--- | :--- | :---: | :---: |
-| **Clean Modular Architecture** | `src/datagen/`, `src/validate/`, `config/`, `data/sql/` | `compileall`, full 166-test pytest suite | **PASS** | None |
+| **Clean Modular Architecture** | `src/datagen/`, `src/validate/`, `config/`, `data/sql/` | `compileall`, full 167-test pytest suite | **PASS** | None |
 | **Strict 3NF SQLite Schema** | `data/sql/schema.sql` (19 relational tables with PK, compound FKs, UNIQUE, and CHECK constraints) | `tests/test_schema.py` (6 tests), `tests/test_sql_schema.py` (2 tests) | **PASS** | None |
 | **Monetary Minor Units** | `src/datagen/requests.py`, `src/datagen/quotes.py` (integer cents stored for non-floating precision) | `tests/test_requests.py`, `tests/test_quotes.py` | **PASS** | None |
 | **Centralized Config** | `src/datagen/config.py`, `config/default.yaml` | `tests/test_config.py` (9 tests) | **PASS** | None |
@@ -76,7 +76,7 @@
 | **Financial Reconciliation** | `src/validate/checks.py` (Header sums match lines, landed costs match item components) | `tests/test_validation_financial.py` (6 tests) | **PASS** | None |
 | **Date & Chronology Ordering** | `src/validate/checks.py` (PR <= Approval <= RFQ <= Quote <= Award <= PO <= Delivery) | `tests/test_validation_dates.py` (4 tests) | **PASS** | None |
 | **Lifecycle State Machine** | `src/validate/checks.py` (Valid state transitions across PR, PO, RFQ, Delivery) | `tests/test_validation_lifecycle.py` (4 tests) | **PASS** | None |
-| **Business Rules Validation** | `src/validate/checks.py` (Tiered limits, >= 3 quotes, lowest-score award) | `tests/test_validation_approvals.py` (4 tests) | **PASS** | None |
+| **Business Rules Validation** | `src/validate/checks.py` (Tiered limits, >= 3 quotes, lowest-score award, split purchase audit) | `tests/test_validation_approvals.py` (5 tests) | **PASS** | None |
 | **Derived Fields Engine** | `src/datagen/derive.py` (Pure recalculation of line totals, landed costs, balances) | `tests/test_derive.py` (9 tests) | **PASS** | None |
 
 ---
@@ -102,13 +102,13 @@
 
 | Requirement | Implementation File | Test Evidence | Result | Remaining Work |
 | :--- | :--- | :--- | :---: | :---: |
-| **CSV Export** | `src/datagen/export.py` (17 operational CSV tables with RFC 4180 formatting) | `tests/test_csv_export.py` (3 tests) | **PASS** | None |
-| **JSON Export** | `src/datagen/export.py` (17 operational JSON files + `metadata.json`) | `tests/test_json_export.py` (3 tests) | **PASS** | None |
+| **CSV Export** | `src/datagen/export.py` (18 operational CSV tables with RFC 4180 formatting) | `tests/test_csv_export.py` (3 tests) | **PASS** | None |
+| **JSON Export** | `src/datagen/export.py` (18 operational JSON files + `metadata.json`) | `tests/test_json_export.py` (3 tests) | **PASS** | None |
 | **SQLite DB (`procurement.db`)** | `src/datagen/database.py` (`PRAGMA foreign_keys = ON;`, `integrity_check = ok`) | `tests/test_database_export.py` (3 tests) | **PASS** | None |
 | **Canonical DDL (`schema.sql`)** | `data/sql/schema.sql` (19 tables with indexes and check constraints) | `tests/test_sql_schema.py` (2 tests) | **PASS** | None |
 | **Populated SQL Seed (`seed.sql`)**| `src/datagen/export.py` (Topologically ordered INSERT statements, 0 FK violations) | `tests/test_sql_seed.py` (2 tests) | **PASS** | None |
 | **Source Provenance Manifest** | `source_manifest.json` (SHA-256 hashes, zero external proprietary data) | `tests/test_export.py` | **PASS** | None |
-| **Two-Run Bitwise Determinism** | Seed `20261022` yields 100% identical SHA-256 hashes across all 20 artifacts | `scratch/verify_determinism_2runs.py` | **PASS** | None |
+| **Two-Run Bitwise Determinism** | Seed `20261022` yields 100% identical SHA-256 hashes across all 21 artifacts | `scratch/verify_determinism_2runs.py` | **PASS** | None |
 | **Clean Fresh Clone Verification** | 7-stage fresh clone verification in temporary sandbox passes 100% | `scratch/fresh_clone_audit.py` | **PASS** | None |
 
 ---

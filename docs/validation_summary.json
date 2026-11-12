@@ -2,83 +2,156 @@
   "status": "FAIL",
   "mode": "clean",
   "summary": {
-    "total_checks": 10844,
-    "passed": 10832,
-    "failed": 12,
+    "total_checks": 111918,
+    "passed": 111855,
+    "failed": 63,
     "warnings": 0
   },
   "categories": {
     "PRIMARY_KEYS": {
-      "total": 3056,
-      "passed": 3056,
+      "total": 31485,
+      "passed": 31485,
       "failed": 0,
       "warnings": 0
     },
     "FOREIGN_KEYS": {
-      "total": 3590,
-      "passed": 3590,
-      "failed": 0,
+      "total": 37450,
+      "passed": 37447,
+      "failed": 3,
       "warnings": 0
     },
     "FINANCIAL": {
-      "total": 1873,
-      "passed": 1872,
-      "failed": 1,
+      "total": 19350,
+      "passed": 19345,
+      "failed": 5,
       "warnings": 0
     },
     "LIFECYCLE": {
-      "total": 1343,
-      "passed": 1343,
+      "total": 14032,
+      "passed": 14032,
       "failed": 0,
       "warnings": 0
     },
     "DATES": {
-      "total": 739,
-      "passed": 738,
-      "failed": 1,
+      "total": 7520,
+      "passed": 7515,
+      "failed": 5,
       "warnings": 0
     },
     "APPROVALS": {
-      "total": 196,
-      "passed": 193,
-      "failed": 3,
+      "total": 1998,
+      "passed": 1983,
+      "failed": 15,
       "warnings": 0
     },
     "BUDGET": {
-      "total": 40,
-      "passed": 40,
+      "total": 48,
+      "passed": 48,
       "failed": 0,
       "warnings": 0
     },
     "ANOMALY_FREE": {
-      "total": 7,
+      "total": 35,
       "passed": 0,
-      "failed": 7,
+      "failed": 35,
       "warnings": 0
     }
   },
   "entities": {
-    "departments": 10,
-    "budgets": 10,
-    "requesters": 30,
-    "suppliers": 13,
-    "approvers": 22,
-    "purchase_requests": 116,
-    "request_lines": 227,
-    "approvals": 96,
-    "rfqs": 50,
-    "rfq_supplier_invites": 183,
-    "supplier_quotes": 183,
-    "quote_lines": 414,
-    "purchase_orders": 93,
-    "purchase_order_lines": 188,
-    "deliveries": 101,
-    "budget_events": 390,
-    "status_events": 930,
-    "ground_truth": 7
+    "departments": 12,
+    "budgets": 12,
+    "requesters": 300,
+    "suppliers": 125,
+    "approvers": 26,
+    "purchase_requests": 1205,
+    "request_lines": 2529,
+    "approvals": 1018,
+    "rfqs": 500,
+    "rfq_supplier_invites": 1779,
+    "supplier_quotes": 1779,
+    "quote_lines": 4497,
+    "purchase_orders": 970,
+    "purchase_order_lines": 2051,
+    "deliveries": 1048,
+    "budget_events": 3970,
+    "status_events": 9664,
+    "exception_logs": 591,
+    "ground_truth": 35
   },
-  "checks_count": 10844,
+  "checks_count": 111918,
   "failures": [
+    {
+      "check_name": "fk_po_supplier_matches_awarded_quote",
+      "category": "FOREIGN_KEYS",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000067",
+      "field": "supplier_id",
+      "actual_value": "SUP-0123",
+      "expected_value": "SUP-0007",
+      "description": "PO supplier matches supplier on awarded quote"
+    },
+    {
+      "check_name": "fk_po_supplier_matches_awarded_quote",
+      "category": "FOREIGN_KEYS",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000174",
+      "field": "supplier_id",
+      "actual_value": "SUP-0121",
+      "expected_value": "SUP-0014",
+      "description": "PO supplier matches supplier on awarded quote"
+    },
+    {
+      "check_name": "fk_po_supplier_matches_awarded_quote",
+      "category": "FOREIGN_KEYS",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000235",
+      "field": "supplier_id",
+      "actual_value": "SUP-0122",
+      "expected_value": "SUP-0025",
+      "description": "PO supplier matches supplier on awarded quote"
+    },
+    {
+      "check_name": "financial_budget_no_overrun",
+      "category": "FINANCIAL",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "budgets",
+      "record_id": "BUD-0004",
+      "field": "allocated_amount",
+      "actual_value": "Encumbered: 44,789,271",
+      "expected_value": "Allocated: 26,873,562",
+      "description": "Department budget has zero clean-path overrun"
+    },
+    {
+      "check_name": "financial_budget_no_overrun",
+      "category": "FINANCIAL",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "budgets",
+      "record_id": "BUD-0005",
+      "field": "allocated_amount",
+      "actual_value": "Encumbered: 44,407,902",
+      "expected_value": "Allocated: 26,644,741",
+      "description": "Department budget has zero clean-path overrun"
+    },
+    {
+      "check_name": "financial_budget_no_overrun",
+      "category": "FINANCIAL",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "budgets",
+      "record_id": "BUD-0006",
+      "field": "allocated_amount",
+      "actual_value": "Encumbered: 47,535,035",
+      "expected_value": "Allocated: 28,521,021",
+      "description": "Department budget has zero clean-path overrun"
+    },
     {
       "check_name": "financial_budget_no_overrun",
       "category": "FINANCIAL",
@@ -87,8 +160,20 @@
       "entity": "budgets",
       "record_id": "BUD-0009",
       "field": "allocated_amount",
-      "actual_value": "Encumbered: 1,892,314",
-      "expected_value": "Allocated: 1,135,388",
+      "actual_value": "Encumbered: 25,886,063",
+      "expected_value": "Allocated: 15,531,637",
+      "description": "Department budget has zero clean-path overrun"
+    },
+    {
+      "check_name": "financial_budget_no_overrun",
+      "category": "FINANCIAL",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "budgets",
+      "record_id": "BUD-0010",
+      "field": "allocated_amount",
+      "actual_value": "Encumbered: 6,684,011",
+      "expected_value": "Allocated: 4,010,406",
       "description": "Department budget has zero clean-path overrun"
     },
     {
@@ -97,10 +182,58 @@
       "passed": false,
       "severity": "ERROR",
       "entity": "supplier_quotes",
-      "record_id": "QUO-SUP-C-0009-2026-000031",
+      "record_id": "QUO-SUP-C-0009-2026-000014",
       "field": "award_date",
-      "actual_value": "2026-03-02",
-      "expected_value": "<= 2026-02-25",
+      "actual_value": "2026-01-22",
+      "expected_value": "<= 2026-01-16",
+      "description": "Quote award occurs before quotation expiry"
+    },
+    {
+      "check_name": "date_award_before_quote_expiry",
+      "category": "DATES",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0044-2026-000252",
+      "field": "award_date",
+      "actual_value": "2026-03-07",
+      "expected_value": "<= 2026-03-01",
+      "description": "Quote award occurs before quotation expiry"
+    },
+    {
+      "check_name": "date_award_before_quote_expiry",
+      "category": "DATES",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0116-2026-000492",
+      "field": "award_date",
+      "actual_value": "2026-04-14",
+      "expected_value": "<= 2026-04-10",
+      "description": "Quote award occurs before quotation expiry"
+    },
+    {
+      "check_name": "date_award_before_quote_expiry",
+      "category": "DATES",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0091-2026-000547",
+      "field": "award_date",
+      "actual_value": "2026-04-27",
+      "expected_value": "<= 2026-04-21",
+      "description": "Quote award occurs before quotation expiry"
+    },
+    {
+      "check_name": "date_award_before_quote_expiry",
+      "category": "DATES",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0002-2026-001330",
+      "field": "award_date",
+      "actual_value": "2026-09-11",
+      "expected_value": "<= 2026-09-06",
       "description": "Quote award occurs before quotation expiry"
     },
     {
@@ -109,10 +242,10 @@
       "passed": false,
       "severity": "ERROR",
       "entity": "purchase_requests",
-      "record_id": "PR-2026-000082",
+      "record_id": "PR-2026-000870",
       "field": "total_estimate_usd",
       "actual_value": "0",
-      "expected_value": ">= 1 levels for $5,675.55",
+      "expected_value": ">= 1 levels for $1,503.26",
       "description": "Requisition received required number of tiered approval levels"
     },
     {
@@ -121,10 +254,106 @@
       "passed": false,
       "severity": "ERROR",
       "entity": "purchase_requests",
-      "record_id": "PR-2026-000116",
+      "record_id": "PR-2026-001139",
       "field": "total_estimate_usd",
       "actual_value": "0",
-      "expected_value": ">= 1 levels for $1,590.00",
+      "expected_value": ">= 1 levels for $107.02",
+      "description": "Requisition received required number of tiered approval levels"
+    },
+    {
+      "check_name": "approval_required_levels",
+      "category": "APPROVALS",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-000221",
+      "field": "total_estimate_usd",
+      "actual_value": "0",
+      "expected_value": ">= 1 levels for $708.24",
+      "description": "Requisition received required number of tiered approval levels"
+    },
+    {
+      "check_name": "approval_required_levels",
+      "category": "APPROVALS",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001151",
+      "field": "total_estimate_usd",
+      "actual_value": "0",
+      "expected_value": ">= 1 levels for $3,262.98",
+      "description": "Requisition received required number of tiered approval levels"
+    },
+    {
+      "check_name": "approval_required_levels",
+      "category": "APPROVALS",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001112",
+      "field": "total_estimate_usd",
+      "actual_value": "0",
+      "expected_value": ">= 1 levels for $767.70",
+      "description": "Requisition received required number of tiered approval levels"
+    },
+    {
+      "check_name": "approval_required_levels",
+      "category": "APPROVALS",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001201",
+      "field": "total_estimate_usd",
+      "actual_value": "0",
+      "expected_value": ">= 1 levels for $1,135.82",
+      "description": "Requisition received required number of tiered approval levels"
+    },
+    {
+      "check_name": "approval_required_levels",
+      "category": "APPROVALS",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001202",
+      "field": "total_estimate_usd",
+      "actual_value": "0",
+      "expected_value": ">= 1 levels for $709.60",
+      "description": "Requisition received required number of tiered approval levels"
+    },
+    {
+      "check_name": "approval_required_levels",
+      "category": "APPROVALS",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001203",
+      "field": "total_estimate_usd",
+      "actual_value": "0",
+      "expected_value": ">= 1 levels for $4,006.10",
+      "description": "Requisition received required number of tiered approval levels"
+    },
+    {
+      "check_name": "approval_required_levels",
+      "category": "APPROVALS",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001204",
+      "field": "total_estimate_usd",
+      "actual_value": "0",
+      "expected_value": ">= 1 levels for $1,787.20",
+      "description": "Requisition received required number of tiered approval levels"
+    },
+    {
+      "check_name": "approval_required_levels",
+      "category": "APPROVALS",
+      "passed": false,
+      "severity": "ERROR",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001205",
+      "field": "total_estimate_usd",
+      "actual_value": "0",
+      "expected_value": ">= 1 levels for $14,350.42",
       "description": "Requisition received required number of tiered approval levels"
     },
     {
@@ -133,10 +362,58 @@
       "passed": false,
       "severity": "CRITICAL",
       "entity": "supplier_quotes",
-      "record_id": "QUO-SUP-C-0005-2026-000004",
+      "record_id": "QUO-SUP-C-0069-2026-000119",
       "field": "score",
-      "actual_value": "0.9451",
-      "expected_value": "0.0698",
+      "actual_value": "0.75",
+      "expected_value": "0.1811",
+      "description": "Awarded quotation has lowest composite score among competitors"
+    },
+    {
+      "check_name": "award_lowest_composite_score",
+      "category": "APPROVALS",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0003-2026-000487",
+      "field": "score",
+      "actual_value": "0.775",
+      "expected_value": "0.15",
+      "description": "Awarded quotation has lowest composite score among competitors"
+    },
+    {
+      "check_name": "award_lowest_composite_score",
+      "category": "APPROVALS",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0059-2026-000560",
+      "field": "score",
+      "actual_value": "0.75",
+      "expected_value": "0.3306",
+      "description": "Awarded quotation has lowest composite score among competitors"
+    },
+    {
+      "check_name": "award_lowest_composite_score",
+      "category": "APPROVALS",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0071-2026-001325",
+      "field": "score",
+      "actual_value": "0.75",
+      "expected_value": "0.25",
+      "description": "Awarded quotation has lowest composite score among competitors"
+    },
+    {
+      "check_name": "award_lowest_composite_score",
+      "category": "APPROVALS",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0020-2026-001747",
+      "field": "score",
+      "actual_value": "0.9318",
+      "expected_value": "0.031",
       "description": "Awarded quotation has lowest composite score among competitors"
     },
     {
@@ -145,11 +422,59 @@
       "passed": false,
       "severity": "CRITICAL",
       "entity": "purchase_orders",
-      "record_id": "PO-2026-000010",
+      "record_id": "PO-2026-000503",
       "field": null,
       "actual_value": "Anomaly: po_without_approval",
       "expected_value": "Zero anomalies in clean dataset",
-      "description": "Purchase order PO-2026-000010 issued for requisition PR-2026-000082 lacking approved authorization"
+      "description": "Purchase order PO-2026-000503 issued for requisition PR-2026-000870 lacking approved authorization"
+    },
+    {
+      "check_name": "clean_mode_anomaly_po_without_approval",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000560",
+      "field": null,
+      "actual_value": "Anomaly: po_without_approval",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Purchase order PO-2026-000560 issued for requisition PR-2026-001139 lacking approved authorization"
+    },
+    {
+      "check_name": "clean_mode_anomaly_po_without_approval",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000562",
+      "field": null,
+      "actual_value": "Anomaly: po_without_approval",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Purchase order PO-2026-000562 issued for requisition PR-2026-000221 lacking approved authorization"
+    },
+    {
+      "check_name": "clean_mode_anomaly_po_without_approval",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000267",
+      "field": null,
+      "actual_value": "Anomaly: po_without_approval",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Purchase order PO-2026-000267 issued for requisition PR-2026-001151 lacking approved authorization"
+    },
+    {
+      "check_name": "clean_mode_anomaly_po_without_approval",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000745",
+      "field": null,
+      "actual_value": "Anomaly: po_without_approval",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Purchase order PO-2026-000745 issued for requisition PR-2026-001112 lacking approved authorization"
     },
     {
       "check_name": "clean_mode_anomaly_expired_quote_before_award",
@@ -157,11 +482,59 @@
       "passed": false,
       "severity": "CRITICAL",
       "entity": "supplier_quotes",
-      "record_id": "QUO-SUP-C-0009-2026-000031",
+      "record_id": "QUO-SUP-C-0009-2026-000014",
       "field": null,
       "actual_value": "Anomaly: expired_quote_before_award",
       "expected_value": "Zero anomalies in clean dataset",
-      "description": "Quote QUO-SUP-C-0009-2026-000031 validity expired on 2026-02-25 before award date 2026-03-02"
+      "description": "Quote QUO-SUP-C-0009-2026-000014 validity expired on 2026-01-16 before award date 2026-01-22"
+    },
+    {
+      "check_name": "clean_mode_anomaly_expired_quote_before_award",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0044-2026-000252",
+      "field": null,
+      "actual_value": "Anomaly: expired_quote_before_award",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Quote QUO-SUP-C-0044-2026-000252 validity expired on 2026-03-01 before award date 2026-03-07"
+    },
+    {
+      "check_name": "clean_mode_anomaly_expired_quote_before_award",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0116-2026-000492",
+      "field": null,
+      "actual_value": "Anomaly: expired_quote_before_award",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Quote QUO-SUP-C-0116-2026-000492 validity expired on 2026-04-10 before award date 2026-04-14"
+    },
+    {
+      "check_name": "clean_mode_anomaly_expired_quote_before_award",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0091-2026-000547",
+      "field": null,
+      "actual_value": "Anomaly: expired_quote_before_award",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Quote QUO-SUP-C-0091-2026-000547 validity expired on 2026-04-21 before award date 2026-04-27"
+    },
+    {
+      "check_name": "clean_mode_anomaly_expired_quote_before_award",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0002-2026-001330",
+      "field": null,
+      "actual_value": "Anomaly: expired_quote_before_award",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Quote QUO-SUP-C-0002-2026-001330 validity expired on 2026-09-06 before award date 2026-09-11"
     },
     {
       "check_name": "clean_mode_anomaly_non_cheapest_quote_without_rationale",
@@ -169,11 +542,59 @@
       "passed": false,
       "severity": "CRITICAL",
       "entity": "supplier_quotes",
-      "record_id": "QUO-SUP-C-0005-2026-000004",
+      "record_id": "QUO-SUP-C-0069-2026-000119",
       "field": null,
       "actual_value": "Anomaly: non_cheapest_quote_without_rationale",
       "expected_value": "Zero anomalies in clean dataset",
-      "description": "Quote QUO-SUP-C-0005-2026-000004 awarded at $4,862.15 exceeding minimum available cost ($4,252.06) without documented justification"
+      "description": "Quote QUO-SUP-C-0069-2026-000119 awarded at $25,417.09 exceeding minimum available cost ($22,732.03) without documented justification"
+    },
+    {
+      "check_name": "clean_mode_anomaly_non_cheapest_quote_without_rationale",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0003-2026-000487",
+      "field": null,
+      "actual_value": "Anomaly: non_cheapest_quote_without_rationale",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Quote QUO-SUP-C-0003-2026-000487 awarded at $5,190.87 exceeding minimum available cost ($4,717.36) without documented justification"
+    },
+    {
+      "check_name": "clean_mode_anomaly_non_cheapest_quote_without_rationale",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0059-2026-000560",
+      "field": null,
+      "actual_value": "Anomaly: non_cheapest_quote_without_rationale",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Quote QUO-SUP-C-0059-2026-000560 awarded at $14,139.78 exceeding minimum available cost ($12,640.12) without documented justification"
+    },
+    {
+      "check_name": "clean_mode_anomaly_non_cheapest_quote_without_rationale",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0071-2026-001325",
+      "field": null,
+      "actual_value": "Anomaly: non_cheapest_quote_without_rationale",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Quote QUO-SUP-C-0071-2026-001325 awarded at $5,373.38 exceeding minimum available cost ($5,127.75) without documented justification"
+    },
+    {
+      "check_name": "clean_mode_anomaly_non_cheapest_quote_without_rationale",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0020-2026-001747",
+      "field": null,
+      "actual_value": "Anomaly: non_cheapest_quote_without_rationale",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Quote QUO-SUP-C-0020-2026-001747 awarded at $19,479.82 exceeding minimum available cost ($18,435.34) without documented justification"
     },
     {
       "check_name": "clean_mode_anomaly_inactive_supplier_used",
@@ -181,11 +602,95 @@
       "passed": false,
       "severity": "CRITICAL",
       "entity": "purchase_orders",
-      "record_id": "PO-2026-000072",
+      "record_id": "PO-2026-000067",
       "field": null,
       "actual_value": "Anomaly: inactive_supplier_used",
       "expected_value": "Zero anomalies in clean dataset",
-      "description": "Purchase order PO-2026-000072 issued to inactive/suspended vendor SUP-0013"
+      "description": "Purchase order PO-2026-000067 issued to inactive/suspended vendor SUP-0123"
+    },
+    {
+      "check_name": "clean_mode_anomaly_inactive_supplier_used",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000174",
+      "field": null,
+      "actual_value": "Anomaly: inactive_supplier_used",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Purchase order PO-2026-000174 issued to inactive/suspended vendor SUP-0121"
+    },
+    {
+      "check_name": "clean_mode_anomaly_inactive_supplier_used",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000235",
+      "field": null,
+      "actual_value": "Anomaly: inactive_supplier_used",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Purchase order PO-2026-000235 issued to inactive/suspended vendor SUP-0122"
+    },
+    {
+      "check_name": "clean_mode_anomaly_inactive_supplier_used",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000919",
+      "field": null,
+      "actual_value": "Anomaly: inactive_supplier_used",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Purchase order PO-2026-000919 issued to inactive/suspended vendor SUP-0124"
+    },
+    {
+      "check_name": "clean_mode_anomaly_inactive_supplier_used",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000921",
+      "field": null,
+      "actual_value": "Anomaly: inactive_supplier_used",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Purchase order PO-2026-000921 issued to inactive/suspended vendor SUP-0125"
+    },
+    {
+      "check_name": "clean_mode_anomaly_budget_overrun",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "budgets",
+      "record_id": "BUD-0004",
+      "field": null,
+      "actual_value": "Anomaly: budget_overrun",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Department budget BUD-0004 total commitments ($447,892.71) exceed allocated budget ($268,735.62) by $179,157.09"
+    },
+    {
+      "check_name": "clean_mode_anomaly_budget_overrun",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "budgets",
+      "record_id": "BUD-0005",
+      "field": null,
+      "actual_value": "Anomaly: budget_overrun",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Department budget BUD-0005 total commitments ($444,079.02) exceed allocated budget ($266,447.41) by $177,631.61"
+    },
+    {
+      "check_name": "clean_mode_anomaly_budget_overrun",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "budgets",
+      "record_id": "BUD-0006",
+      "field": null,
+      "actual_value": "Anomaly: budget_overrun",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Department budget BUD-0006 total commitments ($475,350.35) exceed allocated budget ($285,210.21) by $190,140.14"
     },
     {
       "check_name": "clean_mode_anomaly_budget_overrun",
@@ -197,7 +702,19 @@
       "field": null,
       "actual_value": "Anomaly: budget_overrun",
       "expected_value": "Zero anomalies in clean dataset",
-      "description": "Department budget BUD-0009 total commitments ($18,923.14) exceed allocated budget ($11,353.88) by $7,569.26"
+      "description": "Department budget BUD-0009 total commitments ($258,860.63) exceed allocated budget ($155,316.37) by $103,544.26"
+    },
+    {
+      "check_name": "clean_mode_anomaly_budget_overrun",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "budgets",
+      "record_id": "BUD-0010",
+      "field": null,
+      "actual_value": "Anomaly: budget_overrun",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Department budget BUD-0010 total commitments ($66,840.11) exceed allocated budget ($40,104.06) by $26,736.05"
     },
     {
       "check_name": "clean_mode_anomaly_duplicate_purchase_request",
@@ -205,11 +722,59 @@
       "passed": false,
       "severity": "CRITICAL",
       "entity": "purchase_requests",
-      "record_id": "PR-2026-000116",
+      "record_id": "PR-2026-001205",
       "field": null,
       "actual_value": "Anomaly: duplicate_purchase_request",
       "expected_value": "Zero anomalies in clean dataset",
-      "description": "Requisition PR-2026-000116 is an identical duplicate of PR-2026-000028 submitted within 3 days for identical item lines"
+      "description": "Requisition PR-2026-001205 is an identical duplicate of PR-2026-000010 submitted within 1 days for identical item lines"
+    },
+    {
+      "check_name": "clean_mode_anomaly_duplicate_purchase_request",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001202",
+      "field": null,
+      "actual_value": "Anomaly: duplicate_purchase_request",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Requisition PR-2026-001202 is an identical duplicate of PR-2026-000093 submitted within 2 days for identical item lines"
+    },
+    {
+      "check_name": "clean_mode_anomaly_duplicate_purchase_request",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001204",
+      "field": null,
+      "actual_value": "Anomaly: duplicate_purchase_request",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Requisition PR-2026-001204 is an identical duplicate of PR-2026-000032 submitted within 1 days for identical item lines"
+    },
+    {
+      "check_name": "clean_mode_anomaly_duplicate_purchase_request",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001201",
+      "field": null,
+      "actual_value": "Anomaly: duplicate_purchase_request",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Requisition PR-2026-001201 is an identical duplicate of PR-2026-000629 submitted within 2 days for identical item lines"
+    },
+    {
+      "check_name": "clean_mode_anomaly_duplicate_purchase_request",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001203",
+      "field": null,
+      "actual_value": "Anomaly: duplicate_purchase_request",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Requisition PR-2026-001203 is an identical duplicate of PR-2026-000139 submitted within 3 days for identical item lines"
     },
     {
       "check_name": "clean_mode_anomaly_quote_currency_mismatch",
@@ -217,11 +782,59 @@
       "passed": false,
       "severity": "CRITICAL",
       "entity": "supplier_quotes",
-      "record_id": "QUO-SUP-C-0004-2026-000026",
+      "record_id": "QUO-SUP-C-0033-2026-000041",
       "field": null,
       "actual_value": "Anomaly: quote_currency_mismatch",
       "expected_value": "Zero anomalies in clean dataset",
-      "description": "Quote QUO-SUP-C-0004-2026-000026 submitted in invalid/unsupported currency 'XYZ' lacking valid conversion rate"
+      "description": "Quote QUO-SUP-C-0033-2026-000041 submitted in invalid/unsupported currency 'XYZ' lacking valid conversion rate"
+    },
+    {
+      "check_name": "clean_mode_anomaly_quote_currency_mismatch",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0100-2026-000689",
+      "field": null,
+      "actual_value": "Anomaly: quote_currency_mismatch",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Quote QUO-SUP-C-0100-2026-000689 submitted in invalid/unsupported currency 'XYZ' lacking valid conversion rate"
+    },
+    {
+      "check_name": "clean_mode_anomaly_quote_currency_mismatch",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0073-2026-000848",
+      "field": null,
+      "actual_value": "Anomaly: quote_currency_mismatch",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Quote QUO-SUP-C-0073-2026-000848 submitted in invalid/unsupported currency 'XYZ' lacking valid conversion rate"
+    },
+    {
+      "check_name": "clean_mode_anomaly_quote_currency_mismatch",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0003-2026-001007",
+      "field": null,
+      "actual_value": "Anomaly: quote_currency_mismatch",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Quote QUO-SUP-C-0003-2026-001007 submitted in invalid/unsupported currency 'XYZ' lacking valid conversion rate"
+    },
+    {
+      "check_name": "clean_mode_anomaly_quote_currency_mismatch",
+      "category": "ANOMALY_FREE",
+      "passed": false,
+      "severity": "CRITICAL",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0036-2026-001303",
+      "field": null,
+      "actual_value": "Anomaly: quote_currency_mismatch",
+      "expected_value": "Zero anomalies in clean dataset",
+      "description": "Quote QUO-SUP-C-0036-2026-001303 submitted in invalid/unsupported currency 'XYZ' lacking valid conversion rate"
     }
   ],
   "warnings": [],
@@ -229,45 +842,257 @@
     {
       "issue_type": "po_without_approval",
       "entity": "purchase_orders",
-      "record_id": "PO-2026-000010",
+      "record_id": "PO-2026-000503",
       "detected": true,
-      "reason": "Purchase order PO-2026-000010 issued for requisition PR-2026-000082 lacking approved authorization",
+      "reason": "Purchase order PO-2026-000503 issued for requisition PR-2026-000870 lacking approved authorization",
       "metadata": {
-        "request_id": "PR-2026-000082"
+        "request_id": "PR-2026-000870"
+      }
+    },
+    {
+      "issue_type": "po_without_approval",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000560",
+      "detected": true,
+      "reason": "Purchase order PO-2026-000560 issued for requisition PR-2026-001139 lacking approved authorization",
+      "metadata": {
+        "request_id": "PR-2026-001139"
+      }
+    },
+    {
+      "issue_type": "po_without_approval",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000562",
+      "detected": true,
+      "reason": "Purchase order PO-2026-000562 issued for requisition PR-2026-000221 lacking approved authorization",
+      "metadata": {
+        "request_id": "PR-2026-000221"
+      }
+    },
+    {
+      "issue_type": "po_without_approval",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000267",
+      "detected": true,
+      "reason": "Purchase order PO-2026-000267 issued for requisition PR-2026-001151 lacking approved authorization",
+      "metadata": {
+        "request_id": "PR-2026-001151"
+      }
+    },
+    {
+      "issue_type": "po_without_approval",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000745",
+      "detected": true,
+      "reason": "Purchase order PO-2026-000745 issued for requisition PR-2026-001112 lacking approved authorization",
+      "metadata": {
+        "request_id": "PR-2026-001112"
       }
     },
     {
       "issue_type": "expired_quote_before_award",
       "entity": "supplier_quotes",
-      "record_id": "QUO-SUP-C-0009-2026-000031",
+      "record_id": "QUO-SUP-C-0009-2026-000014",
       "detected": true,
-      "reason": "Quote QUO-SUP-C-0009-2026-000031 validity expired on 2026-02-25 before award date 2026-03-02",
+      "reason": "Quote QUO-SUP-C-0009-2026-000014 validity expired on 2026-01-16 before award date 2026-01-22",
       "metadata": {
-        "award_date": "2026-03-02",
-        "valid_until": "2026-02-25"
+        "award_date": "2026-01-22",
+        "valid_until": "2026-01-16"
+      }
+    },
+    {
+      "issue_type": "expired_quote_before_award",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0044-2026-000252",
+      "detected": true,
+      "reason": "Quote QUO-SUP-C-0044-2026-000252 validity expired on 2026-03-01 before award date 2026-03-07",
+      "metadata": {
+        "award_date": "2026-03-07",
+        "valid_until": "2026-03-01"
+      }
+    },
+    {
+      "issue_type": "expired_quote_before_award",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0116-2026-000492",
+      "detected": true,
+      "reason": "Quote QUO-SUP-C-0116-2026-000492 validity expired on 2026-04-10 before award date 2026-04-14",
+      "metadata": {
+        "award_date": "2026-04-14",
+        "valid_until": "2026-04-10"
+      }
+    },
+    {
+      "issue_type": "expired_quote_before_award",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0091-2026-000547",
+      "detected": true,
+      "reason": "Quote QUO-SUP-C-0091-2026-000547 validity expired on 2026-04-21 before award date 2026-04-27",
+      "metadata": {
+        "award_date": "2026-04-27",
+        "valid_until": "2026-04-21"
+      }
+    },
+    {
+      "issue_type": "expired_quote_before_award",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0002-2026-001330",
+      "detected": true,
+      "reason": "Quote QUO-SUP-C-0002-2026-001330 validity expired on 2026-09-06 before award date 2026-09-11",
+      "metadata": {
+        "award_date": "2026-09-11",
+        "valid_until": "2026-09-06"
       }
     },
     {
       "issue_type": "non_cheapest_quote_without_rationale",
       "entity": "supplier_quotes",
-      "record_id": "QUO-SUP-C-0005-2026-000004",
+      "record_id": "QUO-SUP-C-0069-2026-000119",
       "detected": true,
-      "reason": "Quote QUO-SUP-C-0005-2026-000004 awarded at $4,862.15 exceeding minimum available cost ($4,252.06) without documented justification",
+      "reason": "Quote QUO-SUP-C-0069-2026-000119 awarded at $25,417.09 exceeding minimum available cost ($22,732.03) without documented justification",
       "metadata": {
-        "cost": 4862.15,
-        "min_cost": 4252.06,
-        "rfq_id": "RFQ-2026-000001"
+        "cost": 25417.09,
+        "min_cost": 22732.03,
+        "rfq_id": "RFQ-2026-000034"
+      }
+    },
+    {
+      "issue_type": "non_cheapest_quote_without_rationale",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0003-2026-000487",
+      "detected": true,
+      "reason": "Quote QUO-SUP-C-0003-2026-000487 awarded at $5,190.87 exceeding minimum available cost ($4,717.36) without documented justification",
+      "metadata": {
+        "cost": 5190.87,
+        "min_cost": 4717.36,
+        "rfq_id": "RFQ-2026-000137"
+      }
+    },
+    {
+      "issue_type": "non_cheapest_quote_without_rationale",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0059-2026-000560",
+      "detected": true,
+      "reason": "Quote QUO-SUP-C-0059-2026-000560 awarded at $14,139.78 exceeding minimum available cost ($12,640.12) without documented justification",
+      "metadata": {
+        "cost": 14139.78,
+        "min_cost": 12640.12,
+        "rfq_id": "RFQ-2026-000159"
+      }
+    },
+    {
+      "issue_type": "non_cheapest_quote_without_rationale",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0071-2026-001325",
+      "detected": true,
+      "reason": "Quote QUO-SUP-C-0071-2026-001325 awarded at $5,373.38 exceeding minimum available cost ($5,127.75) without documented justification",
+      "metadata": {
+        "cost": 5373.38,
+        "min_cost": 5127.75,
+        "rfq_id": "RFQ-2026-000371"
+      }
+    },
+    {
+      "issue_type": "non_cheapest_quote_without_rationale",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0020-2026-001747",
+      "detected": true,
+      "reason": "Quote QUO-SUP-C-0020-2026-001747 awarded at $19,479.82 exceeding minimum available cost ($18,435.34) without documented justification",
+      "metadata": {
+        "cost": 19479.82,
+        "min_cost": 18435.34,
+        "rfq_id": "RFQ-2026-000491"
       }
     },
     {
       "issue_type": "inactive_supplier_used",
       "entity": "purchase_orders",
-      "record_id": "PO-2026-000072",
+      "record_id": "PO-2026-000067",
       "detected": true,
-      "reason": "Purchase order PO-2026-000072 issued to inactive/suspended vendor SUP-0013",
+      "reason": "Purchase order PO-2026-000067 issued to inactive/suspended vendor SUP-0123",
       "metadata": {
-        "supplier_id": "SUP-0013",
+        "supplier_id": "SUP-0123",
         "supplier_status": "INACTIVE"
+      }
+    },
+    {
+      "issue_type": "inactive_supplier_used",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000174",
+      "detected": true,
+      "reason": "Purchase order PO-2026-000174 issued to inactive/suspended vendor SUP-0121",
+      "metadata": {
+        "supplier_id": "SUP-0121",
+        "supplier_status": "INACTIVE"
+      }
+    },
+    {
+      "issue_type": "inactive_supplier_used",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000235",
+      "detected": true,
+      "reason": "Purchase order PO-2026-000235 issued to inactive/suspended vendor SUP-0122",
+      "metadata": {
+        "supplier_id": "SUP-0122",
+        "supplier_status": "INACTIVE"
+      }
+    },
+    {
+      "issue_type": "inactive_supplier_used",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000919",
+      "detected": true,
+      "reason": "Purchase order PO-2026-000919 issued to inactive/suspended vendor SUP-0124",
+      "metadata": {
+        "supplier_id": "SUP-0124",
+        "supplier_status": "INACTIVE"
+      }
+    },
+    {
+      "issue_type": "inactive_supplier_used",
+      "entity": "purchase_orders",
+      "record_id": "PO-2026-000921",
+      "detected": true,
+      "reason": "Purchase order PO-2026-000921 issued to inactive/suspended vendor SUP-0125",
+      "metadata": {
+        "supplier_id": "SUP-0125",
+        "supplier_status": "INACTIVE"
+      }
+    },
+    {
+      "issue_type": "budget_overrun",
+      "entity": "budgets",
+      "record_id": "BUD-0004",
+      "detected": true,
+      "reason": "Department budget BUD-0004 total commitments ($447,892.71) exceed allocated budget ($268,735.62) by $179,157.09",
+      "metadata": {
+        "allocated_cents": 26873562,
+        "encumbered_cents": 44789271,
+        "deficit_cents": 17915709
+      }
+    },
+    {
+      "issue_type": "budget_overrun",
+      "entity": "budgets",
+      "record_id": "BUD-0005",
+      "detected": true,
+      "reason": "Department budget BUD-0005 total commitments ($444,079.02) exceed allocated budget ($266,447.41) by $177,631.61",
+      "metadata": {
+        "allocated_cents": 26644741,
+        "encumbered_cents": 44407902,
+        "deficit_cents": 17763161
+      }
+    },
+    {
+      "issue_type": "budget_overrun",
+      "entity": "budgets",
+      "record_id": "BUD-0006",
+      "detected": true,
+      "reason": "Department budget BUD-0006 total commitments ($475,350.35) exceed allocated budget ($285,210.21) by $190,140.14",
+      "metadata": {
+        "allocated_cents": 28521021,
+        "encumbered_cents": 47535035,
+        "deficit_cents": 19014014
       }
     },
     {
@@ -275,30 +1100,130 @@
       "entity": "budgets",
       "record_id": "BUD-0009",
       "detected": true,
-      "reason": "Department budget BUD-0009 total commitments ($18,923.14) exceed allocated budget ($11,353.88) by $7,569.26",
+      "reason": "Department budget BUD-0009 total commitments ($258,860.63) exceed allocated budget ($155,316.37) by $103,544.26",
       "metadata": {
-        "allocated_cents": 1135388,
-        "encumbered_cents": 1892314,
-        "deficit_cents": 756926
+        "allocated_cents": 15531637,
+        "encumbered_cents": 25886063,
+        "deficit_cents": 10354426
+      }
+    },
+    {
+      "issue_type": "budget_overrun",
+      "entity": "budgets",
+      "record_id": "BUD-0010",
+      "detected": true,
+      "reason": "Department budget BUD-0010 total commitments ($66,840.11) exceed allocated budget ($40,104.06) by $26,736.05",
+      "metadata": {
+        "allocated_cents": 4010406,
+        "encumbered_cents": 6684011,
+        "deficit_cents": 2673605
       }
     },
     {
       "issue_type": "duplicate_purchase_request",
       "entity": "purchase_requests",
-      "record_id": "PR-2026-000116",
+      "record_id": "PR-2026-001205",
       "detected": true,
-      "reason": "Requisition PR-2026-000116 is an identical duplicate of PR-2026-000028 submitted within 3 days for identical item lines",
+      "reason": "Requisition PR-2026-001205 is an identical duplicate of PR-2026-000010 submitted within 1 days for identical item lines",
       "metadata": {
-        "original_request_id": "PR-2026-000028",
+        "original_request_id": "PR-2026-000010",
+        "days_difference": 1
+      }
+    },
+    {
+      "issue_type": "duplicate_purchase_request",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001202",
+      "detected": true,
+      "reason": "Requisition PR-2026-001202 is an identical duplicate of PR-2026-000093 submitted within 2 days for identical item lines",
+      "metadata": {
+        "original_request_id": "PR-2026-000093",
+        "days_difference": 2
+      }
+    },
+    {
+      "issue_type": "duplicate_purchase_request",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001204",
+      "detected": true,
+      "reason": "Requisition PR-2026-001204 is an identical duplicate of PR-2026-000032 submitted within 1 days for identical item lines",
+      "metadata": {
+        "original_request_id": "PR-2026-000032",
+        "days_difference": 1
+      }
+    },
+    {
+      "issue_type": "duplicate_purchase_request",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001201",
+      "detected": true,
+      "reason": "Requisition PR-2026-001201 is an identical duplicate of PR-2026-000629 submitted within 2 days for identical item lines",
+      "metadata": {
+        "original_request_id": "PR-2026-000629",
+        "days_difference": 2
+      }
+    },
+    {
+      "issue_type": "duplicate_purchase_request",
+      "entity": "purchase_requests",
+      "record_id": "PR-2026-001203",
+      "detected": true,
+      "reason": "Requisition PR-2026-001203 is an identical duplicate of PR-2026-000139 submitted within 3 days for identical item lines",
+      "metadata": {
+        "original_request_id": "PR-2026-000139",
         "days_difference": 3
       }
     },
     {
       "issue_type": "quote_currency_mismatch",
       "entity": "supplier_quotes",
-      "record_id": "QUO-SUP-C-0004-2026-000026",
+      "record_id": "QUO-SUP-C-0033-2026-000041",
       "detected": true,
-      "reason": "Quote QUO-SUP-C-0004-2026-000026 submitted in invalid/unsupported currency 'XYZ' lacking valid conversion rate",
+      "reason": "Quote QUO-SUP-C-0033-2026-000041 submitted in invalid/unsupported currency 'XYZ' lacking valid conversion rate",
+      "metadata": {
+        "currency": "XYZ",
+        "fx_rate": null
+      }
+    },
+    {
+      "issue_type": "quote_currency_mismatch",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0100-2026-000689",
+      "detected": true,
+      "reason": "Quote QUO-SUP-C-0100-2026-000689 submitted in invalid/unsupported currency 'XYZ' lacking valid conversion rate",
+      "metadata": {
+        "currency": "XYZ",
+        "fx_rate": null
+      }
+    },
+    {
+      "issue_type": "quote_currency_mismatch",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0073-2026-000848",
+      "detected": true,
+      "reason": "Quote QUO-SUP-C-0073-2026-000848 submitted in invalid/unsupported currency 'XYZ' lacking valid conversion rate",
+      "metadata": {
+        "currency": "XYZ",
+        "fx_rate": null
+      }
+    },
+    {
+      "issue_type": "quote_currency_mismatch",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0003-2026-001007",
+      "detected": true,
+      "reason": "Quote QUO-SUP-C-0003-2026-001007 submitted in invalid/unsupported currency 'XYZ' lacking valid conversion rate",
+      "metadata": {
+        "currency": "XYZ",
+        "fx_rate": null
+      }
+    },
+    {
+      "issue_type": "quote_currency_mismatch",
+      "entity": "supplier_quotes",
+      "record_id": "QUO-SUP-C-0036-2026-001303",
+      "detected": true,
+      "reason": "Quote QUO-SUP-C-0036-2026-001303 submitted in invalid/unsupported currency 'XYZ' lacking valid conversion rate",
       "metadata": {
         "currency": "XYZ",
         "fx_rate": null

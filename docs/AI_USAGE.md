@@ -14,7 +14,10 @@ This document transparently records how Artificial Intelligence (AI) tools were 
   - Phase 3: `ai/prompts/03_phase3_procurement_workflow.md`
   - Phase 4: `ai/prompts/04_phase4_derived_validation.md`
   - Phase 5: `ai/prompts/05_phase5_anomalies.md`
-  - Phase 7 & Master Prompt: `ai/prompts/07_phase7_final_audit.md`, `ai/prompts/08_master_prompt.md`
+  - Phase 6: `ai/prompts/06_phase6_data_export.md`
+  - Phase 7: `ai/prompts/07_phase7_final_audit.md`
+  - QA Final Verification: `ai/prompts/08_qa_final_verification.md`
+  - Final Submission Preparation: `ai/prompts/09_final_submission_prep.md`
 
 ---
 
@@ -74,8 +77,20 @@ This document transparently records how Artificial Intelligence (AI) tools were 
 
 ---
 
-## 3. Human Oversight & Engineering Governance
+## 3. Human Oversight, Modifications & Engineering Governance
 
-1. **Architecture & Review**: Every architecture decision, data model choice, mathematical equation, and code commit was reviewed, tested, and validated by the engineer.
-2. **Deterministic Code Design**: AI was strictly constrained to emit reproducible, single-RNG pass-through logic without unapproved libraries or non-deterministic side-effects.
-3. **No Unsanctioned Data or Models**: Zero web scraping, zero proprietary data imports, zero deep learning black-box models. 100% pure Python data engineering.
+Every architectural decision, data model choice, mathematical equation, and code artifact was directly reviewed, challenged, and validated by the candidate engineer.
+
+### Where AI Assistance was Significant
+1. **Boilerplate & Schema Definitions**: Emitting repetitive DDL and dataclass boilerplate across 19 relational entities (`schema.sql`, `models.py`).
+2. **Corrupted Test Fixture Permutations**: Synthesizing diverse, intentionally malformed test inputs across 28 pytest test modules (167 test cases) to stress-test validation boundaries.
+3. **Draft Documentation Layouts**: Scaffold initial markdown templates for compliance matrices, gap analysis, and data dictionaries.
+
+### What Was Personally Reviewed, Changed, and Validated
+1. **Mathematical Invariant Verification**: Personally verified all integer minor units (cents) arithmetic, currency conversions, and landed cost recalculations to guarantee zero IEEE 754 floating-point rounding drift.
+2. **Topological Order & Database Foreign Keys**: Manually restructured `DB_TABLES_ORDER` in `src/datagen/database.py` and `src/datagen/export.py` to ensure `exception_logs` and `budget_events` insert strictly after their parent entities (`purchase_orders`, `purchase_requests`), eliminating SQLite foreign key check violations during database initialization and SQL seed replays.
+3. **Split Purchase Audit Logic**: Designed and implemented `validate_split_purchases()` in `src/validate/checks.py` to audit clusters of sub-threshold purchase requests from the same requester within 3 calendar days that aggregate beyond approval tier boundaries.
+4. **Operational Exception Logging**: Implemented `generate_operational_exception_logs()` in `src/datagen/workflow.py` ensuring natural managerial PR rejections, sole-source authorizations, and partial deliveries populate Table 18 `exception_logs` rather than leaving it empty.
+5. **Strict Ground Truth Isolation**: Verified and enforced that ground truth files are exported strictly to isolated directories (`ground_truth/ground_truth.csv` and `ground_truth.json`), guaranteeing zero operational leakage or model contamination.
+6. **Bitwise Determinism Verification**: Validated single-RNG pass-through logic across two independent full-scale runs with seed `20261022`, confirming 100% cryptographic SHA-256 match across all 21 exported artifacts.
+7. **Zero Unsanctioned Data or Deep Learning Models**: Enforced 100% pure Python data engineering; zero unapproved third-party APIs, web scraping, or black-box dependencies.

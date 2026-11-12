@@ -1,0 +1,592 @@
+exception_id,exception_type,severity,affected_entity_type,affected_entity_id,reason,logged_at,resolved
+EXC-000001,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000599,Purchase request PR-2026-000599 rejected by management review,2026-01-11T12:00:00Z,1
+EXC-000002,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000654,Purchase request PR-2026-000654 rejected by management review,2026-01-14T12:00:00Z,1
+EXC-000003,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000969,Purchase request PR-2026-000969 rejected by management review,2026-01-20T12:00:00Z,1
+EXC-000004,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-001014,Purchase request PR-2026-001014 rejected by management review,2026-02-07T12:00:00Z,1
+EXC-000005,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000849,Purchase request PR-2026-000849 rejected by management review,2026-02-09T12:00:00Z,1
+EXC-000006,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000855,Purchase request PR-2026-000855 rejected by management review,2026-02-09T12:00:00Z,1
+EXC-000007,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000820,Purchase request PR-2026-000820 rejected by management review,2026-02-18T12:00:00Z,1
+EXC-000008,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000251,Purchase request PR-2026-000251 rejected by management review,2026-02-27T12:00:00Z,1
+EXC-000009,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000190,Purchase request PR-2026-000190 rejected by management review,2026-03-05T12:00:00Z,1
+EXC-000010,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-001039,Purchase request PR-2026-001039 rejected by management review,2026-03-06T12:00:00Z,1
+EXC-000011,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-001164,Purchase request PR-2026-001164 rejected by management review,2026-03-06T12:00:00Z,1
+EXC-000012,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000864,Purchase request PR-2026-000864 rejected by management review,2026-04-14T12:00:00Z,1
+EXC-000013,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000055,Purchase request PR-2026-000055 rejected by management review,2026-04-16T12:00:00Z,1
+EXC-000014,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-001165,Purchase request PR-2026-001165 rejected by management review,2026-04-17T12:00:00Z,1
+EXC-000015,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000899,Purchase request PR-2026-000899 rejected by management review,2026-04-18T12:00:00Z,1
+EXC-000016,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000060,Purchase request PR-2026-000060 rejected by management review,2026-05-09T12:00:00Z,1
+EXC-000017,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000968,Purchase request PR-2026-000968 rejected by management review,2026-05-11T12:00:00Z,1
+EXC-000018,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000022,Purchase request PR-2026-000022 rejected by management review,2026-05-25T12:00:00Z,1
+EXC-000019,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-001023,Purchase request PR-2026-001023 rejected by management review,2026-05-29T12:00:00Z,1
+EXC-000020,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000108,Purchase request PR-2026-000108 rejected by management review,2026-07-08T12:00:00Z,1
+EXC-000021,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000284,Purchase request PR-2026-000284 rejected by management review,2026-08-04T12:00:00Z,1
+EXC-000022,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000433,Purchase request PR-2026-000433 rejected by management review,2026-08-04T12:00:00Z,1
+EXC-000023,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000445,Purchase request PR-2026-000445 rejected by management review,2026-08-07T12:00:00Z,1
+EXC-000024,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000724,Purchase request PR-2026-000724 rejected by management review,2026-08-10T12:00:00Z,1
+EXC-000025,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000192,Purchase request PR-2026-000192 rejected by management review,2026-08-17T12:00:00Z,1
+EXC-000026,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000532,Purchase request PR-2026-000532 rejected by management review,2026-08-19T12:00:00Z,1
+EXC-000027,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000947,Purchase request PR-2026-000947 rejected by management review,2026-08-25T12:00:00Z,1
+EXC-000028,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000635,Purchase request PR-2026-000635 rejected by management review,2026-09-02T12:00:00Z,1
+EXC-000029,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000795,Purchase request PR-2026-000795 rejected by management review,2026-09-08T12:00:00Z,1
+EXC-000030,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-001190,Purchase request PR-2026-001190 rejected by management review,2026-09-16T12:00:00Z,1
+EXC-000031,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000630,Purchase request PR-2026-000630 rejected by management review,2026-09-17T12:00:00Z,1
+EXC-000032,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000236,Purchase request PR-2026-000236 rejected by management review,2026-09-26T12:00:00Z,1
+EXC-000033,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000746,Purchase request PR-2026-000746 rejected by management review,2026-10-10T12:00:00Z,1
+EXC-000034,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000104,Purchase request PR-2026-000104 rejected by management review,2026-10-27T12:00:00Z,1
+EXC-000035,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000514,Purchase request PR-2026-000514 rejected by management review,2026-10-31T12:00:00Z,1
+EXC-000036,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-001082,Purchase request PR-2026-001082 rejected by management review,2026-11-05T12:00:00Z,1
+EXC-000037,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-001031,Purchase request PR-2026-001031 rejected by management review,2026-11-13T12:00:00Z,1
+EXC-000038,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000035,Purchase request PR-2026-000035 rejected by management review,2026-11-30T12:00:00Z,1
+EXC-000039,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-001195,Purchase request PR-2026-001195 rejected by management review,2026-12-03T12:00:00Z,1
+EXC-000040,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000860,Purchase request PR-2026-000860 rejected by management review,2026-12-16T12:00:00Z,1
+EXC-000041,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000528,Purchase request PR-2026-000528 rejected by management review,2026-12-18T12:00:00Z,1
+EXC-000042,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000202,Purchase request PR-2026-000202 rejected by management review,2026-12-21T12:00:00Z,1
+EXC-000043,PR_REJECTED,MEDIUM,purchase_requests,PR-2026-000384,Purchase request PR-2026-000384 rejected by management review,2026-12-26T12:00:00Z,1
+EXC-000044,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000501,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-05T09:30:00Z,1
+EXC-000045,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000502,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-10T09:30:00Z,1
+EXC-000046,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000503,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-12T09:30:00Z,1
+EXC-000047,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000504,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-13T09:30:00Z,1
+EXC-000048,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000505,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-17T09:30:00Z,1
+EXC-000049,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000506,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-17T09:30:00Z,1
+EXC-000050,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000507,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-18T09:30:00Z,1
+EXC-000051,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000508,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-18T09:30:00Z,1
+EXC-000052,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000509,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-19T09:30:00Z,1
+EXC-000053,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000510,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-19T09:30:00Z,1
+EXC-000054,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000511,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-19T09:30:00Z,1
+EXC-000055,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000512,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-20T09:30:00Z,1
+EXC-000056,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000513,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-20T09:30:00Z,1
+EXC-000057,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000514,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-21T09:30:00Z,1
+EXC-000058,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000515,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-23T09:30:00Z,1
+EXC-000059,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000516,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-25T09:30:00Z,1
+EXC-000060,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000517,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-25T09:30:00Z,1
+EXC-000061,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000518,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-25T09:30:00Z,1
+EXC-000062,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000519,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-27T09:30:00Z,1
+EXC-000063,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000520,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-01-29T09:30:00Z,1
+EXC-000064,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000522,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-01T09:30:00Z,1
+EXC-000065,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000521,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-02T09:30:00Z,1
+EXC-000066,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000523,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-05T09:30:00Z,1
+EXC-000067,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000524,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-06T09:30:00Z,1
+EXC-000068,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000525,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-06T09:30:00Z,1
+EXC-000069,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000526,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-08T09:30:00Z,1
+EXC-000070,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000527,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-10T09:30:00Z,1
+EXC-000071,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000528,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-10T09:30:00Z,1
+EXC-000072,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000529,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-11T09:30:00Z,1
+EXC-000073,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000530,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-12T09:30:00Z,1
+EXC-000074,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000532,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-12T09:30:00Z,1
+EXC-000075,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000531,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-13T09:30:00Z,1
+EXC-000076,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000534,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-13T09:30:00Z,1
+EXC-000077,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000533,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-14T09:30:00Z,1
+EXC-000078,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000535,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-15T09:30:00Z,1
+EXC-000079,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000536,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-16T09:30:00Z,1
+EXC-000080,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000539,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-17T09:30:00Z,1
+EXC-000081,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000537,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-18T09:30:00Z,1
+EXC-000082,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000538,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-18T09:30:00Z,1
+EXC-000083,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000540,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-19T09:30:00Z,1
+EXC-000084,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000541,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-20T09:30:00Z,1
+EXC-000085,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000543,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-21T09:30:00Z,1
+EXC-000086,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000542,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-22T09:30:00Z,1
+EXC-000087,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000544,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-23T09:30:00Z,1
+EXC-000088,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000545,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-23T09:30:00Z,1
+EXC-000089,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000547,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-24T09:30:00Z,1
+EXC-000090,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000546,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-25T09:30:00Z,1
+EXC-000091,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000548,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-25T09:30:00Z,1
+EXC-000092,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000549,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-25T09:30:00Z,1
+EXC-000093,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000550,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-25T09:30:00Z,1
+EXC-000094,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000551,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-27T09:30:00Z,1
+EXC-000095,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000553,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-02-27T09:30:00Z,1
+EXC-000096,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000552,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-01T09:30:00Z,1
+EXC-000097,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000554,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-03T09:30:00Z,1
+EXC-000098,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000555,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-04T09:30:00Z,1
+EXC-000099,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000556,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-04T09:30:00Z,1
+EXC-000100,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000557,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-04T09:30:00Z,1
+EXC-000101,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000558,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-07T09:30:00Z,1
+EXC-000102,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000559,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-08T09:30:00Z,1
+EXC-000103,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000560,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-09T09:30:00Z,1
+EXC-000104,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000562,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-11T09:30:00Z,1
+EXC-000105,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000561,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-12T09:30:00Z,1
+EXC-000106,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000563,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-13T09:30:00Z,1
+EXC-000107,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000565,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-13T09:30:00Z,1
+EXC-000108,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000566,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-13T09:30:00Z,1
+EXC-000109,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000567,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-13T09:30:00Z,1
+EXC-000110,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000564,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-14T09:30:00Z,1
+EXC-000111,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000568,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-15T09:30:00Z,1
+EXC-000112,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000569,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-16T09:30:00Z,1
+EXC-000113,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000570,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-16T09:30:00Z,1
+EXC-000114,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000571,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-17T09:30:00Z,1
+EXC-000115,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000573,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-19T09:30:00Z,1
+EXC-000116,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000572,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-21T09:30:00Z,1
+EXC-000117,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000575,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-21T09:30:00Z,1
+EXC-000118,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000574,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-22T09:30:00Z,1
+EXC-000119,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000576,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-23T09:30:00Z,1
+EXC-000120,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000577,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-23T09:30:00Z,1
+EXC-000121,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000578,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-24T09:30:00Z,1
+EXC-000122,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000579,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-24T09:30:00Z,1
+EXC-000123,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000580,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-27T09:30:00Z,1
+EXC-000124,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000581,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-28T09:30:00Z,1
+EXC-000125,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000583,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-29T09:30:00Z,1
+EXC-000126,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000582,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-30T09:30:00Z,1
+EXC-000127,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000585,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-30T09:30:00Z,1
+EXC-000128,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000584,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-03-31T09:30:00Z,1
+EXC-000129,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000586,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-01T09:30:00Z,1
+EXC-000130,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000587,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-02T09:30:00Z,1
+EXC-000131,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000588,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-05T09:30:00Z,1
+EXC-000132,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000589,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-06T09:30:00Z,1
+EXC-000133,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000590,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-07T09:30:00Z,1
+EXC-000134,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000591,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-07T09:30:00Z,1
+EXC-000135,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000592,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-07T09:30:00Z,1
+EXC-000136,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000593,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-08T09:30:00Z,1
+EXC-000137,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000594,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-09T09:30:00Z,1
+EXC-000138,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000595,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-11T09:30:00Z,1
+EXC-000139,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000596,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-13T09:30:00Z,1
+EXC-000140,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000597,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-15T09:30:00Z,1
+EXC-000141,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000599,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-15T09:30:00Z,1
+EXC-000142,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000598,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-16T09:30:00Z,1
+EXC-000143,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000600,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-16T09:30:00Z,1
+EXC-000144,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000601,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-16T09:30:00Z,1
+EXC-000145,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000602,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-18T09:30:00Z,1
+EXC-000146,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000603,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-18T09:30:00Z,1
+EXC-000147,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000604,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-18T09:30:00Z,1
+EXC-000148,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000605,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-25T09:30:00Z,1
+EXC-000149,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000606,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-25T09:30:00Z,1
+EXC-000150,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000608,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-25T09:30:00Z,1
+EXC-000151,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000607,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-26T09:30:00Z,1
+EXC-000152,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000609,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-27T09:30:00Z,1
+EXC-000153,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000610,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-27T09:30:00Z,1
+EXC-000154,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000611,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-27T09:30:00Z,1
+EXC-000155,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000612,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-04-27T09:30:00Z,1
+EXC-000156,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000613,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-05-03T09:30:00Z,1
+EXC-000157,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000614,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-05-07T09:30:00Z,1
+EXC-000158,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000615,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-05-10T09:30:00Z,1
+EXC-000159,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000616,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-05-16T09:30:00Z,1
+EXC-000160,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000617,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-05-20T09:30:00Z,1
+EXC-000161,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000618,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-05-21T09:30:00Z,1
+EXC-000162,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000619,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-05-22T09:30:00Z,1
+EXC-000163,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000620,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-05-22T09:30:00Z,1
+EXC-000164,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000621,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-05-25T09:30:00Z,1
+EXC-000165,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000622,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-05-28T09:30:00Z,1
+EXC-000166,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000623,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-05-31T09:30:00Z,1
+EXC-000167,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000624,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-05-31T09:30:00Z,1
+EXC-000168,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000625,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-01T09:30:00Z,1
+EXC-000169,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000626,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-02T09:30:00Z,1
+EXC-000170,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000628,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-02T09:30:00Z,1
+EXC-000171,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000629,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-02T09:30:00Z,1
+EXC-000172,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000627,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-03T09:30:00Z,1
+EXC-000173,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000630,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-04T09:30:00Z,1
+EXC-000174,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000631,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-04T09:30:00Z,1
+EXC-000175,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000632,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-05T09:30:00Z,1
+EXC-000176,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000633,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-06T09:30:00Z,1
+EXC-000177,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000634,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-09T09:30:00Z,1
+EXC-000178,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000635,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-09T09:30:00Z,1
+EXC-000179,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000636,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-10T09:30:00Z,1
+EXC-000180,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000637,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-14T09:30:00Z,1
+EXC-000181,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000638,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-16T09:30:00Z,1
+EXC-000182,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000639,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-17T09:30:00Z,1
+EXC-000183,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000640,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-18T09:30:00Z,1
+EXC-000184,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000642,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-19T09:30:00Z,1
+EXC-000185,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000641,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-20T09:30:00Z,1
+EXC-000186,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000643,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-20T09:30:00Z,1
+EXC-000187,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000644,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-20T09:30:00Z,1
+EXC-000188,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000645,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-20T09:30:00Z,1
+EXC-000189,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000646,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-21T09:30:00Z,1
+EXC-000190,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000647,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-24T09:30:00Z,1
+EXC-000191,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000648,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-27T09:30:00Z,1
+EXC-000192,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000649,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-28T09:30:00Z,1
+EXC-000193,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000651,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-29T09:30:00Z,1
+EXC-000194,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000650,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-06-30T09:30:00Z,1
+EXC-000195,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000653,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-01T09:30:00Z,1
+EXC-000196,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000654,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-01T09:30:00Z,1
+EXC-000197,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000656,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-01T09:30:00Z,1
+EXC-000198,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000652,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-02T09:30:00Z,1
+EXC-000199,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000655,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-03T09:30:00Z,1
+EXC-000200,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000657,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-04T09:30:00Z,1
+EXC-000201,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000658,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-05T09:30:00Z,1
+EXC-000202,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000659,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-06T09:30:00Z,1
+EXC-000203,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000660,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-07T09:30:00Z,1
+EXC-000204,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000661,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-07T09:30:00Z,1
+EXC-000205,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000662,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-08T09:30:00Z,1
+EXC-000206,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000663,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-09T09:30:00Z,1
+EXC-000207,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000664,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-09T09:30:00Z,1
+EXC-000208,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000665,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-10T09:30:00Z,1
+EXC-000209,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000666,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-13T09:30:00Z,1
+EXC-000210,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000667,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-14T09:30:00Z,1
+EXC-000211,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000668,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-15T09:30:00Z,1
+EXC-000212,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000669,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-15T09:30:00Z,1
+EXC-000213,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000670,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-17T09:30:00Z,1
+EXC-000214,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000672,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-17T09:30:00Z,1
+EXC-000215,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000671,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-18T09:30:00Z,1
+EXC-000216,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000674,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-19T09:30:00Z,1
+EXC-000217,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000675,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-20T09:30:00Z,1
+EXC-000218,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000673,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-21T09:30:00Z,1
+EXC-000219,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000676,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-23T09:30:00Z,1
+EXC-000220,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000677,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-24T09:30:00Z,1
+EXC-000221,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000679,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-25T09:30:00Z,1
+EXC-000222,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000678,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-26T09:30:00Z,1
+EXC-000223,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000681,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-27T09:30:00Z,1
+EXC-000224,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000680,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-07-28T09:30:00Z,1
+EXC-000225,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000682,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-02T09:30:00Z,1
+EXC-000226,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000683,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-05T09:30:00Z,1
+EXC-000227,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000684,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-08T09:30:00Z,1
+EXC-000228,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000685,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-08T09:30:00Z,1
+EXC-000229,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000686,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-10T09:30:00Z,1
+EXC-000230,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000687,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-12T09:30:00Z,1
+EXC-000231,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000688,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-19T09:30:00Z,1
+EXC-000232,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000691,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-19T09:30:00Z,1
+EXC-000233,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000689,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-20T09:30:00Z,1
+EXC-000234,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000690,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-21T09:30:00Z,1
+EXC-000235,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000692,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-21T09:30:00Z,1
+EXC-000236,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000693,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-23T09:30:00Z,1
+EXC-000237,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000694,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-25T09:30:00Z,1
+EXC-000238,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000695,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-25T09:30:00Z,1
+EXC-000239,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000696,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-25T09:30:00Z,1
+EXC-000240,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000697,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-08-28T09:30:00Z,1
+EXC-000241,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000698,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-04T09:30:00Z,1
+EXC-000242,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000699,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-04T09:30:00Z,1
+EXC-000243,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000700,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-06T09:30:00Z,1
+EXC-000244,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000701,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-07T09:30:00Z,1
+EXC-000245,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000702,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-07T09:30:00Z,1
+EXC-000246,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000703,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-08T09:30:00Z,1
+EXC-000247,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000704,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-09T09:30:00Z,1
+EXC-000248,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000705,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-10T09:30:00Z,1
+EXC-000249,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000706,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-11T09:30:00Z,1
+EXC-000250,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000707,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-11T09:30:00Z,1
+EXC-000251,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000708,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-13T09:30:00Z,1
+EXC-000252,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000709,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-14T09:30:00Z,1
+EXC-000253,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000710,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-14T09:30:00Z,1
+EXC-000254,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000712,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-15T09:30:00Z,1
+EXC-000255,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000713,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-15T09:30:00Z,1
+EXC-000256,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000711,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-16T09:30:00Z,1
+EXC-000257,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000714,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-16T09:30:00Z,1
+EXC-000258,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000715,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-17T09:30:00Z,1
+EXC-000259,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000717,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-17T09:30:00Z,1
+EXC-000260,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000716,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-18T09:30:00Z,1
+EXC-000261,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000718,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-19T09:30:00Z,1
+EXC-000262,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000719,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-20T09:30:00Z,1
+EXC-000263,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000721,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-24T09:30:00Z,1
+EXC-000264,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000722,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-24T09:30:00Z,1
+EXC-000265,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000720,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-25T09:30:00Z,1
+EXC-000266,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000724,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-25T09:30:00Z,1
+EXC-000267,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000723,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-26T09:30:00Z,1
+EXC-000268,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000725,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-26T09:30:00Z,1
+EXC-000269,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000726,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-27T09:30:00Z,1
+EXC-000270,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000731,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-27T09:30:00Z,1
+EXC-000271,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000729,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-28T09:30:00Z,1
+EXC-000272,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000727,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-29T09:30:00Z,1
+EXC-000273,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000728,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-29T09:30:00Z,1
+EXC-000274,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000730,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-29T09:30:00Z,1
+EXC-000275,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000732,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-09-29T09:30:00Z,1
+EXC-000276,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000733,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-01T09:30:00Z,1
+EXC-000277,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000734,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-05T09:30:00Z,1
+EXC-000278,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000735,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-06T09:30:00Z,1
+EXC-000279,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000740,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-07T09:30:00Z,1
+EXC-000280,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000736,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-08T09:30:00Z,1
+EXC-000281,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000737,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-08T09:30:00Z,1
+EXC-000282,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000738,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-08T09:30:00Z,1
+EXC-000283,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000739,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-09T09:30:00Z,1
+EXC-000284,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000741,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-09T09:30:00Z,1
+EXC-000285,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000742,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-10T09:30:00Z,1
+EXC-000286,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000743,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-11T09:30:00Z,1
+EXC-000287,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000744,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-12T09:30:00Z,1
+EXC-000288,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000745,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-13T09:30:00Z,1
+EXC-000289,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000746,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-16T09:30:00Z,1
+EXC-000290,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000747,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-17T09:30:00Z,1
+EXC-000291,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000748,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-19T09:30:00Z,1
+EXC-000292,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000749,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-19T09:30:00Z,1
+EXC-000293,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000750,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-20T09:30:00Z,1
+EXC-000294,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000753,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-21T09:30:00Z,1
+EXC-000295,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000751,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-22T09:30:00Z,1
+EXC-000296,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000752,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-22T09:30:00Z,1
+EXC-000297,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000754,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-22T09:30:00Z,1
+EXC-000298,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000756,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-23T09:30:00Z,1
+EXC-000299,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000755,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-24T09:30:00Z,1
+EXC-000300,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000757,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-28T09:30:00Z,1
+EXC-000301,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000758,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-29T09:30:00Z,1
+EXC-000302,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000759,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-31T09:30:00Z,1
+EXC-000303,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000760,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-10-31T09:30:00Z,1
+EXC-000304,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000761,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-03T09:30:00Z,1
+EXC-000305,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000762,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-05T09:30:00Z,1
+EXC-000306,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000763,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-05T09:30:00Z,1
+EXC-000307,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000764,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-05T09:30:00Z,1
+EXC-000308,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000768,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-07T09:30:00Z,1
+EXC-000309,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000840,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-07T09:30:00Z,1
+EXC-000310,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000765,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-08T09:30:00Z,1
+EXC-000311,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000766,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-08T09:30:00Z,1
+EXC-000312,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000770,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-08T09:30:00Z,1
+EXC-000313,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000836,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-08T09:30:00Z,1
+EXC-000314,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000837,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-08T09:30:00Z,1
+EXC-000315,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000838,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-08T09:30:00Z,1
+EXC-000316,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000839,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-08T09:30:00Z,1
+EXC-000317,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000841,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-08T09:30:00Z,1
+EXC-000318,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000844,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-08T09:30:00Z,1
+EXC-000319,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000767,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-09T09:30:00Z,1
+EXC-000320,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000769,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-09T09:30:00Z,1
+EXC-000321,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000843,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-09T09:30:00Z,1
+EXC-000322,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000846,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-09T09:30:00Z,1
+EXC-000323,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000771,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-10T09:30:00Z,1
+EXC-000324,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000773,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-10T09:30:00Z,1
+EXC-000325,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000842,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-10T09:30:00Z,1
+EXC-000326,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000845,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-10T09:30:00Z,1
+EXC-000327,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000772,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-12T09:30:00Z,1
+EXC-000328,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000847,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-12T09:30:00Z,1
+EXC-000329,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000849,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-12T09:30:00Z,1
+EXC-000330,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000774,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-13T09:30:00Z,1
+EXC-000331,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000848,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-13T09:30:00Z,1
+EXC-000332,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000850,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-13T09:30:00Z,1
+EXC-000333,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000775,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-14T09:30:00Z,1
+EXC-000334,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000776,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-14T09:30:00Z,1
+EXC-000335,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000777,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-14T09:30:00Z,1
+EXC-000336,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000851,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-14T09:30:00Z,1
+EXC-000337,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000852,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-15T09:30:00Z,1
+EXC-000338,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000853,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-15T09:30:00Z,1
+EXC-000339,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000854,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-15T09:30:00Z,1
+EXC-000340,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000855,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-15T09:30:00Z,1
+EXC-000341,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000856,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-15T09:30:00Z,1
+EXC-000342,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000857,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-15T09:30:00Z,1
+EXC-000343,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000781,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-16T09:30:00Z,1
+EXC-000344,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000782,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-16T09:30:00Z,1
+EXC-000345,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000858,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-16T09:30:00Z,1
+EXC-000346,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000778,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-17T09:30:00Z,1
+EXC-000347,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000779,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-17T09:30:00Z,1
+EXC-000348,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000783,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-17T09:30:00Z,1
+EXC-000349,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000780,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-18T09:30:00Z,1
+EXC-000350,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000859,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-19T09:30:00Z,1
+EXC-000351,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000860,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-19T09:30:00Z,1
+EXC-000352,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000861,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-19T09:30:00Z,1
+EXC-000353,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000862,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-19T09:30:00Z,1
+EXC-000354,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000866,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-19T09:30:00Z,1
+EXC-000355,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000785,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-20T09:30:00Z,1
+EXC-000356,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000863,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-20T09:30:00Z,1
+EXC-000357,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000864,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-20T09:30:00Z,1
+EXC-000358,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000865,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-20T09:30:00Z,1
+EXC-000359,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000867,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-20T09:30:00Z,1
+EXC-000360,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000870,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-20T09:30:00Z,1
+EXC-000361,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000784,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-21T09:30:00Z,1
+EXC-000362,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000786,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-21T09:30:00Z,1
+EXC-000363,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000788,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-21T09:30:00Z,1
+EXC-000364,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000868,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-21T09:30:00Z,1
+EXC-000365,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000869,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-21T09:30:00Z,1
+EXC-000366,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000871,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-21T09:30:00Z,1
+EXC-000367,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000790,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-22T09:30:00Z,1
+EXC-000368,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000873,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-22T09:30:00Z,1
+EXC-000369,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000787,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-23T09:30:00Z,1
+EXC-000370,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000789,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-23T09:30:00Z,1
+EXC-000371,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000876,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-23T09:30:00Z,1
+EXC-000372,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000791,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-24T09:30:00Z,1
+EXC-000373,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000872,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-24T09:30:00Z,1
+EXC-000374,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000874,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-24T09:30:00Z,1
+EXC-000375,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000875,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-24T09:30:00Z,1
+EXC-000376,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000792,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-25T09:30:00Z,1
+EXC-000377,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000793,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-25T09:30:00Z,1
+EXC-000378,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000877,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-25T09:30:00Z,1
+EXC-000379,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000879,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-25T09:30:00Z,1
+EXC-000380,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000880,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-25T09:30:00Z,1
+EXC-000381,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000878,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-26T09:30:00Z,1
+EXC-000382,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000881,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-26T09:30:00Z,1
+EXC-000383,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000794,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-27T09:30:00Z,1
+EXC-000384,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000795,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-27T09:30:00Z,1
+EXC-000385,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000797,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-27T09:30:00Z,1
+EXC-000386,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000883,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-27T09:30:00Z,1
+EXC-000387,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000884,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-27T09:30:00Z,1
+EXC-000388,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000885,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-27T09:30:00Z,1
+EXC-000389,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000886,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-27T09:30:00Z,1
+EXC-000390,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000796,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-28T09:30:00Z,1
+EXC-000391,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000798,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-28T09:30:00Z,1
+EXC-000392,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000799,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-28T09:30:00Z,1
+EXC-000393,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000882,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-28T09:30:00Z,1
+EXC-000394,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000888,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-29T09:30:00Z,1
+EXC-000395,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000800,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-30T09:30:00Z,1
+EXC-000396,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000801,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-11-30T09:30:00Z,1
+EXC-000397,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000887,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-30T09:30:00Z,1
+EXC-000398,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000889,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-30T09:30:00Z,1
+EXC-000399,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000890,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-11-30T09:30:00Z,1
+EXC-000400,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000891,Direct procurement exception authorized: Direct procurement via contract (contract),2026-11-30T09:30:00Z,1
+EXC-000401,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000892,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-11-30T09:30:00Z,1
+EXC-000402,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000802,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-01T09:30:00Z,1
+EXC-000403,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000803,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-01T09:30:00Z,1
+EXC-000404,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000804,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-01T09:30:00Z,1
+EXC-000405,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000805,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-02T09:30:00Z,1
+EXC-000406,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000893,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-02T09:30:00Z,1
+EXC-000407,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000894,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-02T09:30:00Z,1
+EXC-000408,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000896,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-02T09:30:00Z,1
+EXC-000409,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000895,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-03T09:30:00Z,1
+EXC-000410,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000898,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-03T09:30:00Z,1
+EXC-000411,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000806,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-04T09:30:00Z,1
+EXC-000412,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000897,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-04T09:30:00Z,1
+EXC-000413,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000807,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-05T09:30:00Z,1
+EXC-000414,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000899,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-05T09:30:00Z,1
+EXC-000415,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000900,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-06T09:30:00Z,1
+EXC-000416,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000905,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-06T09:30:00Z,1
+EXC-000417,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000901,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-07T09:30:00Z,1
+EXC-000418,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000903,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-07T09:30:00Z,1
+EXC-000419,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000904,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-07T09:30:00Z,1
+EXC-000420,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000902,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-08T09:30:00Z,1
+EXC-000421,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000906,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-08T09:30:00Z,1
+EXC-000422,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000907,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-08T09:30:00Z,1
+EXC-000423,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000908,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-08T09:30:00Z,1
+EXC-000424,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000808,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-09T09:30:00Z,1
+EXC-000425,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000810,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-09T09:30:00Z,1
+EXC-000426,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000909,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-09T09:30:00Z,1
+EXC-000427,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000910,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-09T09:30:00Z,1
+EXC-000428,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000811,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-10T09:30:00Z,1
+EXC-000429,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000812,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-10T09:30:00Z,1
+EXC-000430,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000813,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-10T09:30:00Z,1
+EXC-000431,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000814,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-10T09:30:00Z,1
+EXC-000432,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000911,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-10T09:30:00Z,1
+EXC-000433,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000809,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-11T09:30:00Z,1
+EXC-000434,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000815,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-11T09:30:00Z,1
+EXC-000435,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000816,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-11T09:30:00Z,1
+EXC-000436,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000817,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-11T09:30:00Z,1
+EXC-000437,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000912,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-11T09:30:00Z,1
+EXC-000438,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000913,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-11T09:30:00Z,1
+EXC-000439,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000914,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-12T09:30:00Z,1
+EXC-000440,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000916,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-12T09:30:00Z,1
+EXC-000441,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000918,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-12T09:30:00Z,1
+EXC-000442,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000818,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-13T09:30:00Z,1
+EXC-000443,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000915,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-13T09:30:00Z,1
+EXC-000444,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000919,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-13T09:30:00Z,1
+EXC-000445,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000917,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-14T09:30:00Z,1
+EXC-000446,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000920,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-14T09:30:00Z,1
+EXC-000447,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000923,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-14T09:30:00Z,1
+EXC-000448,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000921,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-15T09:30:00Z,1
+EXC-000449,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000922,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-15T09:30:00Z,1
+EXC-000450,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000924,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-15T09:30:00Z,1
+EXC-000451,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000819,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-16T09:30:00Z,1
+EXC-000452,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000820,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-16T09:30:00Z,1
+EXC-000453,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000821,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-16T09:30:00Z,1
+EXC-000454,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000926,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-16T09:30:00Z,1
+EXC-000455,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000822,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-17T09:30:00Z,1
+EXC-000456,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000925,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-17T09:30:00Z,1
+EXC-000457,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000927,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-17T09:30:00Z,1
+EXC-000458,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000928,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-17T09:30:00Z,1
+EXC-000459,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000929,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-17T09:30:00Z,1
+EXC-000460,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000823,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-19T09:30:00Z,1
+EXC-000461,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000824,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-19T09:30:00Z,1
+EXC-000462,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000930,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-19T09:30:00Z,1
+EXC-000463,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000931,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-19T09:30:00Z,1
+EXC-000464,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000932,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-19T09:30:00Z,1
+EXC-000465,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000933,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-19T09:30:00Z,1
+EXC-000466,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000934,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-19T09:30:00Z,1
+EXC-000467,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000935,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-20T09:30:00Z,1
+EXC-000468,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000936,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-20T09:30:00Z,1
+EXC-000469,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000937,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-21T09:30:00Z,1
+EXC-000470,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000826,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-22T09:30:00Z,1
+EXC-000471,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000938,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-22T09:30:00Z,1
+EXC-000472,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000825,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-23T09:30:00Z,1
+EXC-000473,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000939,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-23T09:30:00Z,1
+EXC-000474,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000941,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-23T09:30:00Z,1
+EXC-000475,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000827,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-24T09:30:00Z,1
+EXC-000476,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000829,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-24T09:30:00Z,1
+EXC-000477,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000940,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-24T09:30:00Z,1
+EXC-000478,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000943,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-24T09:30:00Z,1
+EXC-000479,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000828,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-25T09:30:00Z,1
+EXC-000480,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000944,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-25T09:30:00Z,1
+EXC-000481,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000947,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-25T09:30:00Z,1
+EXC-000482,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000948,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-25T09:30:00Z,1
+EXC-000483,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000950,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-25T09:30:00Z,1
+EXC-000484,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000831,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-26T09:30:00Z,1
+EXC-000485,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000942,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-26T09:30:00Z,1
+EXC-000486,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000946,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-26T09:30:00Z,1
+EXC-000487,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000955,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-26T09:30:00Z,1
+EXC-000488,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000830,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-27T09:30:00Z,1
+EXC-000489,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000832,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-27T09:30:00Z,1
+EXC-000490,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000833,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-27T09:30:00Z,1
+EXC-000491,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000945,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-27T09:30:00Z,1
+EXC-000492,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000949,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-27T09:30:00Z,1
+EXC-000493,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000952,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-27T09:30:00Z,1
+EXC-000494,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000953,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-27T09:30:00Z,1
+EXC-000495,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000954,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-27T09:30:00Z,1
+EXC-000496,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000956,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-27T09:30:00Z,1
+EXC-000497,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000958,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-27T09:30:00Z,1
+EXC-000498,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000951,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-28T09:30:00Z,1
+EXC-000499,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000957,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-28T09:30:00Z,1
+EXC-000500,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000961,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-28T09:30:00Z,1
+EXC-000501,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000960,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-29T09:30:00Z,1
+EXC-000502,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000962,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-29T09:30:00Z,1
+EXC-000503,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000959,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-30T09:30:00Z,1
+EXC-000504,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000963,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-30T09:30:00Z,1
+EXC-000505,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000965,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-30T09:30:00Z,1
+EXC-000506,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000834,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-31T09:30:00Z,1
+EXC-000507,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000835,Direct procurement exception authorized: Direct procurement via catalogue (contract),2026-12-31T09:30:00Z,1
+EXC-000508,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000964,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-31T09:30:00Z,1
+EXC-000509,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000966,Direct procurement exception authorized: Direct procurement via single_source (urgent),2026-12-31T09:30:00Z,1
+EXC-000510,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000967,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-31T09:30:00Z,1
+EXC-000511,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000968,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-31T09:30:00Z,1
+EXC-000512,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000969,Direct procurement exception authorized: Direct procurement via contract (contract),2026-12-31T09:30:00Z,1
+EXC-000513,SOLE_SOURCE_EXCEPTION,LOW,purchase_orders,PO-2026-000970,Direct procurement exception authorized: Direct procurement via single_source (sole_supplier),2026-12-31T09:30:00Z,1
+EXC-000514,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000503-01,Partial shipment sequence 1 for purchase order PO-2026-000503,2026-02-04T14:15:00Z,1
+EXC-000515,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000504-01,Partial shipment sequence 1 for purchase order PO-2026-000504,2026-02-02T14:15:00Z,1
+EXC-000516,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000006-01,Partial shipment sequence 1 for purchase order PO-2026-000006,2026-01-22T14:15:00Z,1
+EXC-000517,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000016-01,Partial shipment sequence 1 for purchase order PO-2026-000016,2026-02-05T14:15:00Z,1
+EXC-000518,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000018-01,Partial shipment sequence 1 for purchase order PO-2026-000018,2026-02-04T14:15:00Z,1
+EXC-000519,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000017-01,Partial shipment sequence 1 for purchase order PO-2026-000017,2026-02-17T14:15:00Z,1
+EXC-000520,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000522-01,Partial shipment sequence 1 for purchase order PO-2026-000522,2026-02-02T14:15:00Z,1
+EXC-000521,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000039-01,Partial shipment sequence 1 for purchase order PO-2026-000039,2026-03-07T14:15:00Z,1
+EXC-000522,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000537-01,Partial shipment sequence 1 for purchase order PO-2026-000537,2026-02-22T14:15:00Z,1
+EXC-000523,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000073-01,Partial shipment sequence 1 for purchase order PO-2026-000073,2026-04-01T14:15:00Z,1
+EXC-000524,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000571-01,Partial shipment sequence 1 for purchase order PO-2026-000571,2026-04-05T14:15:00Z,1
+EXC-000525,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000089-01,Partial shipment sequence 1 for purchase order PO-2026-000089,2026-03-30T14:15:00Z,1
+EXC-000526,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000092-01,Partial shipment sequence 1 for purchase order PO-2026-000092,2026-04-20T14:15:00Z,1
+EXC-000527,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000099-01,Partial shipment sequence 1 for purchase order PO-2026-000099,2026-04-02T14:15:00Z,1
+EXC-000528,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000120-01,Partial shipment sequence 1 for purchase order PO-2026-000120,2026-04-24T14:15:00Z,1
+EXC-000529,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000607-01,Partial shipment sequence 1 for purchase order PO-2026-000607,2026-05-07T14:15:00Z,1
+EXC-000530,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000156-01,Partial shipment sequence 1 for purchase order PO-2026-000156,2026-05-13T14:15:00Z,1
+EXC-000531,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000165-01,Partial shipment sequence 1 for purchase order PO-2026-000165,2026-05-03T14:15:00Z,1
+EXC-000532,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000170-01,Partial shipment sequence 1 for purchase order PO-2026-000170,2026-05-13T14:15:00Z,1
+EXC-000533,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000180-01,Partial shipment sequence 1 for purchase order PO-2026-000180,2026-05-14T14:15:00Z,1
+EXC-000534,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000184-01,Partial shipment sequence 1 for purchase order PO-2026-000184,2026-05-29T14:15:00Z,1
+EXC-000535,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000186-01,Partial shipment sequence 1 for purchase order PO-2026-000186,2026-05-22T14:15:00Z,1
+EXC-000536,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000193-01,Partial shipment sequence 1 for purchase order PO-2026-000193,2026-06-03T14:15:00Z,1
+EXC-000537,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000202-01,Partial shipment sequence 1 for purchase order PO-2026-000202,2026-06-02T14:15:00Z,1
+EXC-000538,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000206-01,Partial shipment sequence 1 for purchase order PO-2026-000206,2026-06-02T14:15:00Z,1
+EXC-000539,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000212-01,Partial shipment sequence 1 for purchase order PO-2026-000212,2026-06-22T14:15:00Z,1
+EXC-000540,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000218-01,Partial shipment sequence 1 for purchase order PO-2026-000218,2026-06-15T14:15:00Z,1
+EXC-000541,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000632-01,Partial shipment sequence 1 for purchase order PO-2026-000632,2026-06-25T14:15:00Z,1
+EXC-000542,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000635-01,Partial shipment sequence 1 for purchase order PO-2026-000635,2026-06-16T14:15:00Z,1
+EXC-000543,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000637-01,Partial shipment sequence 1 for purchase order PO-2026-000637,2026-07-10T14:15:00Z,1
+EXC-000544,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000640-01,Partial shipment sequence 1 for purchase order PO-2026-000640,2026-07-13T14:15:00Z,1
+EXC-000545,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000642-01,Partial shipment sequence 1 for purchase order PO-2026-000642,2026-07-02T14:15:00Z,1
+EXC-000546,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000645-01,Partial shipment sequence 1 for purchase order PO-2026-000645,2026-07-14T14:15:00Z,1
+EXC-000547,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000246-01,Partial shipment sequence 1 for purchase order PO-2026-000246,2026-06-29T14:15:00Z,1
+EXC-000548,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000258-01,Partial shipment sequence 1 for purchase order PO-2026-000258,2026-07-11T14:15:00Z,1
+EXC-000549,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000652-01,Partial shipment sequence 1 for purchase order PO-2026-000652,2026-07-22T14:15:00Z,1
+EXC-000550,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000658-01,Partial shipment sequence 1 for purchase order PO-2026-000658,2026-07-25T14:15:00Z,1
+EXC-000551,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000269-01,Partial shipment sequence 1 for purchase order PO-2026-000269,2026-07-07T14:15:00Z,1
+EXC-000552,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000659-01,Partial shipment sequence 1 for purchase order PO-2026-000659,2026-07-17T14:15:00Z,1
+EXC-000553,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000664-01,Partial shipment sequence 1 for purchase order PO-2026-000664,2026-08-02T14:15:00Z,1
+EXC-000554,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000280-01,Partial shipment sequence 1 for purchase order PO-2026-000280,2026-07-13T14:15:00Z,1
+EXC-000555,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000292-01,Partial shipment sequence 1 for purchase order PO-2026-000292,2026-07-29T14:15:00Z,1
+EXC-000556,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000302-01,Partial shipment sequence 1 for purchase order PO-2026-000302,2026-08-20T14:15:00Z,1
+EXC-000557,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000682-01,Partial shipment sequence 1 for purchase order PO-2026-000682,2026-08-22T14:15:00Z,1
+EXC-000558,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000317-01,Partial shipment sequence 1 for purchase order PO-2026-000317,2026-08-18T14:15:00Z,1
+EXC-000559,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000335-01,Partial shipment sequence 1 for purchase order PO-2026-000335,2026-09-09T14:15:00Z,1
+EXC-000560,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000714-01,Partial shipment sequence 1 for purchase order PO-2026-000714,2026-10-07T14:15:00Z,1
+EXC-000561,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000390-01,Partial shipment sequence 1 for purchase order PO-2026-000390,2026-10-24T14:15:00Z,1
+EXC-000562,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000402-01,Partial shipment sequence 1 for purchase order PO-2026-000402,2026-10-15T14:15:00Z,1
+EXC-000563,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000728-01,Partial shipment sequence 1 for purchase order PO-2026-000728,2026-10-22T14:15:00Z,1
+EXC-000564,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000401-01,Partial shipment sequence 1 for purchase order PO-2026-000401,2026-10-13T14:15:00Z,1
+EXC-000565,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000410-01,Partial shipment sequence 1 for purchase order PO-2026-000410,2026-10-04T14:15:00Z,1
+EXC-000566,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000412-01,Partial shipment sequence 1 for purchase order PO-2026-000412,2026-10-18T14:15:00Z,1
+EXC-000567,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000736-01,Partial shipment sequence 1 for purchase order PO-2026-000736,2026-10-17T14:15:00Z,1
+EXC-000568,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000421-01,Partial shipment sequence 1 for purchase order PO-2026-000421,2026-10-27T14:15:00Z,1
+EXC-000569,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000744-01,Partial shipment sequence 1 for purchase order PO-2026-000744,2026-10-31T14:15:00Z,1
+EXC-000570,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000429-01,Partial shipment sequence 1 for purchase order PO-2026-000429,2026-11-12T14:15:00Z,1
+EXC-000571,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000439-01,Partial shipment sequence 1 for purchase order PO-2026-000439,2026-11-05T14:15:00Z,1
+EXC-000572,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000446-01,Partial shipment sequence 1 for purchase order PO-2026-000446,2026-11-20T14:15:00Z,1
+EXC-000573,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000758-01,Partial shipment sequence 1 for purchase order PO-2026-000758,2026-11-24T14:15:00Z,1
+EXC-000574,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000468-01,Partial shipment sequence 1 for purchase order PO-2026-000468,2026-11-15T14:15:00Z,1
+EXC-000575,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000767-01,Partial shipment sequence 1 for purchase order PO-2026-000767,2026-11-14T14:15:00Z,1
+EXC-000576,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000842-01,Partial shipment sequence 1 for purchase order PO-2026-000842,2026-11-11T14:15:00Z,1
+EXC-000577,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000857-01,Partial shipment sequence 1 for purchase order PO-2026-000857,2026-12-08T14:15:00Z,1
+EXC-000578,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000485-01,Partial shipment sequence 1 for purchase order PO-2026-000485,2026-12-04T14:15:00Z,1
+EXC-000579,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000494-01,Partial shipment sequence 1 for purchase order PO-2026-000494,2026-12-09T14:15:00Z,1
+EXC-000580,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000778-01,Partial shipment sequence 1 for purchase order PO-2026-000778,2026-12-01T14:15:00Z,1
+EXC-000581,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000860-01,Partial shipment sequence 1 for purchase order PO-2026-000860,2026-11-29T14:15:00Z,1
+EXC-000582,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000888-01,Partial shipment sequence 1 for purchase order PO-2026-000888,2026-11-30T14:15:00Z,1
+EXC-000583,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000908-01,Partial shipment sequence 1 for purchase order PO-2026-000908,2026-12-21T14:15:00Z,1
+EXC-000584,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000810-01,Partial shipment sequence 1 for purchase order PO-2026-000810,2026-12-28T14:15:00Z,1
+EXC-000585,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000814-01,Partial shipment sequence 1 for purchase order PO-2026-000814,2026-12-28T14:15:00Z,1
+EXC-000586,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000933-01,Partial shipment sequence 1 for purchase order PO-2026-000933,2026-12-20T14:15:00Z,1
+EXC-000587,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000934-01,Partial shipment sequence 1 for purchase order PO-2026-000934,2026-12-31T14:15:00Z,1
+EXC-000588,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000936-01,Partial shipment sequence 1 for purchase order PO-2026-000936,2026-12-26T14:15:00Z,1
+EXC-000589,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000948-01,Partial shipment sequence 1 for purchase order PO-2026-000948,2026-12-31T14:15:00Z,1
+EXC-000590,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000834-01,Partial shipment sequence 1 for purchase order PO-2026-000834,2026-12-31T14:15:00Z,1
+EXC-000591,PARTIAL_DELIVERY,LOW,deliveries,DEL-PO-2026-000970-01,Partial shipment sequence 1 for purchase order PO-2026-000970,2026-12-31T14:15:00Z,1
