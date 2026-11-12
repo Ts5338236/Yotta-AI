@@ -6,9 +6,7 @@
     "record_id": "PO-2026-000267",
     "expected_decision": "REJECT",
     "reason": "Purchase order PO-2026-000267 issued for requisition PR-2026-001151 lacking required approval records",
-    "metadata": {
-      "request_id": "PR-2026-001151"
-    }
+    "metadata": "{\"request_id\": \"PR-2026-001151\"}"
   },
   {
     "anomaly_id": "ANOM-000002",
@@ -17,9 +15,7 @@
     "record_id": "PO-2026-000562",
     "expected_decision": "REJECT",
     "reason": "Purchase order PO-2026-000562 issued for requisition PR-2026-000221 lacking required approval records",
-    "metadata": {
-      "request_id": "PR-2026-000221"
-    }
+    "metadata": "{\"request_id\": \"PR-2026-000221\"}"
   },
   {
     "anomaly_id": "ANOM-000003",
@@ -28,9 +24,7 @@
     "record_id": "PO-2026-000745",
     "expected_decision": "REJECT",
     "reason": "Purchase order PO-2026-000745 issued for requisition PR-2026-001112 lacking required approval records",
-    "metadata": {
-      "request_id": "PR-2026-001112"
-    }
+    "metadata": "{\"request_id\": \"PR-2026-001112\"}"
   },
   {
     "anomaly_id": "ANOM-000004",
@@ -39,9 +33,7 @@
     "record_id": "PO-2026-000503",
     "expected_decision": "REJECT",
     "reason": "Purchase order PO-2026-000503 issued for requisition PR-2026-000870 lacking required approval records",
-    "metadata": {
-      "request_id": "PR-2026-000870"
-    }
+    "metadata": "{\"request_id\": \"PR-2026-000870\"}"
   },
   {
     "anomaly_id": "ANOM-000005",
@@ -50,9 +42,7 @@
     "record_id": "PO-2026-000560",
     "expected_decision": "REJECT",
     "reason": "Purchase order PO-2026-000560 issued for requisition PR-2026-001139 lacking required approval records",
-    "metadata": {
-      "request_id": "PR-2026-001139"
-    }
+    "metadata": "{\"request_id\": \"PR-2026-001139\"}"
   },
   {
     "anomaly_id": "ANOM-000006",
@@ -61,10 +51,7 @@
     "record_id": "QUO-SUP-C-0002-2026-001330",
     "expected_decision": "DISQUALIFY",
     "reason": "Quote QUO-SUP-C-0002-2026-001330 validity expired on 2026-09-06 prior to award on 2026-09-11",
-    "metadata": {
-      "award_date": "2026-09-11",
-      "expired_date": "2026-09-06"
-    }
+    "metadata": "{\"award_date\": \"2026-09-11\", \"expired_date\": \"2026-09-06\"}"
   },
   {
     "anomaly_id": "ANOM-000007",
@@ -73,10 +60,7 @@
     "record_id": "QUO-SUP-C-0116-2026-000492",
     "expected_decision": "DISQUALIFY",
     "reason": "Quote QUO-SUP-C-0116-2026-000492 validity expired on 2026-04-10 prior to award on 2026-04-14",
-    "metadata": {
-      "award_date": "2026-04-14",
-      "expired_date": "2026-04-10"
-    }
+    "metadata": "{\"award_date\": \"2026-04-14\", \"expired_date\": \"2026-04-10\"}"
   },
   {
     "anomaly_id": "ANOM-000008",
@@ -85,10 +69,7 @@
     "record_id": "QUO-SUP-C-0044-2026-000252",
     "expected_decision": "DISQUALIFY",
     "reason": "Quote QUO-SUP-C-0044-2026-000252 validity expired on 2026-03-01 prior to award on 2026-03-07",
-    "metadata": {
-      "award_date": "2026-03-07",
-      "expired_date": "2026-03-01"
-    }
+    "metadata": "{\"award_date\": \"2026-03-07\", \"expired_date\": \"2026-03-01\"}"
   },
   {
     "anomaly_id": "ANOM-000009",
@@ -97,10 +78,7 @@
     "record_id": "QUO-SUP-C-0091-2026-000547",
     "expected_decision": "DISQUALIFY",
     "reason": "Quote QUO-SUP-C-0091-2026-000547 validity expired on 2026-04-21 prior to award on 2026-04-27",
-    "metadata": {
-      "award_date": "2026-04-27",
-      "expired_date": "2026-04-21"
-    }
+    "metadata": "{\"award_date\": \"2026-04-27\", \"expired_date\": \"2026-04-21\"}"
   },
   {
     "anomaly_id": "ANOM-000010",
@@ -109,10 +87,7 @@
     "record_id": "QUO-SUP-C-0009-2026-000014",
     "expected_decision": "DISQUALIFY",
     "reason": "Quote QUO-SUP-C-0009-2026-000014 validity expired on 2026-01-16 prior to award on 2026-01-22",
-    "metadata": {
-      "award_date": "2026-01-22",
-      "expired_date": "2026-01-16"
-    }
+    "metadata": "{\"award_date\": \"2026-01-22\", \"expired_date\": \"2026-01-16\"}"
   },
   {
     "anomaly_id": "ANOM-000011",
@@ -121,11 +96,7 @@
     "record_id": "QUO-SUP-C-0069-2026-000119",
     "expected_decision": "JUSTIFY_OR_REVERT",
     "reason": "Quotation QUO-SUP-C-0069-2026-000119 awarded at landed cost $25,417.09 over cheaper quote QUO-SUP-C-0038-2026-000120 ($22,732.03) without documented justification rationale",
-    "metadata": {
-      "rfq_id": "RFQ-2026-000034",
-      "awarded_quote_id": "QUO-SUP-C-0069-2026-000119",
-      "cheapest_quote_id": "QUO-SUP-C-0038-2026-000120"
-    }
+    "metadata": "{\"rfq_id\": \"RFQ-2026-000034\", \"awarded_quote_id\": \"QUO-SUP-C-0069-2026-000119\", \"cheapest_quote_id\": \"QUO-SUP-C-0038-2026-000120\"}"
   },
   {
     "anomaly_id": "ANOM-000012",
@@ -134,11 +105,7 @@
     "record_id": "QUO-SUP-C-0059-2026-000560",
     "expected_decision": "JUSTIFY_OR_REVERT",
     "reason": "Quotation QUO-SUP-C-0059-2026-000560 awarded at landed cost $14,139.78 over cheaper quote QUO-SUP-C-0011-2026-000561 ($12,640.12) without documented justification rationale",
-    "metadata": {
-      "rfq_id": "RFQ-2026-000159",
-      "awarded_quote_id": "QUO-SUP-C-0059-2026-000560",
-      "cheapest_quote_id": "QUO-SUP-C-0011-2026-000561"
-    }
+    "metadata": "{\"rfq_id\": \"RFQ-2026-000159\", \"awarded_quote_id\": \"QUO-SUP-C-0059-2026-000560\", \"cheapest_quote_id\": \"QUO-SUP-C-0011-2026-000561\"}"
   },
   {
     "anomaly_id": "ANOM-000013",
@@ -147,11 +114,7 @@
     "record_id": "QUO-SUP-C-0003-2026-000487",
     "expected_decision": "JUSTIFY_OR_REVERT",
     "reason": "Quotation QUO-SUP-C-0003-2026-000487 awarded at landed cost $5,190.87 over cheaper quote QUO-SUP-C-0011-2026-000488 ($4,717.36) without documented justification rationale",
-    "metadata": {
-      "rfq_id": "RFQ-2026-000137",
-      "awarded_quote_id": "QUO-SUP-C-0003-2026-000487",
-      "cheapest_quote_id": "QUO-SUP-C-0011-2026-000488"
-    }
+    "metadata": "{\"rfq_id\": \"RFQ-2026-000137\", \"awarded_quote_id\": \"QUO-SUP-C-0003-2026-000487\", \"cheapest_quote_id\": \"QUO-SUP-C-0011-2026-000488\"}"
   },
   {
     "anomaly_id": "ANOM-000014",
@@ -160,11 +123,7 @@
     "record_id": "QUO-SUP-C-0071-2026-001325",
     "expected_decision": "JUSTIFY_OR_REVERT",
     "reason": "Quotation QUO-SUP-C-0071-2026-001325 awarded at landed cost $5,373.38 over cheaper quote QUO-SUP-C-0079-2026-001326 ($5,127.75) without documented justification rationale",
-    "metadata": {
-      "rfq_id": "RFQ-2026-000371",
-      "awarded_quote_id": "QUO-SUP-C-0071-2026-001325",
-      "cheapest_quote_id": "QUO-SUP-C-0079-2026-001326"
-    }
+    "metadata": "{\"rfq_id\": \"RFQ-2026-000371\", \"awarded_quote_id\": \"QUO-SUP-C-0071-2026-001325\", \"cheapest_quote_id\": \"QUO-SUP-C-0079-2026-001326\"}"
   },
   {
     "anomaly_id": "ANOM-000015",
@@ -173,11 +132,7 @@
     "record_id": "QUO-SUP-C-0020-2026-001747",
     "expected_decision": "JUSTIFY_OR_REVERT",
     "reason": "Quotation QUO-SUP-C-0020-2026-001747 awarded at landed cost $19,479.82 over cheaper quote QUO-SUP-C-0118-2026-001748 ($18,435.34) without documented justification rationale",
-    "metadata": {
-      "rfq_id": "RFQ-2026-000491",
-      "awarded_quote_id": "QUO-SUP-C-0020-2026-001747",
-      "cheapest_quote_id": "QUO-SUP-C-0118-2026-001748"
-    }
+    "metadata": "{\"rfq_id\": \"RFQ-2026-000491\", \"awarded_quote_id\": \"QUO-SUP-C-0020-2026-001747\", \"cheapest_quote_id\": \"QUO-SUP-C-0118-2026-001748\"}"
   },
   {
     "anomaly_id": "ANOM-000016",
@@ -186,9 +141,7 @@
     "record_id": "PO-2026-000174",
     "expected_decision": "BLOCK",
     "reason": "Purchase order PO-2026-000174 issued to inactive/debarred vendor SUP-0121",
-    "metadata": {
-      "supplier_id": "SUP-0121"
-    }
+    "metadata": "{\"supplier_id\": \"SUP-0121\"}"
   },
   {
     "anomaly_id": "ANOM-000017",
@@ -197,9 +150,7 @@
     "record_id": "PO-2026-000235",
     "expected_decision": "BLOCK",
     "reason": "Purchase order PO-2026-000235 issued to inactive/debarred vendor SUP-0122",
-    "metadata": {
-      "supplier_id": "SUP-0122"
-    }
+    "metadata": "{\"supplier_id\": \"SUP-0122\"}"
   },
   {
     "anomaly_id": "ANOM-000018",
@@ -208,9 +159,7 @@
     "record_id": "PO-2026-000067",
     "expected_decision": "BLOCK",
     "reason": "Purchase order PO-2026-000067 issued to inactive/debarred vendor SUP-0123",
-    "metadata": {
-      "supplier_id": "SUP-0123"
-    }
+    "metadata": "{\"supplier_id\": \"SUP-0123\"}"
   },
   {
     "anomaly_id": "ANOM-000019",
@@ -219,9 +168,7 @@
     "record_id": "PO-2026-000919",
     "expected_decision": "BLOCK",
     "reason": "Purchase order PO-2026-000919 issued to inactive/debarred vendor SUP-0124",
-    "metadata": {
-      "supplier_id": "SUP-0124"
-    }
+    "metadata": "{\"supplier_id\": \"SUP-0124\"}"
   },
   {
     "anomaly_id": "ANOM-000020",
@@ -230,9 +177,7 @@
     "record_id": "PO-2026-000921",
     "expected_decision": "BLOCK",
     "reason": "Purchase order PO-2026-000921 issued to inactive/debarred vendor SUP-0125",
-    "metadata": {
-      "supplier_id": "SUP-0125"
-    }
+    "metadata": "{\"supplier_id\": \"SUP-0125\"}"
   },
   {
     "anomaly_id": "ANOM-000021",
@@ -241,11 +186,7 @@
     "record_id": "BUD-0009",
     "expected_decision": "REJECT",
     "reason": "Department budget BUD-0009 total encumbrances ($258,860.63) exceed allocated budget limit ($155,316.37)",
-    "metadata": {
-      "allocated_amount": 15531637,
-      "encumbered_amount": 25886063,
-      "deficit_cents": 10354426
-    }
+    "metadata": "{\"allocated_amount\": 15531637, \"encumbered_amount\": 25886063, \"deficit_cents\": 10354426}"
   },
   {
     "anomaly_id": "ANOM-000022",
@@ -254,11 +195,7 @@
     "record_id": "BUD-0010",
     "expected_decision": "REJECT",
     "reason": "Department budget BUD-0010 total encumbrances ($66,840.11) exceed allocated budget limit ($40,104.06)",
-    "metadata": {
-      "allocated_amount": 4010406,
-      "encumbered_amount": 6684011,
-      "deficit_cents": 2673605
-    }
+    "metadata": "{\"allocated_amount\": 4010406, \"encumbered_amount\": 6684011, \"deficit_cents\": 2673605}"
   },
   {
     "anomaly_id": "ANOM-000023",
@@ -267,11 +204,7 @@
     "record_id": "BUD-0005",
     "expected_decision": "REJECT",
     "reason": "Department budget BUD-0005 total encumbrances ($444,079.02) exceed allocated budget limit ($266,447.41)",
-    "metadata": {
-      "allocated_amount": 26644741,
-      "encumbered_amount": 44407902,
-      "deficit_cents": 17763161
-    }
+    "metadata": "{\"allocated_amount\": 26644741, \"encumbered_amount\": 44407902, \"deficit_cents\": 17763161}"
   },
   {
     "anomaly_id": "ANOM-000024",
@@ -280,11 +213,7 @@
     "record_id": "BUD-0006",
     "expected_decision": "REJECT",
     "reason": "Department budget BUD-0006 total encumbrances ($475,350.35) exceed allocated budget limit ($285,210.21)",
-    "metadata": {
-      "allocated_amount": 28521021,
-      "encumbered_amount": 47535035,
-      "deficit_cents": 19014014
-    }
+    "metadata": "{\"allocated_amount\": 28521021, \"encumbered_amount\": 47535035, \"deficit_cents\": 19014014}"
   },
   {
     "anomaly_id": "ANOM-000025",
@@ -293,11 +222,7 @@
     "record_id": "BUD-0004",
     "expected_decision": "REJECT",
     "reason": "Department budget BUD-0004 total encumbrances ($447,892.71) exceed allocated budget limit ($268,735.62)",
-    "metadata": {
-      "allocated_amount": 26873562,
-      "encumbered_amount": 44789271,
-      "deficit_cents": 17915709
-    }
+    "metadata": "{\"allocated_amount\": 26873562, \"encumbered_amount\": 44789271, \"deficit_cents\": 17915709}"
   },
   {
     "anomaly_id": "ANOM-000026",
@@ -306,11 +231,7 @@
     "record_id": "PR-2026-001201",
     "expected_decision": "FLAG",
     "reason": "Duplicate requisition PR-2026-001201 submitted for identical items within short time window of original request PR-2026-000629",
-    "metadata": {
-      "original_request_id": "PR-2026-000629",
-      "duplicate_request_id": "PR-2026-001201",
-      "requester_id": "REQ-0040"
-    }
+    "metadata": "{\"original_request_id\": \"PR-2026-000629\", \"duplicate_request_id\": \"PR-2026-001201\", \"requester_id\": \"REQ-0040\"}"
   },
   {
     "anomaly_id": "ANOM-000027",
@@ -319,11 +240,7 @@
     "record_id": "PR-2026-001202",
     "expected_decision": "FLAG",
     "reason": "Duplicate requisition PR-2026-001202 submitted for identical items within short time window of original request PR-2026-000093",
-    "metadata": {
-      "original_request_id": "PR-2026-000093",
-      "duplicate_request_id": "PR-2026-001202",
-      "requester_id": "REQ-0127"
-    }
+    "metadata": "{\"original_request_id\": \"PR-2026-000093\", \"duplicate_request_id\": \"PR-2026-001202\", \"requester_id\": \"REQ-0127\"}"
   },
   {
     "anomaly_id": "ANOM-000028",
@@ -332,11 +249,7 @@
     "record_id": "PR-2026-001203",
     "expected_decision": "FLAG",
     "reason": "Duplicate requisition PR-2026-001203 submitted for identical items within short time window of original request PR-2026-000139",
-    "metadata": {
-      "original_request_id": "PR-2026-000139",
-      "duplicate_request_id": "PR-2026-001203",
-      "requester_id": "REQ-0049"
-    }
+    "metadata": "{\"original_request_id\": \"PR-2026-000139\", \"duplicate_request_id\": \"PR-2026-001203\", \"requester_id\": \"REQ-0049\"}"
   },
   {
     "anomaly_id": "ANOM-000029",
@@ -345,11 +258,7 @@
     "record_id": "PR-2026-001204",
     "expected_decision": "FLAG",
     "reason": "Duplicate requisition PR-2026-001204 submitted for identical items within short time window of original request PR-2026-000032",
-    "metadata": {
-      "original_request_id": "PR-2026-000032",
-      "duplicate_request_id": "PR-2026-001204",
-      "requester_id": "REQ-0270"
-    }
+    "metadata": "{\"original_request_id\": \"PR-2026-000032\", \"duplicate_request_id\": \"PR-2026-001204\", \"requester_id\": \"REQ-0270\"}"
   },
   {
     "anomaly_id": "ANOM-000030",
@@ -358,11 +267,7 @@
     "record_id": "PR-2026-001205",
     "expected_decision": "FLAG",
     "reason": "Duplicate requisition PR-2026-001205 submitted for identical items within short time window of original request PR-2026-000010",
-    "metadata": {
-      "original_request_id": "PR-2026-000010",
-      "duplicate_request_id": "PR-2026-001205",
-      "requester_id": "REQ-0135"
-    }
+    "metadata": "{\"original_request_id\": \"PR-2026-000010\", \"duplicate_request_id\": \"PR-2026-001205\", \"requester_id\": \"REQ-0135\"}"
   },
   {
     "anomaly_id": "ANOM-000031",
@@ -371,9 +276,7 @@
     "record_id": "QUO-SUP-C-0003-2026-001007",
     "expected_decision": "REVISE",
     "reason": "Quote QUO-SUP-C-0003-2026-001007 submitted in unsupported currency XYZ lacking valid FX conversion rate",
-    "metadata": {
-      "currency": "XYZ"
-    }
+    "metadata": "{\"currency\": \"XYZ\"}"
   },
   {
     "anomaly_id": "ANOM-000032",
@@ -382,9 +285,7 @@
     "record_id": "QUO-SUP-C-0100-2026-000689",
     "expected_decision": "REVISE",
     "reason": "Quote QUO-SUP-C-0100-2026-000689 submitted in unsupported currency XYZ lacking valid FX conversion rate",
-    "metadata": {
-      "currency": "XYZ"
-    }
+    "metadata": "{\"currency\": \"XYZ\"}"
   },
   {
     "anomaly_id": "ANOM-000033",
@@ -393,9 +294,7 @@
     "record_id": "QUO-SUP-C-0073-2026-000848",
     "expected_decision": "REVISE",
     "reason": "Quote QUO-SUP-C-0073-2026-000848 submitted in unsupported currency XYZ lacking valid FX conversion rate",
-    "metadata": {
-      "currency": "XYZ"
-    }
+    "metadata": "{\"currency\": \"XYZ\"}"
   },
   {
     "anomaly_id": "ANOM-000034",
@@ -404,9 +303,7 @@
     "record_id": "QUO-SUP-C-0033-2026-000041",
     "expected_decision": "REVISE",
     "reason": "Quote QUO-SUP-C-0033-2026-000041 submitted in unsupported currency XYZ lacking valid FX conversion rate",
-    "metadata": {
-      "currency": "XYZ"
-    }
+    "metadata": "{\"currency\": \"XYZ\"}"
   },
   {
     "anomaly_id": "ANOM-000035",
@@ -415,8 +312,6 @@
     "record_id": "QUO-SUP-C-0036-2026-001303",
     "expected_decision": "REVISE",
     "reason": "Quote QUO-SUP-C-0036-2026-001303 submitted in unsupported currency XYZ lacking valid FX conversion rate",
-    "metadata": {
-      "currency": "XYZ"
-    }
+    "metadata": "{\"currency\": \"XYZ\"}"
   }
 ]

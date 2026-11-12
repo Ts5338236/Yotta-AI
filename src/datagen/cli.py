@@ -91,8 +91,13 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument(
         "--output-dir",
         type=str,
-        default="output",
-        help="Root directory for exported artifacts (default: output)",
+        default="data",
+        help="Root directory for exported artifacts (default: data)",
+    )
+    parser.add_argument(
+        "--validate-exports",
+        action="store_true",
+        help="Run export integrity and cross-format consistency validation on exported deliverables",
     )
     parser.add_argument(
         "--scale",
@@ -179,28 +184,31 @@ def main(argv: list[str] | None = None) -> None:
                 from datagen.export import export_all
                 from validate.checks import validate_dataset
                 from validate.anomaly_checks import detect_all_anomalies, evaluate_detections
+                from validate.export_checks import validate_all_exports
                 import json
 
                 out_root = Path(args.output_dir).resolve()
                 print(f"\n=== Persisting Dataset to Disk ({out_root}) ===")
-                exp_res = export_all(dataset, output_dir=out_root)
+                exp_res = export_all(dataset, base_dir=out_root, ground_truth=gt_records)
                 print(f"CSV Tables Exported: {exp_res['total_tables_exported']} -> {out_root}/csv/")
                 print(f"JSON Files Exported: {len(exp_res['json_files'])} -> {out_root}/json/")
                 print(f"SQLite DB Created  : {exp_res['sqlite_db']}")
                 print(f"DDL Schema Exported: {exp_res['schema_ddl']}")
                 print(f"SQL Seed Generated : {exp_res['seed_sql']}")
+                if exp_res["ground_truth_files"]:
+                    print(f"Ground Truth Files : {exp_res['ground_truth_files']}")
                 print(f"Source Manifest    : {exp_res['manifest']}")
 
-                rep_dir = out_root / "reports"
+                rep_dir = Path("docs").resolve()
                 rep_dir.mkdir(parents=True, exist_ok=True)
 
                 # Generate validation report
                 val_report = validate_dataset(dataset)
-                with open(rep_dir / "validation_report.json", "w", encoding="utf-8") as f:
+                with open(rep_dir / "validation_summary.json", "w", encoding="utf-8") as f:
                     json.dump(val_report.to_dict(), f, indent=2)
-                with open(rep_dir / "validation_report.md", "w", encoding="utf-8") as f:
+                with open(rep_dir / "validation_summary.md", "w", encoding="utf-8") as f:
                     f.write(val_report.to_markdown())
-                print(f"Validation Report  : {rep_dir}/validation_report.md (Status: {val_report.status})")
+                print(f"Validation Report  : {rep_dir}/validation_summary.md (Status: {val_report.status})")
 
                 # Generate anomaly evaluation report if ground truth present
                 if gt_records:
@@ -235,6 +243,12 @@ def main(argv: list[str] | None = None) -> None:
                     with open(rep_dir / "anomaly_evaluation_report.md", "w", encoding="utf-8") as f:
                         f.write("\n".join(md_anom) + "\n")
                     print(f"Anomaly Evaluation : {rep_dir}/anomaly_evaluation_report.md (F1: {eval_metrics['f1_score']:.4f})")
+
+                if args.validate_exports:
+                    export_audit = validate_all_exports(dataset, base_dir=out_root)
+                    print(f"Export Audit Status: {export_audit['status']}")
+                    with open(rep_dir / "export_integrity_report.json", "w", encoding="utf-8") as f:
+                        json.dump(export_audit, f, indent=2)
 
             sys.exit(0)
         except Exception as err:

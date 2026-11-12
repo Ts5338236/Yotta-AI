@@ -1,0 +1,65 @@
+[
+  {
+    "anomaly_id": "ANOM-000001",
+    "issue_type": "po_without_approval",
+    "entity": "purchase_orders",
+    "record_id": "PO-2026-000010",
+    "expected_decision": "REJECT",
+    "reason": "Purchase order PO-2026-000010 issued for requisition PR-2026-000082 lacking required approval records",
+    "metadata": "{\"request_id\": \"PR-2026-000082\"}"
+  },
+  {
+    "anomaly_id": "ANOM-000002",
+    "issue_type": "expired_quote_before_award",
+    "entity": "supplier_quotes",
+    "record_id": "QUO-SUP-C-0009-2026-000031",
+    "expected_decision": "DISQUALIFY",
+    "reason": "Quote QUO-SUP-C-0009-2026-000031 validity expired on 2026-02-25 prior to award on 2026-03-02",
+    "metadata": "{\"award_date\": \"2026-03-02\", \"expired_date\": \"2026-02-25\"}"
+  },
+  {
+    "anomaly_id": "ANOM-000003",
+    "issue_type": "non_cheapest_quote_without_rationale",
+    "entity": "supplier_quotes",
+    "record_id": "QUO-SUP-C-0005-2026-000004",
+    "expected_decision": "JUSTIFY_OR_REVERT",
+    "reason": "Quotation QUO-SUP-C-0005-2026-000004 awarded at landed cost $4,862.15 over cheaper quote QUO-SUP-C-0007-2026-000002 ($4,252.06) without documented justification rationale",
+    "metadata": "{\"rfq_id\": \"RFQ-2026-000001\", \"awarded_quote_id\": \"QUO-SUP-C-0005-2026-000004\", \"cheapest_quote_id\": \"QUO-SUP-C-0007-2026-000002\"}"
+  },
+  {
+    "anomaly_id": "ANOM-000004",
+    "issue_type": "inactive_supplier_used",
+    "entity": "purchase_orders",
+    "record_id": "PO-2026-000072",
+    "expected_decision": "BLOCK",
+    "reason": "Purchase order PO-2026-000072 issued to inactive/debarred vendor SUP-0013",
+    "metadata": "{\"supplier_id\": \"SUP-0013\"}"
+  },
+  {
+    "anomaly_id": "ANOM-000005",
+    "issue_type": "budget_overrun",
+    "entity": "budgets",
+    "record_id": "BUD-0009",
+    "expected_decision": "REJECT",
+    "reason": "Department budget BUD-0009 total encumbrances ($18,923.14) exceed allocated budget limit ($11,353.88)",
+    "metadata": "{\"allocated_amount\": 1135388, \"encumbered_amount\": 1892314, \"deficit_cents\": 756926}"
+  },
+  {
+    "anomaly_id": "ANOM-000006",
+    "issue_type": "duplicate_purchase_request",
+    "entity": "purchase_requests",
+    "record_id": "PR-2026-000116",
+    "expected_decision": "FLAG",
+    "reason": "Duplicate requisition PR-2026-000116 submitted for identical items within short time window of original request PR-2026-000028",
+    "metadata": "{\"original_request_id\": \"PR-2026-000028\", \"duplicate_request_id\": \"PR-2026-000116\", \"requester_id\": \"REQ-0010\"}"
+  },
+  {
+    "anomaly_id": "ANOM-000007",
+    "issue_type": "quote_currency_mismatch",
+    "entity": "supplier_quotes",
+    "record_id": "QUO-SUP-C-0004-2026-000026",
+    "expected_decision": "REVISE",
+    "reason": "Quote QUO-SUP-C-0004-2026-000026 submitted in unsupported currency XYZ lacking valid FX conversion rate",
+    "metadata": "{\"currency\": \"XYZ\"}"
+  }
+]

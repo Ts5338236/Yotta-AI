@@ -9,7 +9,7 @@ BEGIN TRANSACTION;
 -- ----------------------------------------------------------------------------
 -- Table: departments (12 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO departments (department_id, name, cost_center_code, created_at) VALUES
+INSERT INTO departments (department_id, name, cost_center_code, created_at) VALUES
   ('DEPT-01', 'Engineering', 'CC-ENG-100', '2026-01-01T00:00:00Z'),
   ('DEPT-02', 'Information Technology', 'CC-IT-200', '2026-01-01T00:00:00Z'),
   ('DEPT-03', 'Finance', 'CC-FIN-300', '2026-01-01T00:00:00Z'),
@@ -26,7 +26,7 @@ INSERT OR REPLACE INTO departments (department_id, name, cost_center_code, creat
 -- ----------------------------------------------------------------------------
 -- Table: budgets (12 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO budgets (budget_id, department_id, fiscal_year, currency, allocated_amount, reserved_amount, committed_amount, spent_amount, created_at) VALUES
+INSERT INTO budgets (budget_id, department_id, fiscal_year, currency, allocated_amount, reserved_amount, committed_amount, spent_amount, created_at) VALUES
   ('BUD-0001', 'DEPT-01', 2026, 'USD', 450000000, 0, 0, 97409616, '2026-01-01T00:00:00Z'),
   ('BUD-0002', 'DEPT-02', 2026, 'USD', 455000000, 0, 0, 65558858, '2026-01-01T00:00:00Z'),
   ('BUD-0003', 'DEPT-03', 2026, 'USD', 775000000, 0, 0, 60655820, '2026-01-01T00:00:00Z'),
@@ -43,7 +43,7 @@ INSERT OR REPLACE INTO budgets (budget_id, department_id, fiscal_year, currency,
 -- ----------------------------------------------------------------------------
 -- Table: requesters (300 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO requesters (requester_id, name, email, department_id, job_title, created_at) VALUES
+INSERT INTO requesters (requester_id, name, email, department_id, job_title, created_at) VALUES
   ('REQ-0001', 'Drew Smith', 'drew.smith.001@example.com', 'DEPT-01', 'Director of Engineering', '2026-01-01T00:00:00Z'),
   ('REQ-0002', 'Kendall Ramirez', 'kendall.ramirez.002@example.com', 'DEPT-01', 'Senior Manager, Engineering', '2026-01-01T00:00:00Z'),
   ('REQ-0003', 'Casey Harris', 'casey.harris.003@example.com', 'DEPT-01', 'Manager, Engineering', '2026-01-01T00:00:00Z'),
@@ -245,7 +245,7 @@ INSERT OR REPLACE INTO requesters (requester_id, name, email, department_id, job
   ('REQ-0199', 'Dakota Sanchez', 'dakota.sanchez.199@example.com', 'DEPT-05', 'Specialist, Procurement', '2026-01-01T00:00:00Z'),
   ('REQ-0200', 'Jesse Wilson', 'jesse.wilson.200@example.com', 'DEPT-05', 'Specialist, Procurement', '2026-01-01T00:00:00Z');
 
-INSERT OR REPLACE INTO requesters (requester_id, name, email, department_id, job_title, created_at) VALUES
+INSERT INTO requesters (requester_id, name, email, department_id, job_title, created_at) VALUES
   ('REQ-0201', 'Emerson Moore', 'emerson.moore.201@example.com', 'DEPT-05', 'Specialist, Procurement', '2026-01-01T00:00:00Z'),
   ('REQ-0202', 'Pat Jones', 'pat.jones.202@example.com', 'DEPT-05', 'Senior Specialist, Procurement', '2026-01-01T00:00:00Z'),
   ('REQ-0203', 'Skyler White', 'skyler.white.203@example.com', 'DEPT-05', 'Specialist, Procurement', '2026-01-01T00:00:00Z'),
@@ -350,7 +350,7 @@ INSERT OR REPLACE INTO requesters (requester_id, name, email, department_id, job
 -- ----------------------------------------------------------------------------
 -- Table: approvers (26 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO approvers (approver_id, name, email, department_id, role, approval_limit, is_active, created_at) VALUES
+INSERT INTO approvers (approver_id, name, email, department_id, role, approval_limit, is_active, created_at) VALUES
   ('APP-0001', 'Kendall Martinez', 'kendall.martinez.app01@example.com', 'DEPT-01', 'LINE_MANAGER', 200000, 1, '2026-01-01T00:00:00Z'),
   ('APP-0002', 'Kendall Brown', 'kendall.brown.app02@example.com', 'DEPT-01', 'DEPARTMENT_HEAD', 2500000, 1, '2026-01-01T00:00:00Z'),
   ('APP-0003', 'Taylor Garcia', 'taylor.garcia.app03@example.com', 'DEPT-02', 'LINE_MANAGER', 200000, 1, '2026-01-01T00:00:00Z'),
@@ -381,7 +381,7 @@ INSERT OR REPLACE INTO approvers (approver_id, name, email, department_id, role,
 -- ----------------------------------------------------------------------------
 -- Table: suppliers (125 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO suppliers (supplier_id, name, contact_email, country, currency, status, risk_classification, created_at) VALUES
+INSERT INTO suppliers (supplier_id, name, contact_email, country, currency, status, risk_classification, created_at) VALUES
   ('SUP-0001', 'Apex Materials Group', 'sales@apexmaterialsgroup.example.com', 'USA', 'USD', 'ACTIVE', 'LOW', '2026-01-01T00:00:00Z'),
   ('SUP-0002', 'Alliance Components Enterprises', 'sales@alliancecomponentsenterprises.example.com', 'USA', 'USD', 'ACTIVE', 'LOW', '2026-01-01T00:00:00Z'),
   ('SUP-0003', 'Nexus Industrial Corp', 'sales@nexusindustrialcorp.example.com', 'DEU', 'EUR', 'ACTIVE', 'LOW', '2026-01-01T00:00:00Z'),
@@ -511,7 +511,7 @@ INSERT OR REPLACE INTO suppliers (supplier_id, name, contact_email, country, cur
 -- ----------------------------------------------------------------------------
 -- Table: purchase_requests (1205 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
+INSERT INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
   ('PR-2026-000743', 'REQ-0279', 'DEPT-09', 'BUD-0009', 'USD', 74922, 'ORDERED', '2026-01-01', 'Quarterly consumable and operational supplies replenishment', '2026-01-01T15:21:09Z', '2026-01-05T10:00:00Z'),
   ('PR-2026-000799', 'REQ-0248', 'DEPT-07', 'BUD-0007', 'USD', 3051248, 'ORDERED', '2026-01-01', 'Critical project milestone software tools and infrastructure', '2026-01-01T12:00:25Z', '2026-01-19T10:00:00Z'),
   ('PR-2026-000249', 'REQ-0256', 'DEPT-07', 'BUD-0007', 'USD', 1540282, 'ORDERED', '2026-01-02', 'External specialized advisory support for compliance requirements', '2026-01-02T14:22:19Z', '2026-01-21T10:00:00Z'),
@@ -713,7 +713,7 @@ INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_i
   ('PR-2026-000204', 'REQ-0003', 'DEPT-01', 'BUD-0001', 'USD', 121545, 'ORDERED', '2026-03-11', 'Departmental expansion and onboarding equipment', '2026-03-11T10:22:04Z', '2026-03-15T10:00:00Z'),
   ('PR-2026-000444', 'REQ-0018', 'DEPT-01', 'BUD-0001', 'USD', 3092375, 'ORDERED', '2026-03-11', 'Client delivery commitment and fulfillment hardware', '2026-03-11T11:23:23Z', '2026-04-03T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
+INSERT INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
   ('PR-2026-000501', 'REQ-0213', 'DEPT-06', 'BUD-0006', 'USD', 240102, 'ORDERED', '2026-03-12', 'Critical project milestone software tools and infrastructure', '2026-03-12T12:39:48Z', '2026-03-26T10:00:00Z'),
   ('PR-2026-000869', 'REQ-0040', 'DEPT-01', 'BUD-0001', 'USD', 991416, 'ORDERED', '2026-03-12', 'Client delivery commitment and fulfillment hardware', '2026-03-12T12:41:29Z', '2026-03-26T10:00:00Z'),
   ('PR-2026-000880', 'REQ-0062', 'DEPT-01', 'BUD-0001', 'USD', 75026, 'ORDERED', '2026-03-12', 'Client delivery commitment and fulfillment hardware', '2026-03-12T09:35:07Z', '2026-03-16T10:00:00Z'),
@@ -915,7 +915,7 @@ INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_i
   ('PR-2026-001081', 'REQ-0002', 'DEPT-01', 'BUD-0001', 'USD', 877796, 'ORDERED', '2026-05-15', 'Annual renewal of enterprise business subscriptions', '2026-05-15T15:08:51Z', '2026-05-31T10:00:00Z'),
   ('PR-2026-001113', 'REQ-0171', 'DEPT-04', 'BUD-0004', 'USD', 1089011, 'ORDERED', '2026-05-15', 'Quarterly consumable and operational supplies replenishment', '2026-05-15T12:44:46Z', '2026-06-02T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
+INSERT INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
   ('PR-2026-001065', 'REQ-0063', 'DEPT-01', 'BUD-0001', 'USD', 641156, 'ORDERED', '2026-05-16', 'Client delivery commitment and fulfillment hardware', '2026-05-16T10:13:41Z', '2026-05-31T10:00:00Z'),
   ('PR-2026-001114', 'REQ-0101', 'DEPT-02', 'BUD-0002', 'USD', 79518, 'DRAFT', '2026-05-16', 'External specialized advisory support for compliance requirements', '2026-05-16T13:10:43Z', '2026-05-16T13:10:43Z'),
   ('PR-2026-000110', 'REQ-0216', 'DEPT-06', 'BUD-0006', 'USD', 257955, 'DRAFT', '2026-05-17', 'Critical project milestone software tools and infrastructure', '2026-05-17T11:37:11Z', '2026-05-17T11:37:11Z'),
@@ -1117,7 +1117,7 @@ INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_i
   ('PR-2026-000423', 'REQ-0166', 'DEPT-04', 'BUD-0004', 'USD', 206052, 'ORDERED', '2026-07-20', 'Critical project milestone software tools and infrastructure', '2026-07-20T17:45:29Z', '2026-08-03T10:00:00Z'),
   ('PR-2026-000731', 'REQ-0067', 'DEPT-01', 'BUD-0001', 'USD', 163071, 'ORDERED', '2026-07-20', 'Annual renewal of enterprise business subscriptions', '2026-07-20T10:39:03Z', '2026-07-23T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
+INSERT INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
   ('PR-2026-000826', 'REQ-0283', 'DEPT-09', 'BUD-0009', 'USD', 545412, 'ORDERED', '2026-07-21', 'Annual renewal of enterprise business subscriptions', '2026-07-21T10:35:02Z', '2026-08-06T10:00:00Z'),
   ('PR-2026-000701', 'REQ-0239', 'DEPT-06', 'BUD-0006', 'USD', 79324, 'ORDERED', '2026-07-22', 'Client delivery commitment and fulfillment hardware', '2026-07-22T14:19:38Z', '2026-07-24T10:00:00Z'),
   ('PR-2026-000747', 'REQ-0168', 'DEPT-04', 'BUD-0004', 'USD', 39020, 'ORDERED', '2026-07-22', 'Scheduled preventive facility maintenance and safety supplies', '2026-07-22T12:43:13Z', '2026-07-26T10:00:00Z'),
@@ -1319,7 +1319,7 @@ INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_i
   ('PR-2026-000312', 'REQ-0219', 'DEPT-06', 'BUD-0006', 'USD', 55456, 'ORDERED', '2026-09-23', 'Client delivery commitment and fulfillment hardware', '2026-09-23T14:42:17Z', '2026-09-26T10:00:00Z'),
   ('PR-2026-000355', 'REQ-0008', 'DEPT-01', 'BUD-0001', 'USD', 291360, 'ORDERED', '2026-09-23', 'Replacement of deprecated departmental equipment', '2026-09-23T17:20:44Z', '2026-10-11T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
+INSERT INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
   ('PR-2026-000400', 'REQ-0062', 'DEPT-01', 'BUD-0001', 'USD', 450327, 'ORDERED', '2026-09-23', 'Client delivery commitment and fulfillment hardware', '2026-09-23T14:08:01Z', '2026-10-11T10:00:00Z'),
   ('PR-2026-000415', 'REQ-0063', 'DEPT-01', 'BUD-0001', 'USD', 421919, 'ORDERED', '2026-09-23', 'Scheduled preventive facility maintenance and safety supplies', '2026-09-23T16:03:06Z', '2026-10-11T10:00:00Z'),
   ('PR-2026-000553', 'REQ-0053', 'DEPT-01', 'BUD-0001', 'USD', 122176, 'DRAFT', '2026-09-23', 'Critical project milestone software tools and infrastructure', '2026-09-23T14:15:37Z', '2026-09-23T14:15:37Z'),
@@ -1521,7 +1521,7 @@ INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_i
   ('PR-2026-000518', 'REQ-0124', 'DEPT-03', 'BUD-0003', 'USD', 21780, 'ORDERED', '2026-11-14', 'Departmental expansion and onboarding equipment', '2026-11-14T15:00:16Z', '2026-11-16T10:00:00Z'),
   ('PR-2026-000587', 'REQ-0182', 'DEPT-04', 'BUD-0004', 'USD', 140652, 'ORDERED', '2026-11-14', 'Scheduled preventive facility maintenance and safety supplies', '2026-11-14T10:45:22Z', '2026-11-17T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
+INSERT INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
   ('PR-2026-000294', 'REQ-0006', 'DEPT-01', 'BUD-0001', 'USD', 490431, 'ORDERED', '2026-11-15', 'Scheduled preventive facility maintenance and safety supplies', '2026-11-15T10:44:54Z', '2026-11-19T10:00:00Z'),
   ('PR-2026-000426', 'REQ-0056', 'DEPT-01', 'BUD-0001', 'USD', 20162, 'DRAFT', '2026-11-15', 'Critical project milestone software tools and infrastructure', '2026-11-15T15:15:52Z', '2026-11-15T15:15:52Z'),
   ('PR-2026-000434', 'REQ-0241', 'DEPT-06', 'BUD-0006', 'USD', 133650, 'DRAFT', '2026-11-15', 'Scheduled preventive facility maintenance and safety supplies', '2026-11-15T12:23:43Z', '2026-11-15T12:23:43Z'),
@@ -1723,7 +1723,7 @@ INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_i
   ('PR-2026-000370', 'REQ-0043', 'DEPT-01', 'BUD-0001', 'USD', 73026, 'ORDERED', '2026-12-31', 'Scheduled preventive facility maintenance and safety supplies', '2026-12-31T17:25:31Z', '2026-12-31T10:00:00Z'),
   ('PR-2026-000634', 'REQ-0074', 'DEPT-02', 'BUD-0002', 'USD', 634552, 'ORDERED', '2026-12-31', 'Client delivery commitment and fulfillment hardware', '2026-12-31T16:18:22Z', '2026-12-31T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
+INSERT INTO purchase_requests (request_id, requester_id, department_id, budget_id, currency, total_estimated_amount, status, request_date, justification, created_at, updated_at) VALUES
   ('PR-2026-001201', 'REQ-0040', 'DEPT-01', 'BUD-0001', 'USD', 113582, 'SUBMITTED', '2026-09-26', 'Departmental expansion and onboarding equipment', '2026-09-26T10:00:00Z', '2026-09-26T10:00:00Z'),
   ('PR-2026-001202', 'REQ-0127', 'DEPT-03', 'BUD-0003', 'USD', 70960, 'SUBMITTED', '2026-07-28', 'Replacement of deprecated departmental equipment', '2026-07-28T10:00:00Z', '2026-07-28T10:00:00Z'),
   ('PR-2026-001203', 'REQ-0049', 'DEPT-01', 'BUD-0001', 'USD', 400610, 'SUBMITTED', '2026-10-10', 'Departmental expansion and onboarding equipment', '2026-10-10T10:00:00Z', '2026-10-10T10:00:00Z'),
@@ -1733,7 +1733,7 @@ INSERT OR REPLACE INTO purchase_requests (request_id, requester_id, department_i
 -- ----------------------------------------------------------------------------
 -- Table: request_lines (2529 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
+INSERT INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
   ('RL-000001', 'PR-2026-000743', 1, 'Cisco Catalyst 9300 48-Port Network Switch', 'IT Hardware', 2, 37461, 74922),
   ('RL-000002', 'PR-2026-000799', 1, 'Multi-Channel Vibration Analysis Diagnostic Meter', 'Industrial Equipment', 13, 50000, 650000),
   ('RL-000003', 'PR-2026-000799', 2, 'Wall-Mounted Emergency Eye Wash & Drench Station', 'Industrial Equipment', 2, 198504, 397008),
@@ -1935,7 +1935,7 @@ INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, 
   ('RL-000199', 'PR-2026-000235', 1, 'Annual Corporate ESG & Investor Report Print Production', 'Marketing', 1, 15706, 15706),
   ('RL-000200', 'PR-2026-000235', 2, 'Eco-Friendly Sustainable Client Gift Swag Packages', 'Marketing', 6, 12609, 75654);
 
-INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
+INSERT INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
   ('RL-000201', 'PR-2026-000235', 3, 'Professional Video Production & Post-Editing Services', 'Marketing', 31, 4470, 138570),
   ('RL-000202', 'PR-2026-000380', 1, 'Heavy-Duty Commercial Desktop Stapler Set', 'Office Supplies', 22, 4564, 100408),
   ('RL-000203', 'PR-2026-000380', 2, 'Premium Rollerball Gel Ink Pens (Pack of 50)', 'Office Supplies', 26, 4773, 124098),
@@ -2137,7 +2137,7 @@ INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, 
   ('RL-000399', 'PR-2026-000501', 1, 'Ergonomic Non-Slip Desk Blotter Pads (Box of 10)', 'Office Supplies', 12, 3239, 38868),
   ('RL-000400', 'PR-2026-000501', 2, 'Universal Document Shredder Conditioning Sheets', 'Office Supplies', 13, 4813, 62569);
 
-INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
+INSERT INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
   ('RL-000401', 'PR-2026-000501', 3, 'MacBook Pro 16-inch M3 Pro Workstation', 'IT Hardware', 1, 70016, 70016),
   ('RL-000402', 'PR-2026-000501', 4, 'Standard File Folders with Reinforced Tabs (Box of 100)', 'Office Supplies', 21, 3269, 68649),
   ('RL-000403', 'PR-2026-000869', 1, 'High-Precision Analytical Laboratory Bench Scale', 'Industrial Equipment', 6, 165236, 991416),
@@ -2339,7 +2339,7 @@ INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, 
   ('RL-000599', 'PR-2026-001132', 1, 'Commercial HVAC Synthetic Air Filters MERV 13 (Pack of 12)', 'Maintenance', 31, 9683, 300173),
   ('RL-000600', 'PR-2026-001132', 2, 'Self-Adhesive Color Note Pads Value Multipack', 'Office Supplies', 10, 2712, 27120);
 
-INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
+INSERT INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
   ('RL-000601', 'PR-2026-001132', 3, 'Heavy-Duty Industrial Floor Degreaser Cleaner (5 Gallon)', 'Maintenance', 18, 6544, 117792),
   ('RL-000602', 'PR-2026-000074', 1, 'High-Precision Analytical Laboratory Bench Scale', 'Industrial Equipment', 9, 68956, 620604),
   ('RL-000603', 'PR-2026-000150', 1, 'Eco-Friendly Sustainable Client Gift Swag Packages', 'Marketing', 6, 4443, 26658),
@@ -2541,7 +2541,7 @@ INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, 
   ('RL-000799', 'PR-2026-000803', 4, 'Multi-Purpose Recycled Copy Paper (10-Ream Case)', 'Office Supplies', 10, 2431, 24310),
   ('RL-000800', 'PR-2026-001188', 1, 'Professional Video Production & Post-Editing Services', 'Marketing', 13, 11653, 151489);
 
-INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
+INSERT INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
   ('RL-000801', 'PR-2026-001188', 2, 'Quarterly Consumer Market Research & Brand Sentiment Study', 'Marketing', 28, 5289, 148092),
   ('RL-000802', 'PR-2026-001188', 3, 'Heavy-Duty Retractable Standing Event Banners (Set of 3)', 'Marketing', 13, 13763, 178919),
   ('RL-000803', 'PR-2026-000783', 1, 'Heavy-Duty Industrial Floor Degreaser Cleaner (5 Gallon)', 'Maintenance', 32, 9403, 300896),
@@ -2743,7 +2743,7 @@ INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, 
   ('RL-000999', 'PR-2026-001048', 2, 'Dell UltraSharp 27-inch 4K USB-C Monitor', 'IT Hardware', 13, 51907, 674791),
   ('RL-001000', 'PR-2026-001048', 3, 'Logitech MX Master 3S Wireless Performance Mouse', 'IT Hardware', 4, 22256, 89024);
 
-INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
+INSERT INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
   ('RL-001001', 'PR-2026-001048', 4, 'Universal Emergency Exit Light with Battery Backup', 'Maintenance', 7, 8826, 61782),
   ('RL-001002', 'PR-2026-001144', 1, 'Professional Video Production & Post-Editing Services', 'Marketing', 22, 4418, 97196),
   ('RL-001003', 'PR-2026-001144', 2, 'Custom Modular Tradeshow Exhibition Booth Backdrop', 'Marketing', 6, 17348, 104088),
@@ -2945,7 +2945,7 @@ INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, 
   ('RL-001199', 'PR-2026-000046', 2, 'Multi-Channel Vibration Analysis Diagnostic Meter', 'Industrial Equipment', 2, 157073, 314146),
   ('RL-001200', 'PR-2026-000174', 1, 'Enterprise Cloud Architecture Consulting (Block of Hours)', 'Professional Services', 2, 39009, 78018);
 
-INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
+INSERT INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
   ('RL-001201', 'PR-2026-000316', 1, 'Standard File Folders with Reinforced Tabs (Box of 100)', 'Office Supplies', 30, 3223, 96690),
   ('RL-001202', 'PR-2026-000316', 2, 'Heavy-Duty Commercial Desktop Stapler Set', 'Office Supplies', 1, 1943, 1943),
   ('RL-001203', 'PR-2026-000322', 1, 'Industrial Rugged Wireless Barcode Handheld Scanner', 'Logistics', 6, 10551, 63306),
@@ -3147,7 +3147,7 @@ INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, 
   ('RL-001399', 'PR-2026-000757', 3, 'Poly Studio USB Video Bar for Conference Rooms', 'IT Hardware', 12, 69770, 837240),
   ('RL-001400', 'PR-2026-000901', 1, 'Ergonomic Non-Slip Desk Blotter Pads (Box of 10)', 'Office Supplies', 2, 2622, 5244);
 
-INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
+INSERT INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
   ('RL-001401', 'PR-2026-000901', 2, 'Multi-Purpose Recycled Copy Paper (10-Ream Case)', 'Office Supplies', 19, 4708, 89452),
   ('RL-001402', 'PR-2026-000901', 3, 'Standard File Folders with Reinforced Tabs (Box of 100)', 'Office Supplies', 29, 1516, 43964),
   ('RL-001403', 'PR-2026-001054', 1, 'Comprehensive OSHA Compliant Workplace First Aid Station', 'Facilities', 14, 9046, 126644),
@@ -3349,7 +3349,7 @@ INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, 
   ('RL-001599', 'PR-2026-000738', 1, 'Industrial Cast Hand Stretch Film Wrap (Case of 4)', 'Logistics', 8, 14376, 115008),
   ('RL-001600', 'PR-2026-000738', 2, 'Commercial Grade Packaging Carton Sealing Tape (Case of 36)', 'Logistics', 19, 8184, 155496);
 
-INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
+INSERT INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
   ('RL-001601', 'PR-2026-000738', 3, 'Double-Wall Corrugated Heavy-Duty Shipping Boxes (Pack of 50)', 'Logistics', 30, 6771, 203130),
   ('RL-001602', 'PR-2026-000738', 4, 'Heat-Treated Standard Wooden Shipping Pallets (Stack of 10)', 'Logistics', 11, 5865, 64515),
   ('RL-001603', 'PR-2026-001190', 1, 'Developer IDE & Code Intelligence Team Subscription', 'Software', 14, 34508, 483112),
@@ -3551,7 +3551,7 @@ INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, 
   ('RL-001799', 'PR-2026-000590', 3, 'Commercial Reverse Osmosis Drinking Water Filtration Core', 'Facilities', 7, 17241, 120687),
   ('RL-001800', 'PR-2026-000590', 4, 'Commercial High-Capacity Upright HEPA Vacuum Cleaner', 'Facilities', 9, 39565, 356085);
 
-INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
+INSERT INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
   ('RL-001801', 'PR-2026-000643', 1, 'Logitech MX Master 3S Wireless Performance Mouse', 'IT Hardware', 5, 92250, 461250),
   ('RL-001802', 'PR-2026-000643', 2, 'HP LaserJet Enterprise M608dn High-Speed Printer', 'IT Hardware', 10, 73472, 734720),
   ('RL-001803', 'PR-2026-000672', 1, 'Double-Wall Corrugated Heavy-Duty Shipping Boxes (Pack of 50)', 'Logistics', 22, 8247, 181434),
@@ -3753,7 +3753,7 @@ INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, 
   ('RL-001999', 'PR-2026-000164', 1, 'Business Intelligence Visual Analytics Dashboard License', 'Software', 3, 31854, 95562),
   ('RL-002000', 'PR-2026-000164', 2, 'Conference Room Mid-Back Leather Swivel Chair', 'Furniture', 3, 17448, 52344);
 
-INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
+INSERT INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
   ('RL-002001', 'PR-2026-000471', 1, 'Facility Maintenance Electrical & Hand Tool Kit', 'Maintenance', 18, 3110, 55980),
   ('RL-002002', 'PR-2026-000489', 1, 'Commercial High-Capacity Upright HEPA Vacuum Cleaner', 'Facilities', 4, 15677, 62708),
   ('RL-002003', 'PR-2026-000489', 2, 'Commercial Reverse Osmosis Drinking Water Filtration Core', 'Facilities', 8, 20487, 163896),
@@ -3955,7 +3955,7 @@ INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, 
   ('RL-002199', 'PR-2026-000064', 1, 'Cybersecurity Endpoint Detection & Response Subscription', 'Software', 6, 16019, 96114),
   ('RL-002200', 'PR-2026-000361', 1, 'Lenovo ThinkPad X1 Carbon Gen 11 Laptop', 'IT Hardware', 5, 139835, 699175);
 
-INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
+INSERT INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
   ('RL-002201', 'PR-2026-000361', 2, 'MacBook Pro 16-inch M3 Pro Workstation', 'IT Hardware', 11, 66834, 735174),
   ('RL-002202', 'PR-2026-000382', 1, 'Wall-Mounted Emergency Eye Wash & Drench Station', 'Industrial Equipment', 3, 654612, 1963836),
   ('RL-002203', 'PR-2026-000390', 1, 'Professional Video Production & Post-Editing Services', 'Marketing', 14, 27964, 391496),
@@ -4157,7 +4157,7 @@ INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, 
   ('RL-002399', 'PR-2026-000939', 1, 'Samsung 34-inch Ultra-Wide Curved Office Display', 'IT Hardware', 5, 117077, 585385),
   ('RL-002400', 'PR-2026-000939', 2, 'HP LaserJet Enterprise M608dn High-Speed Printer', 'IT Hardware', 13, 28360, 368680);
 
-INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
+INSERT INTO request_lines (request_line_id, request_id, line_number, item_description, category, quantity, estimated_unit_price, estimated_line_total) VALUES
   ('RL-002401', 'PR-2026-000515', 1, 'Enterprise Collaboration & Communication Suite Seat', 'Software', 4, 46718, 186872),
   ('RL-002402', 'PR-2026-000515', 2, 'Developer IDE & Code Intelligence Team Subscription', 'Software', 4, 54374, 217496),
   ('RL-002403', 'PR-2026-000917', 1, 'Corporate Financial & Tax Compliance Advisory Services', 'Professional Services', 6, 35519, 213114),
@@ -4291,7 +4291,7 @@ INSERT OR REPLACE INTO request_lines (request_line_id, request_id, line_number, 
 -- ----------------------------------------------------------------------------
 -- Table: rfqs (500 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO rfqs (rfq_id, request_id, issue_date, due_date, status, created_at) VALUES
+INSERT INTO rfqs (rfq_id, request_id, issue_date, due_date, status, created_at) VALUES
   ('RFQ-2026-000001', 'PR-2026-000799', '2026-01-05', '2026-01-17', 'AWARDED', '2026-01-05T09:00:00Z'),
   ('RFQ-2026-000002', 'PR-2026-000249', '2026-01-05', '2026-01-18', 'AWARDED', '2026-01-05T09:00:00Z'),
   ('RFQ-2026-000003', 'PR-2026-001162', '2026-01-06', '2026-01-14', 'AWARDED', '2026-01-06T09:00:00Z'),
@@ -4493,7 +4493,7 @@ INSERT OR REPLACE INTO rfqs (rfq_id, request_id, issue_date, due_date, status, c
   ('RFQ-2026-000199', 'PR-2026-000922', '2026-05-13', '2026-05-23', 'AWARDED', '2026-05-13T09:00:00Z'),
   ('RFQ-2026-000200', 'PR-2026-000034', '2026-05-12', '2026-05-23', 'AWARDED', '2026-05-12T09:00:00Z');
 
-INSERT OR REPLACE INTO rfqs (rfq_id, request_id, issue_date, due_date, status, created_at) VALUES
+INSERT INTO rfqs (rfq_id, request_id, issue_date, due_date, status, created_at) VALUES
   ('RFQ-2026-000201', 'PR-2026-000941', '2026-05-12', '2026-05-19', 'AWARDED', '2026-05-12T09:00:00Z'),
   ('RFQ-2026-000202', 'PR-2026-000926', '2026-05-13', '2026-05-23', 'AWARDED', '2026-05-13T09:00:00Z'),
   ('RFQ-2026-000203', 'PR-2026-000997', '2026-05-14', '2026-05-22', 'AWARDED', '2026-05-14T09:00:00Z'),
@@ -4695,7 +4695,7 @@ INSERT OR REPLACE INTO rfqs (rfq_id, request_id, issue_date, due_date, status, c
   ('RFQ-2026-000399', 'PR-2026-000592', '2026-09-16', '2026-09-25', 'AWARDED', '2026-09-16T09:00:00Z'),
   ('RFQ-2026-000400', 'PR-2026-001060', '2026-09-17', '2026-09-28', 'AWARDED', '2026-09-17T09:00:00Z');
 
-INSERT OR REPLACE INTO rfqs (rfq_id, request_id, issue_date, due_date, status, created_at) VALUES
+INSERT INTO rfqs (rfq_id, request_id, issue_date, due_date, status, created_at) VALUES
   ('RFQ-2026-000401', 'PR-2026-000149', '2026-09-19', '2026-09-27', 'AWARDED', '2026-09-19T09:00:00Z'),
   ('RFQ-2026-000402', 'PR-2026-000199', '2026-09-19', '2026-09-26', 'AWARDED', '2026-09-19T09:00:00Z'),
   ('RFQ-2026-000403', 'PR-2026-000578', '2026-09-19', '2026-09-29', 'AWARDED', '2026-09-19T09:00:00Z'),
@@ -4800,7 +4800,7 @@ INSERT OR REPLACE INTO rfqs (rfq_id, request_id, issue_date, due_date, status, c
 -- ----------------------------------------------------------------------------
 -- Table: rfq_supplier_invites (1779 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
+INSERT INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
   ('INV-000001', 'RFQ-2026-000001', 'SUP-0008', '2026-01-05T09:00:00Z', 'ACCEPTED'),
   ('INV-000002', 'RFQ-2026-000001', 'SUP-0093', '2026-01-05T09:00:00Z', 'ACCEPTED'),
   ('INV-000003', 'RFQ-2026-000001', 'SUP-0040', '2026-01-05T09:00:00Z', 'ACCEPTED'),
@@ -5002,7 +5002,7 @@ INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, inv
   ('INV-000199', 'RFQ-2026-000057', 'SUP-0081', '2026-02-13T09:00:00Z', 'ACCEPTED'),
   ('INV-000200', 'RFQ-2026-000057', 'SUP-0063', '2026-02-13T09:00:00Z', 'ACCEPTED');
 
-INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
+INSERT INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
   ('INV-000201', 'RFQ-2026-000058', 'SUP-0023', '2026-02-13T09:00:00Z', 'ACCEPTED'),
   ('INV-000202', 'RFQ-2026-000058', 'SUP-0030', '2026-02-13T09:00:00Z', 'ACCEPTED'),
   ('INV-000203', 'RFQ-2026-000058', 'SUP-0029', '2026-02-13T09:00:00Z', 'ACCEPTED'),
@@ -5204,7 +5204,7 @@ INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, inv
   ('INV-000399', 'RFQ-2026-000112', 'SUP-0089', '2026-03-22T09:00:00Z', 'ACCEPTED'),
   ('INV-000400', 'RFQ-2026-000112', 'SUP-0118', '2026-03-22T09:00:00Z', 'ACCEPTED');
 
-INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
+INSERT INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
   ('INV-000401', 'RFQ-2026-000113', 'SUP-0001', '2026-03-23T09:00:00Z', 'ACCEPTED'),
   ('INV-000402', 'RFQ-2026-000113', 'SUP-0109', '2026-03-23T09:00:00Z', 'ACCEPTED'),
   ('INV-000403', 'RFQ-2026-000113', 'SUP-0015', '2026-03-23T09:00:00Z', 'ACCEPTED'),
@@ -5406,7 +5406,7 @@ INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, inv
   ('INV-000599', 'RFQ-2026-000170', 'SUP-0037', '2026-04-23T09:00:00Z', 'ACCEPTED'),
   ('INV-000600', 'RFQ-2026-000170', 'SUP-0117', '2026-04-23T09:00:00Z', 'ACCEPTED');
 
-INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
+INSERT INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
   ('INV-000601', 'RFQ-2026-000170', 'SUP-0081', '2026-04-23T09:00:00Z', 'ACCEPTED'),
   ('INV-000602', 'RFQ-2026-000170', 'SUP-0054', '2026-04-23T09:00:00Z', 'ACCEPTED'),
   ('INV-000603', 'RFQ-2026-000170', 'SUP-0041', '2026-04-23T09:00:00Z', 'ACCEPTED'),
@@ -5608,7 +5608,7 @@ INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, inv
   ('INV-000799', 'RFQ-2026-000226', 'SUP-0073', '2026-05-31T09:00:00Z', 'ACCEPTED'),
   ('INV-000800', 'RFQ-2026-000226', 'SUP-0053', '2026-05-31T09:00:00Z', 'ACCEPTED');
 
-INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
+INSERT INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
   ('INV-000801', 'RFQ-2026-000226', 'SUP-0102', '2026-05-31T09:00:00Z', 'ACCEPTED'),
   ('INV-000802', 'RFQ-2026-000227', 'SUP-0040', '2026-06-02T09:00:00Z', 'ACCEPTED'),
   ('INV-000803', 'RFQ-2026-000227', 'SUP-0023', '2026-06-02T09:00:00Z', 'ACCEPTED'),
@@ -5810,7 +5810,7 @@ INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, inv
   ('INV-000999', 'RFQ-2026-000283', 'SUP-0049', '2026-06-28T09:00:00Z', 'ACCEPTED'),
   ('INV-001000', 'RFQ-2026-000284', 'SUP-0056', '2026-06-30T09:00:00Z', 'ACCEPTED');
 
-INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
+INSERT INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
   ('INV-001001', 'RFQ-2026-000284', 'SUP-0075', '2026-06-30T09:00:00Z', 'ACCEPTED'),
   ('INV-001002', 'RFQ-2026-000284', 'SUP-0013', '2026-06-30T09:00:00Z', 'ACCEPTED'),
   ('INV-001003', 'RFQ-2026-000284', 'SUP-0019', '2026-06-30T09:00:00Z', 'ACCEPTED'),
@@ -6012,7 +6012,7 @@ INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, inv
   ('INV-001199', 'RFQ-2026-000338', 'SUP-0021', '2026-08-08T09:00:00Z', 'ACCEPTED'),
   ('INV-001200', 'RFQ-2026-000339', 'SUP-0113', '2026-08-08T09:00:00Z', 'ACCEPTED');
 
-INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
+INSERT INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
   ('INV-001201', 'RFQ-2026-000339', 'SUP-0037', '2026-08-08T09:00:00Z', 'ACCEPTED'),
   ('INV-001202', 'RFQ-2026-000339', 'SUP-0002', '2026-08-08T09:00:00Z', 'ACCEPTED'),
   ('INV-001203', 'RFQ-2026-000339', 'SUP-0035', '2026-08-08T09:00:00Z', 'ACCEPTED'),
@@ -6214,7 +6214,7 @@ INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, inv
   ('INV-001399', 'RFQ-2026-000393', 'SUP-0067', '2026-09-14T09:00:00Z', 'ACCEPTED'),
   ('INV-001400', 'RFQ-2026-000394', 'SUP-0015', '2026-09-17T09:00:00Z', 'ACCEPTED');
 
-INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
+INSERT INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
   ('INV-001401', 'RFQ-2026-000394', 'SUP-0032', '2026-09-17T09:00:00Z', 'ACCEPTED'),
   ('INV-001402', 'RFQ-2026-000394', 'SUP-0116', '2026-09-17T09:00:00Z', 'ACCEPTED'),
   ('INV-001403', 'RFQ-2026-000395', 'SUP-0014', '2026-09-16T09:00:00Z', 'ACCEPTED'),
@@ -6416,7 +6416,7 @@ INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, inv
   ('INV-001599', 'RFQ-2026-000450', 'SUP-0120', '2026-10-14T09:00:00Z', 'ACCEPTED'),
   ('INV-001600', 'RFQ-2026-000451', 'SUP-0079', '2026-10-16T09:00:00Z', 'ACCEPTED');
 
-INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
+INSERT INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, invited_at, invitation_status) VALUES
   ('INV-001601', 'RFQ-2026-000451', 'SUP-0001', '2026-10-16T09:00:00Z', 'ACCEPTED'),
   ('INV-001602', 'RFQ-2026-000451', 'SUP-0041', '2026-10-16T09:00:00Z', 'ACCEPTED'),
   ('INV-001603', 'RFQ-2026-000451', 'SUP-0091', '2026-10-16T09:00:00Z', 'ACCEPTED'),
@@ -6600,7 +6600,7 @@ INSERT OR REPLACE INTO rfq_supplier_invites (invite_id, rfq_id, supplier_id, inv
 -- ----------------------------------------------------------------------------
 -- Table: supplier_quotes (1779 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
+INSERT INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
   ('QUO-SUP-C-0008-2026-000001', 'RFQ-2026-000001', 'SUP-0008', '2026-01-10', 'USD', 1.0, 3327005, 3327005, 2, 'REJECTED', '2026-01-10T14:00:00Z'),
   ('QUO-SUP-C-0093-2026-000002', 'RFQ-2026-000001', 'SUP-0093', '2026-01-11', 'USD', 1.0, 3184373, 3184373, 25, 'REJECTED', '2026-01-11T14:00:00Z'),
   ('QUO-SUP-C-0040-2026-000003', 'RFQ-2026-000001', 'SUP-0040', '2026-01-08', 'USD', 1.0, 3197384, 3197384, 26, 'REJECTED', '2026-01-08T14:00:00Z'),
@@ -6802,7 +6802,7 @@ INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_dat
   ('QUO-SUP-C-0081-2026-000199', 'RFQ-2026-000057', 'SUP-0081', '2026-02-18', 'USD', 1.0, 929206, 929206, 22, 'REJECTED', '2026-02-18T14:00:00Z'),
   ('QUO-SUP-C-0063-2026-000200', 'RFQ-2026-000057', 'SUP-0063', '2026-02-18', 'USD', 1.0, 861651, 861651, 9, 'AWARDED', '2026-02-18T14:00:00Z');
 
-INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
+INSERT INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
   ('QUO-SUP-C-0023-2026-000201', 'RFQ-2026-000058', 'SUP-0023', '2026-02-18', 'USD', 1.0, 565348, 565348, 24, 'REJECTED', '2026-02-18T14:00:00Z'),
   ('QUO-SUP-C-0030-2026-000202', 'RFQ-2026-000058', 'SUP-0030', '2026-02-19', 'GBP', 1.27, 477687, 606662, 2, 'REJECTED', '2026-02-19T14:00:00Z'),
   ('QUO-SUP-C-0029-2026-000203', 'RFQ-2026-000058', 'SUP-0029', '2026-02-19', 'EUR', 1.08, 487120, 526089, 15, 'AWARDED', '2026-02-19T14:00:00Z'),
@@ -7004,7 +7004,7 @@ INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_dat
   ('QUO-SUP-C-0089-2026-000399', 'RFQ-2026-000112', 'SUP-0089', '2026-03-26', 'USD', 1.0, 536415, 536415, 3, 'REJECTED', '2026-03-26T14:00:00Z'),
   ('QUO-SUP-C-0118-2026-000400', 'RFQ-2026-000112', 'SUP-0118', '2026-03-27', 'USD', 1.0, 527961, 527961, 16, 'REJECTED', '2026-03-27T14:00:00Z');
 
-INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
+INSERT INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
   ('QUO-SUP-C-0001-2026-000401', 'RFQ-2026-000113', 'SUP-0001', '2026-03-28', 'USD', 1.0, 409808, 409808, 25, 'REJECTED', '2026-03-28T14:00:00Z'),
   ('QUO-SUP-C-0109-2026-000402', 'RFQ-2026-000113', 'SUP-0109', '2026-03-26', 'EUR', 1.08, 374804, 404789, 18, 'REJECTED', '2026-03-26T14:00:00Z'),
   ('QUO-SUP-C-0015-2026-000403', 'RFQ-2026-000113', 'SUP-0015', '2026-03-29', 'EUR', 1.08, 403710, 436007, 17, 'REJECTED', '2026-03-29T14:00:00Z'),
@@ -7206,7 +7206,7 @@ INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_dat
   ('QUO-SUP-C-0037-2026-000599', 'RFQ-2026-000170', 'SUP-0037', '2026-04-29', 'INR', 0.012, 16137090, 193645, 7, 'AWARDED', '2026-04-29T14:00:00Z'),
   ('QUO-SUP-C-0117-2026-000600', 'RFQ-2026-000170', 'SUP-0117', '2026-04-27', 'USD', 1.0, 226205, 226205, 18, 'REJECTED', '2026-04-27T14:00:00Z');
 
-INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
+INSERT INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
   ('QUO-SUP-C-0081-2026-000601', 'RFQ-2026-000170', 'SUP-0081', '2026-04-28', 'USD', 1.0, 219919, 219919, 24, 'REJECTED', '2026-04-28T14:00:00Z'),
   ('QUO-SUP-C-0054-2026-000602', 'RFQ-2026-000170', 'SUP-0054', '2026-04-27', 'EUR', 1.08, 187623, 202633, 27, 'REJECTED', '2026-04-27T14:00:00Z'),
   ('QUO-SUP-C-0041-2026-000603', 'RFQ-2026-000170', 'SUP-0041', '2026-04-27', 'USD', 1.0, 211637, 211637, 15, 'REJECTED', '2026-04-27T14:00:00Z'),
@@ -7408,7 +7408,7 @@ INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_dat
   ('QUO-SUP-C-0073-2026-000799', 'RFQ-2026-000226', 'SUP-0073', '2026-06-03', 'USD', 1.0, 260281, 260281, 28, 'REJECTED', '2026-06-03T14:00:00Z'),
   ('QUO-SUP-C-0053-2026-000800', 'RFQ-2026-000226', 'SUP-0053', '2026-06-04', 'USD', 1.0, 280812, 280812, 8, 'REJECTED', '2026-06-04T14:00:00Z');
 
-INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
+INSERT INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
   ('QUO-SUP-C-0102-2026-000801', 'RFQ-2026-000226', 'SUP-0102', '2026-06-06', 'USD', 1.0, 254072, 254072, 7, 'AWARDED', '2026-06-06T14:00:00Z'),
   ('QUO-SUP-C-0040-2026-000802', 'RFQ-2026-000227', 'SUP-0040', '2026-06-05', 'USD', 1.0, 4907450, 4907450, 29, 'REJECTED', '2026-06-05T14:00:00Z'),
   ('QUO-SUP-C-0023-2026-000803', 'RFQ-2026-000227', 'SUP-0023', '2026-06-07', 'USD', 1.0, 5024580, 5024580, 24, 'REJECTED', '2026-06-07T14:00:00Z'),
@@ -7610,7 +7610,7 @@ INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_dat
   ('QUO-SUP-C-0049-2026-000999', 'RFQ-2026-000283', 'SUP-0049', '2026-07-01', 'USD', 1.0, 312789, 312789, 21, 'REJECTED', '2026-07-01T14:00:00Z'),
   ('QUO-SUP-C-0056-2026-001000', 'RFQ-2026-000284', 'SUP-0056', '2026-07-03', 'EUR', 1.08, 382740, 413359, 12, 'REJECTED', '2026-07-03T14:00:00Z');
 
-INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
+INSERT INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
   ('QUO-SUP-C-0075-2026-001001', 'RFQ-2026-000284', 'SUP-0075', '2026-07-05', 'USD', 1.0, 390555, 390555, 6, 'AWARDED', '2026-07-05T14:00:00Z'),
   ('QUO-SUP-C-0013-2026-001002', 'RFQ-2026-000284', 'SUP-0013', '2026-07-06', 'USD', 1.0, 457305, 457305, 24, 'REJECTED', '2026-07-06T14:00:00Z'),
   ('QUO-SUP-C-0019-2026-001003', 'RFQ-2026-000284', 'SUP-0019', '2026-07-06', 'JPY', 0.0067, 70253730, 470700, 29, 'REJECTED', '2026-07-06T14:00:00Z'),
@@ -7812,7 +7812,7 @@ INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_dat
   ('QUO-SUP-C-0021-2026-001199', 'RFQ-2026-000338', 'SUP-0021', '2026-08-14', 'GBP', 1.27, 175378, 222730, 19, 'AWARDED', '2026-08-14T14:00:00Z'),
   ('QUO-SUP-C-0113-2026-001200', 'RFQ-2026-000339', 'SUP-0113', '2026-08-11', 'JPY', 0.0067, 143958954, 964525, 27, 'REJECTED', '2026-08-11T14:00:00Z');
 
-INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
+INSERT INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
   ('QUO-SUP-C-0037-2026-001201', 'RFQ-2026-000339', 'SUP-0037', '2026-08-13', 'INR', 0.012, 71416497, 856998, 11, 'REJECTED', '2026-08-13T14:00:00Z'),
   ('QUO-SUP-C-0002-2026-001202', 'RFQ-2026-000339', 'SUP-0002', '2026-08-13', 'USD', 1.0, 831476, 831476, 26, 'AWARDED', '2026-08-13T14:00:00Z'),
   ('QUO-SUP-C-0035-2026-001203', 'RFQ-2026-000339', 'SUP-0035', '2026-08-12', 'INR', 0.012, 74829167, 897950, 13, 'REJECTED', '2026-08-12T14:00:00Z'),
@@ -8014,7 +8014,7 @@ INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_dat
   ('QUO-SUP-C-0067-2026-001399', 'RFQ-2026-000393', 'SUP-0067', '2026-09-20', 'JPY', 0.0067, 284415670, 1905585, 29, 'REJECTED', '2026-09-20T14:00:00Z'),
   ('QUO-SUP-C-0015-2026-001400', 'RFQ-2026-000394', 'SUP-0015', '2026-09-22', 'EUR', 1.08, 211404, 228316, 22, 'REJECTED', '2026-09-22T14:00:00Z');
 
-INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
+INSERT INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
   ('QUO-SUP-C-0032-2026-001401', 'RFQ-2026-000394', 'SUP-0032', '2026-09-20', 'EUR', 1.08, 196394, 212106, 22, 'AWARDED', '2026-09-20T14:00:00Z'),
   ('QUO-SUP-C-0116-2026-001402', 'RFQ-2026-000394', 'SUP-0116', '2026-09-22', 'USD', 1.0, 183914, 183914, 26, 'REJECTED', '2026-09-22T14:00:00Z'),
   ('QUO-SUP-C-0014-2026-001403', 'RFQ-2026-000395', 'SUP-0014', '2026-09-19', 'GBP', 1.27, 201068, 255356, 10, 'AWARDED', '2026-09-19T14:00:00Z'),
@@ -8216,7 +8216,7 @@ INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_dat
   ('QUO-SUP-C-0120-2026-001599', 'RFQ-2026-000450', 'SUP-0120', '2026-10-19', 'USD', 1.0, 464189, 464189, 14, 'AWARDED', '2026-10-19T14:00:00Z'),
   ('QUO-SUP-C-0079-2026-001600', 'RFQ-2026-000451', 'SUP-0079', '2026-10-21', 'USD', 1.0, 671326, 671326, 27, 'REJECTED', '2026-10-21T14:00:00Z');
 
-INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
+INSERT INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_date, currency, fx_rate_to_base, total_quoted_amount, total_quoted_amount_base, lead_time_days, status, created_at) VALUES
   ('QUO-SUP-C-0001-2026-001601', 'RFQ-2026-000451', 'SUP-0001', '2026-10-21', 'USD', 1.0, 625898, 625898, 21, 'AWARDED', '2026-10-21T14:00:00Z'),
   ('QUO-SUP-C-0041-2026-001602', 'RFQ-2026-000451', 'SUP-0041', '2026-10-19', 'USD', 1.0, 656708, 656708, 14, 'REJECTED', '2026-10-19T14:00:00Z'),
   ('QUO-SUP-C-0091-2026-001603', 'RFQ-2026-000451', 'SUP-0091', '2026-10-19', 'USD', 1.0, 681270, 681270, 20, 'REJECTED', '2026-10-19T14:00:00Z'),
@@ -8400,7 +8400,7 @@ INSERT OR REPLACE INTO supplier_quotes (quote_id, rfq_id, supplier_id, quote_dat
 -- ----------------------------------------------------------------------------
 -- Table: quote_lines (4497 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-000001', 'QUO-SUP-C-0008-2026-000001', 'RL-000002', 13, 56504, 734552, 734552, '2026-01-10T14:00:00Z'),
   ('QL-000002', 'QUO-SUP-C-0008-2026-000001', 'RL-000003', 2, 218885, 437770, 437770, '2026-01-10T14:00:00Z'),
   ('QL-000003', 'QUO-SUP-C-0008-2026-000001', 'RL-000004', 3, 101079, 303237, 303237, '2026-01-10T14:00:00Z'),
@@ -8602,7 +8602,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-000199', 'QUO-SUP-C-0084-2026-000070', 'RL-000077', 2, 90044, 180088, 194495, '2026-01-22T14:00:00Z'),
   ('QL-000200', 'QUO-SUP-C-0038-2026-000071', 'RL-000076', 22, 8132, 178904, 178904, '2026-01-21T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-000201', 'QUO-SUP-C-0038-2026-000071', 'RL-000077', 2, 113102, 226204, 226204, '2026-01-21T14:00:00Z'),
   ('QL-000202', 'QUO-SUP-C-0079-2026-000072', 'RL-000076', 22, 7426, 163372, 163372, '2026-01-21T14:00:00Z'),
   ('QL-000203', 'QUO-SUP-C-0079-2026-000072', 'RL-000077', 2, 92299, 184598, 184598, '2026-01-21T14:00:00Z'),
@@ -8804,7 +8804,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-000399', 'QUO-SUP-C-0102-2026-000163', 'RL-000176', 2, 54036, 108072, 108072, '2026-02-10T14:00:00Z'),
   ('QL-000400', 'QUO-SUP-C-0041-2026-000164', 'RL-000175', 1, 124437, 124437, 124437, '2026-02-10T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-000401', 'QUO-SUP-C-0041-2026-000164', 'RL-000176', 2, 53962, 107924, 107924, '2026-02-10T14:00:00Z'),
   ('QL-000402', 'QUO-SUP-C-0004-2026-000165', 'RL-000185', 13, 24498, 318474, 318474, '2026-02-13T14:00:00Z'),
   ('QL-000403', 'QUO-SUP-C-0070-2026-000166', 'RL-000185', 13, 1764917, 22943921, 275327, '2026-02-11T14:00:00Z'),
@@ -9006,7 +9006,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-000599', 'QUO-SUP-C-0038-2026-000246', 'RL-000281', 4, 16949, 67796, 67796, '2026-02-26T14:00:00Z'),
   ('QL-000600', 'QUO-SUP-C-0038-2026-000246', 'RL-000282', 13, 24834, 322842, 322842, '2026-02-26T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-000601', 'QUO-SUP-C-0114-2026-000247', 'RL-000281', 4, 17805, 71220, 71220, '2026-03-01T14:00:00Z'),
   ('QL-000602', 'QUO-SUP-C-0114-2026-000247', 'RL-000282', 13, 21999, 285987, 285987, '2026-03-01T14:00:00Z'),
   ('QL-000603', 'QUO-SUP-C-0023-2026-000248', 'RL-000281', 4, 15756, 63024, 63024, '2026-02-27T14:00:00Z'),
@@ -9208,7 +9208,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-000799', 'QUO-SUP-C-0042-2026-000332', 'RL-000381', 11, 46305, 509355, 509355, '2026-03-17T14:00:00Z'),
   ('QL-000800', 'QUO-SUP-C-0063-2026-000333', 'RL-000380', 1, 106736, 106736, 106736, '2026-03-15T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-000801', 'QUO-SUP-C-0063-2026-000333', 'RL-000381', 11, 39447, 433917, 433917, '2026-03-15T14:00:00Z'),
   ('QL-000802', 'QUO-SUP-C-0107-2026-000334', 'RL-000380', 1, 103481, 103481, 103481, '2026-03-17T14:00:00Z'),
   ('QL-000803', 'QUO-SUP-C-0107-2026-000334', 'RL-000381', 11, 37964, 417604, 417604, '2026-03-17T14:00:00Z'),
@@ -9410,7 +9410,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-000999', 'QUO-SUP-C-0074-2026-000409', 'RL-000465', 8, 35099, 280792, 303255, '2026-03-29T14:00:00Z'),
   ('QL-001000', 'QUO-SUP-C-0074-2026-000409', 'RL-000466', 5, 34329, 171645, 185377, '2026-03-29T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-001001', 'QUO-SUP-C-0107-2026-000410', 'RL-000463', 4, 94843, 379372, 379372, '2026-03-27T14:00:00Z'),
   ('QL-001002', 'QUO-SUP-C-0107-2026-000410', 'RL-000464', 12, 14466, 173592, 173592, '2026-03-27T14:00:00Z'),
   ('QL-001003', 'QUO-SUP-C-0107-2026-000410', 'RL-000465', 8, 38549, 308392, 308392, '2026-03-27T14:00:00Z'),
@@ -9612,7 +9612,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-001199', 'QUO-SUP-C-0023-2026-000477', 'RL-000545', 6, 36127, 216762, 216762, '2026-04-05T14:00:00Z'),
   ('QL-001200', 'QUO-SUP-C-0023-2026-000477', 'RL-000546', 12, 6351, 76212, 76212, '2026-04-05T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-001201', 'QUO-SUP-C-0003-2026-000478', 'RL-000545', 6, 39055, 234330, 253076, '2026-04-05T14:00:00Z'),
   ('QL-001202', 'QUO-SUP-C-0003-2026-000478', 'RL-000546', 12, 5386, 64632, 69803, '2026-04-05T14:00:00Z'),
   ('QL-001203', 'QUO-SUP-C-0111-2026-000479', 'RL-000545', 6, 3016250, 18097500, 217170, '2026-04-05T14:00:00Z'),
@@ -9814,7 +9814,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-001399', 'QUO-SUP-C-0108-2026-000569', 'RL-000643', 5, 14983, 74915, 80908, '2026-04-23T14:00:00Z'),
   ('QL-001400', 'QUO-SUP-C-0108-2026-000569', 'RL-000644', 14, 33965, 475510, 513551, '2026-04-23T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-001401', 'QUO-SUP-C-0108-2026-000569', 'RL-000645', 5, 104507, 522535, 564338, '2026-04-23T14:00:00Z'),
   ('QL-001402', 'QUO-SUP-C-0007-2026-000570', 'RL-000643', 5, 17570, 87850, 87850, '2026-04-22T14:00:00Z'),
   ('QL-001403', 'QUO-SUP-C-0007-2026-000570', 'RL-000644', 14, 33656, 471184, 471184, '2026-04-22T14:00:00Z'),
@@ -10016,7 +10016,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-001599', 'QUO-SUP-C-0120-2026-000653', 'RL-000733', 4, 157590, 630360, 630360, '2026-05-06T14:00:00Z'),
   ('QL-001600', 'QUO-SUP-C-0120-2026-000653', 'RL-000734', 13, 100364, 1304732, 1304732, '2026-05-06T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-001601', 'QUO-SUP-C-0120-2026-000653', 'RL-000735', 2, 69345, 138690, 138690, '2026-05-06T14:00:00Z'),
   ('QL-001602', 'QUO-SUP-C-0120-2026-000653', 'RL-000736', 8, 79429, 635432, 635432, '2026-05-06T14:00:00Z'),
   ('QL-001603', 'QUO-SUP-C-0024-2026-000654', 'RL-000733', 4, 140656, 562624, 562624, '2026-05-05T14:00:00Z'),
@@ -10218,7 +10218,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-001799', 'QUO-SUP-C-0044-2026-000729', 'RL-000799', 10, 2136, 21360, 27127, '2026-05-21T14:00:00Z'),
   ('QL-001800', 'QUO-SUP-C-0064-2026-000730', 'RL-000796', 24, 2496, 59904, 64696, '2026-05-21T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-001801', 'QUO-SUP-C-0064-2026-000730', 'RL-000797', 13, 18272, 237536, 256539, '2026-05-21T14:00:00Z'),
   ('QL-001802', 'QUO-SUP-C-0064-2026-000730', 'RL-000798', 9, 2504, 22536, 24339, '2026-05-21T14:00:00Z'),
   ('QL-001803', 'QUO-SUP-C-0064-2026-000730', 'RL-000799', 10, 2203, 22030, 23792, '2026-05-21T14:00:00Z'),
@@ -10420,7 +10420,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-001999', 'QUO-SUP-C-0107-2026-000811', 'RL-000897', 31, 9563, 296453, 296453, '2026-06-07T14:00:00Z'),
   ('QL-002000', 'QUO-SUP-C-0107-2026-000811', 'RL-000898', 12, 11109, 133308, 133308, '2026-06-07T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-002001', 'QUO-SUP-C-0091-2026-000812', 'RL-000894', 12, 21327, 255924, 255924, '2026-06-07T14:00:00Z'),
   ('QL-002002', 'QUO-SUP-C-0091-2026-000812', 'RL-000895', 5, 41198, 205990, 205990, '2026-06-07T14:00:00Z'),
   ('QL-002003', 'QUO-SUP-C-0091-2026-000812', 'RL-000896', 11, 15722, 172942, 172942, '2026-06-07T14:00:00Z'),
@@ -10622,7 +10622,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-002199', 'QUO-SUP-C-0081-2026-000895', 'RL-000996', 6, 2514, 15084, 15084, '2026-06-20T14:00:00Z'),
   ('QL-002200', 'QUO-SUP-C-0035-2026-000896', 'RL-000993', 27, 190667, 5148009, 61776, '2026-06-19T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-002201', 'QUO-SUP-C-0035-2026-000896', 'RL-000994', 2, 14935833, 29871666, 358460, '2026-06-19T14:00:00Z'),
   ('QL-002202', 'QUO-SUP-C-0035-2026-000896', 'RL-000995', 3, 245167, 735501, 8826, '2026-06-19T14:00:00Z'),
   ('QL-002203', 'QUO-SUP-C-0035-2026-000896', 'RL-000996', 6, 189667, 1138002, 13656, '2026-06-19T14:00:00Z'),
@@ -10824,7 +10824,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-002399', 'QUO-SUP-C-0038-2026-000971', 'RL-001067', 2, 328919, 657838, 657838, '2026-07-02T14:00:00Z'),
   ('QL-002400', 'QUO-SUP-C-0018-2026-000972', 'RL-001066', 3, 281383, 844149, 844149, '2026-06-29T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-002401', 'QUO-SUP-C-0018-2026-000972', 'RL-001067', 2, 363001, 726002, 726002, '2026-06-29T14:00:00Z'),
   ('QL-002402', 'QUO-SUP-C-0102-2026-000973', 'RL-001070', 8, 77184, 617472, 617472, '2026-06-30T14:00:00Z'),
   ('QL-002403', 'QUO-SUP-C-0065-2026-000974', 'RL-001070', 8, 71183, 569464, 615021, '2026-07-01T14:00:00Z'),
@@ -11026,7 +11026,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-002599', 'QUO-SUP-C-0108-2026-001064', 'RL-001176', 14, 52790, 739060, 798185, '2026-07-20T14:00:00Z'),
   ('QL-002600', 'QUO-SUP-C-0108-2026-001064', 'RL-001177', 4, 46165, 184660, 199433, '2026-07-20T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-002601', 'QUO-SUP-C-0119-2026-001065', 'RL-001176', 14, 55725, 780150, 780150, '2026-07-21T14:00:00Z'),
   ('QL-002602', 'QUO-SUP-C-0119-2026-001065', 'RL-001177', 4, 51607, 206428, 206428, '2026-07-21T14:00:00Z'),
   ('QL-002603', 'QUO-SUP-C-0110-2026-001066', 'RL-001179', 1, 16664, 16664, 16664, '2026-07-24T14:00:00Z'),
@@ -11228,7 +11228,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-002799', 'QUO-SUP-C-0013-2026-001142', 'RL-001262', 5, 94324, 471620, 471620, '2026-08-06T14:00:00Z'),
   ('QL-002800', 'QUO-SUP-C-0027-2026-001143', 'RL-001261', 11, 21596, 237556, 301696, '2026-08-05T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-002801', 'QUO-SUP-C-0027-2026-001143', 'RL-001262', 5, 69891, 349455, 443808, '2026-08-05T14:00:00Z'),
   ('QL-002802', 'QUO-SUP-C-0044-2026-001144', 'RL-001261', 11, 22226, 244486, 310497, '2026-08-06T14:00:00Z'),
   ('QL-002803', 'QUO-SUP-C-0044-2026-001144', 'RL-001262', 5, 82528, 412640, 524053, '2026-08-06T14:00:00Z'),
@@ -11430,7 +11430,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-002999', 'QUO-SUP-C-0041-2026-001226', 'RL-001340', 13, 18806, 244478, 244478, '2026-08-18T14:00:00Z'),
   ('QL-003000', 'QUO-SUP-C-0098-2026-001227', 'RL-001340', 13, 20380, 264940, 264940, '2026-08-15T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-003001', 'QUO-SUP-C-0080-2026-001228', 'RL-001340', 13, 16799, 218387, 277351, '2026-08-18T14:00:00Z'),
   ('QL-003002', 'QUO-SUP-C-0072-2026-001229', 'RL-001340', 13, 18211, 236743, 236743, '2026-08-18T14:00:00Z'),
   ('QL-003003', 'QUO-SUP-C-0081-2026-001230', 'RL-001343', 6, 56565, 339390, 339390, '2026-08-21T14:00:00Z'),
@@ -11632,7 +11632,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-003199', 'QUO-SUP-C-0021-2026-001300', 'RL-001429', 10, 8896, 88960, 112979, '2026-08-30T14:00:00Z'),
   ('QL-003200', 'QUO-SUP-C-0021-2026-001300', 'RL-001430', 20, 3538, 70760, 89865, '2026-08-30T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-003201', 'QUO-SUP-C-0021-2026-001300', 'RL-001431', 31, 4230, 131130, 166535, '2026-08-30T14:00:00Z'),
   ('QL-003202', 'QUO-SUP-C-0021-2026-001300', 'RL-001432', 3, 18098, 54294, 68953, '2026-08-30T14:00:00Z'),
   ('QL-003203', 'QUO-SUP-C-0119-2026-001301', 'RL-001428', 13, 11316, 147108, 147108, '2026-08-30T14:00:00Z'),
@@ -11834,7 +11834,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-003399', 'QUO-SUP-C-0021-2026-001372', 'RL-001512', 14, 8968, 125552, 159451, '2026-09-11T14:00:00Z'),
   ('QL-003400', 'QUO-SUP-C-0021-2026-001372', 'RL-001513', 8, 16591, 132728, 168565, '2026-09-11T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-003401', 'QUO-SUP-C-0033-2026-001373', 'RL-001519', 6, 169817, 1018902, 1018902, '2026-09-16T14:00:00Z'),
   ('QL-003402', 'QUO-SUP-C-0024-2026-001374', 'RL-001519', 6, 151984, 911904, 911904, '2026-09-17T14:00:00Z'),
   ('QL-003403', 'QUO-SUP-C-0109-2026-001375', 'RL-001519', 6, 152256, 913536, 986619, '2026-09-16T14:00:00Z'),
@@ -12036,7 +12036,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-003599', 'QUO-SUP-C-0032-2026-001444', 'RL-001616', 9, 12653, 113877, 122987, '2026-09-26T14:00:00Z'),
   ('QL-003600', 'QUO-SUP-C-0032-2026-001444', 'RL-001617', 5, 10319, 51595, 55723, '2026-09-26T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-003601', 'QUO-SUP-C-0032-2026-001444', 'RL-001618', 1, 5851, 5851, 6319, '2026-09-26T14:00:00Z'),
   ('QL-003602', 'QUO-SUP-C-0032-2026-001444', 'RL-001619', 9, 22845, 205605, 222053, '2026-09-26T14:00:00Z'),
   ('QL-003603', 'QUO-SUP-C-0041-2026-001445', 'RL-001615', 11, 7021, 77231, 77231, '2026-09-26T14:00:00Z'),
@@ -12238,7 +12238,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-003799', 'QUO-SUP-C-0020-2026-001516', 'RL-001705', 9, 1301194, 11710746, 78462, '2026-10-04T14:00:00Z'),
   ('QL-003800', 'QUO-SUP-C-0020-2026-001516', 'RL-001706', 12, 5040000, 60480000, 405216, '2026-10-04T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-003801', 'QUO-SUP-C-0020-2026-001516', 'RL-001707', 6, 1343433, 8060598, 54006, '2026-10-04T14:00:00Z'),
   ('QL-003802', 'QUO-SUP-C-0020-2026-001516', 'RL-001708', 15, 642537, 9638055, 64575, '2026-10-04T14:00:00Z'),
   ('QL-003803', 'QUO-SUP-C-0020-2026-001516', 'RL-001709', 13, 1660896, 21591648, 144664, '2026-10-04T14:00:00Z'),
@@ -12440,7 +12440,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-003999', 'QUO-SUP-C-0040-2026-001597', 'RL-001793', 14, 24602, 344428, 344428, '2026-10-20T14:00:00Z'),
   ('QL-004000', 'QUO-SUP-C-0040-2026-001597', 'RL-001794', 5, 10672, 53360, 53360, '2026-10-20T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-004001', 'QUO-SUP-C-0040-2026-001597', 'RL-001795', 9, 12188, 109692, 109692, '2026-10-20T14:00:00Z'),
   ('QL-004002', 'QUO-SUP-C-0013-2026-001598', 'RL-001793', 14, 25031, 350434, 350434, '2026-10-19T14:00:00Z'),
   ('QL-004003', 'QUO-SUP-C-0013-2026-001598', 'RL-001794', 5, 11948, 59740, 59740, '2026-10-19T14:00:00Z'),
@@ -12642,7 +12642,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-004199', 'QUO-SUP-C-0003-2026-001671', 'RL-001871', 5, 56031, 280155, 302567, '2026-10-27T14:00:00Z'),
   ('QL-004200', 'QUO-SUP-C-0062-2026-001672', 'RL-001868', 4, 26786, 107144, 107144, '2026-10-26T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-004201', 'QUO-SUP-C-0062-2026-001672', 'RL-001869', 6, 11571, 69426, 69426, '2026-10-26T14:00:00Z'),
   ('QL-004202', 'QUO-SUP-C-0062-2026-001672', 'RL-001870', 25, 5569, 139225, 139225, '2026-10-26T14:00:00Z'),
   ('QL-004203', 'QUO-SUP-C-0062-2026-001672', 'RL-001871', 5, 52477, 262385, 262385, '2026-10-26T14:00:00Z'),
@@ -12844,7 +12844,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
   ('QL-004399', 'QUO-SUP-C-0032-2026-001745', 'RL-001957', 12, 52933, 635196, 686012, '2026-11-10T14:00:00Z'),
   ('QL-004400', 'QUO-SUP-C-0032-2026-001745', 'RL-001958', 9, 72902, 656118, 708607, '2026-11-10T14:00:00Z');
 
-INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
+INSERT INTO quote_lines (quote_line_id, quote_id, request_line_id, quoted_quantity, unit_price, line_total, line_total_base, created_at) VALUES
   ('QL-004401', 'QUO-SUP-C-0032-2026-001745', 'RL-001959', 3, 23300, 69900, 75492, '2026-11-10T14:00:00Z'),
   ('QL-004402', 'QUO-SUP-C-0032-2026-001745', 'RL-001960', 33, 7974, 263142, 284193, '2026-11-10T14:00:00Z'),
   ('QL-004403', 'QUO-SUP-C-0120-2026-001746', 'RL-001957', 12, 50169, 602028, 602028, '2026-11-07T14:00:00Z'),
@@ -12946,7 +12946,7 @@ INSERT OR REPLACE INTO quote_lines (quote_line_id, quote_id, request_line_id, qu
 -- ----------------------------------------------------------------------------
 -- Table: approvals (1018 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO approvals (approval_id, request_id, approver_id, approval_level, decision, decision_date, comments, created_at) VALUES
+INSERT INTO approvals (approval_id, request_id, approver_id, approval_level, decision, decision_date, comments, created_at) VALUES
   ('APR-000001', 'PR-2026-000743', 'APP-0017', 1, 'APPROVED', '2026-01-03T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-01-03T11:00:00Z'),
   ('APR-000002', 'PR-2026-000799', 'APP-0014', 1, 'APPROVED', '2026-01-02T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-01-02T11:00:00Z'),
   ('APR-000003', 'PR-2026-000799', 'APP-0026', 2, 'APPROVED', '2026-01-03T11:00:00Z', 'Approved: Corporate finance review completed.', '2026-01-03T11:00:00Z'),
@@ -13148,7 +13148,7 @@ INSERT OR REPLACE INTO approvals (approval_id, request_id, approver_id, approval
   ('APR-000202', 'PR-2026-000775', 'APP-0002', 1, 'APPROVED', '2026-03-20T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-03-20T11:00:00Z'),
   ('APR-000203', 'PR-2026-000095', 'APP-0022', 1, 'APPROVED', '2026-03-21T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-03-21T11:00:00Z');
 
-INSERT OR REPLACE INTO approvals (approval_id, request_id, approver_id, approval_level, decision, decision_date, comments, created_at) VALUES
+INSERT INTO approvals (approval_id, request_id, approver_id, approval_level, decision, decision_date, comments, created_at) VALUES
   ('APR-000204', 'PR-2026-000379', 'APP-0020', 1, 'APPROVED', '2026-03-21T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-03-21T11:00:00Z'),
   ('APR-000205', 'PR-2026-000907', 'APP-0003', 1, 'APPROVED', '2026-03-21T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-03-21T11:00:00Z'),
   ('APR-000206', 'PR-2026-000155', 'APP-0002', 1, 'APPROVED', '2026-03-23T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-03-23T11:00:00Z'),
@@ -13350,7 +13350,7 @@ INSERT OR REPLACE INTO approvals (approval_id, request_id, approver_id, approval
   ('APR-000402', 'PR-2026-000246', 'APP-0011', 1, 'APPROVED', '2026-06-07T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-06-07T11:00:00Z'),
   ('APR-000403', 'PR-2026-000699', 'APP-0012', 1, 'APPROVED', '2026-06-08T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-06-08T11:00:00Z');
 
-INSERT OR REPLACE INTO approvals (approval_id, request_id, approver_id, approval_level, decision, decision_date, comments, created_at) VALUES
+INSERT INTO approvals (approval_id, request_id, approver_id, approval_level, decision, decision_date, comments, created_at) VALUES
   ('APR-000404', 'PR-2026-000788', 'APP-0014', 1, 'APPROVED', '2026-06-08T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-06-08T11:00:00Z'),
   ('APR-000405', 'PR-2026-000334', 'APP-0004', 1, 'APPROVED', '2026-06-08T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-06-08T11:00:00Z'),
   ('APR-000406', 'PR-2026-000597', 'APP-0010', 1, 'APPROVED', '2026-06-09T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-06-09T11:00:00Z'),
@@ -13552,7 +13552,7 @@ INSERT OR REPLACE INTO approvals (approval_id, request_id, approver_id, approval
   ('APR-000603', 'PR-2026-000492', 'APP-0002', 1, 'APPROVED', '2026-08-26T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-08-26T11:00:00Z'),
   ('APR-000604', 'PR-2026-000806', 'APP-0016', 1, 'APPROVED', '2026-08-26T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-08-26T11:00:00Z');
 
-INSERT OR REPLACE INTO approvals (approval_id, request_id, approver_id, approval_level, decision, decision_date, comments, created_at) VALUES
+INSERT INTO approvals (approval_id, request_id, approver_id, approval_level, decision, decision_date, comments, created_at) VALUES
   ('APR-000605', 'PR-2026-000947', 'APP-0018', 1, 'REJECTED', '2026-08-27T11:00:00Z', 'Rejected: Insufficient department budget allocation.', '2026-08-27T11:00:00Z'),
   ('APR-000606', 'PR-2026-000087', 'APP-0022', 1, 'APPROVED', '2026-08-28T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-08-28T11:00:00Z'),
   ('APR-000607', 'PR-2026-001011', 'APP-0008', 1, 'APPROVED', '2026-08-27T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-08-27T11:00:00Z'),
@@ -13754,7 +13754,7 @@ INSERT OR REPLACE INTO approvals (approval_id, request_id, approver_id, approval
   ('APR-000804', 'PR-2026-000904', 'APP-0001', 1, 'APPROVED', '2026-11-04T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-11-04T11:00:00Z'),
   ('APR-000805', 'PR-2026-001027', 'APP-0018', 1, 'APPROVED', '2026-11-04T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-11-04T11:00:00Z');
 
-INSERT OR REPLACE INTO approvals (approval_id, request_id, approver_id, approval_level, decision, decision_date, comments, created_at) VALUES
+INSERT INTO approvals (approval_id, request_id, approver_id, approval_level, decision, decision_date, comments, created_at) VALUES
   ('APR-000806', 'PR-2026-001046', 'APP-0006', 1, 'APPROVED', '2026-11-05T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-11-05T11:00:00Z'),
   ('APR-000807', 'PR-2026-000047', 'APP-0008', 1, 'APPROVED', '2026-11-05T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-11-05T11:00:00Z'),
   ('APR-000808', 'PR-2026-000252', 'APP-0014', 1, 'APPROVED', '2026-11-06T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-11-06T11:00:00Z'),
@@ -13956,7 +13956,7 @@ INSERT OR REPLACE INTO approvals (approval_id, request_id, approver_id, approval
   ('APR-001004', 'PR-2026-000853', 'APP-0010', 1, 'APPROVED', '2026-12-25T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-12-25T11:00:00Z'),
   ('APR-001005', 'PR-2026-001009', 'APP-0008', 1, 'APPROVED', '2026-12-25T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-12-25T11:00:00Z');
 
-INSERT OR REPLACE INTO approvals (approval_id, request_id, approver_id, approval_level, decision, decision_date, comments, created_at) VALUES
+INSERT INTO approvals (approval_id, request_id, approver_id, approval_level, decision, decision_date, comments, created_at) VALUES
   ('APR-001006', 'PR-2026-001175', 'APP-0018', 1, 'APPROVED', '2026-12-25T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-12-25T11:00:00Z'),
   ('APR-001007', 'PR-2026-000389', 'APP-0002', 1, 'APPROVED', '2026-12-27T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-12-27T11:00:00Z'),
   ('APR-001008', 'PR-2026-001117', 'APP-0018', 1, 'APPROVED', '2026-12-26T11:00:00Z', 'Approved: Valid operational expenditure.', '2026-12-26T11:00:00Z'),
@@ -13979,7 +13979,7 @@ INSERT OR REPLACE INTO approvals (approval_id, request_id, approver_id, approval
 -- ----------------------------------------------------------------------------
 -- Table: purchase_orders (970 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO purchase_orders (po_id, request_id, supplier_id, awarded_quote_id, sourcing_type, sourcing_justification, currency, total_amount, status, po_date, expected_delivery_date, created_at, updated_at) VALUES
+INSERT INTO purchase_orders (po_id, request_id, supplier_id, awarded_quote_id, sourcing_type, sourcing_justification, currency, total_amount, status, po_date, expected_delivery_date, created_at, updated_at) VALUES
   ('PO-2026-000501', 'PR-2026-000743', 'SUP-0012', NULL, 'SOLE_SOURCE', 'Direct procurement via catalogue (contract)', 'USD', 74922, 'COMPLETED', '2026-01-05', '2026-02-03', '2026-01-05T10:00:00Z', '2026-02-03T11:00:00Z'),
   ('PO-2026-000502', 'PR-2026-000723', 'SUP-0028', NULL, 'SOLE_SOURCE', 'Direct procurement via catalogue (contract)', 'USD', 123859, 'COMPLETED', '2026-01-10', '2026-01-18', '2026-01-10T10:00:00Z', '2026-01-17T11:00:00Z'),
   ('PO-2026-000503', 'PR-2026-000870', 'SUP-0062', NULL, 'SOLE_SOURCE', 'Direct procurement via catalogue (contract)', 'USD', 150326, 'COMPLETED', '2026-01-12', '2026-02-07', '2026-01-12T10:00:00Z', '2026-02-11T15:00:00Z'),
@@ -14181,7 +14181,7 @@ INSERT OR REPLACE INTO purchase_orders (po_id, request_id, supplier_id, awarded_
   ('PO-2026-000113', 'PR-2026-000379', 'SUP-0007', 'QUO-SUP-C-0007-2026-000405', 'COMPETITIVE', 'Lowest evaluated score: 0.1170 (Landed cost: $4,352.53, Lead time: 17d)', 'USD', 411034, 'COMPLETED', '2026-04-04', '2026-04-21', '2026-04-04T10:00:00Z', '2026-04-21T11:00:00Z'),
   ('PO-2026-000116', 'PR-2026-001050', 'SUP-0015', 'QUO-SUP-C-0015-2026-000414', 'COMPETITIVE', 'Lowest evaluated score: 0.2500 (Landed cost: $2,698.80, Lead time: 21d)', 'USD', 254829, 'COMPLETED', '2026-04-05', '2026-04-26', '2026-04-05T10:00:00Z', '2026-04-26T11:00:00Z');
 
-INSERT OR REPLACE INTO purchase_orders (po_id, request_id, supplier_id, awarded_quote_id, sourcing_type, sourcing_justification, currency, total_amount, status, po_date, expected_delivery_date, created_at, updated_at) VALUES
+INSERT INTO purchase_orders (po_id, request_id, supplier_id, awarded_quote_id, sourcing_type, sourcing_justification, currency, total_amount, status, po_date, expected_delivery_date, created_at, updated_at) VALUES
   ('PO-2026-000588', 'PR-2026-000112', 'SUP-0042', NULL, 'SOLE_SOURCE', 'Direct procurement via catalogue (contract)', 'USD', 58557, 'COMPLETED', '2026-04-05', '2026-04-19', '2026-04-05T10:00:00Z', '2026-04-19T11:00:00Z'),
   ('PO-2026-000107', 'PR-2026-000409', 'SUP-0045', 'QUO-SUP-C-0045-2026-000380', 'COMPETITIVE', 'Lowest evaluated score: 0.2391 (Landed cost: $2,828.60, Lead time: 24d)', 'USD', 261919, 'COMPLETED', '2026-04-06', '2026-04-30', '2026-04-06T10:00:00Z', '2026-04-29T11:00:00Z'),
   ('PO-2026-000114', 'PR-2026-000155', 'SUP-0067', 'QUO-SUP-C-0067-2026-000406', 'COMPETITIVE', 'Lowest evaluated score: 0.1294 (Landed cost: $2,264.98, Lead time: 26d)', 'USD', 209510, 'COMPLETED', '2026-04-06', '2026-05-02', '2026-04-06T10:00:00Z', '2026-04-30T11:00:00Z'),
@@ -14383,7 +14383,7 @@ INSERT OR REPLACE INTO purchase_orders (po_id, request_id, supplier_id, awarded_
   ('PO-2026-000251', 'PR-2026-000431', 'SUP-0084', 'QUO-SUP-C-0084-2026-000885', 'COMPETITIVE', 'Lowest evaluated score: 0.2500 (Landed cost: $2,133.50, Lead time: 27d)', 'USD', 198357, 'COMPLETED', '2026-06-25', '2026-07-22', '2026-06-25T10:00:00Z', '2026-07-21T11:00:00Z'),
   ('PO-2026-000247', 'PR-2026-001143', 'SUP-0096', 'QUO-SUP-C-0096-2026-000872', 'COMPETITIVE', 'Lowest evaluated score: 0.0500 (Landed cost: $2,807.15, Lead time: 7d)', 'USD', 265203, 'COMPLETED', '2026-06-26', '2026-07-03', '2026-06-26T10:00:00Z', '2026-07-04T11:00:00Z');
 
-INSERT OR REPLACE INTO purchase_orders (po_id, request_id, supplier_id, awarded_quote_id, sourcing_type, sourcing_justification, currency, total_amount, status, po_date, expected_delivery_date, created_at, updated_at) VALUES
+INSERT INTO purchase_orders (po_id, request_id, supplier_id, awarded_quote_id, sourcing_type, sourcing_justification, currency, total_amount, status, po_date, expected_delivery_date, created_at, updated_at) VALUES
   ('PO-2026-000250', 'PR-2026-001085', 'SUP-0073', 'QUO-SUP-C-0073-2026-000882', 'COMPETITIVE', 'Lowest evaluated score: 0.2500 (Landed cost: $5,885.61, Lead time: 29d)', 'USD', 560853, 'COMPLETED', '2026-06-26', '2026-07-25', '2026-06-26T10:00:00Z', '2026-07-25T11:00:00Z'),
   ('PO-2026-000260', 'PR-2026-000957', 'SUP-0018', 'QUO-SUP-C-0018-2026-000918', 'COMPETITIVE', 'Lowest evaluated score: 0.1593 (Landed cost: $6,749.77, Lead time: 7d)', 'USD', 646988, 'COMPLETED', '2026-06-26', '2026-07-03', '2026-06-26T10:00:00Z', '2026-07-02T11:00:00Z'),
   ('PO-2026-000259', 'PR-2026-000627', 'SUP-0064', 'QUO-SUP-C-0064-2026-000917', 'COMPETITIVE', 'Lowest evaluated score: 0.2519 (Landed cost: $23,639.86, Lead time: 14d)', 'USD', 2205188, 'COMPLETED', '2026-06-27', '2026-07-11', '2026-06-27T10:00:00Z', '2026-07-15T11:00:00Z'),
@@ -14585,7 +14585,7 @@ INSERT OR REPLACE INTO purchase_orders (po_id, request_id, supplier_id, awarded_
   ('PO-2026-000383', 'PR-2026-000395', 'SUP-0061', 'QUO-SUP-C-0061-2026-001364', 'COMPETITIVE', 'Lowest evaluated score: 0.1371 (Landed cost: $19,240.56, Lead time: 23d)', 'USD', 1786837, 'COMPLETED', '2026-09-19', '2026-10-12', '2026-09-19T10:00:00Z', '2026-10-10T11:00:00Z'),
   ('PO-2026-000385', 'PR-2026-000349', 'SUP-0032', 'QUO-SUP-C-0032-2026-001371', 'COMPETITIVE', 'Lowest evaluated score: 0.2500 (Landed cost: $2,920.67, Lead time: 21d)', 'USD', 271823, 'COMPLETED', '2026-09-19', '2026-10-10', '2026-09-19T10:00:00Z', '2026-10-10T11:00:00Z');
 
-INSERT OR REPLACE INTO purchase_orders (po_id, request_id, supplier_id, awarded_quote_id, sourcing_type, sourcing_justification, currency, total_amount, status, po_date, expected_delivery_date, created_at, updated_at) VALUES
+INSERT INTO purchase_orders (po_id, request_id, supplier_id, awarded_quote_id, sourcing_type, sourcing_justification, currency, total_amount, status, po_date, expected_delivery_date, created_at, updated_at) VALUES
   ('PO-2026-000718', 'PR-2026-001173', 'SUP-0020', NULL, 'SOLE_SOURCE', 'Direct procurement via catalogue (contract)', 'USD', 10233, 'COMPLETED', '2026-09-19', '2026-10-11', '2026-09-19T10:00:00Z', '2026-10-10T11:00:00Z'),
   ('PO-2026-000382', 'PR-2026-001200', 'SUP-0038', 'QUO-SUP-C-0038-2026-001361', 'COMPETITIVE', 'Lowest evaluated score: 0.2353 (Landed cost: $2,553.07, Lead time: 19d)', 'USD', 246052, 'COMPLETED', '2026-09-20', '2026-10-09', '2026-09-20T10:00:00Z', '2026-10-07T11:00:00Z'),
   ('PO-2026-000719', 'PR-2026-001079', 'SUP-0096', NULL, 'SOLE_SOURCE', 'Direct procurement via catalogue (contract)', 'USD', 196122, 'COMPLETED', '2026-09-20', '2026-09-27', '2026-09-20T10:00:00Z', '2026-09-30T11:00:00Z'),
@@ -14787,7 +14787,7 @@ INSERT OR REPLACE INTO purchase_orders (po_id, request_id, supplier_id, awarded_
   ('PO-2026-000492', 'PR-2026-000770', 'SUP-0013', 'QUO-SUP-C-0013-2026-001750', 'COMPETITIVE', 'Lowest evaluated score: 0.2500 (Landed cost: $12,588.30, Lead time: 22d)', 'USD', 1203816, 'COMPLETED', '2026-11-18', '2026-12-10', '2026-11-18T10:00:00Z', '2026-12-10T11:00:00Z'),
   ('PO-2026-000497', 'PR-2026-001027', 'SUP-0079', 'QUO-SUP-C-0079-2026-001767', 'COMPETITIVE', 'Lowest evaluated score: 0.2500 (Landed cost: $2,298.87, Lead time: 28d)', 'USD', 220824, 'COMPLETED', '2026-11-18', '2026-12-16', '2026-11-18T10:00:00Z', '2026-12-15T11:00:00Z');
 
-INSERT OR REPLACE INTO purchase_orders (po_id, request_id, supplier_id, awarded_quote_id, sourcing_type, sourcing_justification, currency, total_amount, status, po_date, expected_delivery_date, created_at, updated_at) VALUES
+INSERT INTO purchase_orders (po_id, request_id, supplier_id, awarded_quote_id, sourcing_type, sourcing_justification, currency, total_amount, status, po_date, expected_delivery_date, created_at, updated_at) VALUES
   ('PO-2026-000500', 'PR-2026-000252', 'SUP-0079', 'QUO-SUP-C-0079-2026-001779', 'COMPETITIVE', 'Lowest evaluated score: 0.1875 (Landed cost: $3,044.09, Lead time: 26d)', 'USD', 293477, 'COMPLETED', '2026-11-18', '2026-12-14', '2026-11-18T10:00:00Z', '2026-12-14T11:00:00Z'),
   ('PO-2026-000780', 'PR-2026-000086', 'SUP-0039', NULL, 'SOLE_SOURCE', 'Direct procurement via catalogue (contract)', 'USD', 137049, 'COMPLETED', '2026-11-18', '2026-12-15', '2026-11-18T10:00:00Z', '2026-12-15T11:00:00Z'),
   ('PO-2026-000498', 'PR-2026-001046', 'SUP-0037', 'QUO-SUP-C-0037-2026-001771', 'COMPETITIVE', 'Lowest evaluated score: 0.1115 (Landed cost: $5,595.19, Lead time: 8d)', 'USD', 523434, 'COMPLETED', '2026-11-19', '2026-11-27', '2026-11-19T10:00:00Z', '2026-11-25T11:00:00Z'),
@@ -14962,7 +14962,7 @@ INSERT OR REPLACE INTO purchase_orders (po_id, request_id, supplier_id, awarded_
 -- ----------------------------------------------------------------------------
 -- Table: purchase_order_lines (2051 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
+INSERT INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
   ('POL-000001', 'PO-2026-000001', 1, 'RL-000002', 'QL-000016', 13, 45120, 586560, '2026-01-19T10:00:00Z'),
   ('POL-000002', 'PO-2026-000001', 2, 'RL-000003', 'QL-000017', 2, 218652, 437304, '2026-01-19T10:00:00Z'),
   ('POL-000003', 'PO-2026-000001', 3, 'RL-000004', 'QL-000018', 3, 94813, 284439, '2026-01-19T10:00:00Z'),
@@ -15164,7 +15164,7 @@ INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, req
   ('POL-000199', 'PO-2026-000082', 1, 'RL-000340', 'QL-000711', 6, 152665, 915990, '2026-03-16T10:00:00Z'),
   ('POL-000200', 'PO-2026-000083', 1, 'RL-000341', 'QL-000713', 17, 7592, 129065, '2026-03-17T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
+INSERT INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
   ('POL-000201', 'PO-2026-000083', 2, 'RL-000342', 'QL-000714', 9, 36754, 330784, '2026-03-17T10:00:00Z'),
   ('POL-000202', 'PO-2026-000083', 3, 'RL-000343', 'QL-000715', 30, 5933, 178003, '2026-03-17T10:00:00Z'),
   ('POL-000203', 'PO-2026-000084', 1, 'RL-000344', 'QL-000728', 10, 16627, 166270, '2026-03-23T10:00:00Z'),
@@ -15366,7 +15366,7 @@ INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, req
   ('POL-000399', 'PO-2026-000161', 3, 'RL-000645', 'QL-001407', 5, 109561, 547805, '2026-05-03T10:00:00Z'),
   ('POL-000400', 'PO-2026-000162', 1, 'RL-000653', 'QL-001408', 12, 10599, 127188, '2026-05-04T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
+INSERT INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
   ('POL-000401', 'PO-2026-000162', 2, 'RL-000654', 'QL-001409', 14, 7404, 103656, '2026-05-04T10:00:00Z'),
   ('POL-000402', 'PO-2026-000162', 3, 'RL-000655', 'QL-001410', 13, 29795, 387335, '2026-05-04T10:00:00Z'),
   ('POL-000403', 'PO-2026-000163', 1, 'RL-000659', 'QL-001426', 4, 14917, 59668, '2026-04-30T10:00:00Z'),
@@ -15568,7 +15568,7 @@ INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, req
   ('POL-000599', 'PO-2026-000242', 1, 'RL-000956', 'QL-002099', 9, 9704, 87336, '2026-06-22T10:00:00Z'),
   ('POL-000600', 'PO-2026-000242', 2, 'RL-000957', 'QL-002100', 1, 174461, 174461, '2026-06-22T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
+INSERT INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
   ('POL-000601', 'PO-2026-000243', 1, 'RL-000958', 'QL-002103', 13, 14161, 184087, '2026-06-25T10:00:00Z'),
   ('POL-000602', 'PO-2026-000244', 1, 'RL-000959', 'QL-002114', 5, 79603, 398015, '2026-06-25T10:00:00Z'),
   ('POL-000603', 'PO-2026-000244', 2, 'RL-000960', 'QL-002115', 8, 75987, 607896, '2026-06-25T10:00:00Z'),
@@ -15770,7 +15770,7 @@ INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, req
   ('POL-000799', 'PO-2026-000326', 3, 'RL-001267', 'QL-002818', 12, 14529, 174346, '2026-08-18T10:00:00Z'),
   ('POL-000800', 'PO-2026-000327', 1, 'RL-001268', 'QL-002836', 10, 29532, 295320, '2026-08-12T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
+INSERT INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
   ('POL-000801', 'PO-2026-000327', 2, 'RL-001269', 'QL-002837', 12, 15609, 187308, '2026-08-12T10:00:00Z'),
   ('POL-000802', 'PO-2026-000328', 1, 'RL-001273', 'QL-002838', 11, 30682, 337502, '2026-08-15T10:00:00Z'),
   ('POL-000803', 'PO-2026-000329', 1, 'RL-001278', 'QL-002843', 14, 36813, 515382, '2026-08-16T10:00:00Z'),
@@ -15972,7 +15972,7 @@ INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, req
   ('POL-000999', 'PO-2026-000404', 2, 'RL-001595', 'QL-003552', 5, 15934, 79670, '2026-10-02T10:00:00Z'),
   ('POL-001000', 'PO-2026-000404', 3, 'RL-001596', 'QL-003553', 10, 12629, 126290, '2026-10-02T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
+INSERT INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
   ('POL-001001', 'PO-2026-000404', 4, 'RL-001597', 'QL-003554', 13, 2516, 32708, '2026-10-02T10:00:00Z'),
   ('POL-001002', 'PO-2026-000404', 5, 'RL-001598', 'QL-003555', 8, 7990, 63920, '2026-10-02T10:00:00Z'),
   ('POL-001003', 'PO-2026-000405', 1, 'RL-001599', 'QL-003566', 8, 15935, 127480, '2026-10-03T10:00:00Z'),
@@ -16174,7 +16174,7 @@ INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, req
   ('POL-001199', 'PO-2026-000477', 1, 'RL-001903', 'QL-004270', 6, 120365, 722190, '2026-11-10T10:00:00Z'),
   ('POL-001200', 'PO-2026-000477', 2, 'RL-001904', 'QL-004271', 11, 46211, 508321, '2026-11-10T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
+INSERT INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
   ('POL-001201', 'PO-2026-000478', 1, 'RL-001905', 'QL-004278', 14, 32425, 453948, '2026-11-09T10:00:00Z'),
   ('POL-001202', 'PO-2026-000478', 2, 'RL-001906', 'QL-004279', 1, 13467, 13467, '2026-11-09T10:00:00Z'),
   ('POL-001203', 'PO-2026-000478', 3, 'RL-001907', 'QL-004280', 12, 11906, 142871, '2026-11-09T10:00:00Z'),
@@ -16376,7 +16376,7 @@ INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, req
   ('POL-001399', 'PO-2026-000601', 2, 'RL-000637', NULL, 6, 7166, 42996, '2026-04-16T10:00:00Z'),
   ('POL-001400', 'PO-2026-000602', 1, 'RL-000640', NULL, 25, 4567, 114175, '2026-04-18T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
+INSERT INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
   ('POL-001401', 'PO-2026-000602', 2, 'RL-000641', NULL, 2, 16352, 32704, '2026-04-18T10:00:00Z'),
   ('POL-001402', 'PO-2026-000602', 3, 'RL-000642', NULL, 1, 10053, 10053, '2026-04-18T10:00:00Z'),
   ('POL-001403', 'PO-2026-000603', 1, 'RL-000646', NULL, 2, 16445, 32890, '2026-04-18T10:00:00Z'),
@@ -16578,7 +16578,7 @@ INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, req
   ('POL-001599', 'PO-2026-000752', 1, 'RL-001835', NULL, 16, 3570, 57120, '2026-10-22T10:00:00Z'),
   ('POL-001600', 'PO-2026-000753', 1, 'RL-001836', NULL, 8, 15872, 126976, '2026-10-21T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
+INSERT INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
   ('POL-001601', 'PO-2026-000753', 2, 'RL-001837', NULL, 5, 10000, 50000, '2026-10-21T10:00:00Z'),
   ('POL-001602', 'PO-2026-000754', 1, 'RL-001838', NULL, 5, 9238, 46190, '2026-10-22T10:00:00Z'),
   ('POL-001603', 'PO-2026-000755', 1, 'RL-001872', NULL, 12, 6041, 72492, '2026-10-24T10:00:00Z'),
@@ -16780,7 +16780,7 @@ INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, req
   ('POL-001799', 'PO-2026-000873', 1, 'RL-002138', NULL, 7, 43650, 305550, '2026-11-22T10:00:00Z'),
   ('POL-001800', 'PO-2026-000873', 2, 'RL-002139', NULL, 2, 5330, 10660, '2026-11-22T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
+INSERT INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
   ('POL-001801', 'PO-2026-000873', 3, 'RL-002140', NULL, 14, 73845, 1033830, '2026-11-22T10:00:00Z'),
   ('POL-001802', 'PO-2026-000874', 1, 'RL-002141', NULL, 9, 2162, 19458, '2026-11-24T10:00:00Z'),
   ('POL-001803', 'PO-2026-000874', 2, 'RL-002142', NULL, 3, 6397, 19191, '2026-11-24T10:00:00Z'),
@@ -16982,7 +16982,7 @@ INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, req
   ('POL-001999', 'PO-2026-000951', 2, 'RL-002451', NULL, 3, 76048, 228144, '2026-12-28T10:00:00Z'),
   ('POL-002000', 'PO-2026-000951', 3, 'RL-002452', NULL, 2, 111139, 222278, '2026-12-28T10:00:00Z');
 
-INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
+INSERT INTO purchase_order_lines (po_line_id, po_id, line_number, request_line_id, awarded_quote_line_id, quantity, unit_price, line_total, created_at) VALUES
   ('POL-002001', 'PO-2026-000951', 4, 'RL-002453', NULL, 9, 50000, 450000, '2026-12-28T10:00:00Z'),
   ('POL-002002', 'PO-2026-000952', 1, 'RL-002454', NULL, 10, 27040, 270400, '2026-12-27T10:00:00Z'),
   ('POL-002003', 'PO-2026-000952', 2, 'RL-002455', NULL, 12, 54334, 652008, '2026-12-27T10:00:00Z'),
@@ -17038,7 +17038,7 @@ INSERT OR REPLACE INTO purchase_order_lines (po_line_id, po_id, line_number, req
 -- ----------------------------------------------------------------------------
 -- Table: deliveries (1048 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO deliveries (delivery_id, po_id, delivery_sequence, delivery_date, received_by, delivery_status, items_delivered_count, notes, created_at) VALUES
+INSERT INTO deliveries (delivery_id, po_id, delivery_sequence, delivery_date, received_by, delivery_status, items_delivered_count, notes, created_at) VALUES
   ('DEL-PO-2026-000501-01', 'PO-2026-000501', 1, '2026-02-03', 'Reese Gonzalez', 'FULL', 2, 'Delivered on-time in good condition', '2026-02-03T11:00:00Z'),
   ('DEL-PO-2026-000502-01', 'PO-2026-000502', 1, '2026-01-17', 'Sage Martinez', 'FULL', 9, 'Delivered on-time in good condition', '2026-01-17T11:00:00Z'),
   ('DEL-PO-2026-000503-01', 'PO-2026-000503', 1, '2026-02-04', 'Adrian Perez', 'PARTIAL', 14, 'Initial partial delivery: 14/22 units received', '2026-02-04T14:30:00Z'),
@@ -17240,7 +17240,7 @@ INSERT OR REPLACE INTO deliveries (delivery_id, po_id, delivery_sequence, delive
   ('DEL-PO-2026-000585-01', 'PO-2026-000585', 1, '2026-04-02', 'Pat Harris', 'FULL', 29, 'Delivered on-time in good condition', '2026-04-02T11:00:00Z'),
   ('DEL-PO-2026-000100-01', 'PO-2026-000100', 1, '2026-04-04', 'Reese Martinez', 'FULL', 13, 'Delivered on-time in good condition', '2026-04-04T11:00:00Z');
 
-INSERT OR REPLACE INTO deliveries (delivery_id, po_id, delivery_sequence, delivery_date, received_by, delivery_status, items_delivered_count, notes, created_at) VALUES
+INSERT INTO deliveries (delivery_id, po_id, delivery_sequence, delivery_date, received_by, delivery_status, items_delivered_count, notes, created_at) VALUES
   ('DEL-PO-2026-000103-01', 'PO-2026-000103', 1, '2026-04-28', 'Jordan Johnson', 'FULL', 37, 'Delivered on-time in good condition', '2026-04-28T11:00:00Z'),
   ('DEL-PO-2026-000584-01', 'PO-2026-000584', 1, '2026-04-22', 'Finley Wilson', 'FULL', 2, 'Delivered on-time in good condition', '2026-04-22T11:00:00Z'),
   ('DEL-PO-2026-000098-01', 'PO-2026-000098', 1, '2026-04-12', 'Avery Ramirez', 'FULL', 4, 'Delivered on-time in good condition', '2026-04-12T11:00:00Z'),
@@ -17442,7 +17442,7 @@ INSERT OR REPLACE INTO deliveries (delivery_id, po_id, delivery_sequence, delive
   ('DEL-PO-2026-000228-01', 'PO-2026-000228', 1, '2026-07-02', 'Cameron Jackson', 'FULL', 3, 'Delivered on-time in good condition', '2026-07-02T11:00:00Z'),
   ('DEL-PO-2026-000230-01', 'PO-2026-000230', 1, '2026-06-29', 'Peyton Martin', 'FULL', 13, 'Delivered on-time in good condition', '2026-06-29T11:00:00Z');
 
-INSERT OR REPLACE INTO deliveries (delivery_id, po_id, delivery_sequence, delivery_date, received_by, delivery_status, items_delivered_count, notes, created_at) VALUES
+INSERT INTO deliveries (delivery_id, po_id, delivery_sequence, delivery_date, received_by, delivery_status, items_delivered_count, notes, created_at) VALUES
   ('DEL-PO-2026-000638-01', 'PO-2026-000638', 1, '2026-07-05', 'Skyler Sanchez', 'FULL', 8, 'Delivered on-time in good condition', '2026-07-05T11:00:00Z'),
   ('DEL-PO-2026-000239-01', 'PO-2026-000239', 1, '2026-06-29', 'Reese Martinez', 'FULL', 13, 'Received with minor supplier transit delay', '2026-06-29T11:00:00Z'),
   ('DEL-PO-2026-000639-01', 'PO-2026-000639', 1, '2026-06-20', 'Casey White', 'FULL', 11, 'Delivered on-time in good condition', '2026-06-20T11:00:00Z'),
@@ -17644,7 +17644,7 @@ INSERT OR REPLACE INTO deliveries (delivery_id, po_id, delivery_sequence, delive
   ('DEL-PO-2026-000360-01', 'PO-2026-000360', 1, '2026-09-18', 'Sam White', 'FULL', 34, 'Received with minor supplier transit delay', '2026-09-18T11:00:00Z'),
   ('DEL-PO-2026-000362-01', 'PO-2026-000362', 1, '2026-10-01', 'Rowan Wilson', 'FULL', 41, 'Delivered on-time in good condition', '2026-10-01T11:00:00Z');
 
-INSERT OR REPLACE INTO deliveries (delivery_id, po_id, delivery_sequence, delivery_date, received_by, delivery_status, items_delivered_count, notes, created_at) VALUES
+INSERT INTO deliveries (delivery_id, po_id, delivery_sequence, delivery_date, received_by, delivery_status, items_delivered_count, notes, created_at) VALUES
   ('DEL-PO-2026-000354-01', 'PO-2026-000354', 1, '2026-09-03', 'Reese Johnson', 'FULL', 48, 'Delivered on-time in good condition', '2026-09-03T11:00:00Z'),
   ('DEL-PO-2026-000359-01', 'PO-2026-000359', 1, '2026-09-02', 'Pat Robinson', 'FULL', 31, 'Delivered on-time in good condition', '2026-09-02T11:00:00Z'),
   ('DEL-PO-2026-000355-01', 'PO-2026-000355', 1, '2026-09-07', 'Reese Anderson', 'FULL', 8, 'Delivered on-time in good condition', '2026-09-07T11:00:00Z'),
@@ -17846,7 +17846,7 @@ INSERT OR REPLACE INTO deliveries (delivery_id, po_id, delivery_sequence, delive
   ('DEL-PO-2026-000768-01', 'PO-2026-000768', 1, '2026-11-15', 'Skyler Harris', 'FULL', 18, 'Delivered on-time in good condition', '2026-11-15T11:00:00Z'),
   ('DEL-PO-2026-000840-01', 'PO-2026-000840', 1, '2026-11-24', 'Jordan Miller', 'FULL', 16, 'Delivered on-time in good condition', '2026-11-24T11:00:00Z');
 
-INSERT OR REPLACE INTO deliveries (delivery_id, po_id, delivery_sequence, delivery_date, received_by, delivery_status, items_delivered_count, notes, created_at) VALUES
+INSERT INTO deliveries (delivery_id, po_id, delivery_sequence, delivery_date, received_by, delivery_status, items_delivered_count, notes, created_at) VALUES
   ('DEL-PO-2026-000474-01', 'PO-2026-000474', 1, '2026-11-11', 'Chris Gonzalez', 'FULL', 8, 'Delivered on-time in good condition', '2026-11-11T11:00:00Z'),
   ('DEL-PO-2026-000765-01', 'PO-2026-000765', 1, '2026-12-02', 'Dakota Lewis', 'FULL', 1, 'Delivered on-time in good condition', '2026-12-02T11:00:00Z'),
   ('DEL-PO-2026-000766-01', 'PO-2026-000766', 1, '2026-11-14', 'Morgan Moore', 'FULL', 5, 'Delivered on-time in good condition', '2026-11-14T11:00:00Z'),
@@ -18048,7 +18048,7 @@ INSERT OR REPLACE INTO deliveries (delivery_id, po_id, delivery_sequence, delive
   ('DEL-PO-2026-000936-01', 'PO-2026-000936', 1, '2026-12-26', 'Hayden Taylor', 'PARTIAL', 23, 'Initial partial delivery: 23/40 units received', '2026-12-26T14:30:00Z'),
   ('DEL-PO-2026-000936-02', 'PO-2026-000936', 2, '2026-12-31', 'Hayden Taylor', 'FULL', 17, 'Final fulfillment delivery: 17 units received, order complete', '2026-12-31T15:00:00Z');
 
-INSERT OR REPLACE INTO deliveries (delivery_id, po_id, delivery_sequence, delivery_date, received_by, delivery_status, items_delivered_count, notes, created_at) VALUES
+INSERT INTO deliveries (delivery_id, po_id, delivery_sequence, delivery_date, received_by, delivery_status, items_delivered_count, notes, created_at) VALUES
   ('DEL-PO-2026-000937-01', 'PO-2026-000937', 1, '2026-12-31', 'Pat Moore', 'FULL', 8, 'Received with minor supplier transit delay', '2026-12-31T11:00:00Z'),
   ('DEL-PO-2026-000826-01', 'PO-2026-000826', 1, '2026-12-25', 'Drew Harris', 'FULL', 1, 'Delivered on-time in good condition', '2026-12-25T11:00:00Z'),
   ('DEL-PO-2026-000938-01', 'PO-2026-000938', 1, '2026-12-27', 'Kendall Ramirez', 'FULL', 6, 'Delivered on-time in good condition', '2026-12-27T11:00:00Z'),
@@ -18101,7 +18101,7 @@ INSERT OR REPLACE INTO deliveries (delivery_id, po_id, delivery_sequence, delive
 -- ----------------------------------------------------------------------------
 -- Table: status_events (9664 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-000006', 'PURCHASE_REQUEST', 'PR-2026-000799', 'DRAFT', 'SUBMITTED', 'REQ-0248', 'REQUESTER', '2026-01-01T12:00:25Z', 'Requisition submitted for approval'),
   ('SE-000007', 'PURCHASE_REQUEST', 'PR-2026-000799', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-01-01T12:00:25Z', 'Workflow routing to designated approvers'),
   ('SE-000001', 'PURCHASE_REQUEST', 'PR-2026-000743', 'DRAFT', 'SUBMITTED', 'REQ-0279', 'REQUESTER', '2026-01-01T15:21:09Z', 'Requisition submitted for approval'),
@@ -18303,7 +18303,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-000055', 'PURCHASE_REQUEST', 'PR-2026-000263', 'APPROVED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-01-19T10:00:00Z', 'Purchase order PO-2026-000009 issued to vendor'),
   ('SE-000172', 'PURCHASE_REQUEST', 'PR-2026-000403', 'APPROVED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-01-19T10:00:00Z', 'Purchase order PO-2026-000509 issued to vendor');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-000183', 'PURCHASE_REQUEST', 'PR-2026-001069', 'APPROVED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-01-19T10:00:00Z', 'Purchase order PO-2026-000510 issued to vendor'),
   ('SE-000188', 'PURCHASE_REQUEST', 'PR-2026-000510', 'APPROVED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-01-19T10:00:00Z', 'Purchase order PO-2026-000511 issued to vendor'),
   ('SE-005209', 'RFQ', 'RFQ-2026-000011', 'CLOSED', 'AWARDED', 'BUYER', 'BUYER', '2026-01-19T10:00:00Z', 'Awarded to supplier SUP-0064'),
@@ -18505,7 +18505,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-000337', 'PURCHASE_REQUEST', 'PR-2026-000715', 'DRAFT', 'SUBMITTED', 'REQ-0124', 'REQUESTER', '2026-01-30T10:47:10Z', 'Requisition submitted for approval'),
   ('SE-000338', 'PURCHASE_REQUEST', 'PR-2026-000715', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-01-30T10:47:10Z', 'Workflow routing to designated approvers');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-000072', 'PURCHASE_REQUEST', 'PR-2026-000942', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-01-30T11:00:00Z', 'All goods delivered under DEL-PO-2026-000012-01'),
   ('SE-000094', 'PURCHASE_REQUEST', 'PR-2026-000455', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-01-30T11:00:00Z', 'All goods delivered under DEL-PO-2026-000014-01'),
   ('SE-000308', 'PURCHASE_REQUEST', 'PR-2026-000301', 'PENDING_APPROVAL', 'APPROVED', 'APP-0008', 'APPROVER', '2026-01-30T11:00:00Z', 'Approved: Valid operational expenditure.'),
@@ -18707,7 +18707,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-008635', 'DELIVERY', 'DEL-PO-2026-000510-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-02-09T11:00:00Z', 'Delivered on-time in good condition'),
   ('SE-008662', 'DELIVERY', 'DEL-PO-2026-000022-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-02-09T11:00:00Z', 'Delivered on-time in good condition');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-008667', 'DELIVERY', 'DEL-PO-2026-000021-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-02-09T11:00:00Z', 'Delivered on-time in good condition'),
   ('SE-000463', 'PURCHASE_REQUEST', 'PR-2026-000921', 'DRAFT', 'SUBMITTED', 'REQ-0002', 'REQUESTER', '2026-02-09T11:28:06Z', 'Requisition submitted for approval'),
   ('SE-000464', 'PURCHASE_REQUEST', 'PR-2026-000921', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-02-09T11:28:06Z', 'Workflow routing to designated approvers'),
@@ -18909,7 +18909,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-000431', 'PURCHASE_REQUEST', 'PR-2026-000614', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-02-17T11:00:00Z', 'All goods delivered under DEL-PO-2026-000528-01'),
   ('SE-000552', 'PURCHASE_REQUEST', 'PR-2026-000059', 'PENDING_APPROVAL', 'APPROVED', 'APP-0001', 'APPROVER', '2026-02-17T11:00:00Z', 'Approved: Valid operational expenditure.');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-000562', 'PURCHASE_REQUEST', 'PR-2026-000516', 'PENDING_APPROVAL', 'APPROVED', 'APP-0022', 'APPROVER', '2026-02-17T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-006732', 'PURCHASE_ORDER', 'PO-2026-000019', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-02-17T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-006748', 'PURCHASE_ORDER', 'PO-2026-000519', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-02-17T11:00:00Z', 'All contracted line items physically delivered and verified'),
@@ -19111,7 +19111,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-006883', 'PURCHASE_ORDER', 'PO-2026-000548', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-02-25T10:00:00Z', 'Purchase order approved and transmitted to vendor'),
   ('SE-006885', 'PURCHASE_ORDER', 'PO-2026-000549', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-02-25T10:00:00Z', 'Purchase order approved and transmitted to vendor');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-006887', 'PURCHASE_ORDER', 'PO-2026-000550', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-02-25T10:00:00Z', 'Purchase order approved and transmitted to vendor'),
   ('SE-000668', 'PURCHASE_REQUEST', 'PR-2026-000459', 'DRAFT', 'SUBMITTED', 'REQ-0276', 'REQUESTER', '2026-02-25T10:37:31Z', 'Requisition submitted for approval'),
   ('SE-000669', 'PURCHASE_REQUEST', 'PR-2026-000459', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-02-25T10:37:31Z', 'Workflow routing to designated approvers'),
@@ -19313,7 +19313,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-008728', 'DELIVERY', 'DEL-PO-2026-000546-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-03-05T11:00:00Z', 'Delivered on-time in good condition'),
   ('SE-000782', 'PURCHASE_REQUEST', 'PR-2026-001111', 'DRAFT', 'SUBMITTED', 'REQ-0118', 'REQUESTER', '2026-03-05T12:34:18Z', 'Requisition submitted for approval');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-000783', 'PURCHASE_REQUEST', 'PR-2026-001111', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-03-05T12:34:18Z', 'Workflow routing to designated approvers'),
   ('SE-000774', 'PURCHASE_REQUEST', 'PR-2026-000190', 'DRAFT', 'SUBMITTED', 'REQ-0132', 'REQUESTER', '2026-03-05T13:41:03Z', 'Requisition submitted for approval'),
   ('SE-000775', 'PURCHASE_REQUEST', 'PR-2026-000190', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-03-05T13:41:03Z', 'Workflow routing to designated approvers'),
@@ -19515,7 +19515,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-008701', 'DELIVERY', 'DEL-PO-2026-000536-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-03-12T11:00:00Z', 'Delivered on-time in good condition'),
   ('SE-008719', 'DELIVERY', 'DEL-PO-2026-000545-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-03-12T11:00:00Z', 'Received with minor supplier transit delay');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-008743', 'DELIVERY', 'DEL-PO-2026-000065-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-03-12T11:00:00Z', 'Received with minor supplier transit delay'),
   ('SE-008746', 'DELIVERY', 'DEL-PO-2026-000556-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-03-12T11:00:00Z', 'Delivered on-time in good condition'),
   ('SE-000876', 'PURCHASE_REQUEST', 'PR-2026-000501', 'DRAFT', 'SUBMITTED', 'REQ-0213', 'REQUESTER', '2026-03-12T12:39:48Z', 'Requisition submitted for approval'),
@@ -19717,7 +19717,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-005495', 'RFQ', 'RFQ-2026-000107', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-03-20T09:00:00Z', 'RFQ published to invited bidders'),
   ('SE-001006', 'PURCHASE_REQUEST', 'PR-2026-000379', 'DRAFT', 'SUBMITTED', 'REQ-0285', 'REQUESTER', '2026-03-20T10:38:49Z', 'Requisition submitted for approval');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-001007', 'PURCHASE_REQUEST', 'PR-2026-000379', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-03-20T10:38:49Z', 'Workflow routing to designated approvers'),
   ('SE-000985', 'PURCHASE_REQUEST', 'PR-2026-000014', 'PENDING_APPROVAL', 'APPROVED', 'APP-0003', 'APPROVER', '2026-03-20T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-000990', 'PURCHASE_REQUEST', 'PR-2026-000042', 'PENDING_APPROVAL', 'APPROVED', 'APP-0001', 'APPROVER', '2026-03-20T11:00:00Z', 'Approved: Valid operational expenditure.'),
@@ -19919,7 +19919,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-007025', 'PURCHASE_ORDER', 'PO-2026-000580', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-03-27T10:00:00Z', 'Purchase order approved and transmitted to vendor'),
   ('SE-001137', 'PURCHASE_REQUEST', 'PR-2026-001029', 'DRAFT', 'SUBMITTED', 'REQ-0017', 'REQUESTER', '2026-03-27T10:24:32Z', 'Requisition submitted for approval');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-001138', 'PURCHASE_REQUEST', 'PR-2026-001029', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-03-27T10:24:32Z', 'Workflow routing to designated approvers'),
   ('SE-000763', 'PURCHASE_REQUEST', 'PR-2026-000374', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-03-27T11:00:00Z', 'All goods delivered under DEL-PO-2026-000085-01'),
   ('SE-000799', 'PURCHASE_REQUEST', 'PR-2026-001139', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-03-27T11:00:00Z', 'All goods delivered under DEL-PO-2026-000560-01'),
@@ -20121,7 +20121,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-008752', 'DELIVERY', 'DEL-PO-2026-000558-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-04-03T11:00:00Z', 'Delivered on-time in good condition'),
   ('SE-008802', 'DELIVERY', 'DEL-PO-2026-000105-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-04-03T11:00:00Z', 'Delivered on-time in good condition');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-005511', 'RFQ', 'RFQ-2026-000112', 'ISSUED', 'CLOSED', 'SYSTEM', 'SYSTEM', '2026-04-03T17:00:00Z', 'Bidding window closed'),
   ('SE-005532', 'RFQ', 'RFQ-2026-000119', 'ISSUED', 'CLOSED', 'SYSTEM', 'SYSTEM', '2026-04-03T17:00:00Z', 'Bidding window closed'),
   ('SE-005535', 'RFQ', 'RFQ-2026-000120', 'ISSUED', 'CLOSED', 'SYSTEM', 'SYSTEM', '2026-04-03T17:00:00Z', 'Bidding window closed'),
@@ -20323,7 +20323,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-005541', 'RFQ', 'RFQ-2026-000122', 'ISSUED', 'CLOSED', 'SYSTEM', 'SYSTEM', '2026-04-09T17:00:00Z', 'Bidding window closed'),
   ('SE-001324', 'PURCHASE_REQUEST', 'PR-2026-000131', 'DRAFT', 'SUBMITTED', 'REQ-0060', 'REQUESTER', '2026-04-10T08:49:07Z', 'Requisition submitted for approval');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-001325', 'PURCHASE_REQUEST', 'PR-2026-000131', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-04-10T08:49:07Z', 'Workflow routing to designated approvers'),
   ('SE-005615', 'RFQ', 'RFQ-2026-000147', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-04-10T09:00:00Z', 'RFQ published to invited bidders'),
   ('SE-005621', 'RFQ', 'RFQ-2026-000149', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-04-10T09:00:00Z', 'RFQ published to invited bidders'),
@@ -20525,7 +20525,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-000977', 'PURCHASE_REQUEST', 'PR-2026-000557', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-04-17T11:00:00Z', 'All goods delivered under DEL-PO-2026-000109-01'),
   ('SE-001057', 'PURCHASE_REQUEST', 'PR-2026-000910', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-04-17T11:00:00Z', 'All goods delivered under DEL-PO-2026-000118-01');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-001410', 'PURCHASE_REQUEST', 'PR-2026-000044', 'PENDING_APPROVAL', 'APPROVED', 'APP-0001', 'APPROVER', '2026-04-17T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-001416', 'PURCHASE_REQUEST', 'PR-2026-000337', 'PENDING_APPROVAL', 'APPROVED', 'APP-0008', 'APPROVER', '2026-04-17T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-001425', 'PURCHASE_REQUEST', 'PR-2026-000762', 'PENDING_APPROVAL', 'APPROVED', 'APP-0004', 'APPROVER', '2026-04-17T11:00:00Z', 'Approved: Valid operational expenditure.'),
@@ -20727,7 +20727,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-001532', 'PURCHASE_REQUEST', 'PR-2026-000487', 'DRAFT', 'SUBMITTED', 'REQ-0235', 'REQUESTER', '2026-04-24T14:24:55Z', 'Requisition submitted for approval'),
   ('SE-001533', 'PURCHASE_REQUEST', 'PR-2026-000487', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-04-24T14:24:55Z', 'Workflow routing to designated approvers');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-008837', 'DELIVERY', 'DEL-PO-2026-000120-01', 'IN_TRANSIT', 'PARTIAL', 'SYSTEM', 'REQUESTER', '2026-04-24T14:30:00Z', 'Initial partial delivery: 16/29 units received'),
   ('SE-005628', 'RFQ', 'RFQ-2026-000151', 'ISSUED', 'CLOSED', 'SYSTEM', 'SYSTEM', '2026-04-24T17:00:00Z', 'Bidding window closed'),
   ('SE-001310', 'PURCHASE_REQUEST', 'PR-2026-001132', 'APPROVED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-04-25T10:00:00Z', 'Purchase order PO-2026-000152 issued to vendor'),
@@ -20929,7 +20929,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-001285', 'PURCHASE_REQUEST', 'PR-2026-000332', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-05-03T11:00:00Z', 'All goods delivered under DEL-PO-2026-000148-01'),
   ('SE-001323', 'PURCHASE_REQUEST', 'PR-2026-001140', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-05-03T11:00:00Z', 'All goods delivered under DEL-PO-2026-000153-01');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-001348', 'PURCHASE_REQUEST', 'PR-2026-000031', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-05-03T11:00:00Z', 'All goods delivered under DEL-PO-2026-000598-01'),
   ('SE-001606', 'PURCHASE_REQUEST', 'PR-2026-000881', 'PENDING_APPROVAL', 'APPROVED', 'APP-0012', 'APPROVER', '2026-05-03T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-007150', 'PURCHASE_ORDER', 'PO-2026-000598', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-05-03T11:00:00Z', 'All contracted line items physically delivered and verified'),
@@ -21131,7 +21131,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-001708', 'PURCHASE_REQUEST', 'PR-2026-000803', 'DRAFT', 'SUBMITTED', 'REQ-0289', 'REQUESTER', '2026-05-12T08:34:39Z', 'Requisition submitted for approval'),
   ('SE-001709', 'PURCHASE_REQUEST', 'PR-2026-000803', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-05-12T08:34:39Z', 'Workflow routing to designated approvers');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-005774', 'RFQ', 'RFQ-2026-000200', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-05-12T09:00:00Z', 'RFQ published to invited bidders'),
   ('SE-005777', 'RFQ', 'RFQ-2026-000201', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-05-12T09:00:00Z', 'RFQ published to invited bidders'),
   ('SE-001566', 'PURCHASE_REQUEST', 'PR-2026-000616', 'APPROVED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-05-12T10:00:00Z', 'Purchase order PO-2026-000181 issued to vendor'),
@@ -21333,7 +21333,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-001653', 'PURCHASE_REQUEST', 'PR-2026-000955', 'APPROVED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-05-20T10:00:00Z', 'Purchase order PO-2026-000196 issued to vendor'),
   ('SE-001760', 'PURCHASE_REQUEST', 'PR-2026-000533', 'APPROVED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-05-20T10:00:00Z', 'Purchase order PO-2026-000617 issued to vendor');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-005779', 'RFQ', 'RFQ-2026-000201', 'CLOSED', 'AWARDED', 'BUYER', 'BUYER', '2026-05-20T10:00:00Z', 'Awarded to supplier SUP-0041'),
   ('SE-007291', 'PURCHASE_ORDER', 'PO-2026-000192', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-05-20T10:00:00Z', 'Purchase order approved and transmitted to vendor'),
   ('SE-007293', 'PURCHASE_ORDER', 'PO-2026-000194', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-05-20T10:00:00Z', 'Purchase order approved and transmitted to vendor'),
@@ -21535,7 +21535,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-001876', 'PURCHASE_REQUEST', 'PR-2026-000667', 'DRAFT', 'SUBMITTED', 'REQ-0298', 'REQUESTER', '2026-05-29T15:19:35Z', 'Requisition submitted for approval'),
   ('SE-001877', 'PURCHASE_REQUEST', 'PR-2026-000667', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-05-29T15:19:35Z', 'Workflow routing to designated approvers');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-001871', 'PURCHASE_REQUEST', 'PR-2026-000447', 'DRAFT', 'SUBMITTED', 'REQ-0054', 'REQUESTER', '2026-05-29T17:22:38Z', 'Requisition submitted for approval'),
   ('SE-001872', 'PURCHASE_REQUEST', 'PR-2026-000447', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-05-29T17:22:38Z', 'Workflow routing to designated approvers'),
   ('SE-001920', 'PURCHASE_REQUEST', 'PR-2026-000665', 'DRAFT', 'SUBMITTED', 'REQ-0243', 'REQUESTER', '2026-05-30T08:11:50Z', 'Requisition submitted for approval'),
@@ -21737,7 +21737,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-001990', 'PURCHASE_REQUEST', 'PR-2026-000091', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-06-05T17:53:04Z', 'Workflow routing to designated approvers'),
   ('SE-002015', 'PURCHASE_REQUEST', 'PR-2026-000699', 'DRAFT', 'SUBMITTED', 'REQ-0235', 'REQUESTER', '2026-06-06T08:29:56Z', 'Requisition submitted for approval');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-002016', 'PURCHASE_REQUEST', 'PR-2026-000699', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-06-06T08:29:56Z', 'Workflow routing to designated approvers'),
   ('SE-001982', 'PURCHASE_REQUEST', 'PR-2026-000079', 'APPROVED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-06-06T10:00:00Z', 'Purchase order PO-2026-000633 issued to vendor'),
   ('SE-005845', 'RFQ', 'RFQ-2026-000223', 'CLOSED', 'AWARDED', 'BUYER', 'BUYER', '2026-06-06T10:00:00Z', 'Awarded to supplier SUP-0119'),
@@ -21939,7 +21939,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-007407', 'PURCHASE_ORDER', 'PO-2026-000233', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-06-14T10:00:00Z', 'Purchase order approved and transmitted to vendor'),
   ('SE-007409', 'PURCHASE_ORDER', 'PO-2026-000637', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-06-14T10:00:00Z', 'Purchase order approved and transmitted to vendor');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-002149', 'PURCHASE_REQUEST', 'PR-2026-000774', 'DRAFT', 'SUBMITTED', 'REQ-0007', 'REQUESTER', '2026-06-14T10:18:03Z', 'Requisition submitted for approval'),
   ('SE-002150', 'PURCHASE_REQUEST', 'PR-2026-000774', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-06-14T10:18:03Z', 'Workflow routing to designated approvers'),
   ('SE-001766', 'PURCHASE_REQUEST', 'PR-2026-000711', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-06-14T11:00:00Z', 'All goods delivered under DEL-PO-2026-000213-01'),
@@ -22141,7 +22141,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-007453', 'PURCHASE_ORDER', 'PO-2026-000242', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-06-22T10:00:00Z', 'Purchase order approved and transmitted to vendor'),
   ('SE-001858', 'PURCHASE_REQUEST', 'PR-2026-000462', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-06-22T11:00:00Z', 'All goods delivered under DEL-PO-2026-000225-01');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-001966', 'PURCHASE_REQUEST', 'PR-2026-000695', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-06-22T11:00:00Z', 'All goods delivered under DEL-PO-2026-000631-01'),
   ('SE-002227', 'PURCHASE_REQUEST', 'PR-2026-000547', 'PENDING_APPROVAL', 'APPROVED', 'APP-0004', 'APPROVER', '2026-06-22T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-002237', 'PURCHASE_REQUEST', 'PR-2026-000866', 'PENDING_APPROVAL', 'APPROVED', 'APP-0009', 'APPROVER', '2026-06-22T11:00:00Z', 'Approved: Valid operational expenditure.'),
@@ -22343,7 +22343,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-005947', 'RFQ', 'RFQ-2026-000257', 'CLOSED', 'AWARDED', 'BUYER', 'BUYER', '2026-06-29T10:00:00Z', 'Awarded to supplier SUP-0053'),
   ('SE-005950', 'RFQ', 'RFQ-2026-000258', 'CLOSED', 'AWARDED', 'BUYER', 'BUYER', '2026-06-29T10:00:00Z', 'Awarded to supplier SUP-0056');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-005977', 'RFQ', 'RFQ-2026-000267', 'CLOSED', 'AWARDED', 'BUYER', 'BUYER', '2026-06-29T10:00:00Z', 'Awarded to supplier SUP-0059'),
   ('SE-007489', 'PURCHASE_ORDER', 'PO-2026-000255', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-06-29T10:00:00Z', 'Purchase order approved and transmitted to vendor'),
   ('SE-007491', 'PURCHASE_ORDER', 'PO-2026-000256', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-06-29T10:00:00Z', 'Purchase order approved and transmitted to vendor'),
@@ -22545,7 +22545,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-009047', 'DELIVERY', 'DEL-PO-2026-000246-02', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-07-06T15:00:00Z', 'Final fulfillment delivery: 25 units received, order complete'),
   ('SE-006000', 'RFQ', 'RFQ-2026-000275', 'ISSUED', 'CLOSED', 'SYSTEM', 'SYSTEM', '2026-07-06T17:00:00Z', 'Bidding window closed');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-006006', 'RFQ', 'RFQ-2026-000277', 'ISSUED', 'CLOSED', 'SYSTEM', 'SYSTEM', '2026-07-06T17:00:00Z', 'Bidding window closed'),
   ('SE-006018', 'RFQ', 'RFQ-2026-000281', 'ISSUED', 'CLOSED', 'SYSTEM', 'SYSTEM', '2026-07-06T17:00:00Z', 'Bidding window closed'),
   ('SE-006024', 'RFQ', 'RFQ-2026-000283', 'ISSUED', 'CLOSED', 'SYSTEM', 'SYSTEM', '2026-07-06T17:00:00Z', 'Bidding window closed'),
@@ -22747,7 +22747,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-007482', 'PURCHASE_ORDER', 'PO-2026-000259', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-07-15T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-007548', 'PURCHASE_ORDER', 'PO-2026-000275', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-07-15T11:00:00Z', 'All contracted line items physically delivered and verified');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-009053', 'DELIVERY', 'DEL-PO-2026-000259-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-07-15T11:00:00Z', 'Received with minor supplier transit delay'),
   ('SE-009091', 'DELIVERY', 'DEL-PO-2026-000275-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-07-15T11:00:00Z', 'Delivered on-time in good condition'),
   ('SE-002509', 'PURCHASE_REQUEST', 'PR-2026-000529', 'DRAFT', 'SUBMITTED', 'REQ-0149', 'REQUESTER', '2026-07-15T12:21:39Z', 'Requisition submitted for approval'),
@@ -22949,7 +22949,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-002609', 'PURCHASE_REQUEST', 'PR-2026-000701', 'DRAFT', 'SUBMITTED', 'REQ-0239', 'REQUESTER', '2026-07-22T14:19:38Z', 'Requisition submitted for approval'),
   ('SE-002610', 'PURCHASE_REQUEST', 'PR-2026-000701', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-07-22T14:19:38Z', 'Workflow routing to designated approvers');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-009071', 'DELIVERY', 'DEL-PO-2026-000652-01', 'IN_TRANSIT', 'PARTIAL', 'SYSTEM', 'REQUESTER', '2026-07-22T14:30:00Z', 'Initial partial delivery: 3/4 units received'),
   ('SE-006110', 'RFQ', 'RFQ-2026-000312', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-07-23T09:00:00Z', 'RFQ published to invited bidders'),
   ('SE-006113', 'RFQ', 'RFQ-2026-000313', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-07-23T09:00:00Z', 'RFQ published to invited bidders'),
@@ -23151,7 +23151,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-002714', 'PURCHASE_REQUEST', 'PR-2026-000704', 'DRAFT', 'SUBMITTED', 'REQ-0070', 'REQUESTER', '2026-07-31T12:23:00Z', 'Requisition submitted for approval'),
   ('SE-002709', 'PURCHASE_REQUEST', 'PR-2026-000153', 'DRAFT', 'SUBMITTED', 'REQ-0230', 'REQUESTER', '2026-07-31T15:12:18Z', 'Requisition submitted for approval');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-002710', 'PURCHASE_REQUEST', 'PR-2026-000153', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-07-31T15:12:18Z', 'Workflow routing to designated approvers'),
   ('SE-006087', 'RFQ', 'RFQ-2026-000304', 'ISSUED', 'CLOSED', 'SYSTEM', 'SYSTEM', '2026-07-31T17:00:00Z', 'Bidding window closed'),
   ('SE-006090', 'RFQ', 'RFQ-2026-000305', 'ISSUED', 'CLOSED', 'SYSTEM', 'SYSTEM', '2026-07-31T17:00:00Z', 'Bidding window closed'),
@@ -23353,7 +23353,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-007610', 'PURCHASE_ORDER', 'PO-2026-000295', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-08-09T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-007664', 'PURCHASE_ORDER', 'PO-2026-000310', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-08-09T11:00:00Z', 'All contracted line items physically delivered and verified');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-009125', 'DELIVERY', 'DEL-PO-2026-000295-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-08-09T11:00:00Z', 'Delivered on-time in good condition'),
   ('SE-009154', 'DELIVERY', 'DEL-PO-2026-000310-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-08-09T11:00:00Z', 'Delivered on-time in good condition'),
   ('SE-002829', 'PURCHASE_REQUEST', 'PR-2026-000688', 'DRAFT', 'SUBMITTED', 'REQ-0292', 'REQUESTER', '2026-08-09T13:56:21Z', 'Requisition submitted for approval'),
@@ -23555,7 +23555,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-006239', 'RFQ', 'RFQ-2026-000355', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-08-18T09:00:00Z', 'RFQ published to invited bidders'),
   ('SE-006245', 'RFQ', 'RFQ-2026-000357', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-08-18T09:00:00Z', 'RFQ published to invited bidders');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-006248', 'RFQ', 'RFQ-2026-000358', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-08-18T09:00:00Z', 'RFQ published to invited bidders'),
   ('SE-002957', 'PURCHASE_REQUEST', 'PR-2026-000905', 'DRAFT', 'SUBMITTED', 'REQ-0051', 'REQUESTER', '2026-08-18T09:46:30Z', 'Requisition submitted for approval'),
   ('SE-002696', 'PURCHASE_REQUEST', 'PR-2026-000847', 'APPROVED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-08-18T10:00:00Z', 'Purchase order PO-2026-000326 issued to vendor'),
@@ -23757,7 +23757,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-003038', 'PURCHASE_REQUEST', 'PR-2026-000806', 'DRAFT', 'SUBMITTED', 'REQ-0267', 'REQUESTER', '2026-08-25T17:04:05Z', 'Requisition submitted for approval'),
   ('SE-003039', 'PURCHASE_REQUEST', 'PR-2026-000806', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-08-25T17:04:05Z', 'Workflow routing to designated approvers');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-003052', 'PURCHASE_REQUEST', 'PR-2026-001011', 'DRAFT', 'SUBMITTED', 'REQ-0169', 'REQUESTER', '2026-08-26T08:14:11Z', 'Requisition submitted for approval'),
   ('SE-003053', 'PURCHASE_REQUEST', 'PR-2026-001011', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-08-26T08:14:11Z', 'Workflow routing to designated approvers'),
   ('SE-006275', 'RFQ', 'RFQ-2026-000367', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-08-26T09:00:00Z', 'RFQ published to invited bidders'),
@@ -23959,7 +23959,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-003099', 'PURCHASE_REQUEST', 'PR-2026-000223', 'PENDING_APPROVAL', 'APPROVED', 'APP-0018', 'APPROVER', '2026-09-04T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-003117', 'PURCHASE_REQUEST', 'PR-2026-001200', 'PENDING_APPROVAL', 'APPROVED', 'APP-0010', 'APPROVER', '2026-09-04T11:00:00Z', 'Approved: Valid operational expenditure.');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-007672', 'PURCHASE_ORDER', 'PO-2026-000684', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-09-04T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-007676', 'PURCHASE_ORDER', 'PO-2026-000315', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-09-04T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-007700', 'PURCHASE_ORDER', 'PO-2026-000322', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-09-04T11:00:00Z', 'All contracted line items physically delivered and verified'),
@@ -24161,7 +24161,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-007822', 'PURCHASE_ORDER', 'PO-2026-000368', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-09-12T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-009208', 'DELIVERY', 'DEL-PO-2026-000346-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-09-12T11:00:00Z', 'Delivered on-time in good condition');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-009225', 'DELIVERY', 'DEL-PO-2026-000366-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-09-12T11:00:00Z', 'Delivered on-time in good condition'),
   ('SE-009235', 'DELIVERY', 'DEL-PO-2026-000368-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-09-12T11:00:00Z', 'Delivered on-time in good condition'),
   ('SE-003237', 'PURCHASE_REQUEST', 'PR-2026-000642', 'DRAFT', 'SUBMITTED', 'REQ-0230', 'REQUESTER', '2026-09-12T12:16:13Z', 'Requisition submitted for approval'),
@@ -24363,7 +24363,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-003367', 'PURCHASE_REQUEST', 'PR-2026-000918', 'DRAFT', 'SUBMITTED', 'REQ-0199', 'REQUESTER', '2026-09-19T10:59:03Z', 'Requisition submitted for approval'),
   ('SE-003368', 'PURCHASE_REQUEST', 'PR-2026-000918', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-09-19T10:59:03Z', 'Workflow routing to designated approvers');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-002852', 'PURCHASE_REQUEST', 'PR-2026-000165', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-09-19T11:00:00Z', 'All goods delivered under DEL-PO-2026-000347-01'),
   ('SE-003056', 'PURCHASE_REQUEST', 'PR-2026-001011', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-09-19T11:00:00Z', 'All goods delivered under DEL-PO-2026-000374-01'),
   ('SE-003173', 'PURCHASE_REQUEST', 'PR-2026-001129', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-09-19T11:00:00Z', 'All goods delivered under DEL-PO-2026-000706-01'),
@@ -24565,7 +24565,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-003506', 'PURCHASE_REQUEST', 'PR-2026-000300', 'DRAFT', 'SUBMITTED', 'REQ-0033', 'REQUESTER', '2026-09-26T10:40:48Z', 'Requisition submitted for approval'),
   ('SE-003507', 'PURCHASE_REQUEST', 'PR-2026-000300', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-09-26T10:40:48Z', 'Workflow routing to designated approvers');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-002833', 'PURCHASE_REQUEST', 'PR-2026-000688', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-09-26T11:00:00Z', 'All goods delivered under DEL-PO-2026-000345-01'),
   ('SE-003086', 'PURCHASE_REQUEST', 'PR-2026-000929', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-09-26T11:00:00Z', 'All goods delivered under DEL-PO-2026-000699-01'),
   ('SE-003129', 'PURCHASE_REQUEST', 'PR-2026-000536', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-09-26T11:00:00Z', 'All goods delivered under DEL-PO-2026-000701-01'),
@@ -24767,7 +24767,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-003596', 'PURCHASE_REQUEST', 'PR-2026-000852', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-10-03T17:28:13Z', 'Workflow routing to designated approvers'),
   ('SE-003600', 'PURCHASE_REQUEST', 'PR-2026-001181', 'DRAFT', 'SUBMITTED', 'REQ-0021', 'REQUESTER', '2026-10-03T17:29:39Z', 'Requisition submitted for approval');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-003601', 'PURCHASE_REQUEST', 'PR-2026-001181', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-10-03T17:29:39Z', 'Workflow routing to designated approvers'),
   ('SE-006479', 'RFQ', 'RFQ-2026-000435', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-10-04T09:00:00Z', 'RFQ published to invited bidders'),
   ('SE-006482', 'RFQ', 'RFQ-2026-000436', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-10-04T09:00:00Z', 'RFQ published to invited bidders'),
@@ -24969,7 +24969,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-007874', 'PURCHASE_ORDER', 'PO-2026-000383', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-10-10T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-007876', 'PURCHASE_ORDER', 'PO-2026-000385', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-10-10T11:00:00Z', 'All contracted line items physically delivered and verified');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-007878', 'PURCHASE_ORDER', 'PO-2026-000718', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-10-10T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-007898', 'PURCHASE_ORDER', 'PO-2026-000393', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-10-10T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-007900', 'PURCHASE_ORDER', 'PO-2026-000720', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-10-10T11:00:00Z', 'All contracted line items physically delivered and verified'),
@@ -25171,7 +25171,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-006499', 'RFQ', 'RFQ-2026-000441', 'CLOSED', 'AWARDED', 'BUYER', 'BUYER', '2026-10-17T10:00:00Z', 'Awarded to supplier SUP-0089'),
   ('SE-008035', 'PURCHASE_ORDER', 'PO-2026-000430', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-10-17T10:00:00Z', 'Purchase order approved and transmitted to vendor');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-008037', 'PURCHASE_ORDER', 'PO-2026-000436', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-10-17T10:00:00Z', 'Purchase order approved and transmitted to vendor'),
   ('SE-008039', 'PURCHASE_ORDER', 'PO-2026-000747', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-10-17T10:00:00Z', 'Purchase order approved and transmitted to vendor'),
   ('SE-003664', 'PURCHASE_REQUEST', 'PR-2026-000213', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-10-17T11:00:00Z', 'All goods delivered under DEL-PO-2026-000742-01'),
@@ -25373,7 +25373,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-009349', 'DELIVERY', 'DEL-PO-2026-000434-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-10-22T11:00:00Z', 'Delivered on-time in good condition'),
   ('SE-003889', 'PURCHASE_REQUEST', 'PR-2026-000243', 'DRAFT', 'SUBMITTED', 'REQ-0213', 'REQUESTER', '2026-10-22T11:08:03Z', 'Requisition submitted for approval');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-009293', 'DELIVERY', 'DEL-PO-2026-000728-01', 'IN_TRANSIT', 'PARTIAL', 'SYSTEM', 'REQUESTER', '2026-10-22T14:30:00Z', 'Initial partial delivery: 10/16 units received'),
   ('SE-003890', 'PURCHASE_REQUEST', 'PR-2026-000429', 'DRAFT', 'SUBMITTED', 'REQ-0231', 'REQUESTER', '2026-10-22T15:40:55Z', 'Requisition submitted for approval'),
   ('SE-003891', 'PURCHASE_REQUEST', 'PR-2026-000429', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-10-22T15:40:55Z', 'Workflow routing to designated approvers'),
@@ -25575,7 +25575,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-008103', 'PURCHASE_ORDER', 'PO-2026-000465', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-10-30T10:00:00Z', 'Purchase order approved and transmitted to vendor'),
   ('SE-003639', 'PURCHASE_REQUEST', 'PR-2026-000330', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-10-30T11:00:00Z', 'All goods delivered under DEL-PO-2026-000440-01');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-003973', 'PURCHASE_REQUEST', 'PR-2026-000413', 'PENDING_APPROVAL', 'APPROVED', 'APP-0003', 'APPROVER', '2026-10-30T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-003978', 'PURCHASE_REQUEST', 'PR-2026-000977', 'PENDING_APPROVAL', 'APPROVED', 'APP-0024', 'APPROVER', '2026-10-30T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-003989', 'PURCHASE_REQUEST', 'PR-2026-000850', 'PENDING_APPROVAL', 'APPROVED', 'APP-0002', 'APPROVER', '2026-10-30T11:00:00Z', 'Approved: Valid operational expenditure.'),
@@ -25777,7 +25777,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-004113', 'PURCHASE_REQUEST', 'PR-2026-000489', 'DRAFT', 'SUBMITTED', 'REQ-0026', 'REQUESTER', '2026-11-05T13:18:43Z', 'Requisition submitted for approval'),
   ('SE-004114', 'PURCHASE_REQUEST', 'PR-2026-000489', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-11-05T13:18:43Z', 'Workflow routing to designated approvers');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-004118', 'PURCHASE_REQUEST', 'PR-2026-000496', 'DRAFT', 'SUBMITTED', 'REQ-0244', 'REQUESTER', '2026-11-05T13:39:49Z', 'Requisition submitted for approval'),
   ('SE-004119', 'PURCHASE_REQUEST', 'PR-2026-000496', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-11-05T13:39:49Z', 'Workflow routing to designated approvers'),
   ('SE-004136', 'PURCHASE_REQUEST', 'PR-2026-001095', 'DRAFT', 'SUBMITTED', 'REQ-0213', 'REQUESTER', '2026-11-05T13:52:33Z', 'Requisition submitted for approval'),
@@ -25979,7 +25979,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-004205', 'PURCHASE_REQUEST', 'PR-2026-001015', 'PENDING_APPROVAL', 'APPROVED', 'APP-0008', 'APPROVER', '2026-11-11T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-004210', 'PURCHASE_REQUEST', 'PR-2026-001180', 'PENDING_APPROVAL', 'APPROVED', 'APP-0006', 'APPROVER', '2026-11-11T11:00:00Z', 'Approved: Valid operational expenditure.');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-004215', 'PURCHASE_REQUEST', 'PR-2026-000030', 'PENDING_APPROVAL', 'APPROVED', 'APP-0002', 'APPROVER', '2026-11-11T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-008052', 'PURCHASE_ORDER', 'PO-2026-000749', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-11-11T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-008058', 'PURCHASE_ORDER', 'PO-2026-000753', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-11-11T11:00:00Z', 'All contracted line items physically delivered and verified'),
@@ -26181,7 +26181,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-004316', 'PURCHASE_REQUEST', 'PR-2026-000009', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-11-16T10:17:43Z', 'Workflow routing to designated approvers'),
   ('SE-003567', 'PURCHASE_REQUEST', 'PR-2026-000660', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-11-16T11:00:00Z', 'All goods delivered under DEL-PO-2026-000433-01');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-003701', 'PURCHASE_REQUEST', 'PR-2026-000624', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-11-16T11:00:00Z', 'All goods delivered under DEL-PO-2026-000448-01'),
   ('SE-003849', 'PURCHASE_REQUEST', 'PR-2026-001191', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-11-16T11:00:00Z', 'All goods delivered under DEL-PO-2026-000466-01'),
   ('SE-004160', 'PURCHASE_REQUEST', 'PR-2026-000353', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-11-16T11:00:00Z', 'All goods delivered under DEL-PO-2026-000843-01'),
@@ -26383,7 +26383,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-004165', 'PURCHASE_REQUEST', 'PR-2026-000818', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-11-21T11:00:00Z', 'All goods delivered under DEL-PO-2026-000844-01'),
   ('SE-004394', 'PURCHASE_REQUEST', 'PR-2026-000376', 'PENDING_APPROVAL', 'APPROVED', 'APP-0001', 'APPROVER', '2026-11-21T11:00:00Z', 'Approved: Valid operational expenditure.');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-004404', 'PURCHASE_REQUEST', 'PR-2026-000183', 'PENDING_APPROVAL', 'APPROVED', 'APP-0013', 'APPROVER', '2026-11-21T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-004409', 'PURCHASE_REQUEST', 'PR-2026-000525', 'PENDING_APPROVAL', 'APPROVED', 'APP-0005', 'APPROVER', '2026-11-21T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-004420', 'PURCHASE_REQUEST', 'PR-2026-001137', 'PENDING_APPROVAL', 'APPROVED', 'APP-0016', 'APPROVER', '2026-11-21T11:00:00Z', 'Approved: Valid operational expenditure.'),
@@ -26585,7 +26585,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-003926', 'PURCHASE_REQUEST', 'PR-2026-000481', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-11-27T11:00:00Z', 'All goods delivered under DEL-PO-2026-000478-01'),
   ('SE-003980', 'PURCHASE_REQUEST', 'PR-2026-000977', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-11-27T11:00:00Z', 'All goods delivered under DEL-PO-2026-000484-01');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-004197', 'PURCHASE_REQUEST', 'PR-2026-000765', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-11-27T11:00:00Z', 'All goods delivered under DEL-PO-2026-000847-01'),
   ('SE-004391', 'PURCHASE_REQUEST', 'PR-2026-001028', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-11-27T11:00:00Z', 'All goods delivered under DEL-PO-2026-000786-01'),
   ('SE-008178', 'PURCHASE_ORDER', 'PO-2026-000478', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-11-27T11:00:00Z', 'All contracted line items physically delivered and verified'),
@@ -26787,7 +26787,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-004642', 'PURCHASE_REQUEST', 'PR-2026-000541', 'PENDING_APPROVAL', 'APPROVED', 'APP-0006', 'APPROVER', '2026-12-04T11:00:00Z', 'Approved: Valid operational expenditure.'),
   ('SE-008162', 'PURCHASE_ORDER', 'PO-2026-000770', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-12-04T11:00:00Z', 'All contracted line items physically delivered and verified');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-008192', 'PURCHASE_ORDER', 'PO-2026-000482', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-12-04T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-008220', 'PURCHASE_ORDER', 'PO-2026-000486', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-12-04T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-008238', 'PURCHASE_ORDER', 'PO-2026-000851', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-12-04T11:00:00Z', 'All contracted line items physically delivered and verified'),
@@ -26989,7 +26989,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-004812', 'PURCHASE_REQUEST', 'PR-2026-000844', 'DRAFT', 'SUBMITTED', 'REQ-0038', 'REQUESTER', '2026-12-10T12:46:11Z', 'Requisition submitted for approval'),
   ('SE-004791', 'PURCHASE_REQUEST', 'PR-2026-000002', 'DRAFT', 'SUBMITTED', 'REQ-0085', 'REQUESTER', '2026-12-10T13:41:05Z', 'Requisition submitted for approval');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-004792', 'PURCHASE_REQUEST', 'PR-2026-000002', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-12-10T13:41:05Z', 'Workflow routing to designated approvers'),
   ('SE-004811', 'PURCHASE_REQUEST', 'PR-2026-000531', 'DRAFT', 'SUBMITTED', 'REQ-0178', 'REQUESTER', '2026-12-10T14:13:39Z', 'Requisition submitted for approval'),
   ('SE-004806', 'PURCHASE_REQUEST', 'PR-2026-000208', 'DRAFT', 'SUBMITTED', 'REQ-0286', 'REQUESTER', '2026-12-10T17:33:55Z', 'Requisition submitted for approval'),
@@ -27191,7 +27191,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-009522', 'DELIVERY', 'DEL-PO-2026-000878-01', 'IN_TRANSIT', 'FULL', 'SYSTEM', 'REQUESTER', '2026-12-16T11:00:00Z', 'Delivered on-time in good condition'),
   ('SE-004912', 'PURCHASE_REQUEST', 'PR-2026-000814', 'DRAFT', 'SUBMITTED', 'REQ-0237', 'REQUESTER', '2026-12-16T12:57:02Z', 'Requisition submitted for approval');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-004913', 'PURCHASE_REQUEST', 'PR-2026-000814', 'SUBMITTED', 'PENDING_APPROVAL', 'SYSTEM', 'SYSTEM', '2026-12-16T12:57:02Z', 'Workflow routing to designated approvers'),
   ('SE-004040', 'PURCHASE_REQUEST', 'PR-2026-000882', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-12-16T15:00:00Z', 'All goods delivered under DEL-PO-2026-000494-02'),
   ('SE-008264', 'PURCHASE_ORDER', 'PO-2026-000494', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-12-16T15:00:00Z', 'All contracted line items physically delivered and verified'),
@@ -27393,7 +27393,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-008543', 'PURCHASE_ORDER', 'PO-2026-000940', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-12-24T10:00:00Z', 'Purchase order approved and transmitted to vendor'),
   ('SE-008545', 'PURCHASE_ORDER', 'PO-2026-000943', 'DRAFT', 'ISSUED', 'BUYER', 'BUYER', '2026-12-24T10:00:00Z', 'Purchase order approved and transmitted to vendor');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-004457', 'PURCHASE_REQUEST', 'PR-2026-001105', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-12-24T11:00:00Z', 'All goods delivered under DEL-PO-2026-000792-01'),
   ('SE-004593', 'PURCHASE_REQUEST', 'PR-2026-000909', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-12-24T11:00:00Z', 'All goods delivered under DEL-PO-2026-000894-01'),
   ('SE-004702', 'PURCHASE_REQUEST', 'PR-2026-000070', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-12-24T11:00:00Z', 'All goods delivered under DEL-PO-2026-000909-01'),
@@ -27595,7 +27595,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-005054', 'PURCHASE_REQUEST', 'PR-2026-000365', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-12-29T11:00:00Z', 'All goods delivered under DEL-PO-2026-000832-01'),
   ('SE-005064', 'PURCHASE_REQUEST', 'PR-2026-000580', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-12-29T11:00:00Z', 'All goods delivered under DEL-PO-2026-000952-01');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-005069', 'PURCHASE_REQUEST', 'PR-2026-000602', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-12-29T11:00:00Z', 'All goods delivered under DEL-PO-2026-000833-01'),
   ('SE-005079', 'PURCHASE_REQUEST', 'PR-2026-000853', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-12-29T11:00:00Z', 'All goods delivered under DEL-PO-2026-000954-01'),
   ('SE-005089', 'PURCHASE_REQUEST', 'PR-2026-001175', 'ORDERED', 'ORDERED', 'SYSTEM', 'SYSTEM', '2026-12-29T11:00:00Z', 'All goods delivered under DEL-PO-2026-000956-01'),
@@ -27797,7 +27797,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
   ('SE-008600', 'PURCHASE_ORDER', 'PO-2026-000965', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-12-31T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-008604', 'PURCHASE_ORDER', 'PO-2026-000835', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-12-31T11:00:00Z', 'All contracted line items physically delivered and verified');
 
-INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
+INSERT INTO status_events (event_id, entity_type, entity_id, previous_status, new_status, actor_id, actor_type, event_timestamp, reason) VALUES
   ('SE-008606', 'PURCHASE_ORDER', 'PO-2026-000964', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-12-31T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-008608', 'PURCHASE_ORDER', 'PO-2026-000966', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-12-31T11:00:00Z', 'All contracted line items physically delivered and verified'),
   ('SE-008610', 'PURCHASE_ORDER', 'PO-2026-000967', 'ISSUED', 'COMPLETED', 'SYSTEM', 'SYSTEM', '2026-12-31T11:00:00Z', 'All contracted line items physically delivered and verified'),
@@ -27866,7 +27866,7 @@ INSERT OR REPLACE INTO status_events (event_id, entity_type, entity_id, previous
 -- ----------------------------------------------------------------------------
 -- Table: budget_events (3970 records)
 -- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-000001', 'BUD-0001', NULL, NULL, 'ALLOCATE', 450000000, 'USD', '2026-01-01T00:00:00Z', 'Initial FY2026 budget allocation for department DEPT-01'),
   ('BE-000002', 'BUD-0002', NULL, NULL, 'ALLOCATE', 455000000, 'USD', '2026-01-01T00:00:00Z', 'Initial FY2026 budget allocation for department DEPT-02'),
   ('BE-000003', 'BUD-0003', NULL, NULL, 'ALLOCATE', 775000000, 'USD', '2026-01-01T00:00:00Z', 'Initial FY2026 budget allocation for department DEPT-03'),
@@ -28068,7 +28068,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-001088', 'BUD-0006', 'PR-2026-000656', 'PO-2026-000525', 'COMMIT', 153922, 'USD', '2026-02-06T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000525'),
   ('BE-002949', 'BUD-0001', 'PR-2026-000222', 'PO-2026-000008', 'SPEND', 322989, 'USD', '2026-02-06T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000008-01 for PO PO-2026-000008');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-000063', 'BUD-0001', 'PR-2026-001197', NULL, 'RESERVE', 1276544, 'USD', '2026-02-07T10:00:00Z', 'Pre-encumbrance reserve for requisition PR-2026-001197'),
   ('BE-001089', 'BUD-0001', 'PR-2026-001197', 'PO-2026-000032', 'RELEASE', 1276544, 'USD', '2026-02-07T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-001197'),
   ('BE-001090', 'BUD-0001', 'PR-2026-001197', 'PO-2026-000032', 'COMMIT', 1228100, 'USD', '2026-02-07T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000032'),
@@ -28270,7 +28270,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-003020', 'BUD-0001', 'PR-2026-001138', 'PO-2026-000543', 'SPEND', 156056, 'USD', '2026-02-25T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000543-01 for PO PO-2026-000543'),
   ('BE-003021', 'BUD-0004', 'PR-2026-000543', 'PO-2026-000046', 'SPEND', 590790, 'USD', '2026-02-25T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000046-01 for PO PO-2026-000046');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-000102', 'BUD-0003', 'PR-2026-001021', NULL, 'RESERVE', 553829, 'USD', '2026-02-26T10:00:00Z', 'Pre-encumbrance reserve for requisition PR-2026-001021'),
   ('BE-001195', 'BUD-0003', 'PR-2026-001021', 'PO-2026-000058', 'RELEASE', 553829, 'USD', '2026-02-26T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-001021'),
   ('BE-001196', 'BUD-0003', 'PR-2026-001021', 'PO-2026-000058', 'COMMIT', 526089, 'USD', '2026-02-26T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000058'),
@@ -28472,7 +28472,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-001289', 'BUD-0009', 'PR-2026-000605', 'PO-2026-000571', 'RELEASE', 183901, 'USD', '2026-03-17T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000605'),
   ('BE-001290', 'BUD-0009', 'PR-2026-000605', 'PO-2026-000571', 'COMMIT', 183901, 'USD', '2026-03-17T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000571');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-003018', 'BUD-0001', 'PR-2026-000015', 'PO-2026-000541', 'SPEND', 77796, 'USD', '2026-03-17T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000541-01 for PO PO-2026-000541'),
   ('BE-003043', 'BUD-0005', 'PR-2026-001071', 'PO-2026-000060', 'SPEND', 413727, 'USD', '2026-03-17T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000060-01 for PO PO-2026-000060'),
   ('BE-003056', 'BUD-0011', 'PR-2026-000516', 'PO-2026-000066', 'SPEND', 366175, 'USD', '2026-03-17T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000066-01 for PO PO-2026-000066'),
@@ -28674,7 +28674,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-001390', 'BUD-0006', 'PR-2026-000268', 'PO-2026-000119', 'COMMIT', 431154, 'USD', '2026-04-06T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000119'),
   ('BE-001391', 'BUD-0006', 'PR-2026-000138', 'PO-2026-000589', 'RELEASE', 72210, 'USD', '2026-04-06T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000138');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-001392', 'BUD-0006', 'PR-2026-000138', 'PO-2026-000589', 'COMMIT', 72210, 'USD', '2026-04-06T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000589'),
   ('BE-003072', 'BUD-0003', 'PR-2026-000298', 'PO-2026-000077', 'SPEND', 367682, 'USD', '2026-04-06T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000077-01 for PO PO-2026-000077'),
   ('BE-003107', 'BUD-0001', 'PR-2026-000869', 'PO-2026-000096', 'SPEND', 921546, 'USD', '2026-04-06T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000096-01 for PO PO-2026-000096'),
@@ -28876,7 +28876,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-001490', 'BUD-0001', 'PR-2026-000658', 'PO-2026-000150', 'COMMIT', 525826, 'USD', '2026-04-23T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000150'),
   ('BE-003149', 'BUD-0003', 'PR-2026-001063', 'PO-2026-000123', 'SPEND', 1155021, 'USD', '2026-04-23T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000123-01 for PO PO-2026-000123');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-003160', 'BUD-0006', 'PR-2026-000150', 'PO-2026-000595', 'SPEND', 189138, 'USD', '2026-04-23T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000595-01 for PO PO-2026-000595'),
   ('BE-003145', 'BUD-0002', 'PR-2026-000908', 'PO-2026-000590', 'SPEND', 136224, 'USD', '2026-04-24T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000590-01 for PO PO-2026-000590'),
   ('BE-003143', 'BUD-0001', 'PR-2026-000524', 'PO-2026-000120', 'SPEND', 526083, 'USD', '2026-04-24T14:30:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000120-01 for PO PO-2026-000120'),
@@ -29078,7 +29078,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-000306', 'BUD-0003', 'PR-2026-000145', NULL, 'RESERVE', 225062, 'USD', '2026-05-16T10:00:00Z', 'Pre-encumbrance reserve for requisition PR-2026-000145'),
   ('BE-000309', 'BUD-0001', 'PR-2026-000992', NULL, 'RESERVE', 544086, 'USD', '2026-05-16T10:00:00Z', 'Pre-encumbrance reserve for requisition PR-2026-000992');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-000336', 'BUD-0001', 'PR-2026-001064', NULL, 'RESERVE', 100332, 'USD', '2026-05-16T10:00:00Z', 'Pre-encumbrance reserve for requisition PR-2026-001064'),
   ('BE-001581', 'BUD-0003', 'PR-2026-000145', 'PO-2026-000182', 'RELEASE', 225062, 'USD', '2026-05-16T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000145'),
   ('BE-001582', 'BUD-0003', 'PR-2026-000145', 'PO-2026-000182', 'COMMIT', 210018, 'USD', '2026-05-16T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000182'),
@@ -29280,7 +29280,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-001681', 'BUD-0002', 'PR-2026-000711', 'PO-2026-000213', 'RELEASE', 2176170, 'USD', '2026-06-05T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000711'),
   ('BE-001682', 'BUD-0002', 'PR-2026-000711', 'PO-2026-000213', 'COMMIT', 2093004, 'USD', '2026-06-05T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000213');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-001683', 'BUD-0001', 'PR-2026-001013', 'PO-2026-000215', 'RELEASE', 232344, 'USD', '2026-06-05T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-001013'),
   ('BE-001684', 'BUD-0001', 'PR-2026-001013', 'PO-2026-000215', 'COMMIT', 219894, 'USD', '2026-06-05T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000215'),
   ('BE-001685', 'BUD-0003', 'PR-2026-001101', 'PO-2026-000216', 'RELEASE', 544887, 'USD', '2026-06-05T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-001101'),
@@ -29482,7 +29482,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-001782', 'BUD-0004', 'PR-2026-001143', 'PO-2026-000247', 'COMMIT', 265203, 'USD', '2026-06-26T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000247'),
   ('BE-001783', 'BUD-0007', 'PR-2026-001085', 'PO-2026-000250', 'RELEASE', 610115, 'USD', '2026-06-26T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-001085');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-001784', 'BUD-0007', 'PR-2026-001085', 'PO-2026-000250', 'COMMIT', 560853, 'USD', '2026-06-26T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000250'),
   ('BE-001785', 'BUD-0004', 'PR-2026-000957', 'PO-2026-000260', 'RELEASE', 667175, 'USD', '2026-06-26T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000957'),
   ('BE-001786', 'BUD-0004', 'PR-2026-000957', 'PO-2026-000260', 'COMMIT', 646988, 'USD', '2026-06-26T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000260'),
@@ -29684,7 +29684,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-001881', 'BUD-0003', 'PR-2026-000575', 'PO-2026-000284', 'RELEASE', 416955, 'USD', '2026-07-14T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000575'),
   ('BE-001882', 'BUD-0003', 'PR-2026-000575', 'PO-2026-000284', 'COMMIT', 390555, 'USD', '2026-07-14T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000284');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-001883', 'BUD-0001', 'PR-2026-000792', 'PO-2026-000288', 'RELEASE', 392189, 'USD', '2026-07-14T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000792'),
   ('BE-001884', 'BUD-0001', 'PR-2026-000792', 'PO-2026-000288', 'COMMIT', 374598, 'USD', '2026-07-14T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000288'),
   ('BE-001885', 'BUD-0002', 'PR-2026-000821', 'PO-2026-000667', 'RELEASE', 61685, 'USD', '2026-07-14T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000821'),
@@ -29886,7 +29886,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-001970', 'BUD-0012', 'PR-2026-000417', 'PO-2026-000310', 'COMMIT', 537326, 'USD', '2026-08-05T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000310'),
   ('BE-001971', 'BUD-0004', 'PR-2026-000069', 'PO-2026-000683', 'RELEASE', 25172, 'USD', '2026-08-05T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000069');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-001972', 'BUD-0004', 'PR-2026-000069', 'PO-2026-000683', 'COMMIT', 25172, 'USD', '2026-08-05T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000683'),
   ('BE-003417', 'BUD-0008', 'PR-2026-000612', 'PO-2026-000668', 'SPEND', 165880, 'USD', '2026-08-05T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000668-01 for PO PO-2026-000668'),
   ('BE-003450', 'BUD-0006', 'PR-2026-001055', 'PO-2026-000303', 'SPEND', 309440, 'USD', '2026-08-05T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000303-01 for PO PO-2026-000303'),
@@ -30088,7 +30088,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-003455', 'BUD-0001', 'PR-2026-000950', 'PO-2026-000682', 'SPEND', 47056, 'USD', '2026-08-27T15:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000682-02 for PO PO-2026-000682'),
   ('BE-000545', 'BUD-0007', 'PR-2026-000931', NULL, 'RESERVE', 251290, 'USD', '2026-08-28T10:00:00Z', 'Pre-encumbrance reserve for requisition PR-2026-000931');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-000558', 'BUD-0004', 'PR-2026-000696', NULL, 'RESERVE', 251713, 'USD', '2026-08-28T10:00:00Z', 'Pre-encumbrance reserve for requisition PR-2026-000696'),
   ('BE-000578', 'BUD-0005', 'PR-2026-000986', NULL, 'RESERVE', 22005, 'USD', '2026-08-28T10:00:00Z', 'Pre-encumbrance reserve for requisition PR-2026-000986'),
   ('BE-002073', 'BUD-0007', 'PR-2026-000931', 'PO-2026-000346', 'RELEASE', 251290, 'USD', '2026-08-28T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000931'),
@@ -30290,7 +30290,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-002170', 'BUD-0005', 'PR-2026-000754', 'PO-2026-000375', 'COMMIT', 791720, 'USD', '2026-09-18T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000375'),
   ('BE-002171', 'BUD-0007', 'PR-2026-000758', 'PO-2026-000378', 'RELEASE', 313137, 'USD', '2026-09-18T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000758');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-002172', 'BUD-0007', 'PR-2026-000758', 'PO-2026-000378', 'COMMIT', 298520, 'USD', '2026-09-18T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000378'),
   ('BE-002173', 'BUD-0006', 'PR-2026-000862', 'PO-2026-000384', 'RELEASE', 214630, 'USD', '2026-09-18T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000862'),
   ('BE-002174', 'BUD-0006', 'PR-2026-000862', 'PO-2026-000384', 'COMMIT', 204503, 'USD', '2026-09-18T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000384'),
@@ -30492,7 +30492,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-002279', 'BUD-0002', 'PR-2026-001155', 'PO-2026-000740', 'RELEASE', 50370, 'USD', '2026-10-07T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-001155'),
   ('BE-002280', 'BUD-0002', 'PR-2026-001155', 'PO-2026-000740', 'COMMIT', 50370, 'USD', '2026-10-07T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000740');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-003538', 'BUD-0001', 'PR-2026-000492', 'PO-2026-000371', 'SPEND', 494344, 'USD', '2026-10-07T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000371-01 for PO PO-2026-000371'),
   ('BE-003571', 'BUD-0005', 'PR-2026-001200', 'PO-2026-000382', 'SPEND', 246052, 'USD', '2026-10-07T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000382-01 for PO PO-2026-000382'),
   ('BE-003574', 'BUD-0003', 'PR-2026-000463', 'PO-2026-000381', 'SPEND', 250516, 'USD', '2026-10-07T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000381-01 for PO PO-2026-000381'),
@@ -30694,7 +30694,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-002368', 'BUD-0006', 'PR-2026-000615', 'PO-2026-000444', 'COMMIT', 280590, 'USD', '2026-10-22T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000444'),
   ('BE-002369', 'BUD-0004', 'PR-2026-000171', 'PO-2026-000751', 'RELEASE', 97370, 'USD', '2026-10-22T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000171');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-002370', 'BUD-0004', 'PR-2026-000171', 'PO-2026-000751', 'COMMIT', 97370, 'USD', '2026-10-22T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000751'),
   ('BE-002371', 'BUD-0002', 'PR-2026-000302', 'PO-2026-000752', 'RELEASE', 57120, 'USD', '2026-10-22T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000302'),
   ('BE-002372', 'BUD-0002', 'PR-2026-000302', 'PO-2026-000752', 'COMMIT', 57120, 'USD', '2026-10-22T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000752'),
@@ -30896,7 +30896,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-002472', 'BUD-0001', 'PR-2026-000489', 'PO-2026-000837', 'COMMIT', 555021, 'USD', '2026-11-08T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000837'),
   ('BE-002473', 'BUD-0007', 'PR-2026-000496', 'PO-2026-000838', 'RELEASE', 643450, 'USD', '2026-11-08T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000496');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-002474', 'BUD-0007', 'PR-2026-000496', 'PO-2026-000838', 'COMMIT', 643450, 'USD', '2026-11-08T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000838'),
   ('BE-002475', 'BUD-0001', 'PR-2026-000497', 'PO-2026-000839', 'RELEASE', 379496, 'USD', '2026-11-08T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000497'),
   ('BE-002476', 'BUD-0001', 'PR-2026-000497', 'PO-2026-000839', 'COMMIT', 379496, 'USD', '2026-11-08T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000839'),
@@ -31098,7 +31098,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-002579', 'BUD-0003', 'PR-2026-000770', 'PO-2026-000492', 'RELEASE', 1235863, 'USD', '2026-11-18T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000770'),
   ('BE-002580', 'BUD-0003', 'PR-2026-000770', 'PO-2026-000492', 'COMMIT', 1203816, 'USD', '2026-11-18T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000492');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-002581', 'BUD-0009', 'PR-2026-001027', 'PO-2026-000497', 'RELEASE', 244048, 'USD', '2026-11-18T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-001027'),
   ('BE-002582', 'BUD-0009', 'PR-2026-001027', 'PO-2026-000497', 'COMMIT', 220824, 'USD', '2026-11-18T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000497'),
   ('BE-002583', 'BUD-0007', 'PR-2026-000252', 'PO-2026-000500', 'RELEASE', 272691, 'USD', '2026-11-18T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-000252'),
@@ -31300,7 +31300,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-002683', 'BUD-0009', 'PR-2026-001107', 'PO-2026-000888', 'RELEASE', 876089, 'USD', '2026-11-29T10:00:00Z', 'Relief of pre-encumbrance upon PO issuance for PR-2026-001107'),
   ('BE-002684', 'BUD-0009', 'PR-2026-001107', 'PO-2026-000888', 'COMMIT', 876089, 'USD', '2026-11-29T10:00:00Z', 'Binding encumbrance commitment for purchase order PO-2026-000888');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-003778', 'BUD-0001', 'PR-2026-000938', 'PO-2026-000858', 'SPEND', 464164, 'USD', '2026-11-29T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000858-01 for PO PO-2026-000858'),
   ('BE-003802', 'BUD-0003', 'PR-2026-001090', 'PO-2026-000863', 'SPEND', 535350, 'USD', '2026-11-29T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000863-01 for PO PO-2026-000863'),
   ('BE-003795', 'BUD-0006', 'PR-2026-000009', 'PO-2026-000860', 'SPEND', 140000, 'USD', '2026-11-29T14:30:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000860-01 for PO PO-2026-000860'),
@@ -31502,7 +31502,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-003760', 'BUD-0003', 'PR-2026-000809', 'PO-2026-000774', 'SPEND', 85946, 'USD', '2026-12-12T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000774-01 for PO PO-2026-000774'),
   ('BE-003786', 'BUD-0004', 'PR-2026-000587', 'PO-2026-000783', 'SPEND', 140652, 'USD', '2026-12-12T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000783-01 for PO PO-2026-000783');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-003805', 'BUD-0011', 'PR-2026-000848', 'PO-2026-000867', 'SPEND', 890028, 'USD', '2026-12-12T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000867-01 for PO PO-2026-000867'),
   ('BE-003808', 'BUD-0001', 'PR-2026-000393', 'PO-2026-000784', 'SPEND', 158052, 'USD', '2026-12-12T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000784-01 for PO PO-2026-000784'),
   ('BE-003827', 'BUD-0003', 'PR-2026-000967', 'PO-2026-000880', 'SPEND', 316569, 'USD', '2026-12-12T11:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000880-01 for PO PO-2026-000880'),
@@ -31704,7 +31704,7 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-003872', 'BUD-0004', 'PR-2026-001125', 'PO-2026-000908', 'SPEND', 172071, 'USD', '2026-12-26T15:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000908-02 for PO PO-2026-000908'),
   ('BE-003917', 'BUD-0006', 'PR-2026-000814', 'PO-2026-000933', 'SPEND', 137768, 'USD', '2026-12-26T15:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000933-02 for PO PO-2026-000933');
 
-INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
+INSERT INTO budget_events (budget_event_id, budget_id, request_id, po_id, event_type, amount, currency, event_timestamp, description) VALUES
   ('BE-000951', 'BUD-0001', 'PR-2026-000006', NULL, 'RESERVE', 438108, 'USD', '2026-12-27T10:00:00Z', 'Pre-encumbrance reserve for requisition PR-2026-000006'),
   ('BE-000954', 'BUD-0006', 'PR-2026-000719', NULL, 'RESERVE', 188949, 'USD', '2026-12-27T10:00:00Z', 'Pre-encumbrance reserve for requisition PR-2026-000719'),
   ('BE-000956', 'BUD-0002', 'PR-2026-001007', NULL, 'RESERVE', 243628, 'USD', '2026-12-27T10:00:00Z', 'Pre-encumbrance reserve for requisition PR-2026-001007'),
@@ -31875,46 +31875,6 @@ INSERT OR REPLACE INTO budget_events (budget_event_id, budget_id, request_id, po
   ('BE-003937', 'BUD-0003', 'PR-2026-000973', 'PO-2026-000948', 'SPEND', 233790, 'USD', '2026-12-31T15:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000948-02 for PO PO-2026-000948'),
   ('BE-003962', 'BUD-0002', 'PR-2026-000325', 'PO-2026-000834', 'SPEND', 55827, 'USD', '2026-12-31T15:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000834-02 for PO PO-2026-000834'),
   ('BE-003970', 'BUD-0002', 'PR-2026-000634', 'PO-2026-000970', 'SPEND', 277616, 'USD', '2026-12-31T15:00:00Z', 'Synthetic expenditure recognized upon receipt DEL-PO-2026-000970-02 for PO PO-2026-000970');
-
--- ----------------------------------------------------------------------------
--- Table: ground_truth (35 records)
--- ----------------------------------------------------------------------------
-INSERT OR REPLACE INTO ground_truth (anomaly_id, issue_type, entity, record_id, expected_decision, reason, metadata, created_at) VALUES
-  ('ANOM-000001', 'po_without_approval', 'purchase_orders', 'PO-2026-000267', 'REJECT', 'Purchase order PO-2026-000267 issued for requisition PR-2026-001151 lacking required approval records', '{"request_id": "PR-2026-001151"}', NULL),
-  ('ANOM-000002', 'po_without_approval', 'purchase_orders', 'PO-2026-000562', 'REJECT', 'Purchase order PO-2026-000562 issued for requisition PR-2026-000221 lacking required approval records', '{"request_id": "PR-2026-000221"}', NULL),
-  ('ANOM-000003', 'po_without_approval', 'purchase_orders', 'PO-2026-000745', 'REJECT', 'Purchase order PO-2026-000745 issued for requisition PR-2026-001112 lacking required approval records', '{"request_id": "PR-2026-001112"}', NULL),
-  ('ANOM-000004', 'po_without_approval', 'purchase_orders', 'PO-2026-000503', 'REJECT', 'Purchase order PO-2026-000503 issued for requisition PR-2026-000870 lacking required approval records', '{"request_id": "PR-2026-000870"}', NULL),
-  ('ANOM-000005', 'po_without_approval', 'purchase_orders', 'PO-2026-000560', 'REJECT', 'Purchase order PO-2026-000560 issued for requisition PR-2026-001139 lacking required approval records', '{"request_id": "PR-2026-001139"}', NULL),
-  ('ANOM-000006', 'expired_quote_before_award', 'supplier_quotes', 'QUO-SUP-C-0002-2026-001330', 'DISQUALIFY', 'Quote QUO-SUP-C-0002-2026-001330 validity expired on 2026-09-06 prior to award on 2026-09-11', '{"award_date": "2026-09-11", "expired_date": "2026-09-06"}', NULL),
-  ('ANOM-000007', 'expired_quote_before_award', 'supplier_quotes', 'QUO-SUP-C-0116-2026-000492', 'DISQUALIFY', 'Quote QUO-SUP-C-0116-2026-000492 validity expired on 2026-04-10 prior to award on 2026-04-14', '{"award_date": "2026-04-14", "expired_date": "2026-04-10"}', NULL),
-  ('ANOM-000008', 'expired_quote_before_award', 'supplier_quotes', 'QUO-SUP-C-0044-2026-000252', 'DISQUALIFY', 'Quote QUO-SUP-C-0044-2026-000252 validity expired on 2026-03-01 prior to award on 2026-03-07', '{"award_date": "2026-03-07", "expired_date": "2026-03-01"}', NULL),
-  ('ANOM-000009', 'expired_quote_before_award', 'supplier_quotes', 'QUO-SUP-C-0091-2026-000547', 'DISQUALIFY', 'Quote QUO-SUP-C-0091-2026-000547 validity expired on 2026-04-21 prior to award on 2026-04-27', '{"award_date": "2026-04-27", "expired_date": "2026-04-21"}', NULL),
-  ('ANOM-000010', 'expired_quote_before_award', 'supplier_quotes', 'QUO-SUP-C-0009-2026-000014', 'DISQUALIFY', 'Quote QUO-SUP-C-0009-2026-000014 validity expired on 2026-01-16 prior to award on 2026-01-22', '{"award_date": "2026-01-22", "expired_date": "2026-01-16"}', NULL),
-  ('ANOM-000011', 'non_cheapest_quote_without_rationale', 'supplier_quotes', 'QUO-SUP-C-0069-2026-000119', 'JUSTIFY_OR_REVERT', 'Quotation QUO-SUP-C-0069-2026-000119 awarded at landed cost $25,417.09 over cheaper quote QUO-SUP-C-0038-2026-000120 ($22,732.03) without documented justification rationale', '{"rfq_id": "RFQ-2026-000034", "awarded_quote_id": "QUO-SUP-C-0069-2026-000119", "cheapest_quote_id": "QUO-SUP-C-0038-2026-000120"}', NULL),
-  ('ANOM-000012', 'non_cheapest_quote_without_rationale', 'supplier_quotes', 'QUO-SUP-C-0059-2026-000560', 'JUSTIFY_OR_REVERT', 'Quotation QUO-SUP-C-0059-2026-000560 awarded at landed cost $14,139.78 over cheaper quote QUO-SUP-C-0011-2026-000561 ($12,640.12) without documented justification rationale', '{"rfq_id": "RFQ-2026-000159", "awarded_quote_id": "QUO-SUP-C-0059-2026-000560", "cheapest_quote_id": "QUO-SUP-C-0011-2026-000561"}', NULL),
-  ('ANOM-000013', 'non_cheapest_quote_without_rationale', 'supplier_quotes', 'QUO-SUP-C-0003-2026-000487', 'JUSTIFY_OR_REVERT', 'Quotation QUO-SUP-C-0003-2026-000487 awarded at landed cost $5,190.87 over cheaper quote QUO-SUP-C-0011-2026-000488 ($4,717.36) without documented justification rationale', '{"rfq_id": "RFQ-2026-000137", "awarded_quote_id": "QUO-SUP-C-0003-2026-000487", "cheapest_quote_id": "QUO-SUP-C-0011-2026-000488"}', NULL),
-  ('ANOM-000014', 'non_cheapest_quote_without_rationale', 'supplier_quotes', 'QUO-SUP-C-0071-2026-001325', 'JUSTIFY_OR_REVERT', 'Quotation QUO-SUP-C-0071-2026-001325 awarded at landed cost $5,373.38 over cheaper quote QUO-SUP-C-0079-2026-001326 ($5,127.75) without documented justification rationale', '{"rfq_id": "RFQ-2026-000371", "awarded_quote_id": "QUO-SUP-C-0071-2026-001325", "cheapest_quote_id": "QUO-SUP-C-0079-2026-001326"}', NULL),
-  ('ANOM-000015', 'non_cheapest_quote_without_rationale', 'supplier_quotes', 'QUO-SUP-C-0020-2026-001747', 'JUSTIFY_OR_REVERT', 'Quotation QUO-SUP-C-0020-2026-001747 awarded at landed cost $19,479.82 over cheaper quote QUO-SUP-C-0118-2026-001748 ($18,435.34) without documented justification rationale', '{"rfq_id": "RFQ-2026-000491", "awarded_quote_id": "QUO-SUP-C-0020-2026-001747", "cheapest_quote_id": "QUO-SUP-C-0118-2026-001748"}', NULL),
-  ('ANOM-000016', 'inactive_supplier_used', 'purchase_orders', 'PO-2026-000174', 'BLOCK', 'Purchase order PO-2026-000174 issued to inactive/debarred vendor SUP-0121', '{"supplier_id": "SUP-0121"}', NULL),
-  ('ANOM-000017', 'inactive_supplier_used', 'purchase_orders', 'PO-2026-000235', 'BLOCK', 'Purchase order PO-2026-000235 issued to inactive/debarred vendor SUP-0122', '{"supplier_id": "SUP-0122"}', NULL),
-  ('ANOM-000018', 'inactive_supplier_used', 'purchase_orders', 'PO-2026-000067', 'BLOCK', 'Purchase order PO-2026-000067 issued to inactive/debarred vendor SUP-0123', '{"supplier_id": "SUP-0123"}', NULL),
-  ('ANOM-000019', 'inactive_supplier_used', 'purchase_orders', 'PO-2026-000919', 'BLOCK', 'Purchase order PO-2026-000919 issued to inactive/debarred vendor SUP-0124', '{"supplier_id": "SUP-0124"}', NULL),
-  ('ANOM-000020', 'inactive_supplier_used', 'purchase_orders', 'PO-2026-000921', 'BLOCK', 'Purchase order PO-2026-000921 issued to inactive/debarred vendor SUP-0125', '{"supplier_id": "SUP-0125"}', NULL),
-  ('ANOM-000021', 'budget_overrun', 'budgets', 'BUD-0009', 'REJECT', 'Department budget BUD-0009 total encumbrances ($258,860.63) exceed allocated budget limit ($155,316.37)', '{"allocated_amount": 15531637, "encumbered_amount": 25886063, "deficit_cents": 10354426}', NULL),
-  ('ANOM-000022', 'budget_overrun', 'budgets', 'BUD-0010', 'REJECT', 'Department budget BUD-0010 total encumbrances ($66,840.11) exceed allocated budget limit ($40,104.06)', '{"allocated_amount": 4010406, "encumbered_amount": 6684011, "deficit_cents": 2673605}', NULL),
-  ('ANOM-000023', 'budget_overrun', 'budgets', 'BUD-0005', 'REJECT', 'Department budget BUD-0005 total encumbrances ($444,079.02) exceed allocated budget limit ($266,447.41)', '{"allocated_amount": 26644741, "encumbered_amount": 44407902, "deficit_cents": 17763161}', NULL),
-  ('ANOM-000024', 'budget_overrun', 'budgets', 'BUD-0006', 'REJECT', 'Department budget BUD-0006 total encumbrances ($475,350.35) exceed allocated budget limit ($285,210.21)', '{"allocated_amount": 28521021, "encumbered_amount": 47535035, "deficit_cents": 19014014}', NULL),
-  ('ANOM-000025', 'budget_overrun', 'budgets', 'BUD-0004', 'REJECT', 'Department budget BUD-0004 total encumbrances ($447,892.71) exceed allocated budget limit ($268,735.62)', '{"allocated_amount": 26873562, "encumbered_amount": 44789271, "deficit_cents": 17915709}', NULL),
-  ('ANOM-000026', 'duplicate_purchase_request', 'purchase_requests', 'PR-2026-001201', 'FLAG', 'Duplicate requisition PR-2026-001201 submitted for identical items within short time window of original request PR-2026-000629', '{"original_request_id": "PR-2026-000629", "duplicate_request_id": "PR-2026-001201", "requester_id": "REQ-0040"}', NULL),
-  ('ANOM-000027', 'duplicate_purchase_request', 'purchase_requests', 'PR-2026-001202', 'FLAG', 'Duplicate requisition PR-2026-001202 submitted for identical items within short time window of original request PR-2026-000093', '{"original_request_id": "PR-2026-000093", "duplicate_request_id": "PR-2026-001202", "requester_id": "REQ-0127"}', NULL),
-  ('ANOM-000028', 'duplicate_purchase_request', 'purchase_requests', 'PR-2026-001203', 'FLAG', 'Duplicate requisition PR-2026-001203 submitted for identical items within short time window of original request PR-2026-000139', '{"original_request_id": "PR-2026-000139", "duplicate_request_id": "PR-2026-001203", "requester_id": "REQ-0049"}', NULL),
-  ('ANOM-000029', 'duplicate_purchase_request', 'purchase_requests', 'PR-2026-001204', 'FLAG', 'Duplicate requisition PR-2026-001204 submitted for identical items within short time window of original request PR-2026-000032', '{"original_request_id": "PR-2026-000032", "duplicate_request_id": "PR-2026-001204", "requester_id": "REQ-0270"}', NULL),
-  ('ANOM-000030', 'duplicate_purchase_request', 'purchase_requests', 'PR-2026-001205', 'FLAG', 'Duplicate requisition PR-2026-001205 submitted for identical items within short time window of original request PR-2026-000010', '{"original_request_id": "PR-2026-000010", "duplicate_request_id": "PR-2026-001205", "requester_id": "REQ-0135"}', NULL),
-  ('ANOM-000031', 'quote_currency_mismatch', 'supplier_quotes', 'QUO-SUP-C-0003-2026-001007', 'REVISE', 'Quote QUO-SUP-C-0003-2026-001007 submitted in unsupported currency XYZ lacking valid FX conversion rate', '{"currency": "XYZ"}', NULL),
-  ('ANOM-000032', 'quote_currency_mismatch', 'supplier_quotes', 'QUO-SUP-C-0100-2026-000689', 'REVISE', 'Quote QUO-SUP-C-0100-2026-000689 submitted in unsupported currency XYZ lacking valid FX conversion rate', '{"currency": "XYZ"}', NULL),
-  ('ANOM-000033', 'quote_currency_mismatch', 'supplier_quotes', 'QUO-SUP-C-0073-2026-000848', 'REVISE', 'Quote QUO-SUP-C-0073-2026-000848 submitted in unsupported currency XYZ lacking valid FX conversion rate', '{"currency": "XYZ"}', NULL),
-  ('ANOM-000034', 'quote_currency_mismatch', 'supplier_quotes', 'QUO-SUP-C-0033-2026-000041', 'REVISE', 'Quote QUO-SUP-C-0033-2026-000041 submitted in unsupported currency XYZ lacking valid FX conversion rate', '{"currency": "XYZ"}', NULL),
-  ('ANOM-000035', 'quote_currency_mismatch', 'supplier_quotes', 'QUO-SUP-C-0036-2026-001303', 'REVISE', 'Quote QUO-SUP-C-0036-2026-001303 submitted in unsupported currency XYZ lacking valid FX conversion rate', '{"currency": "XYZ"}', NULL);
 
 COMMIT;
 PRAGMA foreign_keys = ON;

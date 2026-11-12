@@ -2051,7 +2051,7 @@
     "lead_time_mean": 21.0,
     "lead_time_variance": 4.0,
     "status": "INACTIVE",
-    "active": false,
+    "active": 0,
     "created_at": "2025-01-01T00:00:00Z",
     "notes": "Vendor de-registered due to commercial bankruptcy"
   },
@@ -2067,7 +2067,7 @@
     "lead_time_mean": 21.0,
     "lead_time_variance": 4.0,
     "status": "INACTIVE",
-    "active": false,
+    "active": 0,
     "created_at": "2025-01-01T00:00:00Z",
     "notes": "Vendor de-registered due to commercial bankruptcy"
   },
@@ -2083,7 +2083,7 @@
     "lead_time_mean": 21.0,
     "lead_time_variance": 4.0,
     "status": "INACTIVE",
-    "active": false,
+    "active": 0,
     "created_at": "2025-01-01T00:00:00Z",
     "notes": "Vendor de-registered due to commercial bankruptcy"
   },
@@ -2099,7 +2099,7 @@
     "lead_time_mean": 21.0,
     "lead_time_variance": 4.0,
     "status": "INACTIVE",
-    "active": false,
+    "active": 0,
     "created_at": "2025-01-01T00:00:00Z",
     "notes": "Vendor de-registered due to commercial bankruptcy"
   },
@@ -2115,7 +2115,7 @@
     "lead_time_mean": 21.0,
     "lead_time_variance": 4.0,
     "status": "INACTIVE",
-    "active": false,
+    "active": 0,
     "created_at": "2025-01-01T00:00:00Z",
     "notes": "Vendor de-registered due to commercial bankruptcy"
   }

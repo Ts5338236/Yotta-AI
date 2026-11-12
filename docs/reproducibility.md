@@ -46,13 +46,17 @@ To verify reproducibility:
    ```powershell
    python -m pip install -r requirements.txt
    ```
-3. Run the complete test suite:
+3. Run the complete automated test suite (166 tests):
    ```powershell
-   python -m pytest -v
+   python -m pytest tests/ -v
    ```
-4. Verify database schema initialization:
+4. Verify bitwise determinism across two independent runs with seed `20261022`:
    ```powershell
-   python -m datagen --init-db data/verification.db
-   python -m validate data/verification.db
+   python scratch/verify_determinism_2runs.py
    ```
-   All checks must output `PASSED`.
+   All 20 exported CSV, SQL, and ground truth artifacts will output `MATCH` with identical SHA-256 hashes.
+5. Execute the automated 7-stage fresh clone verification harness in an isolated temporary sandbox:
+   ```powershell
+   python scratch/fresh_clone_audit.py
+   ```
+   All 7 stages must output `PASS`.

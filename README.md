@@ -30,7 +30,7 @@ The **Procure-to-Pay Synthetic Data Generator** is an enterprise data engineerin
 - **Deterministic & Reproducible**: Fully reproducible sequence identifiers and zero uncontrolled randomness (single shared RNG pass-through).
 - **Financial Precision**: Absolute precision in monetary amounts and currency conversions using Python `decimal.Decimal` and SQLite integer minor units.
 
-> **Status Notice**: All phases from Phase 1 (Foundation & Architecture) through Phase 7 (Final Audit, Fresh Clone Verification & Submission Readiness) are **100% COMPLETE**. The codebase is verified to run cleanly in fresh environments with 148 passing tests and 100% bitwise determinism.
+> **Status Notice**: All phases from Phase 1 (Foundation & Architecture) through Phase 7 (Final Audit, Fresh Clone Verification & Submission Readiness) are **100% COMPLETE**. The codebase is verified to run cleanly in fresh environments with 166 passing tests and 100% bitwise determinism.
 
 ---
 
@@ -72,23 +72,31 @@ procure-to-pay-datagen/
 │   │   ├── events.py           # Status event lifecycle audit tracker
 │   │   ├── derive.py           # Centralized derived fields recalculation engine
 │   │   ├── anomalies.py        # Modular anomaly injection engine & ground truth generator
+│   │   ├── database.py         # Relational SQLite database management & integrity checks
+│   │   ├── export.py           # Multi-format exporter, SQL seed & source manifest
 │   │   └── workflow.py         # End-to-end workflow orchestrator & validation
 │   └── validate/               # Comprehensive quality assurance package
 │       ├── __init__.py         # Public exports for validators and models
 │       ├── __main__.py         # validate CLI execution entry point
 │       ├── models.py           # ValidationCheckResult & ValidationReport classes
 │       ├── checks.py           # 7-domain independent auditing engine & SQLite checks
-│       └── anomaly_checks.py   # Independent anomaly detectors & evaluation engine
+│       ├── anomaly_checks.py   # Independent anomaly detectors & evaluation engine
+│       └── export_checks.py    # Multi-format export integrity & cross-format validation
 ├── data/
-│   ├── csv/                    # Destination for CSV exports (.gitkeep)
-│   ├── json/                   # Destination for JSON exports (.gitkeep)
-│   └── sql/
-│       ├── schema.sql          # Canonical DDL defining 18 normalized tables
-│       └── seed.sql            # Seed SQL script placeholder
+│   ├── csv/                    # 17 operational CSV tables
+│   ├── json/                   # 18 operational & metadata JSON files
+│   ├── database/               # Relational SQLite procurement.db
+│   ├── sql/
+│   │   ├── schema.sql          # Canonical 19-table DDL schema
+│   │   └── seed.sql            # Populated sequential SQL seed script
+│   └── ground_truth/           # Segregated anomaly ground truth (CSV/JSON)
 ├── docs/                       # Architectural & design specifications
 │   ├── architecture.md         # System architecture & pipeline data flows
 │   ├── anomaly_catalog.md      # Detailed anomaly specifications, injection logic & detection criteria
-│   ├── data_dictionary.md      # Comprehensive field-level data dictionary (all 18 tables)
+│   ├── data_dictionary.md      # Comprehensive field-level data dictionary (all 19 tables)
+│   ├── export_specification.md # Multi-format export engine technical specification
+│   ├── export_integrity_report.md # Verification audit of exported deliverables
+│   ├── phase6_completion_report.md # Phase 6 completion and sign-off report
 │   ├── assumptions.md          # Classified assumptions & technical decisions
 │   ├── prompt_history.md       # Master prompt index & phase milestones trajectory
 │   ├── validation_summary.md   # Machine-generated markdown validation report
@@ -96,7 +104,7 @@ procure-to-pay-datagen/
 │   ├── reproducibility.md      # Determinism & environment guide
 │   ├── source_manifest.md      # Source inventory of all components
 │   └── AI_USAGE.md             # Transparent AI governance log
-├── tests/                      # Automated pytest suite (142 unit & integration tests)
+├── tests/                      # Automated pytest suite (166 unit & integration tests)
 │   ├── __init__.py
 │   ├── test_anomaly_injection.py      # Anomaly injection engine & candidate tests
 │   ├── test_anomaly_detection.py      # Independent detector & discrimination tests
@@ -106,18 +114,27 @@ procure-to-pay-datagen/
 │   ├── test_approvals.py       # Multi-level approval tests
 │   ├── test_budget.py          # Double-entry budget ledger tests
 │   ├── test_config.py          # Configuration parser tests
+│   ├── test_csv_export.py      # Multi-table CSV export tests
+│   ├── test_database_export.py # Relational SQLite database export & integrity tests
 │   ├── test_delivery.py        # Delivery & partial shipment tests
 │   ├── test_derive.py          # Centralized derived fields unit tests (11 functions)
 │   ├── test_determinism.py     # Determinism & seed verification
 │   ├── test_distributions.py   # Price & seasonality distribution verification
+│   ├── test_export.py          # Master export orchestration tests
+│   ├── test_export_determinism.py     # Export bit-for-bit determinism tests
+│   ├── test_export_integrity.py       # Multi-format export reconciliation tests
 │   ├── test_fx.py              # Foreign exchange conversion tests
+│   ├── test_ground_truth_export.py    # Ground truth isolated export tests
 │   ├── test_ids.py             # Centralized IDFactory tests
+│   ├── test_json_export.py     # Multi-table JSON export tests
 │   ├── test_masters.py         # Master data generator unit tests
 │   ├── test_orders.py          # Purchase order unit tests
 │   ├── test_quotes.py          # Multi-currency quotation & scoring tests
 │   ├── test_requests.py        # Purchase requests & lines unit tests
 │   ├── test_schema.py          # SQLite schema & foreign key constraint tests
 │   ├── test_sourcing.py        # Sourcing classification & RFQ tests
+│   ├── test_sql_schema.py      # Canonical SQL schema DDL tests
+│   ├── test_sql_seed.py        # Populated SQL seed replay & foreign key tests
 │   ├── test_status_events.py   # Status event audit lifecycle tests
 │   ├── test_validation_approvals.py   # Approval & business rule validator tests
 │   ├── test_validation_budget.py      # Budget ledger validator tests
@@ -279,12 +296,13 @@ python -m datagen --generate --scale full --inject-anomalies --export --output-d
 ```
 
 This populates all required submission artifacts into `output/`:
-- **`output/csv/`**: 18 entity CSV files + `ground_truth.csv`
-- **`output/json/`**: 18 entity JSON files + `ground_truth.json` + `metadata.json`
+- **`output/csv/`**: 17 operational entity CSV tables conforming to RFC 4180
+- **`output/json/`**: 17 operational entity JSON files + `metadata.json`
 - **`output/database/procurement.db`**: Fully populated SQLite database with `PRAGMA foreign_keys = ON`
 - **`output/sql/schema.sql`**: Canonical 19-table DDL schema with check constraints and indexes
 - **`output/sql/seed.sql`**: Self-contained, topologically ordered SQL `INSERT` statements
-- **`output/source_manifest.json`**: Cryptographic provenance manifest with SHA-256 hashes
+- **`output/ground_truth/`**: Strictly isolated `ground_truth.csv` and `ground_truth.json`
+- **`source_manifest.json`**: Cryptographic provenance manifest with SHA-256 hashes
 - **`output/reports/`**: Comprehensive markdown and JSON reports for validation, anomaly detection, export integrity, and dataset statistics.
 
 ---
@@ -292,7 +310,7 @@ This populates all required submission artifacts into `output/`:
 ## 8. Running the Automated Test Suite & Fresh Clone Verification
 
 ### Pytest Test Suite
-Execute the entire 148-test automated verification suite:
+Execute the entire 166-test automated verification suite:
 
 ```powershell
 python -m pytest tests/ -v

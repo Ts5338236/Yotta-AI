@@ -119,8 +119,8 @@ SUP-0117,SUP-C-0117,Alliance Systems Group,sales@alliancesystemsgroup.example.co
 SUP-0118,SUP-C-0118,Quantum Tech Inc,sales@quantumtechinc.example.com,USA,USD,ACTIVE,2026-01-01 to 2026-12-31,2026-01-01,2026-12-31,LOW,LOW,0.28,17.0,2026-01-01T00:00:00Z,,,
 SUP-0119,SUP-C-0119,Beacon Components Group,sales@beaconcomponentsgroup.example.com,USA,USD,ACTIVE,2026-01-01 to 2026-12-31,2026-01-01,2026-12-31,LOW,LOW,0.18,16.0,2026-01-01T00:00:00Z,,,
 SUP-0120,SUP-C-0120,Vanguard Tech Inc,sales@vanguardtechinc.example.com,USA,USD,PREFERRED,2026-01-01 to 2026-12-31,2026-01-01,2026-12-31,LOW,LOW,0.12,12.0,2026-01-01T00:00:00Z,,,
-SUP-0121,SUP-D-1084,Decommissioned Supplier SUP-0121,support@sup-0121.example.com,US,USD,INACTIVE,,,,,HIGH,0.85,21.0,2025-01-01T00:00:00Z,4.0,False,Vendor de-registered due to commercial bankruptcy
-SUP-0122,SUP-D-4939,Decommissioned Supplier SUP-0122,support@sup-0122.example.com,US,USD,INACTIVE,,,,,HIGH,0.85,21.0,2025-01-01T00:00:00Z,4.0,False,Vendor de-registered due to commercial bankruptcy
-SUP-0123,SUP-D-8807,Decommissioned Supplier SUP-0123,support@sup-0123.example.com,US,USD,INACTIVE,,,,,HIGH,0.85,21.0,2025-01-01T00:00:00Z,4.0,False,Vendor de-registered due to commercial bankruptcy
-SUP-0124,SUP-D-2131,Decommissioned Supplier SUP-0124,support@sup-0124.example.com,US,USD,INACTIVE,,,,,HIGH,0.85,21.0,2025-01-01T00:00:00Z,4.0,False,Vendor de-registered due to commercial bankruptcy
-SUP-0125,SUP-D-7927,Decommissioned Supplier SUP-0125,support@sup-0125.example.com,US,USD,INACTIVE,,,,,HIGH,0.85,21.0,2025-01-01T00:00:00Z,4.0,False,Vendor de-registered due to commercial bankruptcy
+SUP-0121,SUP-D-1084,Decommissioned Supplier SUP-0121,support@sup-0121.example.com,US,USD,INACTIVE,,,,,HIGH,0.85,21.0,2025-01-01T00:00:00Z,4.0,0.0,Vendor de-registered due to commercial bankruptcy
+SUP-0122,SUP-D-4939,Decommissioned Supplier SUP-0122,support@sup-0122.example.com,US,USD,INACTIVE,,,,,HIGH,0.85,21.0,2025-01-01T00:00:00Z,4.0,0.0,Vendor de-registered due to commercial bankruptcy
+SUP-0123,SUP-D-8807,Decommissioned Supplier SUP-0123,support@sup-0123.example.com,US,USD,INACTIVE,,,,,HIGH,0.85,21.0,2025-01-01T00:00:00Z,4.0,0.0,Vendor de-registered due to commercial bankruptcy
+SUP-0124,SUP-D-2131,Decommissioned Supplier SUP-0124,support@sup-0124.example.com,US,USD,INACTIVE,,,,,HIGH,0.85,21.0,2025-01-01T00:00:00Z,4.0,0.0,Vendor de-registered due to commercial bankruptcy
+SUP-0125,SUP-D-7927,Decommissioned Supplier SUP-0125,support@sup-0125.example.com,US,USD,INACTIVE,,,,,HIGH,0.85,21.0,2025-01-01T00:00:00Z,4.0,0.0,Vendor de-registered due to commercial bankruptcy

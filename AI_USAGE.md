@@ -57,15 +57,27 @@ This document transparently records how Artificial Intelligence (AI) tools were 
   - Implemented edge-case discrimination (e.g. non-cheapest award with valid justification is not flagged; quotes awarded before expiry pass).
   - Built comprehensive evaluation engine calculating TP, FP, FN, Precision, Recall, and F1 overall and per-category (achieved 1.0000 F1 score).
 
-### Phase 6 Multi-Format Export Engine & Persistence
+### Phase 6 Multi-Format Export Engine, Database Persistence & Verification
 - **Export Engine (`src/datagen/export.py`)**:
-  - Direct export to `output/csv/` (18 tables + `ground_truth.csv`).
-  - Direct export to `output/json/` (18 tables + `ground_truth.json` + `metadata.json`).
-  - Relational SQLite database generation at `output/database/procurement.db` with foreign keys enforced.
-  - Canonical DDL export to `output/sql/schema.sql`.
-  - Topologically ordered SQL seed script generation at `output/sql/seed.sql` executable with 0 FK violations.
-  - Cryptographic source manifest (`source_manifest.json`) recording provenance, seeds, and file hashes.
-  - Automated generation of Markdown and JSON integrity, validation, anomaly evaluation, and statistics reports in `output/reports/`.
+  - Delimited CSV export (`data/csv/` and `output/csv/`) for all 17 operational tables conforming to RFC 4180.
+  - Formatted JSON export (`data/json/` and `output/json/`) for all 17 operational tables + system metadata.
+  - Relational SQLite database generation (`data/database/procurement.db` and `output/database/procurement.db`) with `PRAGMA foreign_keys = ON` and transaction safety.
+  - Canonical DDL export to `data/sql/schema.sql` and `output/sql/schema.sql`.
+  - Topologically ordered SQL seed script generation at `data/sql/seed.sql` and `output/sql/seed.sql` executable with 0 foreign key violations.
+  - Cryptographic source manifest (`source_manifest.json`) recording provenance, seeds, and SHA-256 file hashes.
+- **Relational Database Management (`src/datagen/database.py`)**:
+  - Context-managed database connections with active foreign key enforcement.
+  - Idempotent schema initialization from canonical DDL.
+  - Transactional batch population across tables in strict topological parent-child order.
+  - In-database integrity verification using SQLite PRAGMAs (`integrity_check`, `foreign_key_check`).
+- **Export Integrity & Reconciliation Suite (`src/validate/export_checks.py`)**:
+  - Independent verification checking CSV headers, row counts, and primary key uniqueness.
+  - JSON document parsing and count verification.
+  - SQLite database integrity and foreign key validation.
+  - Full SQL seed execution against in-memory clean schema.
+  - Strict ground truth isolation enforcement (zero anomaly labels in operational directories).
+- **Comprehensive Test Coverage (`tests/`)**:
+  - Created 8 dedicated export test modules (`test_csv_export.py`, `test_json_export.py`, `test_database_export.py`, `test_sql_schema.py`, `test_sql_seed.py`, `test_export_integrity.py`, `test_export_determinism.py`, `test_ground_truth_export.py`), expanding the test suite to 166 passing tests (100% pass rate).
 
 ### Phase 7 Final Audit, Determinism & Fresh Clone Verification
 - Complete verification of 100% bitwise determinism across two independent runs with seed `20261022`.
