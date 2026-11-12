@@ -118,3 +118,4 @@ def test_full_scale_empirical_metrics():
     for cat, stats in metrics["by_category"].items():
         assert stats["precision"] == 1.0, f"Precision drop in full scale {cat}"
         assert stats["recall"] == 1.0, f"Recall drop in full scale {cat}"
+

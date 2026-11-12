@@ -107,3 +107,4 @@ def test_ground_truth_storage_separation(starter_anomaly_run):
                 if isinstance(row, dict):
                     overlap = set(row.keys()).intersection(forbidden_keys)
                     assert not overlap, f"Forbidden contamination key(s) {overlap} found in {table_name}"
+

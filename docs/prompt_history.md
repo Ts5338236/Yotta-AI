@@ -60,3 +60,4 @@ This document records the master prompt history, implementation milestones, and 
   - `src/validate/anomaly_checks.py`: 7 independent detectors and ground truth evaluation engine computing TP, FP, FN, Precision, Recall, and F1.
   - Two validation modes (`clean` and `anomaly_aware`) integrated into CLI and automated reports.
 - **Test Baseline**: 142 unit tests passing (100% precision and 100% recall achieved on empirical datasets).
+

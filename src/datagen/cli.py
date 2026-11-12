@@ -84,6 +84,11 @@ def main(argv: list[str] | None = None) -> None:
         help="Inject controlled procurement anomalies into generated dataset",
     )
     parser.add_argument(
+        "--export",
+        action="store_true",
+        help="Persist generated dataset to CSV, JSON, and SQLite database",
+    )
+    parser.add_argument(
         "--scale",
         type=str,
         choices=["starter", "full"],
@@ -162,6 +167,15 @@ def main(argv: list[str] | None = None) -> None:
                 counts = Counter(r["issue_type"] if isinstance(r, dict) else r.issue_type for r in gt_records)
                 for itype, cnt in sorted(counts.items()):
                     print(f"  - {itype}: {cnt}")
+
+            if args.export:
+                from datagen.export import export_all
+                print("\n=== Persisting Dataset to Disk ===")
+                exp_res = export_all(dataset)
+                print(f"CSV Tables Exported: {exp_res['total_tables_exported']} -> data/csv/")
+                print(f"JSON Files Exported: {len(exp_res['json_files'])} -> data/json/")
+                print(f"SQLite DB Created  : {exp_res['sqlite_db']}")
+
             sys.exit(0)
         except Exception as err:
             print(f"Generation error: {err}", file=sys.stderr)

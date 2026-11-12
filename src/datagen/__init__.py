@@ -15,6 +15,12 @@ from datagen.budget import generate_budget_events
 from datagen.config import load_config
 from datagen.delivery import generate_deliveries
 from datagen.events import generate_status_events
+from datagen.export import (
+    export_all,
+    export_to_csv,
+    export_to_json,
+    export_to_sqlite,
+)
 from datagen.ids import IDFactory
 from datagen.masters import (
     generate_all_masters,
@@ -104,6 +110,10 @@ __all__ = [
     "inject_anomalies",
     "GroundTruthRecord",
     "ANOMALY_CATEGORIES",
+    "export_all",
+    "export_to_csv",
+    "export_to_json",
+    "export_to_sqlite",
     "generate_all_masters",
     "generate_departments",
     "generate_budgets",

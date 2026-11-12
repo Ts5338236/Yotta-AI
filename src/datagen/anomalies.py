@@ -332,6 +332,7 @@ def inject_inactive_supplier_used(
             "currency": "USD",
             "contact_email": f"support@{inactive_sup_id.lower()}.example.com",
             "risk_score": 0.85,
+            "risk_classification": "HIGH",
             "lead_time_mean": 21.0,
             "lead_time_variance": 4.0,
             "status": "INACTIVE",

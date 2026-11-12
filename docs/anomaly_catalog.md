@@ -186,3 +186,4 @@ Detection performance was evaluated across both standard scale tiers using the i
 | `budget_overrun` | 5 | 5 | 5 | 0 | 0 | 100% | 100% | 1.0000 |
 | `duplicate_purchase_request` | 5 | 5 | 5 | 0 | 0 | 100% | 100% | 1.0000 |
 | `quote_currency_mismatch` | 5 | 5 | 5 | 0 | 0 | 100% | 100% | 1.0000 |
+

@@ -75,3 +75,4 @@ def test_anomaly_counts_by_scale_tier(project_config):
     counts = Counter(r["issue_type"] for r in gt_full)
     for cat in counts:
         assert counts[cat] == 5, f"Expected 5 anomalies for {cat}, got {counts[cat]}"
+
